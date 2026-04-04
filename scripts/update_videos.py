@@ -36,23 +36,25 @@ LEVEL_OPTIONS = ["超初心者", "初心者", "中級", "上級"]
 # videos.js I/O
 # ---------------------------------------------------------------------------
 
-def read_videos_js() -> list[dict]:
-    """Read videos.js and return the VIDEOS array as a Python list."""
+def read_videos_js() -> tuple[list[dict], str]:
+    """Read videos.js and return the VIDEOS array and the rest of the file."""
     with open(VIDEOS_JS_PATH, "r", encoding="utf-8") as f:
         text = f.read()
-    # Strip "const VIDEOS = " prefix and trailing ";"
-    match = re.search(r"const\s+VIDEOS\s*=\s*(\[.*\])\s*;", text, re.DOTALL)
+    # Match VIDEOS array, stopping at "];" (non-greedy)
+    match = re.search(r"const\s+VIDEOS\s*=\s*(\[.*?\n\]);", text, re.DOTALL)
     if not match:
         print("ERROR: Could not parse videos.js", file=sys.stderr)
         sys.exit(1)
-    return json.loads(match.group(1))
+    # Preserve everything after the VIDEOS array (e.g. ROADMAP)
+    rest = text[match.end():]
+    return json.loads(match.group(1)), rest
 
 
-def write_videos_js(videos: list[dict]) -> None:
-    """Write videos list back to videos.js."""
+def write_videos_js(videos: list[dict], rest: str) -> None:
+    """Write videos list back to videos.js, preserving ROADMAP etc."""
     json_str = json.dumps(videos, indent=2, ensure_ascii=False)
     with open(VIDEOS_JS_PATH, "w", encoding="utf-8") as f:
-        f.write(f"const VIDEOS = {json_str};\n")
+        f.write(f"const VIDEOS = {json_str};{rest}")
 
 
 # ---------------------------------------------------------------------------
@@ -169,7 +171,7 @@ def generate_metadata(client: anthropic.Anthropic, title: str, transcript: str |
 
 def main():
     # Read existing data
-    existing_videos = read_videos_js()
+    existing_videos, rest_of_file = read_videos_js()
     existing_ids = {v["vid_id"] for v in existing_videos}
     print(f"Existing videos: {len(existing_videos)}")
 
@@ -226,7 +228,7 @@ def main():
     new_videos.sort(key=lambda v: v["date"], reverse=True)
     updated_videos = new_videos + existing_videos
 
-    write_videos_js(updated_videos)
+    write_videos_js(updated_videos, rest_of_file)
     print(f"Added {len(new_videos)} new video(s). Total: {len(updated_videos)}")
 
 
