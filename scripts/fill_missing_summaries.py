@@ -108,27 +108,35 @@ def main():
         return
 
     updated = 0
-    for idx, video in missing:
+    for count, (idx, video) in enumerate(missing, 1):
         title = video["title"]
         vid_id = video.get("vid_id", "")
-        print(f"[{updated+1}/{len(missing)}] {title}")
+        print(f"[{count}/{len(missing)}] {title}")
 
-        transcript = get_transcript(vid_id) if vid_id else None
-        if transcript:
-            print(f"  字幕: {len(transcript)}文字")
-        else:
-            print("  字幕なし")
+        try:
+            transcript = get_transcript(vid_id) if vid_id else None
+            if transcript:
+                print(f"  字幕: {len(transcript)}文字")
+            else:
+                print("  字幕なし（タイトルから要約生成）")
 
-        summary = generate_summary(title, transcript)
-        if summary:
-            videos[idx]["summary"] = summary
-            print(f"  要約: {summary}")
-            updated += 1
-        else:
-            print("  要約生成失敗")
+            summary = generate_summary(title, transcript)
+            if summary:
+                videos[idx]["summary"] = summary
+                print(f"  要約: {summary}")
+                updated += 1
+            else:
+                print("  要約生成失敗（スキップ）")
+        except Exception as e:
+            print(f"  エラー（スキップ）: {e}")
 
-        # Gemini無料枠: 15RPM なので安全に4秒待つ
-        time.sleep(4)
+        # Gemini無料枠: 15RPM なので安全に5秒待つ
+        time.sleep(5)
+
+        # 10件ごとに中間保存
+        if updated > 0 and updated % 10 == 0:
+            write_videos_js(videos, rest)
+            print(f"  (中間保存: {updated}件)")
 
     write_videos_js(videos, rest)
     print(f"\n完了: {updated}件の要約を追加しました")
