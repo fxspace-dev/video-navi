@@ -1,0 +1,35 @@
+name: Fill Missing Summaries
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run fill summaries script
+        env:
+          GEMINI_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/fill_missing_summaries.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add videos.js
+          git diff --cached --quiet || (git commit -m "Fill missing video summaries via Gemini" && git push)
