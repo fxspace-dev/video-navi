@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よすが式トレード学習ナビ - FX SPACE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- STICKY HEADER -->
+<header class="header" id="header">
+    <div class="header-inner">
+        <div class="header-logo">
+            <img class="logo-mark-img" src="icon-fxspace.png" alt="FX SPACE">
+            <span class="logo-text">学習ナビ</span>
+        </div>
+        <div class="header-search">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="searchInput" placeholder="キーワードで動画を探す..." class="search-input">
+            <kbd class="search-kbd">⌘K</kbd>
+        </div>
+        <div class="header-actions">
+            <button class="header-btn" id="darkModeToggle" title="ダークモード切替">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="header-btn" id="playlistBtn" title="プレイリスト" onclick="openPlaylistModal()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+            <button class="header-btn" id="memoListBtn" title="メモ一覧">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <span class="header-btn-badge" id="memoListBadge" style="display:none;">0</span>
+            </button>
+            <button class="header-btn" id="watchLaterBtn" title="後で見るリスト">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <span class="header-btn-badge" id="watchLaterBadge" style="display:none;">0</span>
+            </button>
+            <span class="header-divider"></span>
+            <div class="view-toggle-group">
+                <button class="view-toggle active" id="viewGrid" title="グリッド表示"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></button>
+                <button class="view-toggle" id="viewList" title="リスト表示"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="4" rx="1.5"/><rect x="3" y="10" width="18" height="4" rx="1.5"/><rect x="3" y="16" width="18" height="4" rx="1.5"/></svg></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-stars" id="heroStars"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-nebula"></div>
+    </div>
+    <div class="hero-content">
+        <img src="logo-fxspace.png" alt="FX SPACE" class="hero-logo">
+        <h1 class="hero-title">トレード学習ナビ</h1>
+        <p class="hero-desc">レベル・テーマ・キーワードから最適な動画を瞬時に検索</p>
+    </div>
+</section>
+
+
+
+<!-- HISTORY & WATCHLATER ROWS -->
+<section class="history-section" id="historySection" style="display:none;">
+    <div class="container">
+        <div class="history-header">
+            <h2 class="history-title">⏱ 最近見た動画</h2>
+            <button class="history-clear" id="historyClear">履歴を消去</button>
+        </div>
+        <div class="history-scroll" id="historyScroll"></div>
+    </div>
+</section>
+
+<section class="history-section" id="watchLaterSection" style="display:none;">
+    <div class="container">
+        <div class="history-header">
+            <h2 class="history-title">🔖 後で見る</h2>
+            <button class="history-clear" id="watchLaterClear">リストを消去</button>
+        </div>
+        <div class="history-scroll" id="watchLaterScroll"></div>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="main-section">
+    <div class="container main-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-resize" id="sidebarResize"></div>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">レベル</h3>
+                <div class="sidebar-options" id="levelFilters">
+                    <label class="sidebar-option"><input type="radio" name="level" value="all" checked><span class="option-radio"></span>すべて</label>
+                    <label class="sidebar-option"><input type="radio" name="level" value="超初心者"><span class="option-radio"></span>🔰 超初心者<span class="option-count" data-level-count="超初心者"></span></label>
+                    <label class="sidebar-option"><input type="radio" name="level" value="初心者"><span class="option-radio"></span>🌱 初心者<span class="option-count" data-level-count="初心者"></span></label>
+                    <label class="sidebar-option"><input type="radio" name="level" value="中級"><span class="option-radio"></span>📈 中級<span class="option-count" data-level-count="中級"></span></label>
+                    <label class="sidebar-option"><input type="radio" name="level" value="上級"><span class="option-radio"></span>🏆 上級<span class="option-count" data-level-count="上級"></span></label>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">公開方法</h3>
+                <div class="sidebar-options" id="methodFilters">
+                    <label class="sidebar-option"><input type="radio" name="method" value="all" checked><span class="option-radio"></span>すべて</label>
+                    <label class="sidebar-option"><input type="radio" name="method" value="一般公開"><span class="option-radio"></span>🌐 一般公開</label>
+                    <label class="sidebar-option"><input type="radio" name="method" value="メンバーシップ限定公開"><span class="option-radio"></span>🔒 メンバー限定</label>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">テーマ</h3>
+                <div class="sidebar-tags" id="categoryFilters">
+                    <button class="sidebar-tag active" data-cat="all">すべて</button>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">並び替え</h3>
+                <select class="sort-select" id="sortSelect">
+                    <option value="date-new" selected>公開日（新しい順）</option>
+                    <option value="date-old">公開日（古い順）</option>
+                    <option value="title-asc">タイトル (A→Z)</option>
+                    <option value="title-desc">タイトル (Z→A)</option>
+                </select>
+            </div>
+
+            <button class="sidebar-reset" id="resetFilters">フィルターをリセット</button>
+
+            <div class="sidebar-pickup">
+                <h3 class="sidebar-title">PICK UP</h3>
+                <a class="sidebar-pickup-card" href="https://www.youtube.com/watch?v=p1E6kvNnqSk" target="_blank" onclick="openModal(VIDEOS.findIndex(v=>v.vid_id==='p1E6kvNnqSk')); return false;">
+                    <div class="sidebar-pickup-thumb">
+                        <img src="https://img.youtube.com/vi/p1E6kvNnqSk/mqdefault.jpg" alt="">
+                        <div class="sidebar-pickup-play"></div>
+                    </div>
+                    <div class="sidebar-pickup-title">【保存版】よすが式ダウ手法を完全理解</div>
+                </a>
+            </div>
+
+            <div class="sidebar-roadmap">
+                <details>
+                    <summary class="sidebar-roadmap-summary">
+                        <span class="roadmap-summary-icon">🔰</span>
+                        <span class="roadmap-summary-text">超初心者はここから！</span>
+                    </summary>
+                    <div class="sidebar-roadmap-list" id="roadmapList"></div>
+                </details>
+            </div>
+        </aside>
+
+
+        <!-- SIDEBAR TOGGLE -->
+        <button class="sidebar-toggle" id="sidebarToggle" title="サイドバー切替">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="18" x2="12" y2="18"/></svg>
+        </button>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="active-filters" id="activeFilters"></div>
+            <div class="content-header">
+                <div class="result-count"><span id="resultCount">0</span>件の動画</div>
+            </div>
+            <div class="video-grid" id="videoGrid"></div>
+            <div class="video-list hidden" id="videoList"></div>
+            <div class="no-results" id="noResults" style="display:none;">
+                <div class="no-results-icon">🔍</div>
+                <p class="no-results-title">動画が見つかりませんでした</p>
+                <p class="no-results-desc">フィルター条件を変更して再検索してみてください</p>
+                <button class="btn-reset-inline" onclick="resetAll()">フィルターをリセット</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MOBILE FILTER BUTTON -->
+<button class="mobile-filter-btn" id="mobileFilterBtn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="18" x2="12" y2="18"/></svg>
+    フィルター
+    <span class="mobile-filter-badge" id="filterBadge" style="display:none;">0</span>
+</button>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- VIDEO MODAL -->
+<div class="modal" id="videoModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-video" id="modalVideo"></div>
+        <div class="modal-info">
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <div class="modal-meta" id="modalMeta"></div>
+            <div class="modal-tags" id="modalTags"></div>
+            <p class="modal-summary" id="modalSummary"></p>
+            <div class="modal-actions">
+                <a class="modal-link" id="modalLink" href="#" target="_blank">動画を見る →</a>
+                <button class="modal-share" id="modalShare" title="URLをコピー">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> URLコピー
+                </button>
+                <button class="modal-bookmark" id="modalBookmark" title="後で見る">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    <span id="modalBookmarkLabel">後で見る</span>
+                </button>
+                <button class="modal-share" id="modalAddPlaylist" title="プレイリストに追加">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> プレイリスト
+                </button>
+            </div>
+        </div>
+        <div class="modal-memo" id="modalMemo">
+            <div class="memo-header">
+                <h4 class="memo-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    メモ
+                </h4>
+                <span class="memo-saved" id="memoSaved">保存しました</span>
+            </div>
+            <textarea class="memo-textarea" id="memoTextarea" placeholder="この動画で学んだことや気づきをメモ..." rows="3"></textarea>
+        </div>
+        <div class="modal-recommend" id="modalRecommend">
+            <h4 class="modal-recommend-title">おすすめの動画</h4>
+            <div class="modal-recommend-list" id="modalRecommendList"></div>
+        </div>
+    </div>
+</div>
+
+<!-- MEMO LIST MODAL -->
+<div class="modal" id="memoListModal">
+    <div class="modal-backdrop" id="memoListBackdrop"></div>
+    <div class="modal-content memo-list-content">
+        <button class="modal-close" id="memoListClose">&times;</button>
+        <div class="memo-list-header">
+            <div>
+                <h2 class="memo-list-heading">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    学習メモ一覧
+                </h2>
+                <p class="memo-list-count" id="memoListCount"></p>
+            </div>
+            <button class="memo-export-btn" id="memoExportBtn" title="メモをダウンロード">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                ダウンロード
+            </button>
+        </div>
+        <div class="memo-list-search">
+            <svg class="memo-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="memoSearchInput" class="memo-search-input" placeholder="メモを検索...">
+        </div>
+        <div class="memo-list-body" id="memoListBody"></div>
+    </div>
+</div>
+
+<!-- PLAYLIST MODAL -->
+<div class="modal" id="playlistModal">
+    <div class="modal-backdrop" onclick="closePlaylistModal()"></div>
+    <div class="modal-content playlist-modal-content">
+        <button class="modal-close" onclick="closePlaylistModal()">&times;</button>
+        <div class="playlist-header">
+            <h2 class="playlist-heading">プレイリスト</h2>
+            <button class="playlist-create-btn" onclick="createPlaylistPrompt()">＋ 新規作成</button>
+        </div>
+        <div class="playlist-body" id="playlistBody"></div>
+    </div>
+</div>
+
+<footer class="footer"><p>FX SPACE - よすが式トレード学習ナビ</p></footer>
+
+<script src="videos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

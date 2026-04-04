@@ -1,0 +1,3 @@
+youtube-transcript-api
+anthropic
+google-api-python-client
