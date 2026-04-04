@@ -1,6 +1,6 @@
 """
 Fetch latest videos from @fxyosuga YouTube channel,
-generate metadata via Claude API, and update videos.js.
+generate metadata via Gemini API, and update videos.js.
 """
 
 import json
@@ -9,7 +9,7 @@ import re
 import sys
 from datetime import datetime
 
-import anthropic
+import requests
 from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
 
@@ -17,7 +17,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 # Config
 # ---------------------------------------------------------------------------
 YOUTUBE_API_KEY = os.environ["YOUTUBE_API_KEY"]
-ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", YOUTUBE_API_KEY)
 CHANNEL_HANDLE = "@fxyosuga"
 VIDEOS_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "videos.js")
 
@@ -106,12 +106,12 @@ def get_transcript(video_id: str) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# Claude API helper
+# Gemini API helper
 # ---------------------------------------------------------------------------
 
-def generate_metadata(client: anthropic.Anthropic, title: str, transcript: str | None) -> dict:
-    """Use Claude to generate summary, levels, and categories."""
-    context = transcript if transcript else f"(字幕なし) タイトル: {title}"
+def generate_metadata(title: str, transcript: str | None) -> dict:
+    """Use Gemini to generate summary, levels, and categories."""
+    context = transcript[:8000] if transcript else f"(字幕なし) タイトル: {title}"
 
     prompt = f"""あなたはFXトレード教育チャンネル「@fxyosuga」の動画メタデータを生成するアシスタントです。
 
@@ -142,26 +142,27 @@ def generate_metadata(client: anthropic.Anthropic, title: str, transcript: str |
 - categoriesは動画の主題に合うもの（1〜3個）
 - JSONのみ出力（マークダウンのコードブロックなし）"""
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=512,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    response_text = message.content[0].text.strip()
-    # Strip markdown code fences if present
-    response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
-    response_text = re.sub(r"\s*```$", "", response_text)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512},
+    }
 
     try:
+        resp = requests.post(url, json=payload, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        # Strip markdown code fences if present
+        response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
+        response_text = re.sub(r"\s*```$", "", response_text)
         return json.loads(response_text)
-    except json.JSONDecodeError:
-        print(f"WARNING: Could not parse Claude response for '{title}'", file=sys.stderr)
-        print(f"Response: {response_text}", file=sys.stderr)
+    except Exception as e:
+        print(f"WARNING: Gemini API error for '{title}': {e}", file=sys.stderr)
         return {
-            "summary": title,
+            "summary": "",
             "levels": ["初心者"],
-            "categories": ["その他手法"],
+            "categories": ["未分類"],
         }
 
 
@@ -202,18 +203,17 @@ def main():
         else:
             print("  No transcript available")
 
-        # Generate metadata via Claude
-        claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-        metadata = generate_metadata(claude_client, title, transcript)
+        # Generate metadata via Gemini
+        metadata = generate_metadata(title, transcript)
 
         video_entry = {
             "title": title,
             "url": f"https://www.youtube.com/watch?v={vid_id}",
             "thumb": f"https://img.youtube.com/vi/{vid_id}/mqdefault.jpg",
             "levels": metadata.get("levels", ["初心者"]),
-            "categories": metadata.get("categories", ["その他手法"]),
+            "categories": metadata.get("categories", ["未分類"]),
             "method": "一般公開",
-            "summary": metadata.get("summary", title),
+            "summary": metadata.get("summary", ""),
             "vid_id": vid_id,
             "date": published,
         }
