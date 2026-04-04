@@ -1,5 +1,500 @@
 const VIDEOS = [
   {
+    "title": "1000名見てきて分かったプロトレ1%が実際どういうことなのか全て話す",
+    "url": "https://www.youtube.com/watch?v=1yd3FP2V14E",
+    "thumb": "https://img.youtube.com/vi/1yd3FP2V14E/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "1yd3FP2V14E",
+    "date": "2026-04-04"
+  },
+  {
+    "title": "FX取引の2種類の利益",
+    "url": "https://www.youtube.com/watch?v=Gaom2Zxy4lQ",
+    "thumb": "https://img.youtube.com/vi/Gaom2Zxy4lQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "Gaom2Zxy4lQ",
+    "date": "2026-04-03"
+  },
+  {
+    "title": "1万円でもトレードできる理由",
+    "url": "https://www.youtube.com/watch?v=w03X5pwTgj0",
+    "thumb": "https://img.youtube.com/vi/w03X5pwTgj0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "w03X5pwTgj0",
+    "date": "2026-04-01"
+  },
+  {
+    "title": "FXがほかの投資より有利な理由",
+    "url": "https://www.youtube.com/watch?v=H_3I9KIXFBE",
+    "thumb": "https://img.youtube.com/vi/H_3I9KIXFBE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "H_3I9KIXFBE",
+    "date": "2026-03-25"
+  },
+  {
+    "title": "プロスペクト理論の罠",
+    "url": "https://www.youtube.com/watch?v=WXvMqRgoIT8",
+    "thumb": "https://img.youtube.com/vi/WXvMqRgoIT8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "WXvMqRgoIT8",
+    "date": "2026-03-20"
+  },
+  {
+    "title": "月利8%で億万長者になる方法",
+    "url": "https://www.youtube.com/watch?v=p0HkSmGsCik",
+    "thumb": "https://img.youtube.com/vi/p0HkSmGsCik/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "p0HkSmGsCik",
+    "date": "2026-03-18"
+  },
+  {
+    "title": "兼業トレーダーのトレーダースタイル②",
+    "url": "https://www.youtube.com/watch?v=IQNyQOeGIiI",
+    "thumb": "https://img.youtube.com/vi/IQNyQOeGIiI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "IQNyQOeGIiI",
+    "date": "2026-03-13"
+  },
+  {
+    "title": "【FXライブ配信】原油どうなってんの？【質問OK】",
+    "url": "https://www.youtube.com/watch?v=qtT2NJnvs00",
+    "thumb": "https://img.youtube.com/vi/qtT2NJnvs00/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "qtT2NJnvs00",
+    "date": "2026-03-12"
+  },
+  {
+    "title": "【FXライブ配信】原油どうなってんの？【質問OK】",
+    "url": "https://www.youtube.com/watch?v=SrCFIG2dkR4",
+    "thumb": "https://img.youtube.com/vi/SrCFIG2dkR4/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "SrCFIG2dkR4",
+    "date": "2026-03-12"
+  },
+  {
+    "title": "兼業トレーダーのトレーダースタイル①",
+    "url": "https://www.youtube.com/watch?v=bp4rjxR9qkU",
+    "thumb": "https://img.youtube.com/vi/bp4rjxR9qkU/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "bp4rjxR9qkU",
+    "date": "2026-03-11"
+  },
+  {
+    "title": "トレードは習慣にすべし",
+    "url": "https://www.youtube.com/watch?v=hIwbhqmzWxo",
+    "thumb": "https://img.youtube.com/vi/hIwbhqmzWxo/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "hIwbhqmzWxo",
+    "date": "2026-03-06"
+  },
+  {
+    "title": "タイミング待ちの重要性",
+    "url": "https://www.youtube.com/watch?v=BYHo43aQk4o",
+    "thumb": "https://img.youtube.com/vi/BYHo43aQk4o/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "BYHo43aQk4o",
+    "date": "2026-02-27"
+  },
+  {
+    "title": "プライスアクションの正しい使い方",
+    "url": "https://www.youtube.com/watch?v=HInM4sC1o7Q",
+    "thumb": "https://img.youtube.com/vi/HInM4sC1o7Q/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "HInM4sC1o7Q",
+    "date": "2026-02-25"
+  },
+  {
+    "title": "候補値選定の重要性",
+    "url": "https://www.youtube.com/watch?v=if_5OnsMpco",
+    "thumb": "https://img.youtube.com/vi/if_5OnsMpco/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "if_5OnsMpco",
+    "date": "2026-02-20"
+  },
+  {
+    "title": "エントリー手順3ステップ",
+    "url": "https://www.youtube.com/watch?v=Y-AY9sFQCmg",
+    "thumb": "https://img.youtube.com/vi/Y-AY9sFQCmg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "Y-AY9sFQCmg",
+    "date": "2026-02-18"
+  },
+  {
+    "title": "シナリオ構築の重要性",
+    "url": "https://www.youtube.com/watch?v=JGFwiOr9jtE",
+    "thumb": "https://img.youtube.com/vi/JGFwiOr9jtE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "JGFwiOr9jtE",
+    "date": "2026-02-13"
+  },
+  {
+    "title": "期待値の考え方",
+    "url": "https://www.youtube.com/watch?v=3MLJnKJKyjo",
+    "thumb": "https://img.youtube.com/vi/3MLJnKJKyjo/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "3MLJnKJKyjo",
+    "date": "2026-02-11"
+  },
+  {
+    "title": "勝率90%でも負ける理由",
+    "url": "https://www.youtube.com/watch?v=rLyr77QF7Rg",
+    "thumb": "https://img.youtube.com/vi/rLyr77QF7Rg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "rLyr77QF7Rg",
+    "date": "2026-02-06"
+  },
+  {
+    "title": "FXで勝てない理由",
+    "url": "https://www.youtube.com/watch?v=gmTWp64ErOQ",
+    "thumb": "https://img.youtube.com/vi/gmTWp64ErOQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "gmTWp64ErOQ",
+    "date": "2026-02-04"
+  },
+  {
+    "title": "上位足を見る重要性",
+    "url": "https://www.youtube.com/watch?v=bvSR53Y-hq0",
+    "thumb": "https://img.youtube.com/vi/bvSR53Y-hq0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "bvSR53Y-hq0",
+    "date": "2026-01-30"
+  },
+  {
+    "title": "ラインの本当の意味",
+    "url": "https://www.youtube.com/watch?v=HjDMtW_qqus",
+    "thumb": "https://img.youtube.com/vi/HjDMtW_qqus/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "HjDMtW_qqus",
+    "date": "2026-01-28"
+  },
+  {
+    "title": "三尊の本質を理解する",
+    "url": "https://www.youtube.com/watch?v=CynEhfgJ3ko",
+    "thumb": "https://img.youtube.com/vi/CynEhfgJ3ko/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "CynEhfgJ3ko",
+    "date": "2026-01-23"
+  },
+  {
+    "title": "前回安値に買い注文が溜まる理由",
+    "url": "https://www.youtube.com/watch?v=KoVJcvQuI6E",
+    "thumb": "https://img.youtube.com/vi/KoVJcvQuI6E/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "KoVJcvQuI6E",
+    "date": "2026-01-21"
+  },
+  {
+    "title": "レンジブレイクの仕組み",
+    "url": "https://www.youtube.com/watch?v=TkQz2ZboUIc",
+    "thumb": "https://img.youtube.com/vi/TkQz2ZboUIc/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "TkQz2ZboUIc",
+    "date": "2026-01-16"
+  },
+  {
+    "title": "トレンド方向で売買圧を見る",
+    "url": "https://www.youtube.com/watch?v=KiXscMD3gkA",
+    "thumb": "https://img.youtube.com/vi/KiXscMD3gkA/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "KiXscMD3gkA",
+    "date": "2026-01-14"
+  },
+  {
+    "title": "FXで勝つための考え方",
+    "url": "https://www.youtube.com/watch?v=Nu__MwU9j10",
+    "thumb": "https://img.youtube.com/vi/Nu__MwU9j10/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "Nu__MwU9j10",
+    "date": "2026-01-09"
+  },
+  {
+    "title": "未来予測ではFXで勝てない理由",
+    "url": "https://www.youtube.com/watch?v=dEyHeav9yR8",
+    "thumb": "https://img.youtube.com/vi/dEyHeav9yR8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "dEyHeav9yR8",
+    "date": "2026-01-07"
+  },
+  {
+    "title": "【FXライブ配信】2026年 チャート分析初めします【質問OK】",
+    "url": "https://www.youtube.com/watch?v=2O294ZSkYso",
+    "thumb": "https://img.youtube.com/vi/2O294ZSkYso/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "2O294ZSkYso",
+    "date": "2026-01-05"
+  },
+  {
+    "title": "【FXライブ配信】2026年の計画を一緒に立てよう!!!!!!【質問OK】",
+    "url": "https://www.youtube.com/watch?v=uPi2obGrZSU",
+    "thumb": "https://img.youtube.com/vi/uPi2obGrZSU/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "uPi2obGrZSU",
+    "date": "2025-12-31"
+  },
+  {
+    "title": "ライン引きの実践4ステップ",
+    "url": "https://www.youtube.com/watch?v=44MHcr-Gfok",
+    "thumb": "https://img.youtube.com/vi/44MHcr-Gfok/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "44MHcr-Gfok",
+    "date": "2025-12-10"
+  },
+  {
+    "title": "【FXライブ配信】よすが式ダウ手法を完全マスターしよう２【質問OK】",
+    "url": "https://www.youtube.com/watch?v=kVMwxA9iSKc",
+    "thumb": "https://img.youtube.com/vi/kVMwxA9iSKc/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "kVMwxA9iSKc",
+    "date": "2025-12-07"
+  },
+  {
+    "title": "現在を正確に把握するナウキャスト",
+    "url": "https://www.youtube.com/watch?v=hps3hfkbgaI",
+    "thumb": "https://img.youtube.com/vi/hps3hfkbgaI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "hps3hfkbgaI",
+    "date": "2025-12-05"
+  },
+  {
+    "title": "ブレイクの値動きの原理",
+    "url": "https://www.youtube.com/watch?v=NRlkKfSuX1k",
+    "thumb": "https://img.youtube.com/vi/NRlkKfSuX1k/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "NRlkKfSuX1k",
+    "date": "2025-11-27"
+  },
+  {
     "title": "【2026年相場予測】ゴールド・ドル円だけ見ろ。プロが見ている分岐点を全て見せます！",
     "url": "https://www.youtube.com/watch?v=KzbFwJXbCJQ",
     "thumb": "https://img.youtube.com/vi/KzbFwJXbCJQ/mqdefault.jpg",
