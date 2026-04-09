@@ -228,8 +228,22 @@ def main():
     new_videos.sort(key=lambda v: v["date"], reverse=True)
     updated_videos = new_videos + existing_videos
 
-    write_videos_js(updated_videos, rest_of_file)
-    print(f"Added {len(new_videos)} new video(s). Total: {len(updated_videos)}")
+    # Dedupe by title - keep first occurrence (which is the newest after sort)
+    seen_titles = set()
+    deduped = []
+    removed_count = 0
+    for v in updated_videos:
+        title = (v.get("title") or "").strip()
+        if title and title in seen_titles:
+            removed_count += 1
+            continue
+        seen_titles.add(title)
+        deduped.append(v)
+    if removed_count:
+        print(f"Removed {removed_count} duplicate(s) by title.")
+
+    write_videos_js(deduped, rest_of_file)
+    print(f"Added {len(new_videos)} new video(s). Total: {len(deduped)}")
 
 
 if __name__ == "__main__":

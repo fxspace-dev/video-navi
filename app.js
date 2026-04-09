@@ -22,6 +22,10 @@ function isNewVideo(dateStr) {
 let activeLevel = 'all';
 let activeCategories = []; // empty = all
 let activeMethod = 'all';
+let activeType = 'long'; // default: main videos only
+let currentPage = 1;
+const PAGE_SIZE = 12;
+const isMobile = () => window.innerWidth <= 640;
 let searchQuery = '';
 let sortMode = 'date-new';
 let viewMode = 'grid';
@@ -239,10 +243,13 @@ function setupSidebarResize() {
 
 function setupEventListeners() {
     document.querySelectorAll('#levelFilters input[name="level"]').forEach(input => {
-        input.addEventListener('change', () => { activeLevel = input.value; renderVideos(); updateActiveFilters(); });
+        input.addEventListener('change', () => { activeLevel = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
     });
     document.querySelectorAll('#methodFilters input[name="method"]').forEach(input => {
-        input.addEventListener('change', () => { activeMethod = input.value; renderVideos(); updateActiveFilters(); });
+        input.addEventListener('change', () => { activeMethod = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
+    });
+    document.querySelectorAll('#typeFilters input[name="vtype"]').forEach(input => {
+        input.addEventListener('change', () => { activeType = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
     });
     document.getElementById('categoryFilters').addEventListener('click', e => {
         if (e.target.classList.contains('sidebar-tag')) {
@@ -264,13 +271,22 @@ function setupEventListeners() {
                     activeCategories.push(cat);
                 }
             }
-            renderVideos(); updateActiveFilters();
+            currentPage = 1; renderVideos(); updateActiveFilters();
         }
     });
     let searchDebounce;
     document.getElementById('searchInput').addEventListener('input', e => {
         clearTimeout(searchDebounce);
-        searchDebounce = setTimeout(() => { searchQuery = e.target.value.toLowerCase(); renderVideos(); updateActiveFilters(); }, 200);
+        document.getElementById('searchClearBtn').style.display = e.target.value ? 'flex' : 'none';
+        searchDebounce = setTimeout(() => { searchQuery = e.target.value.toLowerCase(); currentPage = 1; renderVideos(); updateActiveFilters(); }, 200);
+    });
+    document.getElementById('searchClearBtn').addEventListener('click', () => {
+        const input = document.getElementById('searchInput');
+        input.value = '';
+        searchQuery = '';
+        document.getElementById('searchClearBtn').style.display = 'none';
+        currentPage = 1; renderVideos(); updateActiveFilters();
+        input.focus();
     });
     document.getElementById('sortSelect').addEventListener('change', e => { sortMode = e.target.value; renderVideos(); });
     document.getElementById('viewGrid').addEventListener('click', () => setView('grid'));
@@ -297,8 +313,22 @@ function setupEventListeners() {
         renderVideos();
     });
     document.getElementById('mobileFilterBtn').addEventListener('click', () => {
-        document.getElementById('sidebar').classList.toggle('open');
-        document.getElementById('mobileOverlay').classList.toggle('open');
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.remove('collapsed');
+        sidebar.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+    const closeBtn = document.getElementById('sidebarMobileClose');
+    if (closeBtn) closeBtn.addEventListener('click', () => {
+        document.getElementById('sidebar').classList.remove('open');
+        document.body.style.overflow = '';
+    });
+    // Sidebar close button (X) handled via pseudo-element click won't work,
+    // so add a real button for mobile
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderVideos, 200);
     });
     document.getElementById('mobileOverlay').addEventListener('click', () => {
         document.getElementById('sidebar').classList.remove('open');
@@ -331,7 +361,12 @@ function updateActiveFilters() {
         chips.push(`<span class="active-filter-chip">${cat} <span class="chip-remove" onclick="clearOneCategory('${cat}')">×</span></span>`);
     });
     if (activeMethod !== 'all') chips.push(`<span class="active-filter-chip">${activeMethod === '一般公開' ? '🌐 一般公開' : '🔒 メンバー限定'} <span class="chip-remove" onclick="clearFilter('method')">×</span></span>`);
-    if (searchQuery) chips.push(`<span class="active-filter-chip">"${searchQuery}" <span class="chip-remove" onclick="clearFilter('search')">×</span></span>`);
+    if (searchQuery) {
+        const keywords = searchQuery.split(/[\s　]+/).filter(k => k.length > 0);
+        keywords.forEach(kw => {
+            chips.push(`<span class="active-filter-chip">"${kw}" <span class="chip-remove" onclick="removeSearchKeyword('${kw.replace(/'/g, "\\'")}')">×</span></span>`);
+        });
+    }
     document.getElementById('activeFilters').innerHTML = chips.join('');
     const badge = document.getElementById('filterBadge');
     badge.style.display = chips.length > 0 ? 'inline' : 'none';
@@ -343,7 +378,14 @@ function clearFilter(type) {
     if (type === 'category') { activeCategories = []; document.querySelectorAll('#categoryFilters .sidebar-tag').forEach(b => b.classList.remove('active')); document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.add('active'); }
     if (type === 'method') { activeMethod = 'all'; document.querySelector('#methodFilters input[value="all"]').checked = true; }
     if (type === 'search') { searchQuery = ''; document.getElementById('searchInput').value = ''; }
-    renderVideos(); updateActiveFilters();
+    currentPage = 1; renderVideos(); updateActiveFilters();
+}
+
+function removeSearchKeyword(kw) {
+    const keywords = searchQuery.split(/[\s　]+/).filter(k => k.length > 0 && k !== kw);
+    searchQuery = keywords.join(' ');
+    document.getElementById('searchInput').value = searchQuery;
+    currentPage = 1; renderVideos(); updateActiveFilters();
 }
 
 function clearOneCategory(cat) {
@@ -353,28 +395,40 @@ function clearOneCategory(cat) {
     if (activeCategories.length === 0) {
         document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.add('active');
     }
-    renderVideos(); updateActiveFilters();
+    currentPage = 1; renderVideos(); updateActiveFilters();
 }
 
 function resetAll() {
-    activeLevel = 'all'; activeCategories = []; activeMethod = 'all'; searchQuery = ''; sortMode = 'date-new';
+    activeLevel = 'all'; activeCategories = []; activeMethod = 'all'; activeType = 'long'; searchQuery = ''; sortMode = 'date-new';
     document.querySelector('#levelFilters input[value="all"]').checked = true;
     document.querySelector('#methodFilters input[value="all"]').checked = true;
+    var typeRadio = document.querySelector('#typeFilters input[value="long"]'); if (typeRadio) typeRadio.checked = true;
     document.querySelectorAll('#categoryFilters .sidebar-tag').forEach(b => b.classList.remove('active'));
     document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.add('active');
     document.getElementById('searchInput').value = '';
     document.getElementById('sortSelect').value = 'date-new';
-    renderVideos(); updateActiveFilters();
+    currentPage = 1; renderVideos(); updateActiveFilters();
 }
 
 function getFilteredVideos() {
-    let result = VIDEOS.filter(v => {
+    // Dedupe by title (safety net)
+    const seenTitles = new Set();
+    const dedupedVideos = VIDEOS.filter(v => {
+        const t = (v.title || '').trim();
+        if (seenTitles.has(t)) return false;
+        seenTitles.add(t);
+        return true;
+    });
+    let result = dedupedVideos.filter(v => {
         if (activeLevel !== 'all' && !v.levels.includes(activeLevel)) return false;
         if (activeCategories.length > 0 && !activeCategories.some(c => v.categories.includes(c))) return false;
         if (activeMethod !== 'all' && v.method !== activeMethod) return false;
+        if (activeType !== 'all' && getVideoType(v) !== activeType) return false;
         if (searchQuery) {
-            const q = searchQuery;
-            if (!v.title.toLowerCase().includes(q) && !(v.summary || '').toLowerCase().includes(q) && !v.categories.some(c => c.toLowerCase().includes(q)) && !v.levels.some(l => l.toLowerCase().includes(q))) return false;
+            const keywords = searchQuery.split(/[\s　]+/).filter(k => k.length > 0);
+            for (const q of keywords) {
+                if (!v.title.toLowerCase().includes(q) && !(v.summary || '').toLowerCase().includes(q) && !v.categories.some(c => c.toLowerCase().includes(q)) && !v.levels.some(l => l.toLowerCase().includes(q))) return false;
+            }
         }
         return true;
     });
@@ -390,14 +444,64 @@ function renderVideos() {
     const gridEl = document.getElementById('videoGrid');
     const listEl = document.getElementById('videoList');
     const noResults = document.getElementById('noResults');
+    const paginationEl = document.getElementById('pagination');
     document.getElementById('resultCount').textContent = filtered.length;
     gridEl.classList.toggle('hidden', viewMode !== 'grid');
     listEl.classList.toggle('hidden', viewMode !== 'list');
-    if (filtered.length === 0) { gridEl.innerHTML = ''; listEl.innerHTML = ''; noResults.style.display = 'block'; return; }
+    if (filtered.length === 0) {
+        gridEl.innerHTML = ''; listEl.innerHTML = '';
+        noResults.style.display = 'block';
+        if (paginationEl) paginationEl.innerHTML = '';
+        return;
+    }
     noResults.style.display = 'none';
-    if (viewMode === 'grid') gridEl.innerHTML = filtered.map((v, i) => renderGridCard(v, i)).join('');
-    else listEl.innerHTML = filtered.map((v, i) => renderListItem(v, i)).join('');
+
+    // Pagination on mobile
+    let displayItems = filtered;
+    let totalPages = 1;
+    if (isMobile()) {
+        totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+        if (currentPage > totalPages) currentPage = 1;
+        const start = (currentPage - 1) * PAGE_SIZE;
+        displayItems = filtered.slice(start, start + PAGE_SIZE);
+    }
+
+    if (viewMode === 'grid') gridEl.innerHTML = displayItems.map((v, i) => renderGridCard(v, i)).join('');
+    else listEl.innerHTML = displayItems.map((v, i) => renderListItem(v, i)).join('');
+
+    if (paginationEl) renderPagination(totalPages, paginationEl);
+
     saveFiltersToURL();
+}
+
+function renderPagination(totalPages, el) {
+    if (!isMobile() || totalPages <= 1) { el.innerHTML = ''; return; }
+    let html = '';
+    html += `<button class="pg-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+    // Show page numbers (limited)
+    const maxButtons = 5;
+    let start = Math.max(1, currentPage - 2);
+    let end = Math.min(totalPages, start + maxButtons - 1);
+    if (end - start + 1 < maxButtons) start = Math.max(1, end - maxButtons + 1);
+    if (start > 1) {
+        html += `<button class="pg-btn" onclick="goToPage(1)">1</button>`;
+        if (start > 2) html += `<span class="pg-ellipsis">…</span>`;
+    }
+    for (let i = start; i <= end; i++) {
+        html += `<button class="pg-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+    }
+    if (end < totalPages) {
+        if (end < totalPages - 1) html += `<span class="pg-ellipsis">…</span>`;
+        html += `<button class="pg-btn" onclick="goToPage(${totalPages})">${totalPages}</button>`;
+    }
+    html += `<button class="pg-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+    el.innerHTML = html;
+}
+
+function goToPage(page) {
+    currentPage = page;
+    renderVideos();
+    document.querySelector('.content-header').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderGridCard(v, i) {
@@ -426,8 +530,11 @@ function renderGridCard(v, i) {
     const watchedBadge = watched ? '<span class="video-watched-badge">視聴済み</span>' : '';
     const wlClass = saved ? 'saved' : '';
     const wlIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + (saved ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
+    const durationHtml = v.duration ? '<span class="video-duration">' + formatDuration(v.duration) + '</span>' : '';
+    const vtype = getVideoType(v);
+    const typeLabel = vtype === 'short' ? '<span class="video-short-label">SHORT</span>' : vtype === 'live' ? '<span class="video-live-label">LIVE</span>' : '';
     return `<a href="${v.url}" target="_blank" class="video-card ${watched ? 'is-watched' : ''}" style="--cat-color:${catColor}" onclick="openModal(${idx}); return false;">
-        <div class="video-thumb">${thumbHtml}<div class="video-play-overlay"><div class="play-icon"></div></div>${watchedBadge}<button class="card-watchlater ${wlClass}" onclick="event.preventDefault();event.stopPropagation();toggleWatchLater('${v.title.replace(/'/g, "\\'")}');" title="後で見る">${wlIcon}</button></div>
+        <div class="video-thumb">${thumbHtml}<div class="video-play-overlay"><div class="play-icon"></div></div>${watchedBadge}${durationHtml}${typeLabel}<button class="card-watchlater ${wlClass}" onclick="event.preventDefault();event.stopPropagation();toggleWatchLater('${v.title.replace(/'/g, "\\'")}');" title="後で見る">${wlIcon}</button></div>
         <div class="video-info"><h3 class="video-title"><span class="video-badge ${badgeClass}">${badgeText}</span>${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryHint}<div class="video-meta">${dateStr ? `<span class="video-date">${dateStr}</span>` : ''}${hasMemo(v.title) ? '<span class="video-memo-icon" title="メモあり">&#9998;</span>' : ''}</div><div class="video-tags">${levelTags}${catTags}</div></div></a>`;
 }
 
@@ -454,7 +561,8 @@ function openModal(index) {
     const videoArea = document.getElementById('modalVideo');
     const fallbackThumb = v.thumb || '';
     const thumbUrl = v.vid_id ? `https://img.youtube.com/vi/${v.vid_id}/maxresdefault.jpg` : fallbackThumb;
-    videoArea.innerHTML = `<a href="${v.url}" target="_blank" class="modal-thumb-link" onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');renderVideos();"><img src="${thumbUrl}" alt="" onerror="if(this.src!=='${fallbackThumb.replace(/'/g, "\\'")}')this.src='${fallbackThumb.replace(/'/g, "\\'")}';"><div class="modal-play-btn"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.55)"/><polygon points="19,14 19,34 36,24" fill="white"/></svg></div></a>`;
+    const modalDurHtml = v.duration ? `<span class="video-duration">${formatDuration(v.duration)}</span>` : '';
+    videoArea.innerHTML = `<a href="${v.url}" target="_blank" class="modal-thumb-link" onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');renderVideos();"><img src="${thumbUrl}" alt="" onerror="if(this.src!=='${fallbackThumb.replace(/'/g, "\\'")}')this.src='${fallbackThumb.replace(/'/g, "\\'")}';"><div class="modal-play-btn"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.55)"/><polygon points="19,14 19,34 36,24" fill="white"/></svg></div>${modalDurHtml}</a>`;
     document.getElementById('modalTitle').textContent = v.title;
     const modalLink = document.getElementById('modalLink');
     modalLink.href = v.url;
@@ -485,8 +593,9 @@ function openModal(index) {
             const rv = VIDEOS[r];
             const rThumb = rv.thumb ? `<img src="${rv.thumb}" alt="" loading="lazy">` : `<div class="rec-thumb-placeholder">🎬</div>`;
             const rCatColor = getCatColor(rv.categories);
+            const rDurHtml = rv.duration ? `<span class="video-duration">${formatDuration(rv.duration)}</span>` : '';
             return `<div class="rec-card" style="--cat-color:${rCatColor}" onclick="openModal(${r})">
-                <div class="rec-thumb">${rThumb}</div>
+                <div class="rec-thumb">${rThumb}${rDurHtml}</div>
                 <div class="rec-info"><p class="rec-title">${rv.title}</p><span class="rec-cat"><span class="cat-dot" style="background:${rCatColor}"></span>${rv.categories[0] || ''}</span></div>
             </div>`;
         }).join('');
@@ -851,7 +960,7 @@ function filterByLevel(level) {
     activeLevel = level;
     const radio = document.querySelector(`#levelFilters input[value="${level}"]`);
     if (radio) radio.checked = true;
-    renderVideos(); updateActiveFilters();
+    currentPage = 1; renderVideos(); updateActiveFilters();
     document.querySelector('.main-section').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -892,6 +1001,10 @@ function renderWatchLaterRow() {
 function escapeRegex(str) { return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 function highlightText(text, q) { if (!q) return text; return text.replace(new RegExp(escapeRegex(q), 'gi'), m => `<mark>${m}</mark>`); }
 function formatDate(d) { if (!d) return ''; const [y, m, day] = d.split('-'); return `${y}/${parseInt(m)}/${parseInt(day)}`; }
+function formatDuration(sec) { if (!sec) return ''; const h = Math.floor(sec/3600); const m = Math.floor((sec%3600)/60); const s = sec%60; return h > 0 ? h+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0') : m+':'+String(s).padStart(2,'0'); }
+function isShort(v) { return (v.url && v.url.includes('/shorts/')) || (v.duration && v.duration <= 75); }
+function isLive(v) { return v.title && v.title.includes('ライブ配信'); }
+function getVideoType(v) { if (isShort(v)) return 'short'; if (isLive(v)) return 'live'; return 'long'; }
 
 // === Keyboard navigation ===
 document.addEventListener('keydown', e => {

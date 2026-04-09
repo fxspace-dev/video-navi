@@ -2,11 +2,13 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#02050f">
     <title>よすが式トレード学習ナビ - FX SPACE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260409b">
 </head>
 <body>
 
@@ -15,19 +17,24 @@
     <div class="header-inner">
         <div class="header-logo">
             <img class="logo-mark-img" src="icon-fxspace.png" alt="FX SPACE">
-            <span class="logo-text">学習ナビ</span>
+            <div class="logo-text-wrap">
+                <span class="logo-text-jp">よすが式</span>
+                <span class="logo-text-main">FX<span class="logo-text-dot">.</span>動画ナビ</span>
+            </div>
         </div>
         <div class="header-search">
             <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="text" id="searchInput" placeholder="キーワードで動画を探す..." class="search-input">
-            <kbd class="search-kbd">⌘K</kbd>
+            <button class="search-clear-btn" id="searchClearBtn" style="display:none;" title="検索をクリア">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
         </div>
         <div class="header-actions">
             <button class="header-btn" id="darkModeToggle" title="ダークモード切替">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
             <button class="header-btn" id="playlistBtn" title="プレイリスト" onclick="openPlaylistModal()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 9h10v2H3V9zm0-4h10v2H3V5zm0 8h7v2H3v-2z" fill="currentColor"/><path d="M14 9v10l9-5-9-5z" fill="currentColor"/></svg>
             </button>
             <button class="header-btn" id="memoListBtn" title="メモ一覧">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
@@ -50,14 +57,35 @@
 <section class="hero">
     <div class="hero-bg">
         <div class="hero-stars" id="heroStars"></div>
+        <div class="hero-grid-overlay"></div>
+        <svg class="hero-chart" viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#60a5fa" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+            <path class="hero-chart-fill" d="M0,300 Q150,250 300,270 T600,200 T900,180 T1200,150 L1200,400 L0,400 Z" fill="url(#chartFill)"/>
+            <path class="hero-chart-line" d="M0,300 Q150,250 300,270 T600,200 T900,180 T1200,150" stroke="url(#chartLine)" stroke-width="2" fill="none"/>
+        </svg>
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
         <div class="hero-nebula"></div>
+        <div class="hero-orbit hero-orbit-1"></div>
+        <div class="hero-orbit hero-orbit-2"></div>
     </div>
     <div class="hero-content">
-        <img src="logo-fxspace.png" alt="FX SPACE" class="hero-logo">
-        <h1 class="hero-title">トレード学習ナビ</h1>
-        <p class="hero-desc">レベル・テーマ・キーワードから最適な動画を瞬時に検索</p>
+        <img class="hero-brand-logo" src="logo-fxspace-horizontal.png" alt="FX SPACE">
+        <h1 class="hero-title">
+            <span class="hero-title-jp">よすが式</span>
+            <span class="hero-title-main">FX<span class="hero-title-dot">.</span>動画ナビ</span>
+        </h1>
     </div>
 </section>
 
@@ -90,6 +118,10 @@
 
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
+            <div class="sidebar-mobile-header">
+                <span class="sidebar-mobile-title">フィルター</span>
+                <button class="sidebar-mobile-close" id="sidebarMobileClose">&times;</button>
+            </div>
             <div class="sidebar-resize" id="sidebarResize"></div>
             <div class="sidebar-section">
                 <h3 class="sidebar-title">レベル</h3>
@@ -99,6 +131,16 @@
                     <label class="sidebar-option"><input type="radio" name="level" value="初心者"><span class="option-radio"></span>🌱 初心者<span class="option-count" data-level-count="初心者"></span></label>
                     <label class="sidebar-option"><input type="radio" name="level" value="中級"><span class="option-radio"></span>📈 中級<span class="option-count" data-level-count="中級"></span></label>
                     <label class="sidebar-option"><input type="radio" name="level" value="上級"><span class="option-radio"></span>🏆 上級<span class="option-count" data-level-count="上級"></span></label>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">動画タイプ</h3>
+                <div class="sidebar-options" id="typeFilters">
+                    <label class="sidebar-option"><input type="radio" name="vtype" value="all"><span class="option-radio"></span>すべて</label>
+                    <label class="sidebar-option"><input type="radio" name="vtype" value="long" checked><span class="option-radio"></span>メイン動画</label>
+                    <label class="sidebar-option"><input type="radio" name="vtype" value="live"><span class="option-radio"></span>ライブ配信</label>
+                    <label class="sidebar-option"><input type="radio" name="vtype" value="short"><span class="option-radio"></span>ショート動画</label>
                 </div>
             </div>
 
@@ -166,6 +208,7 @@
             </div>
             <div class="video-grid" id="videoGrid"></div>
             <div class="video-list hidden" id="videoList"></div>
+            <div class="pagination" id="pagination"></div>
             <div class="no-results" id="noResults" style="display:none;">
                 <div class="no-results-icon">🔍</div>
                 <p class="no-results-title">動画が見つかりませんでした</p>
@@ -265,9 +308,8 @@
     </div>
 </div>
 
-<footer class="footer"><p>FX SPACE - よすが式トレード学習ナビ</p></footer>
 
-<script src="videos.js"></script>
-<script src="app.js"></script>
+<script src="videos.js?v=20260409b"></script>
+<script src="app.js?v=20260409b"></script>
 </body>
 </html>

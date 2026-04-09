@@ -2,7 +2,7 @@ name: Update Videos
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 14 * * *'  # JST 23:00 (UTC 14:00)
   workflow_dispatch:
 
 permissions:
