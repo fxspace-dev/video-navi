@@ -1,5 +1,18 @@
 const VIDEOS = [
   {
+    "title": "FXをおすすめする理由2選",
+    "url": "https://www.youtube.com/shorts/uXMYArrANNs",
+    "thumb": "https://i.ytimg.com/vi/uXMYArrANNs/hq2.jpg",
+    "levels": [],
+    "categories": [],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "uXMYArrANNs",
+    "date": "2026-04-10",
+    "is_short": true,
+    "duration": 59
+  },
+  {
     "title": "FXのメリット3選",
     "url": "https://www.youtube.com/shorts/_VOUsCn16AI",
     "thumb": "https://i.ytimg.com/vi/_VOUsCn16AI/hq2.jpg",

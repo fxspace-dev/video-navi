@@ -1,6 +1,11 @@
 """
 Fetch latest videos from @fxyosuga YouTube channel,
 generate metadata via Gemini API, and update videos.js.
+
+重要: 新規動画には必ず is_short / duration / url / thumb をセットする。
+Shorts判定は youtube.com/shorts/{vid_id} への HEAD リクエストで行う
+(これが唯一確実な方法。YouTube Data API の uploads playlist からは
+Shortsも通常動画も区別なく /watch?v= 形式で返ってくる)。
 """
 
 import json
@@ -31,6 +36,15 @@ EXISTING_CATEGORIES = [
 ]
 
 LEVEL_OPTIONS = ["超初心者", "初心者", "中級", "上級"]
+
+REQUEST_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
+}
 
 # ---------------------------------------------------------------------------
 # videos.js I/O
@@ -82,6 +96,111 @@ def fetch_latest_videos(youtube, playlist_id: str, max_results: int = 50) -> lis
         maxResults=max_results,
     ).execute()
     return resp.get("items", [])
+
+
+def fetch_video_details(youtube, video_ids: list[str]) -> dict[str, dict]:
+    """
+    Batch-fetch content details (duration) and snippet (liveBroadcastContent)
+    for a list of video IDs. Returns {vid_id: {duration_sec, is_live}}.
+    """
+    if not video_ids:
+        return {}
+
+    result: dict[str, dict] = {}
+    # videos.list supports up to 50 IDs per request
+    for i in range(0, len(video_ids), 50):
+        batch = video_ids[i:i + 50]
+        resp = youtube.videos().list(
+            part="contentDetails,snippet,liveStreamingDetails",
+            id=",".join(batch),
+        ).execute()
+        for item in resp.get("items", []):
+            vid = item["id"]
+            iso_duration = item.get("contentDetails", {}).get("duration", "PT0S")
+            duration_sec = iso8601_duration_to_seconds(iso_duration)
+            snippet = item.get("snippet", {})
+            live_broadcast_content = snippet.get("liveBroadcastContent", "none")
+            has_live_details = "liveStreamingDetails" in item
+            result[vid] = {
+                "duration_sec": duration_sec,
+                "is_live_broadcast": live_broadcast_content in ("live", "upcoming") or has_live_details,
+            }
+    return result
+
+
+def iso8601_duration_to_seconds(iso: str) -> int:
+    """Parse ISO 8601 duration (e.g., PT1H2M3S) into total seconds."""
+    match = re.match(
+        r"^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$",
+        iso or "PT0S",
+    )
+    if not match:
+        return 0
+    h, m, s = match.groups()
+    return int(h or 0) * 3600 + int(m or 0) * 60 + int(s or 0)
+
+
+def is_youtube_short(vid_id: str) -> bool:
+    """
+    Determine if a video is a YouTube Short by checking the /shorts/{vid_id} URL.
+
+    - Status 200 → it's a Short
+    - Status 303/302 (redirect to /watch) → it's a regular video
+
+    This is the only 100% reliable method because YouTube Data API does not
+    expose a "this is a short" flag, and duration alone is insufficient
+    (Shorts can be up to 180 seconds, but regular videos can also be <180s).
+    """
+    url = f"https://www.youtube.com/shorts/{vid_id}"
+    try:
+        resp = requests.head(
+            url,
+            headers=REQUEST_HEADERS,
+            allow_redirects=False,
+            timeout=15,
+        )
+        if resp.status_code == 200:
+            return True
+        if resp.status_code in (301, 302, 303, 307, 308):
+            # If the redirect target keeps /shorts/ in the path, it's still a short.
+            # Normally YouTube redirects non-shorts to /watch?v=...
+            location = resp.headers.get("Location", "")
+            if "/shorts/" in location:
+                return True
+            return False
+        # Fallback for unexpected status: assume not short
+        print(
+            f"  WARNING: unexpected HEAD status {resp.status_code} for {url}",
+            file=sys.stderr,
+        )
+        return False
+    except Exception as e:
+        print(
+            f"  WARNING: HEAD request failed for {url}: {e}. "
+            "Falling back to GET request.",
+            file=sys.stderr,
+        )
+        # HEAD sometimes fails; fall back to a lightweight GET.
+        try:
+            resp = requests.get(
+                url,
+                headers=REQUEST_HEADERS,
+                allow_redirects=False,
+                timeout=15,
+            )
+            if resp.status_code == 200:
+                return True
+            if resp.status_code in (301, 302, 303, 307, 308):
+                location = resp.headers.get("Location", "")
+                return "/shorts/" in location
+            return False
+        except Exception as e2:
+            print(
+                f"  ERROR: GET fallback also failed: {e2}. "
+                "Cannot determine Shorts status — aborting to prevent misclassification.",
+                file=sys.stderr,
+            )
+            raise
 
 
 # ---------------------------------------------------------------------------
@@ -167,13 +286,55 @@ def generate_metadata(title: str, transcript: str | None) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Validation
+# ---------------------------------------------------------------------------
+
+REQUIRED_FIELDS = ("title", "url", "thumb", "vid_id", "date", "is_short", "duration")
+
+
+def validate_entry(entry: dict) -> None:
+    """
+    Ensure every new video entry has all required fields.
+    Abort the whole script if any field is missing — we would rather fail loudly
+    than silently emit misclassified data.
+    """
+    missing = [f for f in REQUIRED_FIELDS if f not in entry or entry[f] is None]
+    if missing:
+        raise ValueError(
+            f"Video entry is missing required fields {missing}: "
+            f"{json.dumps(entry, ensure_ascii=False)}"
+        )
+    if not isinstance(entry["is_short"], bool):
+        raise ValueError(
+            f"is_short must be bool, got {type(entry['is_short']).__name__}: "
+            f"{json.dumps(entry, ensure_ascii=False)}"
+        )
+    if not isinstance(entry["duration"], int) or entry["duration"] < 0:
+        raise ValueError(
+            f"duration must be a non-negative int, got {entry['duration']!r}: "
+            f"{json.dumps(entry, ensure_ascii=False)}"
+        )
+    # Consistency check: URLs must match is_short
+    if entry["is_short"] and "/shorts/" not in entry["url"]:
+        raise ValueError(
+            f"is_short=True but url does not contain /shorts/: "
+            f"{json.dumps(entry, ensure_ascii=False)}"
+        )
+    if not entry["is_short"] and "/shorts/" in entry["url"]:
+        raise ValueError(
+            f"is_short=False but url contains /shorts/: "
+            f"{json.dumps(entry, ensure_ascii=False)}"
+        )
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main():
     # Read existing data
     existing_videos, rest_of_file = read_videos_js()
-    existing_ids = {v["vid_id"] for v in existing_videos}
+    existing_ids = {v["vid_id"] for v in existing_videos if v.get("vid_id")}
     print(f"Existing videos: {len(existing_videos)}")
 
     # Fetch from YouTube
@@ -184,47 +345,90 @@ def main():
     latest_items = fetch_latest_videos(youtube, playlist_id, max_results=50)
     print(f"Fetched {len(latest_items)} items from YouTube")
 
-    # Find new videos
-    new_videos = []
+    # Identify brand-new video IDs
+    new_items = []
     for item in latest_items:
         snippet = item["snippet"]
         vid_id = snippet["resourceId"]["videoId"]
         if vid_id in existing_ids:
             continue
+        new_items.append((vid_id, snippet))
 
+    if not new_items:
+        print("No new videos found. Nothing to update.")
+        return
+
+    print(f"New videos to process: {len(new_items)}")
+
+    # Batch-fetch duration + live status for all new videos
+    new_ids = [vid for vid, _ in new_items]
+    details_map = fetch_video_details(youtube, new_ids)
+
+    # Build entries
+    new_videos: list[dict] = []
+    for vid_id, snippet in new_items:
         title = snippet["title"]
         published = snippet["publishedAt"][:10]  # YYYY-MM-DD
         print(f"New video: {title} ({vid_id})")
 
-        # Get transcript
-        transcript = get_transcript(vid_id)
-        if transcript:
-            print(f"  Transcript: {len(transcript)} chars")
+        details = details_map.get(vid_id)
+        if not details:
+            raise RuntimeError(
+                f"videos.list returned no details for {vid_id}. "
+                "Cannot safely classify — aborting."
+            )
+
+        duration_sec = details["duration_sec"]
+        is_live_broadcast = details["is_live_broadcast"]
+
+        # Shorts detection: HEAD request to /shorts/{vid_id}
+        # Skip Shorts check for live broadcasts (lives are never shorts)
+        if is_live_broadcast:
+            is_short = False
         else:
-            print("  No transcript available")
+            is_short = is_youtube_short(vid_id)
+
+        if is_short:
+            url = f"https://www.youtube.com/shorts/{vid_id}"
+            thumb = f"https://i.ytimg.com/vi/{vid_id}/hq2.jpg"
+        else:
+            url = f"https://www.youtube.com/watch?v={vid_id}"
+            thumb = f"https://img.youtube.com/vi/{vid_id}/mqdefault.jpg"
+
+        print(
+            f"  duration={duration_sec}s, is_short={is_short}, "
+            f"is_live={is_live_broadcast}"
+        )
+
+        # Get transcript (only meaningful for non-shorts)
+        transcript = None
+        if not is_short:
+            transcript = get_transcript(vid_id)
+            if transcript:
+                print(f"  Transcript: {len(transcript)} chars")
+            else:
+                print("  No transcript available")
 
         # Generate metadata via Gemini
         metadata = generate_metadata(title, transcript)
 
-        video_entry = {
+        entry = {
             "title": title,
-            "url": f"https://www.youtube.com/watch?v={vid_id}",
-            "thumb": f"https://img.youtube.com/vi/{vid_id}/mqdefault.jpg",
+            "url": url,
+            "thumb": thumb,
             "levels": metadata.get("levels", ["初心者"]),
             "categories": metadata.get("categories", ["未分類"]),
             "method": "一般公開",
             "summary": metadata.get("summary", ""),
             "vid_id": vid_id,
             "date": published,
+            "is_short": bool(is_short),
+            "duration": int(duration_sec),
         }
-        new_videos.append(video_entry)
-
-    if not new_videos:
-        print("No new videos found. Nothing to update.")
-        return
+        validate_entry(entry)
+        new_videos.append(entry)
 
     # Insert new videos at the beginning (newest first)
-    # Sort new videos by date descending
     new_videos.sort(key=lambda v: v["date"], reverse=True)
     updated_videos = new_videos + existing_videos
 

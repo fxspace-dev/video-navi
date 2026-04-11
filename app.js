@@ -1002,7 +1002,16 @@ function escapeRegex(str) { return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 function highlightText(text, q) { if (!q) return text; return text.replace(new RegExp(escapeRegex(q), 'gi'), m => `<mark>${m}</mark>`); }
 function formatDate(d) { if (!d) return ''; const [y, m, day] = d.split('-'); return `${y}/${parseInt(m)}/${parseInt(day)}`; }
 function formatDuration(sec) { if (!sec) return ''; const h = Math.floor(sec/3600); const m = Math.floor((sec%3600)/60); const s = sec%60; return h > 0 ? h+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0') : m+':'+String(s).padStart(2,'0'); }
-function isShort(v) { return (v.url && v.url.includes('/shorts/')) || (v.duration && v.duration <= 75); }
+function isShort(v) {
+    // 優先順位: is_short フィールド > URL > duration
+    // update_videos.py が is_short を必ずセットするよう修正済みのため、
+    // 新規動画では is_short が常に存在する。既存データのフォールバックとして URL/duration も見る。
+    if (typeof v.is_short === 'boolean') return v.is_short;
+    if (v.url && v.url.includes('/shorts/')) return true;
+    // YouTube Shorts は最大 180 秒まで許容されているため閾値は 180
+    if (v.duration && v.duration <= 180) return true;
+    return false;
+}
 function isLive(v) { return v.title && v.title.includes('ライブ配信'); }
 function getVideoType(v) { if (isShort(v)) return 'short'; if (isLive(v)) return 'live'; return 'long'; }
 
