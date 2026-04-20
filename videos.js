@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
-    "url": "https://www.youtube.com/watch?v=H68R87gwzqU",
-    "thumb": "https://img.youtube.com/vi/H68R87gwzqU/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
+    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -11,10 +11,10 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "",
-    "vid_id": "H68R87gwzqU",
+    "vid_id": "6Wlco85JqvQ",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 0
+    "duration": 6226
   },
   {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
