@@ -109,7 +109,7 @@ def generate_metadata(title, transcript, need_full):
 - JSONのみ出力: {{"summary": "要約文"}}
 - マークダウンのコードブロックなし"""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512 if need_full else 256},

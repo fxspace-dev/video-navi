@@ -261,7 +261,7 @@ def generate_metadata(title: str, transcript: str | None) -> dict:
 - categoriesは動画の主題に合うもの（1〜3個）
 - JSONのみ出力（マークダウンのコードブロックなし）"""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512},
