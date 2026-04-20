@@ -241,10 +241,12 @@ def fetch_video_details(youtube, video_ids: list[str]) -> dict[str, dict]:
             live_broadcast_content = snippet.get("liveBroadcastContent", "none")
             has_live_details = "liveStreamingDetails" in item
             published_at = snippet.get("publishedAt", "")[:10]
+            title = snippet.get("title", "")
             result[vid] = {
                 "duration_sec": duration_sec,
                 "is_live_broadcast": live_broadcast_content in ("live", "upcoming") or has_live_details,
                 "published": published_at,
+                "title": title,
             }
     return result
 
@@ -470,21 +472,18 @@ def main():
     playlist_id = get_uploads_playlist_id(youtube)
     print(f"Uploads playlist: {playlist_id}")
 
-    # 1. YouTube Data API: 公開・限定公開の動画（メンバー限定は返ってこない）
+    # 1. 公開動画: YouTube Data API から取得
     latest_items = fetch_latest_videos(youtube, playlist_id, max_results=50)
-    api_ids = {item["snippet"]["resourceId"]["videoId"] for item in latest_items}
-    print(f"API items: {len(latest_items)}")
+    print(f"API items (公開動画): {len(latest_items)}")
 
-    # 2. チャンネルページスクレイピング: メンバー限定含む全動画
-    scraped = scrape_channel_videos_tab()
-    print(f"Scraped items (動画タブ): {len(scraped)}")
+    # 2. メンバー限定動画: Discord メッセージから取得（discord_urls）
 
     # 3. マージして処理対象を組み立てる
-    # (vid_id, title, published_date_or_None, is_member_only)
-    new_items: list[tuple[str, str, str | None, bool]] = []
+    # (vid_id, title_or_None, published_or_None, method, url_override_or_None)
+    new_items: list[tuple[str, str | None, str | None, str, str | None]] = []
     seen = set()
 
-    # API から来た動画（公開・限定公開）
+    # 公開動画
     for item in latest_items:
         snippet = item["snippet"]
         vid_id = snippet["resourceId"]["videoId"]
@@ -492,35 +491,50 @@ def main():
             continue
         title = snippet["title"]
         if should_exclude_title(title):
-            print(f"  SKIP (除外): {title}")
+            print(f"  SKIP (除外・公開): {title}")
             continue
         seen.add(vid_id)
-        new_items.append((vid_id, title, snippet["publishedAt"][:10], False))
+        new_items.append((vid_id, title, snippet["publishedAt"][:10], "一般公開", None))
 
-    # スクレイプから来た動画のうち、API に無いものはメンバー限定扱い
-    for vid_id, title in scraped:
-        if vid_id in existing_ids or vid_id in seen:
+    # メンバー限定動画: Discord に貼られているが videos.js に未登録のもの
+    discord_new_ids = [
+        vid for vid in discord_urls.keys()
+        if vid not in existing_ids and vid not in seen
+    ]
+    print(f"Discord 新規 vid_id: {len(discord_new_ids)}件")
+
+    # 全未登録動画のメタデータを videos.list で一括取得（タイトル・duration・live状態）
+    all_new_ids = [spec[0] for spec in new_items] + discord_new_ids
+    details_map = fetch_video_details(youtube, all_new_ids) if all_new_ids else {}
+
+    # Discord 由来の動画を追加
+    for vid_id in discord_new_ids:
+        details = details_map.get(vid_id)
+        if not details:
+            print(f"  SKIP (YouTube情報なし): {vid_id}")
+            continue
+        title = details.get("title", "")
+        if not title:
+            print(f"  SKIP (タイトル空): {vid_id}")
             continue
         if should_exclude_title(title):
-            print(f"  SKIP (除外): {title}")
+            print(f"  SKIP (除外・Discord): {title}")
             continue
-        is_member_only = vid_id not in api_ids
         seen.add(vid_id)
-        # スクレイプ由来は published 不明 → fetch_video_details で埋める
-        new_items.append((vid_id, title, None, is_member_only))
+        new_items.append((
+            vid_id,
+            title,
+            details.get("published", ""),
+            "メンバーシップ限定公開",
+            discord_urls[vid_id],
+        ))
 
-    # 新規動画がなくても、既存のメンバー限定動画のURL更新は実行したいので
-    # return せずに続ける
     print(f"New videos to process: {len(new_items)}")
-
-    # Batch-fetch duration + live status + publishedAt for all new videos
-    new_ids = [vid for vid, _, _, _ in new_items]
-    details_map = fetch_video_details(youtube, new_ids) if new_ids else {}
 
     # Build entries
     new_videos: list[dict] = []
-    for vid_id, title, published_hint, is_member_only in new_items:
-        print(f"New video: {title} ({vid_id}) member_only={is_member_only}")
+    for vid_id, title, published_hint, method, url_override in new_items:
+        print(f"New video: {title} ({vid_id}) method={method}")
 
         details = details_map.get(vid_id)
         if not details:
@@ -531,7 +545,7 @@ def main():
 
         duration_sec = details["duration_sec"]
         is_live_broadcast = details["is_live_broadcast"]
-        published = published_hint or details.get("published", "")
+        published = published_hint or details.get("published", "") or ""
 
         # Shorts detection: HEAD request to /shorts/{vid_id}
         # Skip Shorts check for live broadcasts (lives are never shorts)
@@ -540,20 +554,15 @@ def main():
         else:
             is_short = is_youtube_short(vid_id)
 
-        # URL / method 決定
-        # - メンバー限定動画 かつ Discord URL が見つかれば → Discord URL に差し替え
-        # - それ以外は従来通り YouTube URL
-        method = "メンバーシップ限定公開" if is_member_only else "一般公開"
-        discord_url = discord_urls.get(vid_id)
-
-        if is_member_only and discord_url:
-            url = discord_url
+        # URL / thumb 決定
+        if url_override:
+            url = url_override  # Discord メッセージリンク
         elif is_short:
             url = f"https://www.youtube.com/shorts/{vid_id}"
         else:
             url = f"https://www.youtube.com/watch?v={vid_id}"
 
-        # サムネイルは常に YouTube を使う（Discordに無いため）
+        # サムネイルは常に YouTube を使う
         if is_short:
             thumb = f"https://i.ytimg.com/vi/{vid_id}/hq2.jpg"
         else:
@@ -562,12 +571,12 @@ def main():
         print(
             f"  duration={duration_sec}s, is_short={is_short}, "
             f"is_live={is_live_broadcast}, method={method}, "
-            f"url={'discord' if is_member_only and discord_url else 'youtube'}"
+            f"url_src={'discord' if url_override else 'youtube'}"
         )
 
-        # Get transcript (only meaningful for non-shorts, 公開動画のみ）
+        # Transcript は公開動画 & 長尺のみ取得
         transcript = None
-        if not is_short and not is_member_only:
+        if not is_short and method == "一般公開":
             transcript = get_transcript(vid_id)
             if transcript:
                 print(f"  Transcript: {len(transcript)} chars")
@@ -593,25 +602,37 @@ def main():
         validate_entry(entry)
         new_videos.append(entry)
 
-    # 既存のメンバー限定動画について、Discord URL が新たに判明した場合は上書き
+    # 既存動画をフィルタリング:
+    # - メンバー限定で Discord URL 未発見 → 視聴不可なので削除
+    # - メンバー限定で Discord URL あり → 最新URLに更新
+    # - 一般公開 → そのまま
+    kept_existing: list[dict] = []
     refreshed_count = 0
+    removed_orphan = 0
     for v in existing_videos:
-        if v.get("method") != "メンバーシップ限定公開":
-            continue
-        vid = v.get("vid_id")
-        if not vid:
-            continue
-        discord_url = discord_urls.get(vid)
-        if discord_url and v.get("url") != discord_url:
-            print(f"  URL更新: {v.get('title')} → Discord")
-            v["url"] = discord_url
-            refreshed_count += 1
+        if v.get("method") == "メンバーシップ限定公開":
+            vid = v.get("vid_id")
+            discord_url = discord_urls.get(vid) if vid else None
+            if discord_url:
+                if v.get("url") != discord_url:
+                    print(f"  URL更新: {v.get('title')} → Discord")
+                    v["url"] = discord_url
+                    refreshed_count += 1
+                kept_existing.append(v)
+            else:
+                # Discord に URL が見つからないメンバー限定動画は視聴できないため削除
+                print(f"  削除 (Discordに無い): {v.get('title')}")
+                removed_orphan += 1
+        else:
+            kept_existing.append(v)
     if refreshed_count:
-        print(f"既存動画のURLを{refreshed_count}件更新しました")
+        print(f"既存動画のURLを{refreshed_count}件更新")
+    if removed_orphan:
+        print(f"孤立したメンバー限定動画を{removed_orphan}件削除")
 
     # Insert new videos at the beginning (newest first)
     new_videos.sort(key=lambda v: v["date"], reverse=True)
-    updated_videos = new_videos + existing_videos
+    updated_videos = new_videos + kept_existing
 
     # Dedupe by title - keep first occurrence (which is the newest after sort)
     seen_titles = set()

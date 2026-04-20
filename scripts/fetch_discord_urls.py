@@ -181,25 +181,9 @@ def main():
                 print(f"  WARNING: スレッド取得失敗: {e}")
 
         hits = 0
-        # デバッグ: 各メッセージの内容を確認
-        # (トーク動画チャンネルのみ詳細ダンプ)
-        is_debug_ch = ch_id == "1413466542049464330"
-        if is_debug_ch:
-            print(f"  === デバッグ: {ch_name} 全メッセージダンプ ===", flush=True)
         # 直下メッセージの処理
         for msg in msgs:
             vids = extract_vid_ids(msg)
-            if is_debug_ch:
-                content_preview = (msg.get("content") or "")[:120]
-                attach = len(msg.get("attachments", []))
-                emb_count = len(msg.get("embeds", []))
-                emb_urls = [e.get("url", "") for e in msg.get("embeds", [])]
-                print(
-                    f"  msg {msg['id']}: vids={vids} "
-                    f"content={content_preview!r} "
-                    f"attach={attach} emb_urls={emb_urls}",
-                    flush=True,
-                )
             if not vids:
                 continue
             msg_url = build_message_url(SERVER_ID, ch_id, msg["id"])
@@ -222,13 +206,9 @@ def main():
         print(f"  マッピング追加: {hits}件")
 
     print(f"\n合計マッピング: {len(mapping)}件")
-    # デバッグ: 全マッピングの vid_id 一覧を出力
-    print("\n--- 全マッピング vid_id ---")
-    for vid in sorted(mapping.keys()):
-        print(f"  {vid}")
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(mapping, f, ensure_ascii=False, indent=2)
-    print(f"\n保存先: {OUTPUT_PATH}")
+    print(f"保存先: {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
