@@ -4,13 +4,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
     "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
     "vid_id": "6Wlco85JqvQ",
     "date": "2026-04-15",
     "is_short": false,
@@ -21,13 +24,17 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=2C-GJoetInw",
     "thumb": "https://img.youtube.com/vi/2C-GJoetInw/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "超初心者",
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "実践",
+      "トレード環境"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "2026年最新のスマホトレードで勝つための全手順を解説している。",
     "vid_id": "2C-GJoetInw",
     "date": "2026-04-18",
     "is_short": false,
@@ -38,13 +45,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
     "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "ナウキャスト",
+      "手法",
+      "プライスアクション"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロトレーダーが活用するナウキャストの概念と、そのトレードにおける重要性について解説している。",
     "vid_id": "fAEy5mNTkxQ",
     "date": "2026-04-17",
     "is_short": true,
@@ -55,13 +65,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/shorts/N6MsSR8wUWQ",
     "thumb": "https://i.ytimg.com/vi/N6MsSR8wUWQ/hq2.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "メンタル",
+      "手法",
+      "実践"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXプロトレーダーの思考プロセスやトレードにおける重要な考え方を解説している。",
     "vid_id": "N6MsSR8wUWQ",
     "date": "2026-04-15",
     "is_short": true,
@@ -72,13 +85,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=kR7krXzUjWE",
     "thumb": "https://img.youtube.com/vi/kR7krXzUjWE/mqdefault.jpg",
     "levels": [
+      "超初心者",
       "初心者"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "実践",
+      "実績"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FX初心者が3ヶ月でプロレベルに到達するために実践した具体的な学習方法やトレード戦略について解説している。",
     "vid_id": "kR7krXzUjWE",
     "date": "2026-04-12",
     "is_short": false,
@@ -89,13 +105,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=dmi_TzivCMQ",
     "thumb": "https://img.youtube.com/vi/dmi_TzivCMQ/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "スキャルピング"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を積み上げる様子をライブ配信で解説している。",
     "vid_id": "dmi_TzivCMQ",
     "date": "2026-04-09",
     "is_short": false,
@@ -106,13 +125,16 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=SrCFIG2dkR4",
     "thumb": "https://img.youtube.com/vi/SrCFIG2dkR4/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
     "vid_id": "SrCFIG2dkR4",
     "date": "2026-04-07",
     "is_short": false,
@@ -125,7 +147,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXをおすすめする理由を2つ解説。手軽に始められる点と、利益を狙える可能性について紹介。",
     "vid_id": "uXMYArrANNs",
     "date": "2026-04-10",
     "is_short": true,
@@ -138,7 +160,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXの魅力的なメリット3つを解説。",
     "vid_id": "_VOUsCn16AI",
     "date": "2026-04-08",
     "is_short": true,
@@ -151,7 +173,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロトレーダーが10万円からスキャルピングで資金を増やす様子をライブ配信で解説。",
     "vid_id": "84LHx8b7KVM",
     "date": "2026-04-08",
     "is_short": false,
@@ -182,7 +204,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FX取引における2種類の利益について解説。",
     "vid_id": "Gaom2Zxy4lQ",
     "date": "2026-04-03",
     "is_short": true,
@@ -195,7 +217,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "少額資金でもFXトレードが可能な理由と、その始め方について解説。",
     "vid_id": "w03X5pwTgj0",
     "date": "2026-04-01",
     "is_short": true,
@@ -228,7 +250,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXが他の投資よりも有利な理由を解説。",
     "vid_id": "H_3I9KIXFBE",
     "date": "2026-03-25",
     "is_short": true,
@@ -241,7 +263,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プロスペクト理論の罠について解説。",
     "vid_id": "WXvMqRgoIT8",
     "date": "2026-03-20",
     "is_short": true,
@@ -254,7 +276,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "月利8%という高いリターンで億万長者を目指す方法を解説。",
     "vid_id": "p0HkSmGsCik",
     "date": "2026-03-18",
     "is_short": true,
@@ -287,7 +309,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "兼業トレーダーのトレーディングスタイルを深掘りする動画。具体的な手法や考え方について解説。",
     "vid_id": "IQNyQOeGIiI",
     "date": "2026-03-13",
     "is_short": true,
@@ -300,7 +322,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "原油市場の現状と今後の見通しについて、ライブ配信で解説。視聴者からの質問にも随時回答。",
     "vid_id": "qtT2NJnvs00",
     "date": "2026-03-12",
     "is_short": false,
@@ -313,7 +335,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "兼業トレーダーのトレーダースタイルについて解説。トレーダーとしての活動スタイルや考え方を紹介。",
     "vid_id": "bp4rjxR9qkU",
     "date": "2026-03-11",
     "is_short": true,
@@ -326,7 +348,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "トレードを成功させるためには、日々の継続的な実践を通じて習慣化することが重要であること。",
     "vid_id": "hIwbhqmzWxo",
     "date": "2026-03-06",
     "is_short": true,
@@ -370,7 +392,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "プライスアクションの正しい使い方を解説。",
     "vid_id": "HInM4sC1o7Q",
     "date": "2026-02-25",
     "is_short": true,
@@ -383,7 +405,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおける候補値選定の重要性について解説。",
     "vid_id": "if_5OnsMpco",
     "date": "2026-02-20",
     "is_short": true,
@@ -612,7 +634,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "レンジ相場におけるブレイクアウトの発生メカニズムと、その後の値動きの可能性について解説。",
     "vid_id": "TkQz2ZboUIc",
     "date": "2026-01-16",
     "is_short": true,
