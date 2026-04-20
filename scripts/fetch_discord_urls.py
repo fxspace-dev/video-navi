@@ -140,9 +140,11 @@ def main():
         msgs = fetch_messages(ch_id)
         print(f"  直下メッセージ: {len(msgs)}件")
 
-        # 3. Forum/Media の場合はスレッドも辿る
+        # 3. スレッドも辿る（テキスト/フォーラム/メディアすべて対応）
+        # type=0のテキストチャンネルでも、スレッド機能を使って
+        # 各動画が個別スレッドに分けられている場合がある。
         thread_msgs: list[tuple[str, dict]] = []  # (thread_id, msg)
-        if ch_type in (15, 16):
+        if ch_type in (0, 5, 15, 16):
             # Active threads
             try:
                 at_r = requests.get(
