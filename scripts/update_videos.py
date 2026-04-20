@@ -574,9 +574,10 @@ def main():
             f"url_src={'discord' if url_override else 'youtube'}"
         )
 
-        # Transcript は公開動画 & 長尺のみ取得
+        # 字幕取得（ショート以外の全ての動画で試す）
+        # メンバー限定動画（限定公開版ID）でも字幕は取得可能
         transcript = None
-        if not is_short and method == "一般公開":
+        if not is_short:
             transcript = get_transcript(vid_id)
             if transcript:
                 print(f"  Transcript: {len(transcript)} chars")
