@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
-    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
-    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=H68R87gwzqU",
+    "thumb": "https://img.youtube.com/vi/H68R87gwzqU/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -14,10 +14,10 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
-    "vid_id": "6Wlco85JqvQ",
+    "vid_id": "H68R87gwzqU",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 6226
+    "duration": 0
   },
   {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
