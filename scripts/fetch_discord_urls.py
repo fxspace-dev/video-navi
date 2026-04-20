@@ -19,8 +19,8 @@ import time
 import requests
 
 DISCORD_API = "https://discord.com/api/v10"
-BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
-SERVER_ID = os.environ.get("DISCORD_SERVER_ID", "")
+BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "").strip()
+SERVER_ID = os.environ.get("DISCORD_SERVER_ID", "").strip()
 CHANNEL_IDS = [c.strip() for c in os.environ.get("DISCORD_CHANNEL_IDS", "").split(",") if c.strip()]
 
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
