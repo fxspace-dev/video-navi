@@ -79,6 +79,14 @@ function updateWatchLaterBadge() {
 const YT_API_KEY = 'AIzaSyDwzewTQkfpXMABw_K8WDb6Cn8v56PkvrA';
 const YT_CHANNEL_HANDLE = '@fxyosuga';
 
+// ISO 8601 duration (PT#H#M#S) → 秒数
+function parseIsoDuration(iso) {
+    if (!iso) return 0;
+    const m = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+    if (!m) return 0;
+    return (parseInt(m[1] || 0) * 3600) + (parseInt(m[2] || 0) * 60) + parseInt(m[3] || 0);
+}
+
 async function fetchYouTubeVideos() {
     try {
         // 1. ハンドルからチャンネルIDを取得
@@ -95,23 +103,47 @@ async function fetchYouTubeVideos() {
         // 3. 既存のvid_idセットを作成
         const existingIds = new Set(VIDEOS.map(v => v.vid_id).filter(Boolean));
 
-        // 4. 新しい動画をVIDEOSに追加
+        // 4. 未登録の videoId だけに絞る
+        const newItems = plData.items.filter(it => !existingIds.has(it.snippet.resourceId.videoId));
+        if (newItems.length === 0) return;
+
+        // 5. contentDetails + liveStreamingDetails を追加取得（duration と live 状態判定のため）
+        const newIds = newItems.map(it => it.snippet.resourceId.videoId);
+        const vRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=contentDetails,liveStreamingDetails&id=${newIds.join(',')}&key=${YT_API_KEY}`);
+        const vData = await vRes.json();
+        const detailsById = {};
+        for (const v of (vData.items || [])) {
+            detailsById[v.id] = {
+                duration: parseIsoDuration(v.contentDetails?.duration),
+                isLive: !!v.liveStreamingDetails,
+            };
+        }
+
+        // 6. 新しい動画をVIDEOSに追加（is_short / duration / url / thumb を正しくセット）
         let addedCount = 0;
-        for (const item of plData.items) {
+        for (const item of newItems) {
             const snippet = item.snippet;
             const videoId = snippet.resourceId.videoId;
-            if (existingIds.has(videoId)) continue;
+            const d = detailsById[videoId] || { duration: 0, isLive: false };
+            // ショート判定: ライブ配信でない かつ duration ≤ 180 秒
+            const isShortGuess = !d.isLive && d.duration > 0 && d.duration <= 180;
 
             VIDEOS.push({
                 title: snippet.title,
-                url: `https://www.youtube.com/watch?v=${videoId}`,
-                thumb: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+                url: isShortGuess
+                    ? `https://www.youtube.com/shorts/${videoId}`
+                    : `https://www.youtube.com/watch?v=${videoId}`,
+                thumb: isShortGuess
+                    ? `https://i.ytimg.com/vi/${videoId}/hq2.jpg`
+                    : `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
                 levels: [],
                 categories: ['未分類'],
                 method: '一般公開',
                 summary: '',
                 vid_id: videoId,
                 date: snippet.publishedAt.substring(0, 10),
+                is_short: isShortGuess,
+                duration: d.duration,
                 _auto: true
             });
             addedCount++;
