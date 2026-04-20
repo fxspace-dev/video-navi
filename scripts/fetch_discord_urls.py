@@ -181,9 +181,25 @@ def main():
                 print(f"  WARNING: スレッド取得失敗: {e}")
 
         hits = 0
+        # デバッグ: 各メッセージの内容を確認
+        # (トーク動画チャンネルのみ詳細ダンプ)
+        is_debug_ch = ch_id == "1413466542049464330"
+        if is_debug_ch:
+            print(f"  === デバッグ: {ch_name} 全メッセージダンプ ===", flush=True)
         # 直下メッセージの処理
         for msg in msgs:
             vids = extract_vid_ids(msg)
+            if is_debug_ch:
+                content_preview = (msg.get("content") or "")[:120]
+                attach = len(msg.get("attachments", []))
+                emb_count = len(msg.get("embeds", []))
+                emb_urls = [e.get("url", "") for e in msg.get("embeds", [])]
+                print(
+                    f"  msg {msg['id']}: vids={vids} "
+                    f"content={content_preview!r} "
+                    f"attach={attach} emb_urls={emb_urls}",
+                    flush=True,
+                )
             if not vids:
                 continue
             msg_url = build_message_url(SERVER_ID, ch_id, msg["id"])
