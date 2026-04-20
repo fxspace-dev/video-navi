@@ -139,9 +139,13 @@ def main():
         print(f"  マッピング追加: {hits}件")
 
     print(f"\n合計マッピング: {len(mapping)}件")
+    # デバッグ: 全マッピングの vid_id 一覧を出力
+    print("\n--- 全マッピング vid_id ---")
+    for vid in sorted(mapping.keys()):
+        print(f"  {vid}")
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(mapping, f, ensure_ascii=False, indent=2)
-    print(f"保存先: {OUTPUT_PATH}")
+    print(f"\n保存先: {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

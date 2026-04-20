@@ -509,15 +509,13 @@ def main():
         # スクレイプ由来は published 不明 → fetch_video_details で埋める
         new_items.append((vid_id, title, None, is_member_only))
 
-    if not new_items:
-        print("No new videos found. Nothing to update.")
-        return
-
+    # 新規動画がなくても、既存のメンバー限定動画のURL更新は実行したいので
+    # return せずに続ける
     print(f"New videos to process: {len(new_items)}")
 
     # Batch-fetch duration + live status + publishedAt for all new videos
     new_ids = [vid for vid, _, _, _ in new_items]
-    details_map = fetch_video_details(youtube, new_ids)
+    details_map = fetch_video_details(youtube, new_ids) if new_ids else {}
 
     # Build entries
     new_videos: list[dict] = []
@@ -594,6 +592,22 @@ def main():
         }
         validate_entry(entry)
         new_videos.append(entry)
+
+    # 既存のメンバー限定動画について、Discord URL が新たに判明した場合は上書き
+    refreshed_count = 0
+    for v in existing_videos:
+        if v.get("method") != "メンバーシップ限定公開":
+            continue
+        vid = v.get("vid_id")
+        if not vid:
+            continue
+        discord_url = discord_urls.get(vid)
+        if discord_url and v.get("url") != discord_url:
+            print(f"  URL更新: {v.get('title')} → Discord")
+            v["url"] = discord_url
+            refreshed_count += 1
+    if refreshed_count:
+        print(f"既存動画のURLを{refreshed_count}件更新しました")
 
     # Insert new videos at the beginning (newest first)
     new_videos.sort(key=lambda v: v["date"], reverse=True)
