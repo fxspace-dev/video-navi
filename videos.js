@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
-    "url": "https://www.youtube.com/watch?v=H68R87gwzqU",
-    "thumb": "https://img.youtube.com/vi/H68R87gwzqU/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
+    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -14,10 +14,63 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
-    "vid_id": "H68R87gwzqU",
+    "vid_id": "6Wlco85JqvQ",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 0
+    "duration": 6226
+  },
+  {
+    "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
+    "url": "https://www.youtube.com/watch?v=xAQLqpI73DY",
+    "thumb": "https://img.youtube.com/vi/xAQLqpI73DY/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "xAQLqpI73DY",
+    "date": "2026-04-15",
+    "is_short": false,
+    "duration": 2206
+  },
+  {
+    "title": "【4/15より適用】Fintokeiのギャンブル行為ルールが変更したので解説",
+    "url": "https://www.youtube.com/watch?v=GJGx8xPoztI",
+    "thumb": "https://img.youtube.com/vi/GJGx8xPoztI/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "プロップファーム",
+      "その他手法"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "2024年4月15日より適用されるFintokeiのギャンブル行為に関する新ルールについて解説している。",
+    "vid_id": "GJGx8xPoztI",
+    "date": "2026-04-14",
+    "is_short": false,
+    "duration": 550
+  },
+  {
+    "title": "ゼロプロ90 5期　募集開始",
+    "url": "https://www.youtube.com/watch?v=z_1f4US6wbk",
+    "thumb": "https://img.youtube.com/vi/z_1f4US6wbk/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "z_1f4US6wbk",
+    "date": "2026-04-07",
+    "is_short": false,
+    "duration": 748
   },
   {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
