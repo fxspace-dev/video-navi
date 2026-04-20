@@ -1,0 +1,4 @@
+scripts/discord_urls.json
+__pycache__/
+*.pyc
+.venv/

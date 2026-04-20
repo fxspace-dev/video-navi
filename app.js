@@ -565,7 +565,12 @@ function renderGridCard(v, i) {
     const durationHtml = v.duration ? '<span class="video-duration">' + formatDuration(v.duration) + '</span>' : '';
     const vtype = getVideoType(v);
     const typeLabel = vtype === 'short' ? '<span class="video-short-label">SHORT</span>' : vtype === 'live' ? '<span class="video-live-label">LIVE</span>' : '';
-    return `<a href="${v.url}" target="_blank" class="video-card ${watched ? 'is-watched' : ''}" style="--cat-color:${catColor}" onclick="openModal(${idx}); return false;">
+    // メンバー限定動画の場合は Discord URL を新タブで開く（モーダル表示しない）
+    const isMemberOnly = v.method === 'メンバーシップ限定公開';
+    const clickAttr = isMemberOnly
+        ? `onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');"`
+        : `onclick="openModal(${idx}); return false;"`;
+    return `<a href="${v.url}" target="_blank" class="video-card ${watched ? 'is-watched' : ''}" style="--cat-color:${catColor}" ${clickAttr}>
         <div class="video-thumb">${thumbHtml}<div class="video-play-overlay"><div class="play-icon"></div></div>${watchedBadge}${durationHtml}${typeLabel}<button class="card-watchlater ${wlClass}" onclick="event.preventDefault();event.stopPropagation();toggleWatchLater('${v.title.replace(/'/g, "\\'")}');" title="後で見る">${wlIcon}</button></div>
         <div class="video-info"><h3 class="video-title"><span class="video-badge ${badgeClass}">${badgeText}</span>${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryHint}<div class="video-meta">${dateStr ? `<span class="video-date">${dateStr}</span>` : ''}${hasMemo(v.title) ? '<span class="video-memo-icon" title="メモあり">&#9998;</span>' : ''}</div><div class="video-tags">${levelTags}${catTags}</div></div></a>`;
 }
@@ -580,7 +585,11 @@ function renderListItem(v, i) {
     const summaryText = v.summary ? v.summary.slice(0, 80) + (v.summary.length > 80 ? '...' : '') : '';
     const idx = VIDEOS.indexOf(v);
     const catColor = getCatColor(v.categories);
-    return `<a href="${v.url}" target="_blank" class="video-list-item" style="--cat-color:${catColor}" onclick="openModal(${idx}); return false;">
+    const isMemberOnly = v.method === 'メンバーシップ限定公開';
+    const clickAttr = isMemberOnly
+        ? `onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');"`
+        : `onclick="openModal(${idx}); return false;"`;
+    return `<a href="${v.url}" target="_blank" class="video-list-item" style="--cat-color:${catColor}" ${clickAttr}>
         <div class="list-thumb">${thumbHtml}</div>
         <div class="list-info"><h3 class="list-title">${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryText ? `<p class="list-summary">${searchQuery ? highlightText(summaryText, searchQuery) : summaryText}</p>` : ''}<div class="list-meta"><span class="list-badge ${badgeClass}">${badgeText}</span>${dateStr ? `<span class="list-date">${dateStr}</span>` : ''}${levelTags}${catTags}</div></div></a>`;
 }

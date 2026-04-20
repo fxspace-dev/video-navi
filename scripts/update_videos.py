@@ -24,7 +24,15 @@ from youtube_transcript_api import YouTubeTranscriptApi
 YOUTUBE_API_KEY = os.environ["YOUTUBE_API_KEY"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", YOUTUBE_API_KEY)
 CHANNEL_HANDLE = "@fxyosuga"
+CHANNEL_VIDEOS_URL = "https://www.youtube.com/@fxyosuga/videos"
 VIDEOS_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "videos.js")
+DISCORD_URLS_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
+
+# 除外する動画のタイトルパターン（ユーザー指定）
+EXCLUDE_TITLE_PATTERNS = [
+    re.compile(r"今日のシナリオ構築"),
+    re.compile(r"ゼロプロ.*期.*添削"),
+]
 
 EXISTING_CATEGORIES = [
     "手法", "基礎", "リアルトレード", "雑談", "メンタル", "実践",
@@ -98,6 +106,107 @@ def fetch_latest_videos(youtube, playlist_id: str, max_results: int = 50) -> lis
     return resp.get("items", [])
 
 
+def scrape_channel_videos_tab() -> list[tuple[str, str]]:
+    """
+    チャンネルの「動画」タブをHTMLから直接パースし、
+    [(video_id, title), ...] を返す。
+
+    この関数は YouTube Data API の playlistItems では返ってこない
+    メンバー限定動画も拾える（チャンネルページ自体は公開されているため）。
+    """
+    try:
+        r = requests.get(CHANNEL_VIDEOS_URL, headers=REQUEST_HEADERS, timeout=30)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"  WARNING: チャンネルページ取得失敗: {e}", file=sys.stderr)
+        return []
+
+    html = r.text
+    idx = html.find("var ytInitialData = ")
+    if idx < 0:
+        idx = html.find("ytInitialData = ")
+    if idx < 0:
+        print("  WARNING: ytInitialData が見つかりません", file=sys.stderr)
+        return []
+
+    # Parse JSON with balanced braces
+    start = html.find("{", idx)
+    depth = 0
+    in_str = False
+    esc = False
+    end = -1
+    for i, ch in enumerate(html[start:], start=start):
+        if esc:
+            esc = False
+            continue
+        if ch == "\\":
+            esc = True
+            continue
+        if ch == '"':
+            in_str = not in_str
+            continue
+        if in_str:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                end = i + 1
+                break
+    if end < 0:
+        return []
+
+    try:
+        data = json.loads(html[start:end])
+    except Exception as e:
+        print(f"  WARNING: ytInitialData JSONパース失敗: {e}", file=sys.stderr)
+        return []
+
+    out: list[tuple[str, str]] = []
+    try:
+        tabs = data["contents"]["twoColumnBrowseResultsRenderer"]["tabs"]
+        for t in tabs:
+            tr = t.get("tabRenderer", {})
+            title_ja = tr.get("title", "")
+            if title_ja not in ("動画", "Videos"):
+                continue
+            items = tr.get("content", {}).get("richGridRenderer", {}).get("contents", [])
+            for it in items:
+                vr = it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
+                if not vr or not vr.get("videoId"):
+                    continue
+                vid = vr["videoId"]
+                title_runs = vr.get("title", {}).get("runs", [])
+                title = title_runs[0].get("text", "") if title_runs else ""
+                out.append((vid, title))
+            break
+    except (KeyError, TypeError) as e:
+        print(f"  WARNING: ytInitialData 構造が想定と違います: {e}", file=sys.stderr)
+
+    return out
+
+
+def should_exclude_title(title: str) -> bool:
+    """除外パターンに該当するか"""
+    for p in EXCLUDE_TITLE_PATTERNS:
+        if p.search(title):
+            return True
+    return False
+
+
+def load_discord_urls() -> dict[str, str]:
+    """fetch_discord_urls.py が生成したマッピングを読み込む"""
+    if not os.path.exists(DISCORD_URLS_PATH):
+        return {}
+    try:
+        with open(DISCORD_URLS_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"  WARNING: discord_urls.json 読み込み失敗: {e}", file=sys.stderr)
+        return {}
+
+
 def fetch_video_details(youtube, video_ids: list[str]) -> dict[str, dict]:
     """
     Batch-fetch content details (duration) and snippet (liveBroadcastContent)
@@ -121,9 +230,11 @@ def fetch_video_details(youtube, video_ids: list[str]) -> dict[str, dict]:
             snippet = item.get("snippet", {})
             live_broadcast_content = snippet.get("liveBroadcastContent", "none")
             has_live_details = "liveStreamingDetails" in item
+            published_at = snippet.get("publishedAt", "")[:10]
             result[vid] = {
                 "duration_sec": duration_sec,
                 "is_live_broadcast": live_broadcast_content in ("live", "upcoming") or has_live_details,
+                "published": published_at,
             }
     return result
 
@@ -315,16 +426,19 @@ def validate_entry(entry: dict) -> None:
             f"{json.dumps(entry, ensure_ascii=False)}"
         )
     # Consistency check: URLs must match is_short
-    if entry["is_short"] and "/shorts/" not in entry["url"]:
-        raise ValueError(
-            f"is_short=True but url does not contain /shorts/: "
-            f"{json.dumps(entry, ensure_ascii=False)}"
-        )
-    if not entry["is_short"] and "/shorts/" in entry["url"]:
-        raise ValueError(
-            f"is_short=False but url contains /shorts/: "
-            f"{json.dumps(entry, ensure_ascii=False)}"
-        )
+    # ただしメンバーシップ限定公開の場合は Discord URL になっているため除外
+    is_discord = "discord.com/channels/" in entry["url"]
+    if not is_discord:
+        if entry["is_short"] and "/shorts/" not in entry["url"]:
+            raise ValueError(
+                f"is_short=True but url does not contain /shorts/: "
+                f"{json.dumps(entry, ensure_ascii=False)}"
+            )
+        if not entry["is_short"] and "/shorts/" in entry["url"]:
+            raise ValueError(
+                f"is_short=False but url contains /shorts/: "
+                f"{json.dumps(entry, ensure_ascii=False)}"
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -337,22 +451,53 @@ def main():
     existing_ids = {v["vid_id"] for v in existing_videos if v.get("vid_id")}
     print(f"Existing videos: {len(existing_videos)}")
 
+    # Load Discord URL mapping (may be empty on first run)
+    discord_urls = load_discord_urls()
+    print(f"Discord URL mapping: {len(discord_urls)}件")
+
     # Fetch from YouTube
     youtube = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
     playlist_id = get_uploads_playlist_id(youtube)
     print(f"Uploads playlist: {playlist_id}")
 
+    # 1. YouTube Data API: 公開・限定公開の動画（メンバー限定は返ってこない）
     latest_items = fetch_latest_videos(youtube, playlist_id, max_results=50)
-    print(f"Fetched {len(latest_items)} items from YouTube")
+    api_ids = {item["snippet"]["resourceId"]["videoId"] for item in latest_items}
+    print(f"API items: {len(latest_items)}")
 
-    # Identify brand-new video IDs
-    new_items = []
+    # 2. チャンネルページスクレイピング: メンバー限定含む全動画
+    scraped = scrape_channel_videos_tab()
+    print(f"Scraped items (動画タブ): {len(scraped)}")
+
+    # 3. マージして処理対象を組み立てる
+    # (vid_id, title, published_date_or_None, is_member_only)
+    new_items: list[tuple[str, str, str | None, bool]] = []
+    seen = set()
+
+    # API から来た動画（公開・限定公開）
     for item in latest_items:
         snippet = item["snippet"]
         vid_id = snippet["resourceId"]["videoId"]
-        if vid_id in existing_ids:
+        if vid_id in existing_ids or vid_id in seen:
             continue
-        new_items.append((vid_id, snippet))
+        title = snippet["title"]
+        if should_exclude_title(title):
+            print(f"  SKIP (除外): {title}")
+            continue
+        seen.add(vid_id)
+        new_items.append((vid_id, title, snippet["publishedAt"][:10], False))
+
+    # スクレイプから来た動画のうち、API に無いものはメンバー限定扱い
+    for vid_id, title in scraped:
+        if vid_id in existing_ids or vid_id in seen:
+            continue
+        if should_exclude_title(title):
+            print(f"  SKIP (除外): {title}")
+            continue
+        is_member_only = vid_id not in api_ids
+        seen.add(vid_id)
+        # スクレイプ由来は published 不明 → fetch_video_details で埋める
+        new_items.append((vid_id, title, None, is_member_only))
 
     if not new_items:
         print("No new videos found. Nothing to update.")
@@ -360,16 +505,14 @@ def main():
 
     print(f"New videos to process: {len(new_items)}")
 
-    # Batch-fetch duration + live status for all new videos
-    new_ids = [vid for vid, _ in new_items]
+    # Batch-fetch duration + live status + publishedAt for all new videos
+    new_ids = [vid for vid, _, _, _ in new_items]
     details_map = fetch_video_details(youtube, new_ids)
 
     # Build entries
     new_videos: list[dict] = []
-    for vid_id, snippet in new_items:
-        title = snippet["title"]
-        published = snippet["publishedAt"][:10]  # YYYY-MM-DD
-        print(f"New video: {title} ({vid_id})")
+    for vid_id, title, published_hint, is_member_only in new_items:
+        print(f"New video: {title} ({vid_id}) member_only={is_member_only}")
 
         details = details_map.get(vid_id)
         if not details:
@@ -380,6 +523,7 @@ def main():
 
         duration_sec = details["duration_sec"]
         is_live_broadcast = details["is_live_broadcast"]
+        published = published_hint or details.get("published", "")
 
         # Shorts detection: HEAD request to /shorts/{vid_id}
         # Skip Shorts check for live broadcasts (lives are never shorts)
@@ -388,21 +532,34 @@ def main():
         else:
             is_short = is_youtube_short(vid_id)
 
-        if is_short:
+        # URL / method 決定
+        # - メンバー限定動画 かつ Discord URL が見つかれば → Discord URL に差し替え
+        # - それ以外は従来通り YouTube URL
+        method = "メンバーシップ限定公開" if is_member_only else "一般公開"
+        discord_url = discord_urls.get(vid_id)
+
+        if is_member_only and discord_url:
+            url = discord_url
+        elif is_short:
             url = f"https://www.youtube.com/shorts/{vid_id}"
-            thumb = f"https://i.ytimg.com/vi/{vid_id}/hq2.jpg"
         else:
             url = f"https://www.youtube.com/watch?v={vid_id}"
+
+        # サムネイルは常に YouTube を使う（Discordに無いため）
+        if is_short:
+            thumb = f"https://i.ytimg.com/vi/{vid_id}/hq2.jpg"
+        else:
             thumb = f"https://img.youtube.com/vi/{vid_id}/mqdefault.jpg"
 
         print(
             f"  duration={duration_sec}s, is_short={is_short}, "
-            f"is_live={is_live_broadcast}"
+            f"is_live={is_live_broadcast}, method={method}, "
+            f"url={'discord' if is_member_only and discord_url else 'youtube'}"
         )
 
-        # Get transcript (only meaningful for non-shorts)
+        # Get transcript (only meaningful for non-shorts, 公開動画のみ）
         transcript = None
-        if not is_short:
+        if not is_short and not is_member_only:
             transcript = get_transcript(vid_id)
             if transcript:
                 print(f"  Transcript: {len(transcript)} chars")
@@ -418,7 +575,7 @@ def main():
             "thumb": thumb,
             "levels": metadata.get("levels", ["初心者"]),
             "categories": metadata.get("categories", ["未分類"]),
-            "method": "一般公開",
+            "method": method,
             "summary": metadata.get("summary", ""),
             "vid_id": vid_id,
             "date": published,
