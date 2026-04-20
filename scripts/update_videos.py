@@ -24,7 +24,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 YOUTUBE_API_KEY = os.environ["YOUTUBE_API_KEY"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", YOUTUBE_API_KEY)
 CHANNEL_HANDLE = "@fxyosuga"
-CHANNEL_VIDEOS_URL = "https://www.youtube.com/@fxyosuga/videos"
+CHANNEL_VIDEOS_URL = "https://www.youtube.com/@fxyosuga/videos?hl=ja&gl=JP"
 VIDEOS_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "videos.js")
 DISCORD_URLS_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
 
@@ -166,21 +166,31 @@ def scrape_channel_videos_tab() -> list[tuple[str, str]]:
     out: list[tuple[str, str]] = []
     try:
         tabs = data["contents"]["twoColumnBrowseResultsRenderer"]["tabs"]
+        # タイトルに依存せず、richGridRenderer + videoRenderer を含むタブを探す。
+        # これで言語設定（動画 / Videos）やタブ位置の違いに耐える。
+        best_tab_items: list[dict] = []
         for t in tabs:
             tr = t.get("tabRenderer", {})
-            title_ja = tr.get("title", "")
-            if title_ja not in ("動画", "Videos"):
+            content = tr.get("content", {}) or {}
+            items = content.get("richGridRenderer", {}).get("contents", []) or []
+            # 最初の長尺動画 videoRenderer を見つけたらこのタブが動画タブ
+            if any(
+                it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
+                for it in items
+            ):
+                best_tab_items = items
+                title_label = tr.get("title", "?")
+                print(f"  スクレイピング: '{title_label}' タブから {len(items)}件", file=sys.stderr)
+                break
+
+        for it in best_tab_items:
+            vr = it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
+            if not vr or not vr.get("videoId"):
                 continue
-            items = tr.get("content", {}).get("richGridRenderer", {}).get("contents", [])
-            for it in items:
-                vr = it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
-                if not vr or not vr.get("videoId"):
-                    continue
-                vid = vr["videoId"]
-                title_runs = vr.get("title", {}).get("runs", [])
-                title = title_runs[0].get("text", "") if title_runs else ""
-                out.append((vid, title))
-            break
+            vid = vr["videoId"]
+            title_runs = vr.get("title", {}).get("runs", [])
+            title = title_runs[0].get("text", "") if title_runs else ""
+            out.append((vid, title))
     except (KeyError, TypeError) as e:
         print(f"  WARNING: ytInitialData 構造が想定と違います: {e}", file=sys.stderr)
 
