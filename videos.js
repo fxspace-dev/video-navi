@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
-    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
-    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=H68R87gwzqU",
+    "thumb": "https://img.youtube.com/vi/H68R87gwzqU/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -11,15 +11,15 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "",
-    "vid_id": "6Wlco85JqvQ",
+    "vid_id": "H68R87gwzqU",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 6226
+    "duration": 0
   },
   {
     "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
-    "url": "https://www.youtube.com/watch?v=xAQLqpI73DY",
-    "thumb": "https://img.youtube.com/vi/xAQLqpI73DY/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1493776048842870915",
+    "thumb": "https://img.youtube.com/vi/uo0pN6Mgh5I/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -28,34 +28,15 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "",
-    "vid_id": "xAQLqpI73DY",
+    "vid_id": "uo0pN6Mgh5I",
     "date": "2026-04-15",
     "is_short": false,
     "duration": 2206
   },
   {
     "title": "【4/15より適用】Fintokeiのギャンブル行為ルールが変更したので解説",
-    "url": "https://www.youtube.com/watch?v=GJGx8xPoztI",
-    "thumb": "https://img.youtube.com/vi/GJGx8xPoztI/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "その他手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "2024年4月15日より適用されるFintokeiのギャンブル行為に関する新ルールについて解説している。",
-    "vid_id": "GJGx8xPoztI",
-    "date": "2026-04-14",
-    "is_short": false,
-    "duration": 550
-  },
-  {
-    "title": "ゼロプロ90 5期　募集開始",
-    "url": "https://www.youtube.com/watch?v=z_1f4US6wbk",
-    "thumb": "https://img.youtube.com/vi/z_1f4US6wbk/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1493466245037559910",
+    "thumb": "https://img.youtube.com/vi/nB1dwq7OaYw/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -64,10 +45,1458 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "",
-    "vid_id": "z_1f4US6wbk",
-    "date": "2026-04-07",
+    "vid_id": "nB1dwq7OaYw",
+    "date": "2026-04-14",
+    "is_short": false,
+    "duration": 550
+  },
+  {
+    "title": "ゼロプロ90 5期　募集開始",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1490903132593590363",
+    "thumb": "https://img.youtube.com/vi/_wteV5IwDfs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "_wteV5IwDfs",
+    "date": "2026-04-05",
     "is_short": false,
     "duration": 748
+  },
+  {
+    "title": "#ラスト【FXライブ配信】10万→604万でFINISH【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550324376014998",
+    "thumb": "https://img.youtube.com/vi/2bpljB4sKI4/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "2bpljB4sKI4",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 3710
+  },
+  {
+    "title": "#12.5【FXライブ配信】強化合宿がヤバかった【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550267799044209",
+    "thumb": "https://img.youtube.com/vi/-jgTEUJpHc0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "-jgTEUJpHc0",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 9002
+  },
+  {
+    "title": "#12【FXライブ配信】明日から強化合宿です【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550240267636736",
+    "thumb": "https://img.youtube.com/vi/d9r15v17DA8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "d9r15v17DA8",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 4733
+  },
+  {
+    "title": "#11【FXライブ配信】これで皆シナリオ構築マスター【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550212648272033",
+    "thumb": "https://img.youtube.com/vi/koK8UtYMNJc/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "koK8UtYMNJc",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 6717
+  },
+  {
+    "title": "#10【FXライブ配信】オートライン、結構革命じゃない？【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550186798780458",
+    "thumb": "https://img.youtube.com/vi/silWs6trsUQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "silWs6trsUQ",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 5538
+  },
+  {
+    "title": "#9【FXライブ配信】アストロトレーダーを知ってるかい？【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550157329465404",
+    "thumb": "https://img.youtube.com/vi/OP3WHTOmRZY/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "OP3WHTOmRZY",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 5817
+  },
+  {
+    "title": "#8【FXライブ配信】さて、あといくらかな…？【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550114933706773",
+    "thumb": "https://img.youtube.com/vi/QWQieHRkRCM/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "QWQieHRkRCM",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 5577
+  },
+  {
+    "title": "#7【FXライブ配信】200万達成を皆で見守る会【10万→1000万企画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550084596039742",
+    "thumb": "https://img.youtube.com/vi/o74CauRB1eI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "o74CauRB1eI",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 4961
+  },
+  {
+    "title": "#6【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550054195855563",
+    "thumb": "https://img.youtube.com/vi/z8hV14oWCIA/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "z8hV14oWCIA",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 7348
+  },
+  {
+    "title": "#5【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550022453366784",
+    "thumb": "https://img.youtube.com/vi/w44E1vymFNg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "w44E1vymFNg",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 4581
+  },
+  {
+    "title": "#4【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489549978719223970",
+    "thumb": "https://img.youtube.com/vi/vHgeqfPgsIo/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "vHgeqfPgsIo",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 7010
+  },
+  {
+    "title": "#3【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489549941901885610",
+    "thumb": "https://img.youtube.com/vi/_z8mWhaJ3ms/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "_z8mWhaJ3ms",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 6879
+  },
+  {
+    "title": "#2【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489549907173048422",
+    "thumb": "https://img.youtube.com/vi/LNePlXjMJlE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "LNePlXjMJlE",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 4701
+  },
+  {
+    "title": "#1【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489549882606878720",
+    "thumb": "https://img.youtube.com/vi/AXcasWro9J0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "AXcasWro9J0",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 4776
+  },
+  {
+    "title": "#0【FXライブ配信】10万→1000万にする",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489549707532570795",
+    "thumb": "https://img.youtube.com/vi/wFjOER3w9Ig/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "wFjOER3w9Ig",
+    "date": "2026-04-03",
+    "is_short": false,
+    "duration": 5230
+  },
+  {
+    "title": "あれについて学びたいな…を解決するもの作りました",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1462666806387937333",
+    "thumb": "https://img.youtube.com/vi/Duhcfz-56H8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Duhcfz-56H8",
+    "date": "2026-01-19",
+    "is_short": false,
+    "duration": 199
+  },
+  {
+    "title": "損切り完全解説〜深掘り動画〜",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1461621596187000991",
+    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "HXSOaLWFfxM",
+    "date": "2026-01-16",
+    "is_short": false,
+    "duration": 1096
+  },
+  {
+    "title": "【5日間】お試しゼロプロ添削完全版",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1454714151074140211",
+    "thumb": "https://img.youtube.com/vi/ujiAnOR_CKA/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "ujiAnOR_CKA",
+    "date": "2025-12-28",
+    "is_short": false,
+    "duration": 1301
+  },
+  {
+    "title": "プロの損切後の立ち回り方２種類完全解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1413828569855037552",
+    "thumb": "https://img.youtube.com/vi/wWsFfLdIiUU/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "wWsFfLdIiUU",
+    "date": "2025-11-28",
+    "is_short": false,
+    "duration": 430
+  },
+  {
+    "title": "CFDで爆益を出す具体的なトレード方法",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1421445128505266197",
+    "thumb": "https://img.youtube.com/vi/Xh0lTF2ULlk/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Xh0lTF2ULlk",
+    "date": "2025-09-27",
+    "is_short": false,
+    "duration": 371
+  },
+  {
+    "title": "よすがの過去相場検証の全て",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417107147669377177",
+    "thumb": "https://img.youtube.com/vi/mUdZW69kogs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "mUdZW69kogs",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1455
+  },
+  {
+    "title": "よすが式ダウ手法習得編【4章 リアル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/7zjYgm_8iUM/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "7zjYgm_8iUM",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 930
+  },
+  {
+    "title": "よすが式ダウ手法習得編【3章 シナリオ】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106607837548656",
+    "thumb": "https://img.youtube.com/vi/EsX9nU4nmuI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "EsX9nU4nmuI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1380
+  },
+  {
+    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106559909101578",
+    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "6VHINPwHyq8",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1624
+  },
+  {
+    "title": "よすが式ダウ手法習得編【1章 ライン】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106441193390204",
+    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "YSOMB0J4VwI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1803
+  },
+  {
+    "title": "よすが式ダウ手法習得編【0章 準備】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106398441115740",
+    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "EgrGud-QgfA",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 2781
+  },
+  {
+    "title": "よすが式ダウ手法【習得編】、いかがでしょう？",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417106305880952862",
+    "thumb": "https://img.youtube.com/vi/irTed42ew7c/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "irTed42ew7c",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 118
+  },
+  {
+    "title": "【3 20   3 24】今週の全リアルトレード解説【ハイレベル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113434306609353",
+    "thumb": "https://img.youtube.com/vi/QpBF-W0qMEs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "QpBF-W0qMEs",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 562
+  },
+  {
+    "title": "【3 13   3 17】今週の全リアルトレード解説【ハイレベル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113434306609353",
+    "thumb": "https://img.youtube.com/vi/7xEnLhhi9xk/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "7xEnLhhi9xk",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1166
+  },
+  {
+    "title": "【3 6   3 10】今週の全リアルトレード解説【ハイレベル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113434306609353",
+    "thumb": "https://img.youtube.com/vi/XTOL4IMa6ko/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "XTOL4IMa6ko",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 662
+  },
+  {
+    "title": "【2 27   3 3】今週の全リアルトレード解説【ハイレベル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113434306609353",
+    "thumb": "https://img.youtube.com/vi/-rsWm23wUCI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "-rsWm23wUCI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 623
+  },
+  {
+    "title": "「ここだけ」は取るべし【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113434306609353",
+    "thumb": "https://img.youtube.com/vi/T-byBdrXBQg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "T-byBdrXBQg",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 280
+  },
+  {
+    "title": "【4 24   4 28】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113356972032061",
+    "thumb": "https://img.youtube.com/vi/feIQFwybzc4/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "feIQFwybzc4",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 543
+  },
+  {
+    "title": "【4 17   4 21】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113356972032061",
+    "thumb": "https://img.youtube.com/vi/UX6Z6Cpn3vs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "UX6Z6Cpn3vs",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 687
+  },
+  {
+    "title": "【4 10   4 14】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113356972032061",
+    "thumb": "https://img.youtube.com/vi/ByffhpnYz2U/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "ByffhpnYz2U",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 692
+  },
+  {
+    "title": "【4 3   4 7】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113356972032061",
+    "thumb": "https://img.youtube.com/vi/SS5KXMTOG7E/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "SS5KXMTOG7E",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1336
+  },
+  {
+    "title": "【3 27   3 31】今週の全リアルトレード解説【ハイレベル】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113356972032061",
+    "thumb": "https://img.youtube.com/vi/DAivHGL2gKE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "DAivHGL2gKE",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 646
+  },
+  {
+    "title": "【5 29   6 2】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113288806338682",
+    "thumb": "https://img.youtube.com/vi/5Cb_Y1JTibE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "5Cb_Y1JTibE",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 757
+  },
+  {
+    "title": "【5 22   5 26】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113288806338682",
+    "thumb": "https://img.youtube.com/vi/Pqnh5j8L-aE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Pqnh5j8L-aE",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 657
+  },
+  {
+    "title": "【5 15   5 19】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113288806338682",
+    "thumb": "https://img.youtube.com/vi/3UeC-CBMH04/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "3UeC-CBMH04",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 536
+  },
+  {
+    "title": "【5 8   5 13】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113288806338682",
+    "thumb": "https://img.youtube.com/vi/XSupCvzmTds/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "XSupCvzmTds",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 567
+  },
+  {
+    "title": "【5 1   5 5】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113288806338682",
+    "thumb": "https://img.youtube.com/vi/mtsnq8ur6hg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "mtsnq8ur6hg",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 815
+  },
+  {
+    "title": "【7 3   7 7】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113216685277287",
+    "thumb": "https://img.youtube.com/vi/7-75_yAKKZ8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "7-75_yAKKZ8",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 420
+  },
+  {
+    "title": "【6 26   6 30】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113216685277287",
+    "thumb": "https://img.youtube.com/vi/QB37qp_yyXM/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "QB37qp_yyXM",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 808
+  },
+  {
+    "title": "【6 19   6 23】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113216685277287",
+    "thumb": "https://img.youtube.com/vi/wTE-raRnuqs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "wTE-raRnuqs",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 720
+  },
+  {
+    "title": "【6 12   6 16】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113216685277287",
+    "thumb": "https://img.youtube.com/vi/ehfL7dEbIB0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "ehfL7dEbIB0",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 652
+  },
+  {
+    "title": "【6 5   6 9】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113216685277287",
+    "thumb": "https://img.youtube.com/vi/Do6oCChBjXw/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Do6oCChBjXw",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 760
+  },
+  {
+    "title": "3月のシナリオ構築動画通りのお手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113159512723537",
+    "thumb": "https://img.youtube.com/vi/5pJY_iJFqsI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "5pJY_iJFqsI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 521
+  },
+  {
+    "title": "1日200pips取れるのはスキャだけ【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113159512723537",
+    "thumb": "https://img.youtube.com/vi/cvvVYGXRuF8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "cvvVYGXRuF8",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 837
+  },
+  {
+    "title": "【7 10   7 14】今週の全リアルトレード＆お手本トレード解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113159512723537",
+    "thumb": "https://img.youtube.com/vi/8pQ-8EHrLj0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "8pQ-8EHrLj0",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 463
+  },
+  {
+    "title": "経済指標をスキャる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/w1SvHXmimFc/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "w1SvHXmimFc",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 458
+  },
+  {
+    "title": "レンジでも1日50pips取る【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/9rZWAc3vBNA/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "9rZWAc3vBNA",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 842
+  },
+  {
+    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "gQj0t0Ov2Ys",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 538
+  },
+  {
+    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "XI3GmDp3TH8",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 387
+  },
+  {
+    "title": "TradingViewおすすめインジケーター",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1417107240212758590",
+    "thumb": "https://img.youtube.com/vi/Z9l6iJmFZ-s/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Z9l6iJmFZ-s",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 379
+  },
+  {
+    "title": "「学校で古文は必要か？」議論に終止符を打つ",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107446488629289",
+    "thumb": "https://img.youtube.com/vi/nqSMSkOoU7E/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "nqSMSkOoU7E",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 538
+  },
+  {
+    "title": "Fintokeiの社長と会ったら革命的だった話",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107405854081045",
+    "thumb": "https://img.youtube.com/vi/_Z88oGGbVXI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "_Z88oGGbVXI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 526
+  },
+  {
+    "title": "その人が「成功者」となるか？　予想した研究結果に超納得した話",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107363504328785",
+    "thumb": "https://img.youtube.com/vi/3gkzvLrpB08/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "3gkzvLrpB08",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 550
+  },
+  {
+    "title": "FXのポテンシャル、ちゃんと知ってる？【コラム動画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107328116723784",
+    "thumb": "https://img.youtube.com/vi/SpwzpWPYBYY/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "SpwzpWPYBYY",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 283
+  },
+  {
+    "title": "よすがが実践している思考を爆速で進める思考整理術",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107194700365971",
+    "thumb": "https://img.youtube.com/vi/fnOM_JWvjPs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "fnOM_JWvjPs",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 438
+  },
+  {
+    "title": "圧倒的「才能」を前に挫折し、再起した話【コラム動画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107091931398174",
+    "thumb": "https://img.youtube.com/vi/IBV1BBUhNB8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "IBV1BBUhNB8",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 869
+  },
+  {
+    "title": "何でYoutubeやってるの？投資家ならやらなくてよくない？【コラム動画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107051510763674",
+    "thumb": "https://img.youtube.com/vi/DW_IKTzdWB0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "DW_IKTzdWB0",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 569
+  },
+  {
+    "title": "私が「FXで稼げるようになる場所」を作る本当の理由",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417107015456526447",
+    "thumb": "https://img.youtube.com/vi/Fh_SEuaWAVI/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Fh_SEuaWAVI",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 849
+  },
+  {
+    "title": "私の手の内「フィルタレーション」、完全解説",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417106978194460793",
+    "thumb": "https://img.youtube.com/vi/q3rVECeq_5s/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "q3rVECeq_5s",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 1205
+  },
+  {
+    "title": "正直に答えます「FXって楽に稼げるんでしょ？」【コラム動画】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1417106949933109293",
+    "thumb": "https://img.youtube.com/vi/mbii2hXJzwY/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "mbii2hXJzwY",
+    "date": "2025-09-15",
+    "is_short": false,
+    "duration": 250
+  },
+  {
+    "title": "よすが式のトレードは２種類だけ【初動と追随】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466672177873029/1417107270898286603",
+    "thumb": "https://img.youtube.com/vi/X7yit9cbsMM/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "その他手法",
+      "プライスアクション"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "よすが式トレードの「初動」と「追随」の2つの手法について解説している。",
+    "vid_id": "X7yit9cbsMM",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 1187
+  },
+  {
+    "title": "【Fundora用】MT4→cTraderコピー機能リリースしたからcTrader使えなくても大丈夫",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1426114465925169213",
+    "thumb": "https://img.youtube.com/vi/mcfs2SJEK7U/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "mcfs2SJEK7U",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 836
+  },
+  {
+    "title": "適切な監視通貨ペア数、はっきりさせよう",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1416827775733465233",
+    "thumb": "https://img.youtube.com/vi/O_WnT3GOKLU/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "O_WnT3GOKLU",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 659
+  },
+  {
+    "title": "プロップの税金について税理士に全部聞いてみた",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1416825121452068985",
+    "thumb": "https://img.youtube.com/vi/h-BhOGIo4ss/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "h-BhOGIo4ss",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 603
+  },
+  {
+    "title": "YTT使えばトレードセットして放置してるだけで稼げます",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1416824681083699417",
+    "thumb": "https://img.youtube.com/vi/f37RIDhgcVU/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "f37RIDhgcVU",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 625
+  },
+  {
+    "title": "利益を３倍以上にするテクニック、ピラミッディングのコツ",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1416824026713690234",
+    "thumb": "https://img.youtube.com/vi/x_6RdKXs-8k/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "x_6RdKXs-8k",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 476
+  },
+  {
+    "title": "FX SPACEで●●して最強のプラットフォームにします",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466542049464330/1416837825088852123",
+    "thumb": "https://img.youtube.com/vi/rY_vyBdKqMc/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "rY_vyBdKqMc",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 877
+  },
+  {
+    "title": "Youtubeメンバーシップの代わりとなるサブスクを開始しました。あとYTT買い切りも",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822985741832345",
+    "thumb": "https://img.youtube.com/vi/lfHiYEJ6Gws/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "lfHiYEJ6Gws",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 160
+  },
+  {
+    "title": "Fundoraが正式ローンチされたのでFintokeiとガチ比較してみた結果",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/40BobTZPAN0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "40BobTZPAN0",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 1080
+  },
+  {
+    "title": "FundoraとFintokeiとガチ比較してみた結果２",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/BEtavXkkNp8/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "BEtavXkkNp8",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 305
+  },
+  {
+    "title": "【秘密厳守】Fundora、これ最強じゃないか…？",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/OAN8pERiMdo/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "OAN8pERiMdo",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 332
+  },
+  {
+    "title": "Fundoraの1％ルール詳細発表│我々にはアレがあるので攻略余裕です",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/u2wS7RQ8GFQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "u2wS7RQ8GFQ",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 314
+  },
+  {
+    "title": "Fintokeiの改善きたぞ！！しかもここからあと５段進化するらしい",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/saBgJPQleS0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "saBgJPQleS0",
+    "date": "2025-09-14",
+    "is_short": false,
+    "duration": 360
+  },
+  {
+    "title": "新興プロップFunded7ってどうなの？内部調査してきました",
+    "url": "https://discord.com/channels/1039824083208126474 /1416822828719673395/1416822948769042513",
+    "thumb": "https://img.youtube.com/vi/4uEXrybJ4Q4/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "4uEXrybJ4Q4",
+    "date": "2025-09-13",
+    "is_short": false,
+    "duration": 231
+  },
+  {
+    "title": "移動平均線の勝てる戦略を完全解説する",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1416834067202310244",
+    "thumb": "https://img.youtube.com/vi/H1iopAiRMNM/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "H1iopAiRMNM",
+    "date": "2024-12-27",
+    "is_short": false,
+    "duration": 338
+  },
+  {
+    "title": "デイがだめならスキャをすればいいじゃない【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1463145875193856105",
+    "thumb": "https://img.youtube.com/vi/ItOroDiLmQs/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "ItOroDiLmQs",
+    "date": "2023-02-04",
+    "is_short": false,
+    "duration": 736
+  },
+  {
+    "title": "デイ→スキャ、縦横無尽に立ち回れ【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1463145793887273045",
+    "thumb": "https://img.youtube.com/vi/Mq3f4P82cU0/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Mq3f4P82cU0",
+    "date": "2023-01-22",
+    "is_short": false,
+    "duration": 736
+  },
+  {
+    "title": "正しい「目線」の切り替えが生死を分ける【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1463145620977221707",
+    "thumb": "https://img.youtube.com/vi/HQHizcvkKtw/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "HQHizcvkKtw",
+    "date": "2023-01-01",
+    "is_short": false,
+    "duration": 372
+  },
+  {
+    "title": "Together – Roa (No Copyright Music)",
+    "url": "https://discord.com/channels/1039824083208126474 /1413466605714804816/1463145620977221707",
+    "thumb": "https://img.youtube.com/vi/EkutnuCkWSQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "EkutnuCkWSQ",
+    "date": "2022-09-20",
+    "is_short": false,
+    "duration": 293
   },
   {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
@@ -723,24 +2152,6 @@ const VIDEOS = [
     "duration": 996
   },
   {
-    "title": "ゼロプロ90 ４期　募集開始",
-    "url": "https://discord.com/channels/1039824083208126474/1171706488234979378/1459183218669650040",
-    "thumb": "https://www.notion.so/image/attachment%3A85e4bb20-bcd6-4ecd-b08a-776ba3b57bf5%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_160458.png?table=block&id=193be001-4995-4002-bd60-fb7971717189&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "ゼロプロ(旧プレアストロ)"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "ゼロプロ90がFX未経験者からでも3ヶ月でプロトレーダーを目指すために、課題提出・添削・疑似添削を通じて大量の実践パターンを高速で習得する育成プログラムであることを解説",
-    "vid_id": "",
-    "date": "2026-01-09",
-    "is_short": false
-  },
-  {
     "title": "FXで勝つための考え方",
     "url": "https://www.youtube.com/shorts/Nu__MwU9j10",
     "thumb": "https://i.ytimg.com/vi/Nu__MwU9j10/hq2.jpg",
@@ -1157,29 +2568,6 @@ const VIDEOS = [
     "duration": 903
   },
   {
-    "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://www.notion.so/image/attachment%3Acfef5950-0865-451d-b994-1aeb81d61ed7%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_134726.png?table=block&id=21a7e33a-832f-45cf-ad32-2048bee02dc9&cache=v2",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "実践",
-      "シナリオ",
-      "ライン",
-      "メンタル",
-      "実績",
-      "インタビュー"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "【一般公開動画続き】上位足で決めたシナリオを否定する価格到達点を損切りに置き、期待値が崩れた時点でトレードを終了させることがプロの損切り判断基準であることが分かる",
-    "vid_id": "",
-    "date": "2025-11-02",
-    "is_short": false
-  },
-  {
     "title": "【プロはここで切る！】総資産10億円トレーダーの損切り完全解説",
     "url": "https://www.youtube.com/watch?v=PC59RLjnSEY",
     "thumb": "https://i.ytimg.com/vi/PC59RLjnSEY/maxresdefault.jpg",
@@ -1353,29 +2741,6 @@ const VIDEOS = [
     "duration": 579
   },
   {
-    "title": "CFDで爆益を出す具体的なトレード方法",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1421445128505266197",
-    "thumb": "https://www.notion.so/image/attachment%3Af34319f3-d616-4e8c-aff9-17e30b8cb679%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_135353.png?table=block&id=426773e7-7878-4f5f-a7d7-c4ffab6e2d24&cache=v2",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "CFD",
-      "手法",
-      "資金管理",
-      "相場",
-      "プライスアクション",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "【一般公開動画続き】CFDは通貨ペアと異なる特性を前提に、口座分離・週足分析・RR拡大やピラミッティング、上位足主導の逆張りエントリーを用いることで大きな利益を狙えることが分かる",
-    "vid_id": "",
-    "date": "2025-09-27",
-    "is_short": false
-  },
-  {
     "title": "CFDトレードで930万円稼いだ方法を徹底解説",
     "url": "https://www.youtube.com/watch?v=SxIj-iQff28",
     "thumb": "https://i.ytimg.com/vi/SxIj-iQff28/maxresdefault.jpg",
@@ -1481,43 +2846,6 @@ const VIDEOS = [
     "duration": 33
   },
   {
-    "title": "移動平均線の勝てる戦略を完全解説する",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416834067202310244",
-    "thumb": "https://www.notion.so/image/attachment%3A2b2a5e48-4613-48b7-aedd-f4255dbbb084%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_203328.png?table=block&id=6ea65e46-7370-4f05-965c-6a3d69174da4&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "インジケーター"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "移動平均線の押し目戦略を統計的に再構築し、MAをエンベロープで偏移させることで有意性を高めた実践的な調整手法と、その限界・運用上の注意点を解説している",
-    "vid_id": "",
-    "date": "2025-09-15",
-    "is_short": false
-  },
-  {
-    "title": "TradingViewおすすめインジケーター",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1417107240212758590",
-    "thumb": "https://i.ytimg.com/vi/Z9l6iJmFZ-s/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "基礎",
-      "インジケーター",
-      "過去検証"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ手法の補助として有効なTradingViewのインジケーター2種と、マルチタイムで相場判断を補完できる外部指標サイトの実践的な使い方を解説している",
-    "vid_id": "",
-    "date": "2025-09-15",
-    "is_short": false
-  },
-  {
     "title": "チャートパターンは忘れろ！「加速」と「減速」しかない",
     "url": "https://www.youtube.com/shorts/7UNQTw9hg5E",
     "thumb": "https://i.ytimg.com/vi/7UNQTw9hg5E/hq2.jpg",
@@ -1529,48 +2857,6 @@ const VIDEOS = [
     "date": "2025-09-15",
     "is_short": true,
     "duration": 62
-  },
-  {
-    "title": "Youtubeメンバーシップの代わりとなるサブスクを開始しました。あとYTT買い切りも",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822985741832345",
-    "thumb": "https://www.notion.so/image/attachment%3Aaaebe46e-7694-410b-8dff-b9f8cb8b200c%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_140216.png?table=block&id=3aa2f4ac-32db-4c1c-9f1b-7d4a399059e9&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ゼロプロ(旧プレアストロ)",
-      "YTT",
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "YouTubeメンバーシップをPayPalサブスク（スタンダード・プレミアム）へ移行し、料金・閲覧範囲・トラブル対応・YTT買い切りの利用条件がどう変わるかが分かる",
-    "vid_id": "",
-    "date": "2025-09-14",
-    "is_short": false
-  },
-  {
-    "title": "FX SPACEの使い方",
-    "url": "https://youtu.be/Vz-IOBS_nhY",
-    "thumb": "https://www.notion.so/image/attachment%3A34af8c0b-d887-4e52-9e77-739402a7b40b%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_135818.png?table=block&id=cca580d9-6bca-4459-8164-1c6d1cee7777&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "ゼロプロ(旧プレアストロ)",
-      "基礎",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXスペースがFX未経験者からプロトレーダーまでを対象に、学習フロー・実践環境・ツール・プロップ連携を通じて再現性高く稼ぐ力を体系的に身につけられる総合コミュニティである",
-    "vid_id": "Vz-IOBS_nhY",
-    "date": "2025-09-14",
-    "is_short": false,
-    "duration": 1115
   },
   {
     "title": "実際に10万→2000万稼いだテクニック②",
@@ -1636,28 +2922,6 @@ const VIDEOS = [
     "date": "2025-09-08",
     "is_short": true,
     "duration": 59
-  },
-  {
-    "title": "プロの損切後の立ち回り方２種類完全解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1413828569855037552",
-    "thumb": "https://www.notion.so/image/attachment%3Ad7cb7fef-6cbf-4b60-9e71-8a46e47c87ce%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_141024.png?table=block&id=f1753cee-10ec-4548-9ad9-eb73322dc945&cache=v2",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "手法",
-      "実践",
-      "メンタル",
-      "シナリオ",
-      "プライスアクション",
-      "チャートパターン"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "損切り後に再エントリーできるかどうかは、「トレンド転換」か「ノイズ」かの判別と、上位足シナリオが崩れているか否かで決まる。",
-    "vid_id": "",
-    "date": "2025-09-06",
-    "is_short": false
   },
   {
     "title": "損切り後に崩れる人と崩れない人の決定的な違い",
@@ -2114,45 +3378,6 @@ const VIDEOS = [
     "duration": 811
   },
   {
-    "title": "利益を３倍以上にするテクニック、ピラミッディングのコツ",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416824026713690234",
-    "thumb": "https://www.notion.so/image/attachment%3A0ea2784b-2b0c-4edd-ba95-39fb5263d886%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_142334.png?table=block&id=12bd6443-927e-4f83-9e4a-5b7570d5f33e&cache=v2",
-    "levels": [
-      "中級"
-    ],
-    "categories": [
-      "実践",
-      "手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "ピラミッティングは、十分なボラティリティがある相場、特に上位足のトレンド転換初動を前提に、分割トレードと組み合わせて「上がっている（下がっている）途中」で段階的に積み、最終局面で一気に利確して期待値を最大化する手法である",
-    "vid_id": "",
-    "date": "2025-05-02",
-    "is_short": false
-  },
-  {
-    "title": "YTT使えばトレードセットして放置してるだけで稼げます",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416824681083699417",
-    "thumb": "https://www.notion.so/image/attachment%3A2fdc3a7b-486e-4aa6-a4df-66eba565c0b5%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_142835.png?table=block&id=0264b145-72bd-4d22-a465-524e6e406342&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "YTT",
-      "手法",
-      "シナリオ",
-      "実践",
-      "資金管理"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "【一般公開動画続き】YTTのシナリオトレード機能を使い、予約・成立要件・トレール・追加ポジ・縦値・シナリオ崩壊条件などを組み合わせて、エントリーから決済までを自動化・最適化する具体的な設定方法を理解できる",
-    "vid_id": "",
-    "date": "2025-04-26",
-    "is_short": false
-  },
-  {
     "title": "トレード手順80%カットの最短最速FX術を完全解説",
     "url": "https://www.youtube.com/watch?v=z9izJ_354TE",
     "thumb": "https://i.ytimg.com/vi/z9izJ_354TE/maxresdefault.jpg",
@@ -2193,44 +3418,6 @@ const VIDEOS = [
     "date": "2025-04-19",
     "is_short": false,
     "duration": 1134
-  },
-  {
-    "title": "プロップの税金について税理士に全部聞いてみた",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416825121452068985",
-    "thumb": "https://www.notion.so/image/attachment%3A2a791997-7728-4503-8258-400f79b07908%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_144412.png?table=block&id=ec2c7297-1aeb-4a2e-8dc3-ce85193295d0&cache=v2",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "税金",
-      "資金管理"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "プロップファーム収入はFX取引とは別扱いとなり、個人・法人ともに所得区分や税率が異なり、特に年間利益1,000万円超で消費税が発生する点を踏まえて、フィントケイとファンドラを税務面からどう使い分けるかを整理している",
-    "vid_id": "",
-    "date": "2025-04-17",
-    "is_short": false
-  },
-  {
-    "title": "Fundoraの1％ルール詳細発表│我々にはアレがあるので攻略余裕です",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
-    "thumb": "https://www.notion.so/image/attachment%3Ad61f4cfb-35b9-4b0a-8fbb-4b3811c02560%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_143343.png?table=block&id=f19ee7d7-25cc-4046-ab11-b89afb13aec8&cache=v2",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "資金管理"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "Fundora(ファンドラ)におけるリスク1％トレーディングの具体的な基準と、複数ポジション時のDD計算ルール、違反時の扱いを理解できる",
-    "vid_id": "",
-    "date": "2025-04-16",
-    "is_short": false
   },
   {
     "title": "資金ゼロでも6000万運用できる方法を完全解説【プロップファームFundora】",
@@ -2275,24 +3462,6 @@ const VIDEOS = [
     "duration": 1603
   },
   {
-    "title": "【Fundora用】MT4→cTraderコピー機能リリースしたからcTrader使えなくても大丈夫",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
-    "thumb": "https://www.notion.so/image/attachment%3Ad6b93538-c12b-4480-ac12-b30388218676%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_144732.png?table=block&id=d04a9ae4-864b-4fc8-a9f0-70cfdec76db3&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "YTT"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "YTTバージョン1.6で追加されたMT4とcTrader間のコピートレード機能とUI刷新により、MT4操作だけでシナリオ構築から資金管理を含む注文をcTraderへ自動反映する具体的な設定方法を理解できる",
-    "vid_id": "",
-    "date": "2025-04-01",
-    "is_short": false
-  },
-  {
     "title": "ガチ検証 1日1時間スキャルピングで稼げるか？",
     "url": "https://www.youtube.com/watch?v=TP__1AmWB9A",
     "thumb": "https://i.ytimg.com/vi/TP__1AmWB9A/maxresdefault.jpg",
@@ -2327,25 +3496,6 @@ const VIDEOS = [
     "duration": 58
   },
   {
-    "title": "【秘密厳守】Fundora、これ最強じゃないか…？",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
-    "thumb": "https://www.notion.so/image/attachment%3A91b41d5a-0b90-46e1-b5aa-cb4f34df79ae%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_145156.png?table=block&id=29bb0d81-6b5d-4a94-8046-e988aeaecf40&cache=v2",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "税金",
-      "資金管理"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "Fundora(ファンドラ)は合格後に法人契約へ切り替え可能となり、個人最大45％課税に比べて法人税率まで圧縮できるため、税務面で明確な優位性が生まれたことを理解できる",
-    "vid_id": "",
-    "date": "2025-03-22",
-    "is_short": false
-  },
-  {
     "title": "【FX初心者必見】勝ちパターンをリアルチャートで解説",
     "url": "https://www.youtube.com/watch?v=3DXNCY806uA",
     "thumb": "https://i.ytimg.com/vi_webp/3DXNCY806uA/maxresdefault.webp",
@@ -2366,40 +3516,6 @@ const VIDEOS = [
     "date": "2025-03-22",
     "is_short": false,
     "duration": 950
-  },
-  {
-    "title": "Fundoraが正式ローンチされたのでFintokeiとガチ比較してみた結果",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
-    "thumb": "https://www.notion.so/image/attachment%3A68761678-f86e-4a6b-b703-11c4e98008f2%3Amq2.webp?table=block&id=93dd6411-f3c2-4c40-ad92-26485e8ece09&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "プロップファーム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "ファンドラは「低コスト・自由度・明確な1％ルール」を重視する初心者〜中級者向け、フィント系は「最速出金・スケーリングで資金拡大」を狙う中上級者向けで、目的別に明確に使い分けるのが最適解。",
-    "vid_id": "",
-    "date": "2025-03-20",
-    "is_short": false
-  },
-  {
-    "title": "FundoraとFintokeiとガチ比較してみた結果２",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
-    "thumb": "https://www.notion.so/image/attachment%3Abb2b0883-2781-4022-9084-b47a7466b661%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_145522.png?table=block&id=53a768cc-c681-4025-9290-ccb2b6454f93&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "プロップファーム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "正式ローンチ直後のファンドラについて、50％クーポンの即効性に加え、国内銀行出金の速さと安全性、明確な1％ルール、今後の機能追加余地を踏まえてフィントケイとの使い分け判断軸を整理できる",
-    "vid_id": "",
-    "date": "2025-03-20",
-    "is_short": false
   },
   {
     "title": "Can ordinary people make money with FX? [Yosuga]",
@@ -2636,26 +3752,6 @@ const VIDEOS = [
     "duration": 997
   },
   {
-    "title": "適切な監視通貨ペア数、はっきりさせよう",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416827775733465233",
-    "thumb": "https://www.notion.so/image/attachment%3Acde11cf7-df7d-43f1-848f-1a83042c98a2%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_150945.png?table=block&id=efe97a0a-de04-460e-a581-87abe25658eb&cache=v2",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "基礎",
-      "実践",
-      "相場"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "トレード精度を落とさず成長するために、監視通貨ペアは最初は1つに絞り、シナリオ構築の正確さと速度が上がった段階でトレードスタイルに応じて段階的に増やす考え方を解説している",
-    "vid_id": "",
-    "date": "2025-01-25",
-    "is_short": false
-  },
-  {
     "title": "【FX初心者向け】狙うべきはコレ！おすすめ通貨ランキングTOP3",
     "url": "https://www.youtube.com/watch?v=eREiMZ5Q974",
     "thumb": "https://i.ytimg.com/vi_webp/eREiMZ5Q974/maxresdefault.webp",
@@ -2870,25 +3966,6 @@ const VIDEOS = [
     "duration": 572
   },
   {
-    "title": "FX SPACEで●●して最強のプラットフォームにします",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1416837825088852123",
-    "thumb": "https://www.notion.so/image/attachment%3A95295df3-0c57-4a83-b633-15589f8e2de8%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_151708.png?table=block&id=f500afa4-f313-468f-8223-2293affcdacb&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "プロップファーム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "フィントケイとの提携理由を軸に、出金まで到達できるプロトレーダーを育てるための教育思想とFX SPACEを中核とした今後のプラットフォーム構想を具体的に示している",
-    "vid_id": "",
-    "date": "2024-10-30",
-    "is_short": false
-  },
-  {
     "title": "これが揃って初めてエントリーできる３つの条件",
     "url": "https://www.youtube.com/watch?v=LAyDU7c7r-k",
     "thumb": "https://i.ytimg.com/vi/LAyDU7c7r-k/maxresdefault.jpg",
@@ -3088,28 +4165,6 @@ const VIDEOS = [
     "duration": 765
   },
   {
-    "title": "よすが式のトレードは２種類だけ【初動と追随】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416838674724946043",
-    "thumb": "https://www.notion.so/image/attachment%3A2dcd3cee-2348-430a-aba4-5dacdba62542%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_152042.png?table=block&id=5ae159ff-1371-46d6-9537-e66598ef4ae0&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "シナリオ",
-      "ナウキャスト",
-      "資金管理",
-      "ライン",
-      "基礎"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "初動トレードと追随トレードを構造的に整理し、それぞれのエントリー条件・損切り位置・利確設計・途中決済の考え方と確率の違いをマルチタイムフレーム前提で解説している",
-    "vid_id": "",
-    "date": "2024-08-17",
-    "is_short": false
-  },
-  {
     "title": "「損切したのに戻ってきた！😭」をなくす方法",
     "url": "https://www.youtube.com/watch?v=F3FD3j86Ou0",
     "thumb": "https://i.ytimg.com/vi_webp/F3FD3j86Ou0/maxresdefault.webp",
@@ -3262,25 +4317,6 @@ const VIDEOS = [
     "duration": 542
   },
   {
-    "title": "私が「FXで稼げるようになる場所」を作る本当の理由",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107015456526447",
-    "thumb": "https://www.notion.so/image/attachment%3A7f8f867f-5db1-4e37-baa2-65b5c9f248f0%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_152400.png?table=block&id=729d9cb4-d6ea-4822-8de8-aa6da356733a&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "お金と幸福は比例せず、真の幸福は「仲間・仕事・最低限の生活基盤」によって生まれ、暇は人を不幸にするため、継続的に価値を積み上げる仕事を持ち続けることが人生の本質であると論じている",
-    "vid_id": "",
-    "date": "2024-06-03",
-    "is_short": false
-  },
-  {
     "title": "プロを100人以上輩出した伝説「FX SPACE」を完全解説",
     "url": "https://www.youtube.com/watch?v=J_BTJHJcuQ0",
     "thumb": "https://i.ytimg.com/vi_webp/J_BTJHJcuQ0/maxresdefault.webp",
@@ -3388,25 +4424,6 @@ const VIDEOS = [
     "duration": 653
   },
   {
-    "title": "よすがが実践している思考を爆速で進める思考整理術",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107194700365971",
-    "thumb": "https://www.notion.so/image/attachment%3A77fd45e8-aab4-4b58-bf21-022025f0e7e4%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_153256.png?table=block&id=34b8db2b-b2cd-46fe-ad86-350bb627a72f&cache=v2",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "雑談",
-      "メンタル"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXで勝つために考え続けるには頭の中だけで完結させず、思考をアウトプットして外部化する仕組みが重要であり、その具体的な方法としてObsidianを使った思考整理と日々の管理方法を解説している",
-    "vid_id": "",
-    "date": "2024-04-30",
-    "is_short": false
-  },
-  {
     "title": "FX初心者がやりがちな失敗3選",
     "url": "https://www.youtube.com/watch?v=sZzxDz3d5FM",
     "thumb": "https://i.ytimg.com/vi_webp/sZzxDz3d5FM/maxresdefault.webp",
@@ -3443,28 +4460,6 @@ const VIDEOS = [
     "duration": 649
   },
   {
-    "title": "よすが式ダウ手法習得編【4章 リアル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://www.notion.so/image/attachment%3Adfb95c31-bdc9-44d0-b929-a87027b173bb%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_153211.png?table=block&id=24df8a7e-997f-4804-9418-8e7574490688&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "資金管理",
-      "YTT",
-      "Yカリキュラム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "過去相場検証・リアルトレード・プロップファーム運用という三段階を通じて、プロトレーダーとして安定収益を実現するための具体的な数値基準と実行手順を体系的に示している",
-    "vid_id": "",
-    "date": "2024-04-12",
-    "is_short": false
-  },
-  {
     "title": "実践的ローソク足パターンは３つで完璧",
     "url": "https://www.youtube.com/watch?v=IHYZo4nvQLE",
     "thumb": "https://i.ytimg.com/vi/IHYZo4nvQLE/maxresdefault.jpg",
@@ -3482,25 +4477,6 @@ const VIDEOS = [
     "date": "2024-04-06",
     "is_short": false,
     "duration": 514
-  },
-  {
-    "title": "Fintokeiの社長と会ったら革命的だった話",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107405854081045",
-    "thumb": "https://www.notion.so/image/attachment%3A8b9113c3-3d2b-422d-ae86-4cdf35f51506%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_153451.png?table=block&id=5da2860e-7fc7-425e-bd62-2f56534d1f77&cache=v2",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "プロップファーム",
-      "インタビュー",
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "フィントケイ代表と直接会い、プロップファームを教育の延長として位置づける事業思想、安全性・透明性へのこだわり、日本展開の狙い、今後の新プラン構想までを一次情報として整理・共有している",
-    "vid_id": "",
-    "date": "2024-04-01",
-    "is_short": false
   },
   {
     "title": "【＋81万円】旅行しながらスマホで稼ぐプロトレーダーの1日",
@@ -3580,25 +4556,6 @@ const VIDEOS = [
     "duration": 508
   },
   {
-    "title": "「学校で古文は必要か？」議論に終止符を打つ",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107446488629289",
-    "thumb": "https://www.notion.so/image/attachment%3A4a724a38-ed79-4cf3-b7d0-d92f7a875560%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_153624.png?table=block&id=35f3a355-655f-46c9-abff-899aaa09eddc&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "メンタル",
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "一見無駄に見える学習や経験こそが人生の楽しさと仕事の成果を広げており、インプットよりもアウトプットと行動量を重視する重要性を具体例とともに説明している",
-    "vid_id": "",
-    "date": "2024-03-02",
-    "is_short": false
-  },
-  {
     "title": "【完全版】FX初心者ガイド「 FXの基礎知識」編 ＿ゼロからわかるFXシリーズNo .2",
     "url": "https://www.youtube.com/watch?v=r0yoPbbaqFg",
     "thumb": "https://i.ytimg.com/vi/r0yoPbbaqFg/maxresdefault.jpg",
@@ -3617,25 +4574,6 @@ const VIDEOS = [
     "date": "2024-03-02",
     "is_short": false,
     "duration": 1254
-  },
-  {
-    "title": "その人が「成功者」となるか？　予想した研究結果に超納得した話",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107363504328785",
-    "thumb": "https://www.notion.so/image/attachment%3A6f7868c7-121e-4d4d-ba07-b45d94c690de%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_153759.png?table=block&id=37bd128c-9a63-4191-a049-51841264ff42&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "メンタル",
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "成功と失敗を分ける要因が才能や環境ではなく継続力であり、継続が結果・母数・データ・習慣化のすべてを生み出す理由を具体例と研究結果から整理している",
-    "vid_id": "",
-    "date": "2024-02-28",
-    "is_short": false
   },
   {
     "title": "FX経験ゼロ初心者→プロまで３か月＋半年間月利12％以上継続！最速上達者インタビュー",
@@ -3868,24 +4806,6 @@ const VIDEOS = [
     "duration": 873
   },
   {
-    "title": "#ラスト【FXライブ配信】10万→604万でFINISH【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550324376014998",
-    "thumb": "https://i.ytimg.com/vi/bZXQhlo18bA/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-10-06",
-    "is_short": false
-  },
-  {
     "title": "【FXライブ配信】革命前夜",
     "url": "https://www.youtube.com/watch?v=rf5P9rquNNg",
     "thumb": "https://img.youtube.com/vi/rf5P9rquNNg/mqdefault.jpg",
@@ -3916,120 +4836,6 @@ const VIDEOS = [
     "date": "2023-10-04",
     "is_short": false,
     "duration": 4619
-  },
-  {
-    "title": "#12.5【FXライブ配信】強化合宿がヤバかった【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550267799044209",
-    "thumb": "https://i.ytimg.com/vi/VZij9cxcjsw/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-09-30",
-    "is_short": false
-  },
-  {
-    "title": "#12【FXライブ配信】明日から強化合宿です【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550240267636736",
-    "thumb": "https://i.ytimg.com/vi/bOzXotBRK_8/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-09-25",
-    "is_short": false
-  },
-  {
-    "title": "#11【FXライブ配信】これで皆シナリオ構築マスター【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550212648272033",
-    "thumb": "https://i.ytimg.com/vi/AuwWd3MFUkI/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-09-20",
-    "is_short": false
-  },
-  {
-    "title": "よすが式ダウ手法習得編【3章 シナリオ】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106607837548656",
-    "thumb": "https://www.notion.so/image/attachment%3A10418241-8ea5-4402-86b8-c62770f71df3%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_154050.png?table=block&id=c3d28102-895a-4777-b9c8-8d3397dba767&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "シナリオ",
-      "実践",
-      "YTT",
-      "基礎",
-      "メンタル",
-      "Yカリキュラム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ手法における最重要工程「シナリオ構築」について、期待値・RR比・プロスペクト理論対策・YTT操作を含め、思想から実践までを完全に体系化した中級者向け中核教材",
-    "vid_id": "",
-    "date": "2023-09-19",
-    "is_short": false
-  },
-  {
-    "title": "#10【FXライブ配信】オートライン、結構革命じゃない？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550186798780458",
-    "thumb": "https://i.ytimg.com/vi/cg4Z6ZeSq5Q/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-09-14",
-    "is_short": false
-  },
-  {
-    "title": "#9【FXライブ配信】アストロトレーダーを知ってるかい？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550157329465404",
-    "thumb": "https://i.ytimg.com/vi/Bbcd0fY_9Rc/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-09-06",
-    "is_short": false
   },
   {
     "title": "奪われた人生を自分のものにした話 in沖縄",
@@ -4082,60 +4888,6 @@ const VIDEOS = [
     "duration": 1389
   },
   {
-    "title": "#8【FXライブ配信】さて、あといくらかな…？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550114933706773",
-    "thumb": "https://i.ytimg.com/vi/GwTsACE2AR8/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-08-23",
-    "is_short": false
-  },
-  {
-    "title": "#7【FXライブ配信】200万達成を皆で見守る会【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550084596039742",
-    "thumb": "https://i.ytimg.com/vi/zgx0eur0Uyg/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-08-16",
-    "is_short": false
-  },
-  {
-    "title": "#6【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550054195855563",
-    "thumb": "https://i.ytimg.com/vi/yIZV5YkukOQ/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-08-09",
-    "is_short": false
-  },
-  {
     "title": "最強トレードツール作ったからお披露目します",
     "url": "https://www.youtube.com/watch?v=WU8CWMU1N0A",
     "thumb": "https://i.ytimg.com/vi/WU8CWMU1N0A/maxresdefault.jpg",
@@ -4153,78 +4905,6 @@ const VIDEOS = [
     "date": "2023-08-05",
     "is_short": false,
     "duration": 2633
-  },
-  {
-    "title": "#5【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550022453366784",
-    "thumb": "https://i.ytimg.com/vi/BfsyNzcNFxA/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-08-02",
-    "is_short": false
-  },
-  {
-    "title": "#4【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549978719223970",
-    "thumb": "https://i.ytimg.com/vi/dfZiuqkNsdg/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-07-26",
-    "is_short": false
-  },
-  {
-    "title": "#3【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549941901885610",
-    "thumb": "https://i.ytimg.com/vi/INeyAjNJCD8/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-07-19",
-    "is_short": false
-  },
-  {
-    "title": "#2【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549907173048422",
-    "thumb": "https://i.ytimg.com/vi/czn1hUNf268/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-07-12",
-    "is_short": false
   },
   {
     "title": "FX歴3か月の初心者にプロが3か月間みっちり教え込んだ結果",
@@ -4247,42 +4927,6 @@ const VIDEOS = [
     "duration": 1236
   },
   {
-    "title": "#1【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549882606878720",
-    "thumb": "https://i.ytimg.com/vi/OqrgCBNtf8c/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-07-05",
-    "is_short": false
-  },
-  {
-    "title": "#0【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549707532570795",
-    "thumb": "https://i.ytimg.com/vi/wZ01r0n98c8/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "",
-    "vid_id": "",
-    "date": "2023-06-28",
-    "is_short": false
-  },
-  {
     "title": "最速で10万円を1000万円にする現実的な方法完全解説",
     "url": "https://www.youtube.com/watch?v=NZtk6Yms2VE",
     "thumb": "https://i.ytimg.com/vi/NZtk6Yms2VE/maxresdefault.jpg",
@@ -4299,27 +4943,6 @@ const VIDEOS = [
     "date": "2023-06-24",
     "is_short": false,
     "duration": 802
-  },
-  {
-    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://www.notion.so/image/attachment%3A1cf45262-479a-48cb-a92f-cc7203e6246f%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_154455.png?table=block&id=b659b5c3-37e4-427e-9256-ef794978036e&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "ナウキャスト",
-      "Yカリキュラム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "ナウキャストとは、更新幅・存在率・逸脱の3指標から\n「今、買いと売りのどちらが・どれくらい優勢か」を定量的に読む技術である",
-    "vid_id": "",
-    "date": "2023-06-18",
-    "is_short": false
   },
   {
     "title": "FXで1日1万円稼ぐ技術、スキャルピング完全解説",
@@ -4645,27 +5268,6 @@ const VIDEOS = [
     "duration": 447
   },
   {
-    "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://www.notion.so/image/attachment%3A6f3601a7-95b6-4981-bfb2-f116fcf66527%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_154658.png?table=block&id=46289d54-8c16-4507-abaf-5aa76364b4d4&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "ライン",
-      "Yカリキュラム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ手法におけるラインの本質を「注文が集まる場所」という原理から説明し、反発とブレイクの仕組み、ラインの種類・強さ・引き方・環境認識への落とし込みまでを体系的に理解できる内容になっている",
-    "vid_id": "",
-    "date": "2023-03-01",
-    "is_short": false
-  },
-  {
     "title": "【実録】リアルなプロトレーダーの1日 浅草編",
     "url": "https://www.youtube.com/watch?v=as8iwaLPW8c",
     "thumb": "https://i.ytimg.com/vi/as8iwaLPW8c/maxresdefault.jpg",
@@ -4702,26 +5304,6 @@ const VIDEOS = [
     "duration": 531
   },
   {
-    "title": "私の手の内「フィルタレーション」、完全解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417106978194460793",
-    "thumb": "https://www.notion.so/image/attachment%3Ac1cf9f43-7672-40fb-bbc1-8c188cd6f1fb%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_154901.png?table=block&id=c9d59608-2944-4d02-8975-6f4d57c94e03&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "メンタル",
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "目標達成の再現性を高めるために、モチベーションを可視化・選別する「フィルタレーション」という思考・タスク管理システムを具体例付きで解説している。",
-    "vid_id": "",
-    "date": "2023-02-13",
-    "is_short": false
-  },
-  {
     "title": "絶ッ対使って！必須ツールTradingView完全解説",
     "url": "https://www.youtube.com/watch?v=E1dHAvJbtds&feature=youtu.be",
     "thumb": "https://i.ytimg.com/vi/E1dHAvJbtds/maxresdefault.jpg",
@@ -4738,23 +5320,6 @@ const VIDEOS = [
     "date": "2023-02-11",
     "is_short": false,
     "duration": 727
-  },
-  {
-    "title": "デイがだめならスキャをすればいいじゃない【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145875193856105",
-    "thumb": "https://i.ytimg.com/vi/ItOroDiLmQs/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "1週間のリアルトレードを振り返り、相場環境の変化に応じてM5など下位足中心にシナリオを切り替えながら、再現性のあるトレード判断とミスの要因を整理している",
-    "vid_id": "",
-    "date": "2023-02-04",
-    "is_short": false
   },
   {
     "title": "FXを知らない人でも10分で分かるように実戦まで解説するダウ理論",
@@ -4815,23 +5380,6 @@ const VIDEOS = [
     "duration": 187
   },
   {
-    "title": "デイ→スキャ、縦横無尽に立ち回れ【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145793887273045",
-    "thumb": "https://i.ytimg.com/vi/Mq3f4P82cU0/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "リプレイ形式で今週のトレードを振り返り、上位足が機能しない難相場では下位足トレードへ切り替える判断軸を解説している",
-    "vid_id": "",
-    "date": "2023-01-22",
-    "is_short": false
-  },
-  {
     "title": "【完全解説】FXで勝つためには避けては通れない道、過去相場検証",
     "url": "https://www.youtube.com/watch?v=DSYvHwfkojI",
     "thumb": "https://i.ytimg.com/vi/DSYvHwfkojI/maxresdefault.jpg",
@@ -4852,63 +5400,6 @@ const VIDEOS = [
     "duration": 1108
   },
   {
-    "title": "よすがの過去相場検証の全て",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417107147669377177",
-    "thumb": "https://www.notion.so/image/attachment%3A699fa57f-1f04-4a31-926f-d5c314ac22c4%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155054.png?table=block&id=d18fe179-54e6-466d-a743-3321cae79203&cache=v2",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "実践",
-      "手法",
-      "過去検証"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "フォレックステスターを使った過去検証を通じて、マルチタイムフレームでのライン認識・シナリオ切り替え・エントリー判断・損切りと利確・期待値計算までの実践的な思考プロセスを具体的に追体験できる内容になっている",
-    "vid_id": "",
-    "date": "2023-01-21",
-    "is_short": false
-  },
-  {
-    "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://www.notion.so/image/attachment%3Ab859b338-77c0-4a33-b455-b7012a2bd200%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155217.png?table=block&id=bf6422ab-31d2-4bc6-912a-0a017b0e6097&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "基礎",
-      "手法",
-      "トレード環境",
-      "Yカリキュラム"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ手法を本気で習得するために、理論と実トレードのギャップを埋める目的で、学習全体の構成、事前準備、デモトレード、MT4の使い方、ナウキャストを軸としたテクニカル分析の考え方を体系的に示している",
-    "vid_id": "",
-    "date": "2023-01-18",
-    "is_short": false
-  },
-  {
-    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
-    "thumb": "https://i.ytimg.com/vi/gWhVeA8yQ84/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "複数時間軸のシナリオを行き来しながらリアルトレードを振り返り、ミスへの対処と視点切り替えの重要性を解説している",
-    "vid_id": "",
-    "date": "2023-01-14",
-    "is_short": false
-  },
-  {
     "title": "投資初心者は株や不動産ではなく「FX」すべし！理由TOP5",
     "url": "https://www.youtube.com/watch?v=WwvgTky_bjc",
     "thumb": "https://i.ytimg.com/vi_webp/WwvgTky_bjc/maxresdefault.webp",
@@ -4925,23 +5416,6 @@ const VIDEOS = [
     "date": "2023-01-14",
     "is_short": false,
     "duration": 521
-  },
-  {
-    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
-    "thumb": "https://i.ytimg.com/vi/0wZ6G7P26UI/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "上位足と下位足の構造を組み合わせてロングとショート両面のシナリオを切り替えながら実際のトレード判断を解説している",
-    "vid_id": "",
-    "date": "2023-01-08",
-    "is_short": false
   },
   {
     "title": "10万を2000万にしたノーリスクFX爆益法",
@@ -4965,78 +5439,6 @@ const VIDEOS = [
     "duration": 397
   },
   {
-    "title": "FXのポテンシャル、ちゃんと知ってる？【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107328116723784",
-    "thumb": "https://www.notion.so/image/attachment%3Aa2660a9f-6944-4d0d-8d08-59ef82cbaffa%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155356.png?table=block&id=529b9137-d41f-48f0-9879-ca8ea7d93e5f&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXが複利の効率性、テクニカル分析による再現性、個人で完結できる自由度、場所を選ばない点において他の職業や投資と比べて優れている理由を整理して伝えている",
-    "vid_id": "",
-    "date": "2023-01-06",
-    "is_short": false
-  },
-  {
-    "title": "圧倒的「才能」を前に挫折し、再起した話【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107091931398174",
-    "thumb": "https://www.notion.so/image/attachment%3A06d51526-3504-407c-ad60-18efa0c4d29c%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155604.png?table=block&id=770aab2a-37aa-48b9-ba95-0122ede91e9d&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "才能の正体を「集中力の長さ・深さ・切り替え速度」の3要素と定義し、自身の挫折体験と成功体験を通じて、自己特性を理解し環境設計で活かす重要性を解説している",
-    "vid_id": "",
-    "date": "2023-01-05",
-    "is_short": false
-  },
-  {
-    "title": "正しい「目線」の切り替えが生死を分ける【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145620977221707",
-    "thumb": "https://i.ytimg.com/vi/HQHizcvkKtw/maxresdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "リアルトレード"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "上位足のトレンドとチャート構造を根拠にロング前提のシナリオを組み立て実際のトレード判断を解説している",
-    "vid_id": "",
-    "date": "2023-01-01",
-    "is_short": false
-  },
-  {
-    "title": "何でYoutubeやってるの？投資家ならやらなくてよくない？【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107051510763674",
-    "thumb": "https://www.notion.so/image/attachment%3Aa95984fc-e68d-4a9b-a7c1-411882755b7d%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155847.png?table=block&id=5fdd5584-b073-4f00-946d-56851dc6ad0c&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "翌年の目標設定をテーマに、他人や社会から植え付けられた欲望ではなく、自分自身が本当に楽しいと感じる価値基準で人生と行動を選ぶ重要性を掘り下げている",
-    "vid_id": "",
-    "date": "2022-12-31",
-    "is_short": false
-  },
-  {
     "title": "【初心者向け】FXが確実に上手くなる方法とロードマップ",
     "url": "https://www.youtube.com/watch?v=cvPReS9883A&feature=youtu.be",
     "thumb": "https://i.ytimg.com/vi/cvPReS9883A/maxresdefault.jpg",
@@ -5058,24 +5460,6 @@ const VIDEOS = [
     "date": "2022-12-28",
     "is_short": false,
     "duration": 678
-  },
-  {
-    "title": "正直に答えます「FXって楽に稼げるんでしょ？」【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417106949933109293",
-    "thumb": "https://www.notion.so/image/attachment%3Ace646994-99ae-48f2-92ee-e943baa2baab%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_155956.png?table=block&id=7ac50116-46ed-47ac-a320-69519b35ba15&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXは結果として大きく稼げるが、その裏には半年以上にわたる徹底した検証・試行錯誤・継続努力があり、「楽に稼げる」という認識では決して到達できない世界であることを実体験ベースで語っている",
-    "vid_id": "",
-    "date": "2022-12-21",
-    "is_short": false
   },
   {
     "title": "損切の後はチャンスになる",
@@ -5155,25 +5539,6 @@ const VIDEOS = [
     "date": "2022-12-10",
     "is_short": false,
     "duration": 1512
-  },
-  {
-    "title": "よすが式ダウ手法【習得編】、いかがでしょう？",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106305880952862",
-    "thumb": "https://www.notion.so/image/attachment%3A4e65e631-2e43-402d-aac2-d57a6b3569a1%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_160101.png?table=block&id=1de00b41-e492-495f-ba0e-7e6f45cf51a9&cache=v2",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "雑談"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ手法をより実践レベルで習得するため、手法を分解して深掘り解説するメンバー限定動画シリーズと、メンタルや考え方を扱う補足コンテンツの開始を検討している告知",
-    "vid_id": "",
-    "date": "2022-12-06",
-    "is_short": false
   },
   {
     "title": "逆行トレンドでもエントリーする方法【今週のリアルトレード解説】",
