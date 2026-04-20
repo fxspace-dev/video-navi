@@ -1,23 +1,20 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
-    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
-    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=H68R87gwzqU",
+    "thumb": "https://img.youtube.com/vi/H68R87gwzqU/mqdefault.jpg",
     "levels": [
-      "中級",
-      "上級"
+      "初心者"
     ],
     "categories": [
-      "リアルトレード",
-      "手法",
-      "実践"
+      "未分類"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
-    "vid_id": "6Wlco85JqvQ",
+    "summary": "",
+    "vid_id": "H68R87gwzqU",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 6226
+    "duration": 0
   },
   {
     "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
@@ -3903,7 +3900,7 @@ const VIDEOS = [
   },
   {
     "title": "#13【FXライブ配信】400万達成を皆で見届けてくれ【10万→1000万企画】",
-    "url": "https://www.youtube.com/watch?v=GkpwfKCi2y0",
+    "url": "https://discord.com/channels/1039824083208126474 /1414551420643840040/1489550288649064528",
     "thumb": "https://i.ytimg.com/vi/yqdo2ajSPKc/maxresdefault.jpg",
     "levels": [
       "初心者",
