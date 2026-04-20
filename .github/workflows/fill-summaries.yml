@@ -24,7 +24,7 @@ jobs:
 
       - name: Run fill summaries script
         env:
-          GEMINI_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/fill_missing_summaries.py
 
       - name: Commit and push if changed
