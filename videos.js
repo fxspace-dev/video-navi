@@ -1,5 +1,124 @@
 const VIDEOS = [
   {
+    "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
+    "url": "https://www.youtube.com/watch?v=2C-GJoetInw",
+    "thumb": "https://img.youtube.com/vi/2C-GJoetInw/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "2C-GJoetInw",
+    "date": "2026-04-18",
+    "is_short": false,
+    "duration": 726
+  },
+  {
+    "title": "プロトレーダーが使うナウキャストとは？",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
+    "is_short": true,
+    "duration": 58
+  },
+  {
+    "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
+    "url": "https://www.youtube.com/watch?v=6Wlco85JqvQ",
+    "thumb": "https://img.youtube.com/vi/6Wlco85JqvQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "6Wlco85JqvQ",
+    "date": "2026-04-15",
+    "is_short": false,
+    "duration": 6226
+  },
+  {
+    "title": "FXプロトレーダーの考え方",
+    "url": "https://www.youtube.com/shorts/N6MsSR8wUWQ",
+    "thumb": "https://i.ytimg.com/vi/N6MsSR8wUWQ/hq2.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "N6MsSR8wUWQ",
+    "date": "2026-04-15",
+    "is_short": true,
+    "duration": 59
+  },
+  {
+    "title": "🔰初心者が3か月で爆速プロになってたから何したか全部聞く",
+    "url": "https://www.youtube.com/watch?v=kR7krXzUjWE",
+    "thumb": "https://img.youtube.com/vi/kR7krXzUjWE/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "kR7krXzUjWE",
+    "date": "2026-04-12",
+    "is_short": false,
+    "duration": 1009
+  },
+  {
+    "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#3",
+    "url": "https://www.youtube.com/watch?v=dmi_TzivCMQ",
+    "thumb": "https://img.youtube.com/vi/dmi_TzivCMQ/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "dmi_TzivCMQ",
+    "date": "2026-04-09",
+    "is_short": false,
+    "duration": 2188
+  },
+  {
+    "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#1",
+    "url": "https://www.youtube.com/watch?v=SrCFIG2dkR4",
+    "thumb": "https://img.youtube.com/vi/SrCFIG2dkR4/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "一般公開",
+    "summary": "",
+    "vid_id": "SrCFIG2dkR4",
+    "date": "2026-04-07",
+    "is_short": false,
+    "duration": 6320
+  },
+  {
     "title": "FXをおすすめする理由2選",
     "url": "https://www.youtube.com/shorts/uXMYArrANNs",
     "thumb": "https://i.ytimg.com/vi/uXMYArrANNs/hq2.jpg",
