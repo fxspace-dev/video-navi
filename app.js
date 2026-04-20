@@ -766,6 +766,8 @@ function getRecommendations(currentIndex, count) {
 
     const scored = VIDEOS.map((v, i) => {
         if (i === currentIndex) return { i, score: -1 };
+        // ショート動画はおすすめから除外
+        if (isShort(v)) return { i, score: -1 };
         let score = 0;
         // Category match with current video (strongest signal)
         v.categories.forEach(c => { if (current.categories.includes(c)) score += 4; });
