@@ -115,17 +115,39 @@ def generate_metadata(title, transcript, need_full):
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512 if need_full else 256},
     }
 
-    try:
-        resp = requests.post(url, json=payload, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        text = re.sub(r"^```(?:json)?\s*", "", text)
-        text = re.sub(r"\s*```$", "", text)
-        return json.loads(text)
-    except Exception as e:
-        print(f"  WARNING: Gemini error: {e}", file=sys.stderr)
-        return {}
+    max_retries = 3
+    for attempt in range(max_retries + 1):
+        try:
+            resp = requests.post(url, json=payload, timeout=30)
+            if resp.status_code == 429 and attempt < max_retries:
+                # レスポンスから retryDelay を取得
+                delay_sec = 30  # デフォルト
+                try:
+                    err_data = resp.json()
+                    for detail in err_data.get("error", {}).get("details", []):
+                        if "retryDelay" in detail:
+                            m = re.match(r"(\d+)", detail["retryDelay"])
+                            if m:
+                                delay_sec = int(m.group(1)) + 3
+                                break
+                except Exception:
+                    pass
+                print(f"  429: retry_delay={delay_sec}s 待機中... (attempt {attempt+1}/{max_retries})", file=sys.stderr)
+                time.sleep(delay_sec)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            text = re.sub(r"^```(?:json)?\s*", "", text)
+            text = re.sub(r"\s*```$", "", text)
+            return json.loads(text)
+        except Exception as e:
+            if attempt == max_retries:
+                print(f"  WARNING: Gemini error (最終): {e}", file=sys.stderr)
+                return {}
+            # 429以外の例外は短く待ってリトライ
+            time.sleep(5)
+    return {}
 
 
 def main():
