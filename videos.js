@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -10,19 +10,19 @@ const VIDEOS = [
     "categories": [
       "ナウキャスト",
       "手法",
-      "相場"
+      "インジケーター"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが活用するナウキャストの概念とその重要性について解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
+    "summary": "プロトレーダーが活用するナウキャストについて解説している動画。",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
     "is_short": true,
     "duration": 58
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
+    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -30,19 +30,19 @@ const VIDEOS = [
     "categories": [
       "損切",
       "基礎",
-      "実践"
+      "手法"
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおける損切りの重要性とその具体的な方法について深掘り解説している。",
-    "vid_id": "HXSOaLWFfxM",
-    "date": "2026-01-16",
+    "vid_id": "7YmolpwwUcI",
+    "date": "2025-11-01",
     "is_short": false,
     "duration": 1096
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -54,19 +54,18 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
-    "vid_id": "6VHINPwHyq8",
-    "date": "2025-09-15",
+    "vid_id": "Q1xuEpJuWRc",
+    "date": "2023-06-17",
     "is_short": false,
     "duration": 1624
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
     "levels": [
       "超初心者",
-      "初心者",
-      "中級"
+      "初心者"
     ],
     "categories": [
       "手法",
@@ -74,16 +73,16 @@ const VIDEOS = [
       "ライン"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ理論に基づいたトレード手法の習得を目指すシリーズの第1章として、ラインの引き方や活用方法を解説している。",
-    "vid_id": "YSOMB0J4VwI",
-    "date": "2025-09-15",
+    "summary": "よすが式ダウ理論の習得に向けた第一歩として、ラインの引き方と活用方法を解説している。",
+    "vid_id": "d0QNPmq28eE",
+    "date": "2023-03-01",
     "is_short": false,
     "duration": 1803
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -93,19 +92,19 @@ const VIDEOS = [
       "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階について解説している。",
-    "vid_id": "EgrGud-QgfA",
-    "date": "2025-09-15",
+    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階を解説している。",
+    "vid_id": "jFh1TOOLnY4",
+    "date": "2023-01-18",
     "is_short": false,
     "duration": 2781
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
+    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
     "levels": [
-      "中級",
-      "上級"
+      "初心者",
+      "中級"
     ],
     "categories": [
       "メンタル",
@@ -113,16 +112,16 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおけるミスへの考え方と、根絶ではなく「対処」することの重要性をリアルトレード解説を通じて紹介している。",
-    "vid_id": "gQj0t0Ov2Ys",
-    "date": "2025-09-15",
+    "summary": "FXトレードにおけるミスへの向き合い方と、今週のリアルトレードの解説について紹介している。",
+    "vid_id": "gWhVeA8yQ84",
+    "date": "2023-01-14",
     "is_short": false,
     "duration": 538
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
+    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -134,8 +133,8 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "今週のリアルトレードを解説し、さらなるトレードの絞り込み方について紹介している。",
-    "vid_id": "XI3GmDp3TH8",
-    "date": "2025-09-15",
+    "vid_id": "0wZ6G7P26UI",
+    "date": "2023-01-08",
     "is_short": false,
     "duration": 387
   },
@@ -839,13 +838,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
     "thumb": "https://img.youtube.com/vi/ByffhpnYz2U/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年4月10日から4月14日までのリアルトレードと、それをお手本としたトレード解説を行っている。",
     "vid_id": "ByffhpnYz2U",
     "date": "2025-09-15",
     "is_short": false,
@@ -856,13 +858,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
     "thumb": "https://img.youtube.com/vi/SS5KXMTOG7E/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週のリアルトレードと、それをお手本としたトレード解説。",
     "vid_id": "SS5KXMTOG7E",
     "date": "2025-09-15",
     "is_short": false,
@@ -873,13 +878,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
     "thumb": "https://img.youtube.com/vi/DAivHGL2gKE/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年3月27日から3月31日までの1週間の全リアルトレードをハイレベルな解説で紹介している。",
     "vid_id": "DAivHGL2gKE",
     "date": "2025-09-15",
     "is_short": false,
@@ -890,13 +897,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
     "thumb": "https://img.youtube.com/vi/5Cb_Y1JTibE/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年5月29日から6月2日までのリアルトレードと、そのトレードを解説した動画。",
     "vid_id": "5Cb_Y1JTibE",
     "date": "2025-09-15",
     "is_short": false,
@@ -907,13 +917,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
     "thumb": "https://img.youtube.com/vi/Pqnh5j8L-aE/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年5月22日から5月26日までの1週間の全リアルトレードと、お手本トレードの解説を行っている。",
     "vid_id": "Pqnh5j8L-aE",
     "date": "2025-09-15",
     "is_short": false,
@@ -924,13 +937,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
     "thumb": "https://img.youtube.com/vi/3UeC-CBMH04/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年5月15日から5月19日までのリアルトレードと、それをお手本としたトレード解説を行っている。",
     "vid_id": "3UeC-CBMH04",
     "date": "2025-09-15",
     "is_short": false,
@@ -981,13 +997,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
     "thumb": "https://img.youtube.com/vi/7-75_yAKKZ8/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週の全リアルトレードと、お手本トレードの解説を行っている。",
     "vid_id": "7-75_yAKKZ8",
     "date": "2025-09-15",
     "is_short": false,
@@ -998,13 +1017,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
     "thumb": "https://img.youtube.com/vi/QB37qp_yyXM/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年6月26日から6月30日までのリアルトレードと、そのトレードを解説する動画。",
     "vid_id": "QB37qp_yyXM",
     "date": "2025-09-15",
     "is_short": false,
@@ -1015,13 +1037,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
     "thumb": "https://img.youtube.com/vi/wTE-raRnuqs/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年6月19日から6月23日までのリアルトレードと、それをお手本としたトレード解説を行っている。",
     "vid_id": "wTE-raRnuqs",
     "date": "2025-09-15",
     "is_short": false,
@@ -1032,13 +1057,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
     "thumb": "https://img.youtube.com/vi/ehfL7dEbIB0/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年6月12日から6月16日までの1週間の全リアルトレードと、お手本トレードの解説を行っている。",
     "vid_id": "ehfL7dEbIB0",
     "date": "2025-09-15",
     "is_short": false,
@@ -1049,13 +1077,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
     "thumb": "https://img.youtube.com/vi/Do6oCChBjXw/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週のリアルトレードと、お手本トレードの解説を行っている。",
     "vid_id": "Do6oCChBjXw",
     "date": "2025-09-15",
     "is_short": false,
@@ -1066,13 +1097,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
     "thumb": "https://img.youtube.com/vi/5pJY_iJFqsI/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "シナリオ",
+      "手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "3月のシナリオ構築動画で提示したシナリオに沿ったお手本トレードを解説している。",
     "vid_id": "5pJY_iJFqsI",
     "date": "2025-09-15",
     "is_short": false,
@@ -1083,13 +1117,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
     "thumb": "https://img.youtube.com/vi/cvvVYGXRuF8/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "リアルトレード",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "1日で200pipsを狙えるのはスキャルピングのみであることを、今週のリアルトレード解説を通じて説明している。",
     "vid_id": "cvvVYGXRuF8",
     "date": "2025-09-15",
     "is_short": false,
@@ -1100,13 +1137,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
     "thumb": "https://img.youtube.com/vi/8pQ-8EHrLj0/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "2023年7月10日から7月14日までの1週間の全リアルトレードと、それらのお手本となるトレード解説。",
     "vid_id": "8pQ-8EHrLj0",
     "date": "2025-09-15",
     "is_short": false,
@@ -1117,13 +1157,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
     "thumb": "https://img.youtube.com/vi/w1SvHXmimFc/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "ナウキャスト"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週のリアルトレードにおいて、経済指標発表時のスキャルピング手法を解説している。",
     "vid_id": "w1SvHXmimFc",
     "date": "2025-09-15",
     "is_short": false,
@@ -1134,13 +1177,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
     "thumb": "https://img.youtube.com/vi/9rZWAc3vBNA/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "リアルトレード",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "レンジ相場でも1日50pipsを獲得する具体的なトレード手法と、今週のリアルトレードの解説。",
     "vid_id": "9rZWAc3vBNA",
     "date": "2025-09-15",
     "is_short": false,
@@ -1304,13 +1350,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417106978194460793",
     "thumb": "https://img.youtube.com/vi/q3rVECeq_5s/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "その他手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "トレーダーの「フィルタレーション」という手法について、その詳細な解説を行っている。",
     "vid_id": "q3rVECeq_5s",
     "date": "2025-09-15",
     "is_short": false,
@@ -2608,7 +2657,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "保有時間を事前に予測する方法を解説",
     "vid_id": "7fbsbmbbI9Q",
     "date": "2025-11-18",
     "is_short": true,
@@ -5006,7 +5055,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "1週間の旅から帰還したトレーダーによるFXに関する雑談ライブ配信。",
     "vid_id": "oWG35qepfEc",
     "date": "2023-09-02",
     "is_short": false,
