@@ -1,5 +1,144 @@
 const VIDEOS = [
   {
+    "title": "プロトレーダーが使うナウキャストとは？",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "ナウキャスト",
+      "手法",
+      "相場"
+    ],
+    "method": "一般公開",
+    "summary": "プロトレーダーが活用するナウキャストの概念とその重要性について解説している。",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
+    "is_short": true,
+    "duration": 58
+  },
+  {
+    "title": "損切り完全解説〜深掘り動画〜",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
+    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "損切",
+      "基礎",
+      "実践"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける損切りの重要性とその具体的な方法について深掘り解説している。",
+    "vid_id": "7YmolpwwUcI",
+    "date": "2025-11-01",
+    "is_short": false,
+    "duration": 1096
+  },
+  {
+    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "ナウキャスト",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
+    "vid_id": "Q1xuEpJuWRc",
+    "date": "2023-06-17",
+    "is_short": false,
+    "duration": 1624
+  },
+  {
+    "title": "よすが式ダウ手法習得編【1章 ライン】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "ライン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "よすが式ダウ理論に基づいたトレード手法の習得を目指すシリーズの第1章として、ラインの引き方について解説している。",
+    "vid_id": "d0QNPmq28eE",
+    "date": "2023-03-01",
+    "is_short": false,
+    "duration": 1803
+  },
+  {
+    "title": "よすが式ダウ手法習得編【0章 準備】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階について解説している。",
+    "vid_id": "jFh1TOOLnY4",
+    "date": "2023-01-18",
+    "is_short": false,
+    "duration": 2781
+  },
+  {
+    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
+    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "メンタル",
+      "リアルトレード",
+      "実践"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおけるミスへの向き合い方と、今週のリアルトレードの解説について紹介している。",
+    "vid_id": "gWhVeA8yQ84",
+    "date": "2023-01-14",
+    "is_short": false,
+    "duration": 538
+  },
+  {
+    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
+    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "手法",
+      "実践"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "今週のリアルトレードを解説し、さらなるトレードの絞り込み方について紹介している。",
+    "vid_id": "0wZ6G7P26UI",
+    "date": "2023-01-08",
+    "is_short": false,
+    "duration": 387
+  },
+  {
     "title": "プロトレーダーが使うMTFとは？",
     "url": "https://www.youtube.com/shorts/7eDbHMlVQ1Q",
     "thumb": "https://i.ytimg.com/vi/7eDbHMlVQ1Q/hq2.jpg",
@@ -18,146 +157,6 @@ const VIDEOS = [
     "date": "2026-04-24",
     "is_short": true,
     "duration": 60
-  },
-  {
-    "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "相場"
-    ],
-    "method": "一般公開",
-    "summary": "プロトレーダーが活用するナウキャストの概念と、そのトレードにおける重要性について解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
-    "is_short": true,
-    "duration": 58
-  },
-  {
-    "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "損切",
-      "基礎",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける損切りの重要性とその具体的な方法について深掘り解説している。",
-    "vid_id": "HXSOaLWFfxM",
-    "date": "2026-01-16",
-    "is_short": false,
-    "duration": 1096
-  },
-  {
-    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "ナウキャスト",
-      "基礎"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
-    "vid_id": "6VHINPwHyq8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1624
-  },
-  {
-    "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "ライン"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ理論に基づいたトレード手法の習得を目指すシリーズの第1章として、ラインの引き方や活用方法を解説している。",
-    "vid_id": "YSOMB0J4VwI",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1803
-  },
-  {
-    "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "手法",
-      "基礎"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードのダウ理論を用いた手法習得に向けた準備段階を解説している。",
-    "vid_id": "EgrGud-QgfA",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 2781
-  },
-  {
-    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "メンタル",
-      "リアルトレード",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおけるミスへの考え方と、根絶ではなく「対処」することの重要性をリアルトレード解説を通して説明している。",
-    "vid_id": "gQj0t0Ov2Ys",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 538
-  },
-  {
-    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "手法",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを解説し、さらなるトレードの絞り込み方について紹介している。",
-    "vid_id": "XI3GmDp3TH8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 387
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#5",
@@ -1554,13 +1553,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1416837825088852123",
     "thumb": "https://img.youtube.com/vi/rY_vyBdKqMc/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "トレード環境",
+      "企画"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "FX SPACEというプラットフォームを最強にするための具体的な方法を解説している。",
     "vid_id": "rY_vyBdKqMc",
     "date": "2025-09-14",
     "is_short": false,
@@ -1571,13 +1572,17 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822985741832345",
     "thumb": "https://img.youtube.com/vi/lfHiYEJ6Gws/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "超初心者",
+      "初心者",
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "企画",
+      "YTT"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "Youtubeメンバーシップに代わるサブスクリプションサービスと、YTTの買い切り販売を開始したことを告知している。",
     "vid_id": "lfHiYEJ6Gws",
     "date": "2025-09-14",
     "is_short": false,
@@ -1588,13 +1593,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/40BobTZPAN0/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "企画"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "Fundoraの正式ローンチを受け、Fintokeiとの詳細な比較検証を行っている。",
     "vid_id": "40BobTZPAN0",
     "date": "2025-09-14",
     "is_short": false,
@@ -1605,13 +1612,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/BEtavXkkNp8/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "企画",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "FundoraとFintokeiのプロップファームを徹底比較し、その結果を解説している。",
     "vid_id": "BEtavXkkNp8",
     "date": "2025-09-14",
     "is_short": false,
@@ -1622,13 +1632,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/OAN8pERiMdo/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "Fundoraというツールが最強ではないかと考察している動画。",
     "vid_id": "OAN8pERiMdo",
     "date": "2025-09-14",
     "is_short": false,
@@ -1639,13 +1651,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/u2wS7RQ8GFQ/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "資金管理",
+      "手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "Fundoraの1％ルールの詳細発表と、それを攻略するための「アレ」について解説している。",
     "vid_id": "u2wS7RQ8GFQ",
     "date": "2025-09-14",
     "is_short": false,
@@ -1656,13 +1671,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/saBgJPQleS0/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "企画"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "Fintokeiの最新の改善点と、今後の5段階の進化について解説している。",
     "vid_id": "saBgJPQleS0",
     "date": "2025-09-14",
     "is_short": false,
@@ -1673,13 +1690,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
     "thumb": "https://img.youtube.com/vi/4uEXrybJ4Q4/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "プロップファーム",
+      "企画"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "新興プロップファーム「Funded7」について、内部調査の結果を解説している。",
     "vid_id": "4uEXrybJ4Q4",
     "date": "2025-09-13",
     "is_short": false,
@@ -1690,13 +1709,17 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416834067202310244",
     "thumb": "https://img.youtube.com/vi/H1iopAiRMNM/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "超初心者",
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "インジケーター",
+      "手法",
+      "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "移動平均線を使った勝てるトレード戦略を、初心者にも分かりやすく徹底的に解説している動画。",
     "vid_id": "H1iopAiRMNM",
     "date": "2024-12-27",
     "is_short": false,
@@ -1707,13 +1730,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145875193856105",
     "thumb": "https://img.youtube.com/vi/ItOroDiLmQs/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "リアルトレード",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "デイリートレードがうまくいかない場合にスキャルピングで対応する方法を、今週のリアルトレード解説を通じて紹介している。",
     "vid_id": "ItOroDiLmQs",
     "date": "2023-02-04",
     "is_short": false,
@@ -1744,13 +1770,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145620977221707",
     "thumb": "https://img.youtube.com/vi/HQHizcvkKtw/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "メンタル"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週のリアルトレード解説を通じて、正しい「目線」の切り替えがトレードの成否に大きく影響することを解説している。",
     "vid_id": "HQHizcvkKtw",
     "date": "2023-01-01",
     "is_short": false,
@@ -1761,13 +1790,14 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145620977221707",
     "thumb": "https://img.youtube.com/vi/EkutnuCkWSQ/mqdefault.jpg",
     "levels": [
+      "超初心者",
       "初心者"
     ],
     "categories": [
-      "未分類"
+      "その他手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "著作権フリーの楽曲「Together – Roa」を紹介している動画。",
     "vid_id": "EkutnuCkWSQ",
     "date": "2022-09-20",
     "is_short": false,
@@ -2113,7 +2143,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおけるタイミング待ちの重要性について解説。",
     "vid_id": "BYHo43aQk4o",
     "date": "2026-02-27",
     "is_short": true,
@@ -2152,7 +2182,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおけるエントリー手順を3つのステップで解説。",
     "vid_id": "Y-AY9sFQCmg",
     "date": "2026-02-18",
     "is_short": true,
@@ -2185,7 +2215,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおけるシナリオ構築の重要性について解説。成功への道筋を描くための考え方。",
     "vid_id": "JGFwiOr9jtE",
     "date": "2026-02-13",
     "is_short": true,
@@ -2198,7 +2228,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおける期待値の考え方とその重要性について解説。",
     "vid_id": "3MLJnKJKyjo",
     "date": "2026-02-11",
     "is_short": true,
@@ -2232,7 +2262,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "勝率90%という高い確率でもトレードで負けてしまう理由を解説。",
     "vid_id": "rLyr77QF7Rg",
     "date": "2026-02-06",
     "is_short": true,
