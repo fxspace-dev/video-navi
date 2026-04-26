@@ -1,8 +1,28 @@
 const VIDEOS = [
   {
+    "title": "FXに限らず勝ってる人って結局全員この思考持ってるんだよな",
+    "url": "https://www.youtube.com/watch?v=PHaK8i_x7mg",
+    "thumb": "https://img.youtube.com/vi/PHaK8i_x7mg/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "メンタル",
+      "雑談"
+    ],
+    "method": "一般公開",
+    "summary": "FXトレードに限らず、利益を上げているトレーダーに共通する思考法を解説している。",
+    "vid_id": "PHaK8i_x7mg",
+    "date": "2026-04-26",
+    "is_short": false,
+    "duration": 950
+  },
+  {
     "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
-    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
+    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
+    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -14,35 +34,36 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "プロトレーダーが活用するナウキャストの概念とその重要性について解説している。",
-    "vid_id": "fAEy5mNTkxQ",
-    "date": "2026-04-17",
+    "vid_id": "z_YEqGSrWY0",
+    "date": "2026-04-22",
     "is_short": true,
     "duration": 58
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
-    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
+    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
     "levels": [
+      "超初心者",
       "初心者",
       "中級"
     ],
     "categories": [
       "損切",
       "基礎",
-      "実践"
+      "手法"
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおける損切りの重要性とその具体的な方法について深掘り解説している。",
-    "vid_id": "7YmolpwwUcI",
-    "date": "2025-11-01",
+    "vid_id": "HXSOaLWFfxM",
+    "date": "2026-01-16",
     "is_short": false,
     "duration": 1096
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
+    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -54,15 +75,15 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
-    "vid_id": "Q1xuEpJuWRc",
-    "date": "2023-06-17",
+    "vid_id": "6VHINPwHyq8",
+    "date": "2025-09-15",
     "is_short": false,
     "duration": 1624
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
+    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -73,16 +94,16 @@ const VIDEOS = [
       "ライン"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ理論に基づいたトレード手法の習得を目指すシリーズの第1章として、ラインの引き方について解説している。",
-    "vid_id": "d0QNPmq28eE",
-    "date": "2023-03-01",
+    "summary": "FXトレードにおける「よすが式ダウ手法」の習得に向けた、第1章「ライン」の解説動画。",
+    "vid_id": "YSOMB0J4VwI",
+    "date": "2025-09-15",
     "is_short": false,
     "duration": 1803
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
+    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -93,18 +114,18 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階について解説している。",
-    "vid_id": "jFh1TOOLnY4",
-    "date": "2023-01-18",
+    "vid_id": "EgrGud-QgfA",
+    "date": "2025-09-15",
     "is_short": false,
     "duration": 2781
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
-    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
     "levels": [
-      "初心者",
-      "中級"
+      "中級",
+      "上級"
     ],
     "categories": [
       "メンタル",
@@ -112,16 +133,16 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおけるミスへの向き合い方と、今週のリアルトレードの解説について紹介している。",
-    "vid_id": "gWhVeA8yQ84",
-    "date": "2023-01-14",
+    "summary": "FXトレードにおけるミスへの向き合い方を、根絶ではなく「対処」に焦点を当てて解説しているリアルトレード動画。",
+    "vid_id": "gQj0t0Ov2Ys",
+    "date": "2025-09-15",
     "is_short": false,
     "duration": 538
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
-    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -133,8 +154,8 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "今週のリアルトレードを解説し、さらなるトレードの絞り込み方について紹介している。",
-    "vid_id": "0wZ6G7P26UI",
-    "date": "2023-01-08",
+    "vid_id": "XI3GmDp3TH8",
+    "date": "2025-09-15",
     "is_short": false,
     "duration": 387
   },
@@ -2275,7 +2296,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXで勝てない理由を解説。具体的な原因と改善策について紹介。",
     "vid_id": "gmTWp64ErOQ",
     "date": "2026-02-04",
     "is_short": true,
@@ -2308,7 +2329,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "上位足を見ることで、相場の全体像を把握し、より精度の高いトレード判断に繋がることを解説。",
     "vid_id": "bvSR53Y-hq0",
     "date": "2026-01-30",
     "is_short": true,
@@ -2321,7 +2342,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "ラインの本当の意味を解説",
     "vid_id": "HjDMtW_qqus",
     "date": "2026-01-28",
     "is_short": true,
@@ -2354,7 +2375,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおける三尊天井・三尊底の本質的な意味と、その見極め方、トレードへの活かし方",
     "vid_id": "CynEhfgJ3ko",
     "date": "2026-01-23",
     "is_short": true,
@@ -2367,7 +2388,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "前回安値に買い注文が溜まるメカニズムと、その背景にあるトレーダー心理を解説。",
     "vid_id": "KoVJcvQuI6E",
     "date": "2026-01-21",
     "is_short": true,
@@ -2411,7 +2432,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "トレンドの方向性を把握し、その方向への売買圧力を分析することで、トレードの優位性を高める手法を解説。",
     "vid_id": "KiXscMD3gkA",
     "date": "2026-01-14",
     "is_short": true,
@@ -2443,7 +2464,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXで勝つための本質的な考え方と、トレードで成功するために必要なマインドセットの解説。",
     "vid_id": "Nu__MwU9j10",
     "date": "2026-01-09",
     "is_short": true,
@@ -2456,7 +2477,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおいて、未来予測が通用しない理由を解説。",
     "vid_id": "dEyHeav9yR8",
     "date": "2026-01-07",
     "is_short": true,
@@ -2469,7 +2490,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "2026年のFX相場を予測するチャート分析を開始。視聴者からの質問も受け付けるライブ配信。",
     "vid_id": "2O294ZSkYso",
     "date": "2026-01-05",
     "is_short": false,
@@ -2524,7 +2545,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "2026年のFXトレード計画を視聴者と共に立案するライブ配信。質問も受け付け、具体的な目標設定や戦略について議論。",
     "vid_id": "uPi2obGrZSU",
     "date": "2025-12-31",
     "is_short": false,
@@ -2613,7 +2634,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおけるライン引きの実践方法を4つのステップで解説。",
     "vid_id": "44MHcr-Gfok",
     "date": "2025-12-10",
     "is_short": true,
@@ -2626,7 +2647,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXライブ配信で、よすが式ダウ理論をさらに深く掘り下げ、完全マスターを目指す内容。質問も受け付け、理解を深める機会を提供。",
     "vid_id": "kVMwxA9iSKc",
     "date": "2025-12-07",
     "is_short": false,
@@ -2658,7 +2679,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "現在の経済状況を正確に把握するためのナウキャストの解説。",
     "vid_id": "hps3hfkbgaI",
     "date": "2025-12-05",
     "is_short": true,
@@ -2692,7 +2713,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "ブレイクアウトの値動きの原理を解説。",
     "vid_id": "NRlkKfSuX1k",
     "date": "2025-11-27",
     "is_short": true,
@@ -2705,7 +2726,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "ラインの上下で起こる値動きのメカニズムと、その背景にある市場参加者の心理を解説。",
     "vid_id": "gjGJb7UDs0I",
     "date": "2025-11-25",
     "is_short": true,
@@ -2798,7 +2819,7 @@ const VIDEOS = [
     "levels": [],
     "categories": [],
     "method": "一般公開",
-    "summary": "",
+    "summary": "FXトレードにおけるライン引きの重要性と具体的な引き方を解説。視聴者からの質問にもリアルタイムで回答。",
     "vid_id": "dkxFP70MPJI",
     "date": "2025-11-13",
     "is_short": false,
