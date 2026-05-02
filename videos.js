@@ -2648,7 +2648,6 @@ const VIDEOS = [
     "url": "https://youtu.be/csvMponcNEY",
     "thumb": "https://www.notion.so/image/attachment%3A89a75797-1c35-4335-a0eb-3de5a9198dde%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-13_010254.png?table=block&id=2e1a8fb3-5191-80e1-b0e5-db5692039db3&cache=v2",
     "levels": [
-      "ALL",
       "超初心者",
       "初心者",
       "中級",
@@ -4993,7 +4992,6 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=8dZkrW3oJPY",
     "thumb": "https://i.ytimg.com/vi/8dZkrW3oJPY/maxresdefault.jpg",
     "levels": [
-      "中級者",
       "中級",
       "上級"
     ],

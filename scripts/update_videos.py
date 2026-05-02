@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime
 
 import requests
@@ -390,22 +391,51 @@ def generate_metadata(title: str, transcript: str | None) -> dict:
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512},
     }
 
-    try:
-        resp = requests.post(url, json=payload, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        # Strip markdown code fences if present
-        response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
-        response_text = re.sub(r"\s*```$", "", response_text)
-        return json.loads(response_text)
-    except Exception as e:
-        print(f"WARNING: Gemini API error for '{title}': {e}", file=sys.stderr)
-        return {
-            "summary": "",
-            "levels": ["初心者"],
-            "categories": ["未分類"],
-        }
+    max_retries = 3
+    for attempt in range(max_retries + 1):
+        try:
+            resp = requests.post(url, json=payload, timeout=30)
+            if resp.status_code == 429 and attempt < max_retries:
+                delay_sec = 30
+                try:
+                    for detail in resp.json().get("error", {}).get("details", []):
+                        if "retryDelay" in detail:
+                            m = re.match(r"(\d+)", detail["retryDelay"])
+                            if m:
+                                delay_sec = int(m.group(1)) + 3
+                                break
+                except Exception:
+                    pass
+                print(f"  429: {delay_sec}s 待機中... (attempt {attempt+1}/{max_retries})", file=sys.stderr)
+                time.sleep(delay_sec)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            response_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
+            response_text = re.sub(r"\s*```$", "", response_text)
+            result = json.loads(response_text)
+            # Normalize levels to valid options only
+            valid_levels = {"超初心者", "初心者", "中級", "上級"}
+            level_map = {"中級者": "中級", "ALL": None}
+            normalized = []
+            for l in result.get("levels", []):
+                mapped = level_map.get(l, l)
+                if mapped and mapped in valid_levels and mapped not in normalized:
+                    normalized.append(mapped)
+            if normalized:
+                result["levels"] = normalized
+            return result
+        except Exception as e:
+            if attempt == max_retries:
+                print(f"WARNING: Gemini API error for '{title}': {e}", file=sys.stderr)
+                return {
+                    "summary": "",
+                    "levels": ["初心者"],
+                    "categories": ["未分類"],
+                }
+            time.sleep(5)
+    return {"summary": "", "levels": ["初心者"], "categories": ["未分類"]}
 
 
 # ---------------------------------------------------------------------------
