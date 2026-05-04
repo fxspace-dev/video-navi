@@ -50,11 +50,16 @@ jobs:
           git diff --cached --quiet || (git commit -m "Update videos.js with latest uploads & summaries" && git push)
 
       - name: Deploy to production server
-        run: |
-          sudo apt-get install -y sshpass > /dev/null 2>&1
-          sshpass -p "${{ secrets.FTP_PASSWORD }}" scp \
-            -P 10022 \
-            -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=30 \
-            videos.js \
-            "${{ secrets.FTP_USERNAME }}@sv14907.xserver.jp:/fx-space.com/public_html/videonavi/videos.js"
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: sv14907.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /fx-space.com/public_html/videonavi/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/scripts/**
+            **/.github/**
+            **/*.md
