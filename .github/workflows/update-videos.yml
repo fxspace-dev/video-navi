@@ -48,3 +48,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add videos.js
           git diff --cached --quiet || (git commit -m "Update videos.js with latest uploads & summaries" && git push)
+
+      - name: Deploy to production server
+        run: |
+          curl -s -T videos.js \
+            "ftp://${{ secrets.FTP_HOST }}/fx-space.com/public_html/videonavi/videos.js" \
+            --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" \
+            --ftp-create-dirs
