@@ -52,10 +52,9 @@ jobs:
       - name: Deploy to production server
         run: |
           sudo apt-get install -y sshpass > /dev/null 2>&1
-          sshpass -p "${{ secrets.FTP_PASSWORD }}" sftp \
+          sshpass -p "${{ secrets.FTP_PASSWORD }}" scp \
             -P 10022 \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=30 \
-            "${{ secrets.FTP_USERNAME }}@sv14907.xserver.jp" << 'SFTP_EOF'
-          put videos.js /fx-space.com/public_html/videonavi/videos.js
-          SFTP_EOF
+            videos.js \
+            "${{ secrets.FTP_USERNAME }}@sv14907.xserver.jp:/fx-space.com/public_html/videonavi/videos.js"
