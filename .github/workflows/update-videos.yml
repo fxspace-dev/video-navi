@@ -56,6 +56,6 @@ jobs:
             -P 10022 \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=30 \
-            "${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}" << 'SFTP_EOF'
+            "${{ secrets.FTP_USERNAME }}@sv14907.xserver.jp" << 'SFTP_EOF'
           put videos.js /fx-space.com/public_html/videonavi/videos.js
           SFTP_EOF
