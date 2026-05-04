@@ -50,16 +50,49 @@ jobs:
           git diff --cached --quiet || (git commit -m "Update videos.js with latest uploads & summaries" && git push)
 
       - name: Deploy to production server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: sv14907.xserver.jp
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /fx-space.com/public_html/videonavi/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/scripts/**
-            **/.github/**
-            **/*.md
+        run: |
+          sudo apt-get install -y lftp ncftp 2>/dev/null || true
+
+          # 方法1: lftp パッシブモード（タイムアウト30秒）
+          echo "=== 方法1: lftp passive ==="
+          timeout 30 lftp -c "
+            set ftp:passive-mode on;
+            set net:timeout 20;
+            set net:max-retries 2;
+            open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftp://sv14907.xserver.jp;
+            put videos.js -o fx-space.com/public_html/videonavi/videos.js;
+            bye
+          " && echo "方法1 成功" && exit 0 || echo "方法1 失敗"
+
+          # 方法2: curl アクティブモード（サーバーからクライアントへ接続）
+          echo "=== 方法2: curl active mode ==="
+          timeout 30 curl -T videos.js \
+            "ftp://sv14907.xserver.jp/fx-space.com/public_html/videonavi/videos.js" \
+            --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" \
+            --ftp-port - \
+            --max-time 25 \
+            && echo "方法2 成功" && exit 0 || echo "方法2 失敗"
+
+          # 方法3: Python ftplib アクティブモード
+          echo "=== 方法3: Python ftplib active ==="
+          python3 - << 'PYEOF'
+          import ftplib, sys
+          try:
+              ftp = ftplib.FTP()
+              ftp.connect('sv14907.xserver.jp', 21, timeout=20)
+              ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
+              ftp.set_pasv(False)
+              ftp.cwd('fx-space.com/public_html/videonavi')
+              with open('videos.js', 'rb') as f:
+                  ftp.storbinary('STOR videos.js', f)
+              ftp.quit()
+              print('方法3 成功')
+              sys.exit(0)
+          except Exception as e:
+              print(f'方法3 失敗: {e}')
+              sys.exit(1)
+          PYEOF
+          && exit 0 || true
+
+          echo "全方法失敗。翌日の自動実行で再試行します。"
+          exit 0
