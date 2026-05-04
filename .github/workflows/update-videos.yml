@@ -51,7 +51,11 @@ jobs:
 
       - name: Deploy to production server
         run: |
-          curl -s -T videos.js \
-            "ftp://${{ secrets.FTP_HOST }}/fx-space.com/public_html/videonavi/videos.js" \
-            --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" \
-            --ftp-create-dirs
+          sudo apt-get install -y sshpass > /dev/null 2>&1
+          sshpass -p "${{ secrets.FTP_PASSWORD }}" sftp \
+            -P 10022 \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=30 \
+            "${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}" << 'SFTP_EOF'
+          put videos.js /fx-space.com/public_html/videonavi/videos.js
+          SFTP_EOF
