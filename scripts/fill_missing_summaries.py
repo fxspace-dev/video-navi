@@ -14,6 +14,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 VIDEOS_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "videos.js")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+FORCE_ALL = os.environ.get("FORCE_ALL", "0") == "1"  # 全件強制再生成モード
 
 EXISTING_CATEGORIES = [
     "手法", "基礎", "リアルトレード", "雑談", "メンタル", "実践",
@@ -63,10 +64,15 @@ def generate_metadata(title, transcript, need_full):
     """
     context = transcript[:8000] if transcript else f"(字幕なし) タイトル: {title}"
 
+    summary_instruction = """
+## summary の書き方（最重要）
+- タイトルの言い換えは禁止。字幕テキストから読み取れる「具体的な内容・手法・ポイント」を書く
+- 例: 「損切りラインの決め方3パターンと、エントリー後のメンタル管理について解説している。」
+- 「〜を解説している」「〜について紹介している」のような体言止めの文体
+- 1〜2文、日本語80文字以内"""
+
     if need_full:
         prompt = f"""あなたはFXトレード教育チャンネル「@fxyosuga」の動画メタデータを生成するアシスタントです。
-
-以下の動画情報を基に、JSON形式でメタデータを生成してください。
 
 ## 動画タイトル
 {title}
@@ -76,37 +82,32 @@ def generate_metadata(title, transcript, need_full):
 
 ## 出力フォーマット（JSONのみ、他のテキストなし）
 {{
-  "summary": "動画の内容を1〜2文で要約（日本語）",
+  "summary": "字幕から読み取れる具体的な内容を1〜2文で",
   "levels": ["該当するレベルを配列で"],
   "categories": ["該当するカテゴリを配列で"]
 }}
-
+{summary_instruction}
 ## レベル選択肢（1つ以上選択）
 {", ".join(LEVEL_OPTIONS)}
 
 ## 既存カテゴリ一覧（できるだけここから選択。該当なしの場合は新しいカテゴリを作成可）
 {", ".join(EXISTING_CATEGORIES)}
 
-## 注意
-- summaryは「〜を解説している」「〜について紹介している」のような体言止めの文体
+## その他注意
 - levelsは対象視聴者のレベル（複数可）
 - categoriesは動画の主題に合うもの（1〜3個）
 - JSONのみ出力（マークダウンのコードブロックなし）"""
     else:
         prompt = f"""あなたはFXトレード教育チャンネル「@fxyosuga」の動画メタデータを生成するアシスタントです。
 
-以下の動画情報を基に、動画の要約を1〜2文で生成してください。
-
 ## 動画タイトル
 {title}
 
 ## 動画の内容（字幕テキスト）
 {context}
-
-## 注意
-- 「〜を解説している」「〜について紹介している」のような体言止めの文体
-- JSONのみ出力: {{"summary": "要約文"}}
-- マークダウンのコードブロックなし"""
+{summary_instruction}
+JSONのみ出力: {{"summary": "要約文"}}
+マークダウンのコードブロックなし"""
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
     payload = {
@@ -154,17 +155,21 @@ def main():
         sys.exit("ERROR: Set GEMINI_API_KEY environment variable")
 
     videos, rest = read_videos_js()
-    # 対象: 要約が空 OR categories が ["未分類"]（update_videos.py のフォールバック値）
-    def needs_fix(v):
-        no_summary = not v.get("summary", "").strip()
-        unclassified = v.get("categories") == ["未分類"]
-        return no_summary or unclassified
 
-    missing = [(i, v) for i, v in enumerate(videos) if needs_fix(v)]
-    print(f"要約/カテゴリ補完対象: {len(missing)}件 / 全{len(videos)}件")
+    if FORCE_ALL:
+        # 全件対象（ショート除く）: 字幕ベースの深い要約に差し替え
+        missing = [(i, v) for i, v in enumerate(videos) if not v.get("is_short", False)]
+        print(f"[FORCE_ALL] 全件再生成対象: {len(missing)}件 / 全{len(videos)}件")
+    else:
+        def needs_fix(v):
+            no_summary = not v.get("summary", "").strip()
+            unclassified = v.get("categories") == ["未分類"]
+            return no_summary or unclassified
+        missing = [(i, v) for i, v in enumerate(videos) if needs_fix(v)]
+        print(f"要約/カテゴリ補完対象: {len(missing)}件 / 全{len(videos)}件")
 
     if not missing:
-        print("すべての動画に要約とカテゴリがあります。")
+        print("対象動画がありません。")
         return
 
     updated = 0
