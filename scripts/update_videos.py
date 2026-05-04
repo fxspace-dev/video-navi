@@ -333,17 +333,15 @@ def is_youtube_short(vid_id: str) -> bool:
 
 def get_transcript(video_id: str) -> str | None:
     """Try to fetch Japanese transcript for a video."""
+    api = YouTubeTranscriptApi()
     try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-        # Prefer manually created Japanese, then auto-generated Japanese
-        for method in ("find_transcript", "find_generated_transcript"):
-            try:
-                tr = getattr(transcript_list, method)(["ja"])
-                parts = tr.fetch()
-                return " ".join(entry["text"] for entry in parts)
-            except Exception:
-                continue
-        return None
+        transcript = api.fetch(video_id, languages=["ja"])
+        return " ".join(e.text for e in transcript)
+    except Exception:
+        pass
+    try:
+        transcript = api.fetch(video_id)
+        return " ".join(e.text for e in transcript)
     except Exception:
         return None
 

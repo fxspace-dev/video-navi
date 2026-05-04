@@ -43,16 +43,15 @@ def write_videos_js(videos, rest):
 
 
 def get_transcript(video_id):
+    api = YouTubeTranscriptApi()
     try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-        for method in ("find_transcript", "find_generated_transcript"):
-            try:
-                tr = getattr(transcript_list, method)(["ja"])
-                parts = tr.fetch()
-                return " ".join(entry["text"] for entry in parts)
-            except Exception:
-                continue
-        return None
+        transcript = api.fetch(video_id, languages=["ja"])
+        return " ".join(e.text for e in transcript)
+    except Exception:
+        pass
+    try:
+        transcript = api.fetch(video_id)
+        return " ".join(e.text for e in transcript)
     except Exception:
         return None
 
@@ -169,6 +168,7 @@ def main():
         return
 
     updated = 0
+    consecutive_failures = 0
     for count, (idx, video) in enumerate(missing, 1):
         title = video["title"]
         vid_id = video.get("vid_id", "")
@@ -199,10 +199,18 @@ def main():
                 changed = True
             if changed:
                 updated += 1
+                consecutive_failures = 0
             else:
+                consecutive_failures += 1
                 print("  生成失敗（スキップ）")
         except Exception as e:
+            consecutive_failures += 1
             print(f"  エラー（スキップ）: {e}")
+
+        # 3件連続失敗 = Geminiクォータ枯渇とみなして早期終了
+        if consecutive_failures >= 3:
+            print("3件連続失敗: Geminiクォータ枯渇と判断。翌日の実行で再試行します。")
+            break
 
         # Gemini無料枠: 15RPM なので安全に5秒待つ
         time.sleep(5)
