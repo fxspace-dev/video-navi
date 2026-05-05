@@ -157,9 +157,10 @@ def main():
     videos, rest = read_videos_js()
 
     if FORCE_ALL:
-        # 全件対象（ショート除く）: 字幕ベースの深い要約に差し替え
-        missing = [(i, v) for i, v in enumerate(videos) if not v.get("is_short", False)]
-        print(f"[FORCE_ALL] 全件再生成対象: {len(missing)}件 / 全{len(videos)}件")
+        # 全件対象（ショート除く、transcript_ok フラグ未設定のもの）
+        missing = [(i, v) for i, v in enumerate(videos)
+                   if not v.get("is_short", False) and not v.get("transcript_ok", False)]
+        print(f"[FORCE_ALL] 再生成対象: {len(missing)}件 / 全{len(videos)}件（処理済みはスキップ）")
     else:
         def needs_fix(v):
             no_summary = not v.get("summary", "").strip()
@@ -205,6 +206,8 @@ def main():
             if changed:
                 updated += 1
                 consecutive_failures = 0
+                if FORCE_ALL:
+                    videos[idx]["transcript_ok"] = True  # 処理済みマーク
             else:
                 consecutive_failures += 1
                 print("  生成失敗（スキップ）")
@@ -212,9 +215,9 @@ def main():
             consecutive_failures += 1
             print(f"  エラー（スキップ）: {e}")
 
-        # 3件連続失敗 = Geminiクォータ枯渇とみなして早期終了
-        if consecutive_failures >= 3:
-            print("3件連続失敗: Geminiクォータ枯渇と判断。翌日の実行で再試行します。")
+        # 5件連続失敗 = Geminiクォータ枯渇とみなして早期終了
+        if consecutive_failures >= 5:
+            print("5件連続失敗: Geminiクォータ枯渇と判断。翌日の実行で再試行します。")
             break
 
         # Gemini無料枠: 15RPM なので安全に5秒待つ

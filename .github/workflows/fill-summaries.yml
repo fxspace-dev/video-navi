@@ -41,6 +41,7 @@ jobs:
           git diff --cached --quiet || (git commit -m "Regenerate video summaries from transcripts" && git push)
 
       - name: Deploy to production server
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: sv14907.xserver.jp
