@@ -14,7 +14,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 VIDEOS_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "videos.js")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-FORCE_ALL = os.environ.get("FORCE_ALL", "0") == "1"  # 全件強制再生成モード
+FORCE_ALL = os.environ.get("FORCE_ALL", "0").lower() in ("1", "true")  # 全件強制再生成モード
 
 EXISTING_CATEGORIES = [
     "手法", "基礎", "リアルトレード", "雑談", "メンタル", "実践",
