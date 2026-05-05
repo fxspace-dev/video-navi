@@ -24,13 +24,17 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
     "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "超初心者",
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "損切",
+      "基礎",
+      "メンタル"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "損切りラインの決め方3パターンと、エントリー後のメンタル管理について解説している。",
     "vid_id": "HXSOaLWFfxM",
     "date": "2026-01-16",
     "is_short": false,
@@ -41,13 +45,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
     "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "初心者",
+      "中級"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "ナウキャスト",
+      "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "ダウ理論を基盤とした「よすが式ダウ手法」の習得を目指すシリーズの第2章。ナウキャストの具体的な解説。",
     "vid_id": "6VHINPwHyq8",
     "date": "2025-09-15",
     "is_short": false,
@@ -58,13 +65,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
     "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
     "levels": [
+      "超初心者",
       "初心者"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "基礎",
+      "ライン"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "ダウ理論の基本となるラインの引き方と、その重要性について解説。",
     "vid_id": "YSOMB0J4VwI",
     "date": "2025-09-15",
     "is_short": false,
@@ -75,13 +85,15 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
     "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
     "levels": [
+      "超初心者",
       "初心者"
     ],
     "categories": [
-      "未分類"
+      "手法",
+      "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "よすが式ダウ理論手法の習得に向けた、学習開始前の準備段階について解説。",
     "vid_id": "EgrGud-QgfA",
     "date": "2025-09-15",
     "is_short": false,
@@ -92,13 +104,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
     "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "メンタル",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "トレードにおけるミスをなくすのではなく、発生したミスにどう対処するかという視点からのリアルトレード解説。",
     "vid_id": "gQj0t0Ov2Ys",
     "date": "2025-09-15",
     "is_short": false,
@@ -109,13 +124,16 @@ const VIDEOS = [
     "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
     "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
     "levels": [
-      "初心者"
+      "中級",
+      "上級"
     ],
     "categories": [
-      "未分類"
+      "リアルトレード",
+      "手法",
+      "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "",
+    "summary": "今週のリアルトレードを解説。エントリーポイントをさらに絞り込むための具体的な手法や考え方。",
     "vid_id": "XI3GmDp3TH8",
     "date": "2025-09-15",
     "is_short": false,
