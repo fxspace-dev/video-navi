@@ -38,7 +38,8 @@ const VIDEOS = [
     "vid_id": "HXSOaLWFfxM",
     "date": "2026-01-16",
     "is_short": false,
-    "duration": 1096
+    "duration": 1096,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
@@ -54,11 +55,12 @@ const VIDEOS = [
       "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ダウ理論を基盤とした「よすが式ダウ手法」の習得を目指すシリーズの第2章。ナウキャストの具体的な解説。",
+    "summary": "ダウ理論に基づいたナウキャストの具体的なエントリーポイントと、相場状況に応じた判断基準を解説。",
     "vid_id": "6VHINPwHyq8",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 1624
+    "duration": 1624,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
@@ -74,11 +76,12 @@ const VIDEOS = [
       "ライン"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ダウ理論の基本となるラインの引き方と、その重要性について解説。",
+    "summary": "ダウ理論の「ライン」を解説。トレンドラインの引き方や、サポートライン・レジスタンスラインの重要性について説明。",
     "vid_id": "YSOMB0J4VwI",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 1803
+    "duration": 1803,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
@@ -93,11 +96,12 @@ const VIDEOS = [
       "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ理論手法の習得に向けた、学習開始前の準備段階について解説。",
+    "summary": "ダウ理論の基本概念と、トレードにおけるダウ理論の活用法を解説。",
     "vid_id": "EgrGud-QgfA",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 2781
+    "duration": 2781,
+    "transcript_ok": true
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
@@ -113,11 +117,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "トレードにおけるミスをなくすのではなく、発生したミスにどう対処するかという視点からのリアルトレード解説。",
+    "summary": "ミスを根絶するのではなく、迅速かつ効果的に対処する方法を、今週のリアルトレードを例に解説。具体的なトレード判断とメンタル管理のポイント。",
     "vid_id": "gQj0t0Ov2Ys",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 538
+    "duration": 538,
+    "transcript_ok": true
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
@@ -133,11 +138,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを解説。エントリーポイントをさらに絞り込むための具体的な手法や考え方。",
+    "summary": "エントリーポイントをさらに絞り込むための具体的な手法と、今週のリアルトレードにおける実践的な解説。",
     "vid_id": "XI3GmDp3TH8",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 387
+    "duration": 387,
+    "transcript_ok": true
   },
   {
     "title": "FX初心者がつまずくpipsとは？",
@@ -191,11 +197,12 @@ const VIDEOS = [
       "雑談"
     ],
     "method": "一般公開",
-    "summary": "FXトレードに限らず、利益を上げているトレーダーに共通する思考法を解説している。",
+    "summary": "FXで勝つために必要な思考法と、その思考法を身につけるための具体的なアプローチについて解説。",
     "vid_id": "PHaK8i_x7mg",
     "date": "2026-04-26",
     "is_short": false,
-    "duration": 950
+    "duration": 950,
+    "transcript_ok": true
   },
   {
     "title": "プロトレーダーが使うMTFとは？",
@@ -231,11 +238,12 @@ const VIDEOS = [
       "スキャルピング"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を積み上げる様子をライブ配信で解説している。",
+    "summary": "10万円からスキャルピングで資金を増やすプロトレーダーのライブ配信。具体的なトレード手法やメンタル管理のポイント。",
     "vid_id": "H68R87gwzqU",
     "date": "2026-04-20",
     "is_short": false,
-    "duration": 0
+    "duration": 0,
+    "transcript_ok": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
@@ -251,11 +259,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
+    "summary": "10万円からスキャルピングで資金を増やすプロトレーダーのトレードをライブ配信で解説。",
     "vid_id": "6Wlco85JqvQ",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 6226
+    "duration": 6226,
+    "transcript_ok": true
   },
   {
     "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
@@ -270,11 +279,12 @@ const VIDEOS = [
       "雑談"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "らいていさんへの追加インタビューのイベントアーカイブ動画。",
+    "summary": "らいていさんへの追加インタビュー。具体的なトレード手法や相場分析のポイントについて解説。",
     "vid_id": "uo0pN6Mgh5I",
     "date": "2026-04-15",
     "is_short": false,
-    "duration": 2206
+    "duration": 2206,
+    "transcript_ok": true
   },
   {
     "title": "【4/15より適用】Fintokeiのギャンブル行為ルールが変更したので解説",
@@ -289,11 +299,12 @@ const VIDEOS = [
       "その他手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "2024年4月15日より適用されるFintokeiのギャンブル行為に関する新ルールについて解説している。",
+    "summary": "Fintokeiのギャンブル行為に関する新ルール（4/15適用）の内容と、それに伴う注意点を解説。",
     "vid_id": "nB1dwq7OaYw",
     "date": "2026-04-14",
     "is_short": false,
-    "duration": 550
+    "duration": 550,
+    "transcript_ok": true
   },
   {
     "title": "ゼロプロ90 5期　募集開始",
@@ -309,11 +320,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXトレード教育プログラム「ゼロプロ90」の第5期募集開始を告知している動画。",
+    "summary": "ゼロプロ90 5期の募集開始を告知。具体的な内容や手法、ポイントは字幕テキストに記載なし。",
     "vid_id": "_wteV5IwDfs",
     "date": "2026-04-05",
     "is_short": false,
-    "duration": 748
+    "duration": 748,
+    "transcript_ok": true
   },
   {
     "title": "#ラスト【FXライブ配信】10万→604万でFINISH【10万→1000万企画】",
@@ -349,11 +361,12 @@ const VIDEOS = [
       "実績"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信で、10万円から1000万円を目指す企画の強化合宿の様子を紹介している。",
+    "summary": "強化合宿の様子をライブ配信。10万から1000万を目指す企画の進捗と合宿での学びを共有。",
     "vid_id": "-jgTEUJpHc0",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 9002
+    "duration": 9002,
+    "transcript_ok": true
   },
   {
     "title": "#12【FXライブ配信】明日から強化合宿です【10万→1000万企画】",
@@ -369,11 +382,12 @@ const VIDEOS = [
       "雑談"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信で、明日から始まる10万円から1000万円を目指す企画の強化合宿について言及している。",
+    "summary": "明日からのFX強化合宿について、10万円から1000万円を目指す企画の進捗と意気込みを語る。",
     "vid_id": "d9r15v17DA8",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 4733
+    "duration": 4733,
+    "transcript_ok": true
   },
   {
     "title": "#11【FXライブ配信】これで皆シナリオ構築マスター【10万→1000万企画】",
@@ -389,11 +403,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信にて、視聴者全員がシナリオ構築をマスターできるような解説と、10万円から1000万円を目指す企画の進捗状況を紹介している。",
+    "summary": "FXライブ配信でシナリオ構築の具体的な手法を解説。10万から1000万を目指す企画の進捗も報告。",
     "vid_id": "koK8UtYMNJc",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 6717
+    "duration": 6717,
+    "transcript_ok": true
   },
   {
     "title": "#10【FXライブ配信】オートライン、結構革命じゃない？【10万→1000万企画】",
@@ -469,11 +484,12 @@ const VIDEOS = [
       "実績"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信で、10万円から1000万円を目指す企画の第7弾。視聴者と共に200万円達成を見守る様子。",
+    "summary": "10万円から1000万円を目指す企画の7回目のライブ配信。200万円達成の瞬間を視聴者と共に迎える様子と、その過程でのトレードのポイント。",
     "vid_id": "o74CauRB1eI",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 4961
+    "duration": 4961,
+    "transcript_ok": true
   },
   {
     "title": "#6【FXライブ配信】10万→1000万にする",
