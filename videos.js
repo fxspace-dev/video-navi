@@ -1,8 +1,8 @@
 const VIDEOS = [
   {
     "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -14,15 +14,15 @@ const VIDEOS = [
     ],
     "method": "一般公開",
     "summary": "プロトレーダーが活用するナウキャストの概念とその重要性について解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
     "is_short": true,
     "duration": 58
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
+    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者",
@@ -35,58 +35,49 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "損切りラインの決め方3パターンと、エントリー後のメンタル管理について解説している。",
-    "vid_id": "HXSOaLWFfxM",
-    "date": "2026-01-16",
+    "vid_id": "7YmolpwwUcI",
+    "date": "2025-11-01",
     "is_short": false,
-    "duration": 1096,
-    "transcript_ok": true
+    "duration": 1096
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
     "levels": [
-      "初心者",
-      "中級"
+      "初心者"
     ],
     "categories": [
-      "手法",
-      "ナウキャスト",
-      "基礎"
+      "未分類"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ダウ理論に基づいたナウキャストの具体的なエントリーポイントと、相場状況に応じた判断基準を解説。",
-    "vid_id": "6VHINPwHyq8",
-    "date": "2025-09-15",
+    "summary": "",
+    "vid_id": "Q1xuEpJuWRc",
+    "date": "2023-06-17",
     "is_short": false,
-    "duration": 1624,
-    "transcript_ok": true
+    "duration": 1624
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
     "levels": [
-      "超初心者",
       "初心者"
     ],
     "categories": [
-      "手法",
-      "基礎",
-      "ライン"
+      "未分類"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ダウ理論の「ライン」を解説。トレンドラインの引き方や、サポートライン・レジスタンスラインの重要性について説明。",
-    "vid_id": "YSOMB0J4VwI",
-    "date": "2025-09-15",
+    "summary": "",
+    "vid_id": "d0QNPmq28eE",
+    "date": "2023-03-01",
     "is_short": false,
-    "duration": 1803,
-    "transcript_ok": true
+    "duration": 1803
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -96,54 +87,45 @@ const VIDEOS = [
       "基礎"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ダウ理論の基本概念と、トレードにおけるダウ理論の活用法を解説。",
-    "vid_id": "EgrGud-QgfA",
-    "date": "2025-09-15",
+    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階について解説している。",
+    "vid_id": "jFh1TOOLnY4",
+    "date": "2023-01-18",
     "is_short": false,
-    "duration": 2781,
-    "transcript_ok": true
+    "duration": 2781
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
+    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
     "levels": [
-      "中級",
-      "上級"
+      "初心者"
     ],
     "categories": [
-      "リアルトレード",
-      "メンタル",
-      "実践"
+      "未分類"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "ミスを根絶するのではなく、迅速かつ効果的に対処する方法を、今週のリアルトレードを例に解説。具体的なトレード判断とメンタル管理のポイント。",
-    "vid_id": "gQj0t0Ov2Ys",
-    "date": "2025-09-15",
+    "summary": "",
+    "vid_id": "gWhVeA8yQ84",
+    "date": "2023-01-14",
     "is_short": false,
-    "duration": 538,
-    "transcript_ok": true
+    "duration": 538
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
+    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
     "levels": [
-      "中級",
-      "上級"
+      "初心者"
     ],
     "categories": [
-      "リアルトレード",
-      "手法",
-      "実践"
+      "未分類"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "エントリーポイントをさらに絞り込むための具体的な手法と、今週のリアルトレードにおける実践的な解説。",
-    "vid_id": "XI3GmDp3TH8",
-    "date": "2025-09-15",
+    "summary": "",
+    "vid_id": "0wZ6G7P26UI",
+    "date": "2023-01-08",
     "is_short": false,
-    "duration": 387,
-    "transcript_ok": true
+    "duration": 387
   },
   {
     "title": "FX初心者がつまずくpipsとは？",
