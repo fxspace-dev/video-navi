@@ -115,13 +115,13 @@ JSONのみ出力: {{"summary": "要約文"}}
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 512 if need_full else 256},
     }
 
-    max_retries = 3
+    max_retries = 5
     for attempt in range(max_retries + 1):
         try:
             resp = requests.post(url, json=payload, timeout=30)
             if resp.status_code == 429 and attempt < max_retries:
-                # レスポンスから retryDelay を取得
-                delay_sec = 30  # デフォルト
+                delay_sec = 30
+                is_daily_quota = False
                 try:
                     err_data = resp.json()
                     for detail in err_data.get("error", {}).get("details", []):
@@ -130,9 +130,15 @@ JSONのみ出力: {{"summary": "要約文"}}
                             if m:
                                 delay_sec = int(m.group(1)) + 3
                                 break
+                        # 日次クォータ枯渇の場合は諦める
+                        if detail.get("reason") == "RATE_LIMIT_EXCEEDED" and delay_sec > 300:
+                            is_daily_quota = True
                 except Exception:
                     pass
-                print(f"  429: retry_delay={delay_sec}s 待機中... (attempt {attempt+1}/{max_retries})", file=sys.stderr)
+                if is_daily_quota:
+                    print(f"  日次クォータ枯渇。終了します。", file=sys.stderr)
+                    return None  # Noneで日次枯渇を通知
+                print(f"  429: {delay_sec}s 待機中... (attempt {attempt+1}/{max_retries})", file=sys.stderr)
                 time.sleep(delay_sec)
                 continue
             resp.raise_for_status()
@@ -145,7 +151,6 @@ JSONのみ出力: {{"summary": "要約文"}}
             if attempt == max_retries:
                 print(f"  WARNING: Gemini error (最終): {e}", file=sys.stderr)
                 return {}
-            # 429以外の例外は短く待ってリトライ
             time.sleep(5)
     return {}
 
@@ -190,6 +195,9 @@ def main():
                 print("  字幕なし（タイトルから生成）")
 
             result = generate_metadata(title, transcript, need_full)
+            if result is None:
+                print("  日次クォータ枯渇。処理を終了します。", file=sys.stderr)
+                break
             changed = False
             if result.get("summary"):
                 videos[idx]["summary"] = result["summary"]
