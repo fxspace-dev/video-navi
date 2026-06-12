@@ -1,0 +1,37 @@
+name: Deploy to Production
+
+# データ生成はローカル (scripts/run_daily_local.sh) で行い、
+# push されたサイトファイルを本番サーバーへFTPデプロイする。
+on:
+  push:
+    branches: [main]
+    paths:
+      - videos.js
+      - index.html
+      - app.js
+      - style.css
+      - "*.png"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: sv14907.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /fx-space.com/public_html/videonavi/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/scripts/**
+            **/.github/**
+            **/*.md

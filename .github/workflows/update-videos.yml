@@ -1,8 +1,11 @@
 name: Update Videos
 
+# 注意: GitHub Actions のランナーは YouTube から字幕取得をブロックされる
+# (RequestBlocked) ため、字幕ベースの要約は生成できない。
+# 定時実行はローカルの scripts/run_daily_local.sh（Windowsタスクスケジューラ、
+# 毎日 JST 21:00）に移管済み。このワークフローは緊急時の手動実行用。
+# 実行するには GitHub Secrets の DISCORD_BOT_TOKEN が最新である必要がある。
 on:
-  schedule:
-    - cron: '0 12 * * *'  # JST 21:00 (UTC 12:00)
   workflow_dispatch:
 
 permissions:

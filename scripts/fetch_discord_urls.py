@@ -68,8 +68,22 @@ def fetch_messages(channel_id: str, limit_total: int = 1000) -> list[dict]:
                 file=sys.stderr,
             )
             return messages
+        if r.status_code == 401:
+            sys.exit(
+                "ERROR: 401 Unauthorized — DISCORD_BOT_TOKEN が無効です。"
+                "GitHub Secrets のトークンを確認してください。"
+            )
         if r.status_code == 429:
-            retry = r.json().get("retry_after", 5)
+            # Cloudflare のIPブロック(error 1015等)はHTMLを返すためJSONパースを保護
+            try:
+                retry = r.json().get("retry_after", 5)
+            except ValueError:
+                print(
+                    f"  WARNING: 429 (非JSON応答)。CloudflareによるIPブロックの可能性。"
+                    f" body[:200]: {r.text[:200]}",
+                    file=sys.stderr,
+                )
+                retry = 30
             print(f"  Rate limited, sleeping {retry}s", file=sys.stderr)
             time.sleep(retry)
             continue

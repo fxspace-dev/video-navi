@@ -602,15 +602,13 @@ def main():
             f"url_src={'discord' if url_override else 'youtube'}"
         )
 
-        # 字幕取得（ショート以外の全ての動画で試す）
+        # 字幕取得（ショートを含む全ての動画で試す）
         # メンバー限定動画（限定公開版ID）でも字幕は取得可能
-        transcript = None
-        if not is_short:
-            transcript = get_transcript(vid_id)
-            if transcript:
-                print(f"  Transcript: {len(transcript)} chars")
-            else:
-                print("  No transcript available")
+        transcript = get_transcript(vid_id)
+        if transcript:
+            print(f"  Transcript: {len(transcript)} chars")
+        else:
+            print("  No transcript available")
 
         # Generate metadata via Gemini
         metadata = generate_metadata(title, transcript)
@@ -628,6 +626,9 @@ def main():
             "is_short": bool(is_short),
             "duration": int(duration_sec),
         }
+        if transcript:
+            # 字幕ベースで要約済みのマーク（fill_missing_summaries の FORCE_ALL が再処理しない）
+            entry["transcript_ok"] = True
         validate_entry(entry)
         new_videos.append(entry)
 
@@ -638,8 +639,13 @@ def main():
     kept_existing: list[dict] = []
     refreshed_count = 0
     removed_orphan = 0
+    # マッピングが空（Discord取得失敗など）の場合に全メンバー限定動画を
+    # 誤削除しないためのガード
+    skip_orphan_cleanup = not discord_urls
+    if skip_orphan_cleanup:
+        print("WARNING: Discord URLマッピングが空のため孤立動画の削除をスキップします", file=sys.stderr)
     for v in existing_videos:
-        if v.get("method") == "メンバーシップ限定公開":
+        if not skip_orphan_cleanup and v.get("method") == "メンバーシップ限定公開":
             vid = v.get("vid_id")
             discord_url = discord_urls.get(vid) if vid else None
             if discord_url:

@@ -2,3 +2,8 @@ scripts/discord_urls.json
 __pycache__/
 *.pyc
 .venv/
+.env
+scripts/comments_raw.json
+scripts/comments_classified.json
+scripts/local_run.log
+scripts/theme_cache.json

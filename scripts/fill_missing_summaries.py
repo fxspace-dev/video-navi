@@ -169,8 +169,11 @@ def main():
     else:
         def needs_fix(v):
             no_summary = not v.get("summary", "").strip()
-            unclassified = v.get("categories") == ["未分類"]
-            return no_summary or unclassified
+            cats = v.get("categories") or []
+            levels = v.get("levels") or []
+            # 「未分類」だけでなく、空配列・キー欠損も補完対象にする
+            unclassified = not cats or cats == ["未分類"]
+            return no_summary or unclassified or not levels
         missing = [(i, v) for i, v in enumerate(videos) if needs_fix(v)]
         print(f"要約/カテゴリ補完対象: {len(missing)}件 / 全{len(videos)}件")
 
@@ -183,8 +186,9 @@ def main():
     for count, (idx, video) in enumerate(missing, 1):
         title = video["title"]
         vid_id = video.get("vid_id", "")
-        # ["未分類"] の場合は levels/categories も再生成
-        need_full = video.get("categories") == ["未分類"]
+        # カテゴリが「未分類」/空/欠損、またはレベルが空の場合は levels/categories も再生成
+        cats = video.get("categories") or []
+        need_full = not cats or cats == ["未分類"] or not (video.get("levels") or [])
         print(f"[{count}/{len(missing)}] {title} (full={need_full})")
 
         try:
