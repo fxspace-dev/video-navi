@@ -44,17 +44,23 @@ def write_videos_js(videos, rest):
 
 
 def get_transcript(video_id):
+    """字幕テキストを返す。(text, blocked) のタプル。
+    blocked=True は YouTube による IPブロック/レート制限（リトライしても無駄）"""
     api = YouTubeTranscriptApi()
-    try:
-        transcript = api.fetch(video_id, languages=["ja"])
-        return " ".join(e.text for e in transcript)
-    except Exception:
-        pass
-    try:
-        transcript = api.fetch(video_id)
-        return " ".join(e.text for e in transcript)
-    except Exception:
-        return None
+    blocked = False
+    for langs in (["ja"], None):
+        try:
+            if langs:
+                transcript = api.fetch(video_id, languages=langs)
+            else:
+                transcript = api.fetch(video_id)
+            return " ".join(e.text for e in transcript), False
+        except Exception as e:
+            # IpBlocked / RequestBlocked / TooManyRequests = IP起因の失敗
+            if any(k in type(e).__name__ for k in ("Blocked", "TooManyRequests")):
+                blocked = True
+                break
+    return None, blocked
 
 
 def generate_metadata(title, transcript, need_full):
@@ -165,7 +171,12 @@ def main():
         # 全件対象（ショート除く、transcript_ok フラグ未設定のもの）
         missing = [(i, v) for i, v in enumerate(videos)
                    if not v.get("is_short", False) and not v.get("transcript_ok", False)]
-        print(f"[FORCE_ALL] 再生成対象: {len(missing)}件 / 全{len(videos)}件（処理済みはスキップ）")
+        total_remaining = len(missing)
+        # YouTubeのIPブロック（短時間に大量の字幕取得で発生）を避けるため
+        # 1回の実行で処理する件数を制限。毎晩の実行で数日かけて収束する
+        batch_limit = int(os.environ.get("FORCE_ALL_BATCH", "60"))
+        missing = missing[:batch_limit]
+        print(f"[FORCE_ALL] 再生成対象: 残り{total_remaining}件中 今回{len(missing)}件を処理 / 全{len(videos)}件")
     else:
         def needs_fix(v):
             no_summary = not v.get("summary", "").strip()
@@ -183,6 +194,7 @@ def main():
 
     updated = 0
     consecutive_failures = 0
+    consecutive_blocked = 0
     for count, (idx, video) in enumerate(missing, 1):
         title = video["title"]
         vid_id = video.get("vid_id", "")
@@ -192,11 +204,26 @@ def main():
         print(f"[{count}/{len(missing)}] {title} (full={need_full})")
 
         try:
-            transcript = get_transcript(vid_id) if vid_id else None
+            transcript, blocked = get_transcript(vid_id) if vid_id else (None, False)
+            if blocked:
+                consecutive_blocked += 1
+                print("  YouTubeにIPブロックされています（スキップ）", file=sys.stderr)
+                if consecutive_blocked >= 3:
+                    print("3件連続IPブロック: 本日は字幕取得不可。翌日の実行で再試行します。")
+                    break
+                time.sleep(10)
+                continue
+            consecutive_blocked = 0
             if transcript:
                 print(f"  字幕: {len(transcript)}文字")
             else:
                 print("  字幕なし（タイトルから生成）")
+            if FORCE_ALL and not transcript:
+                # FORCE_ALLは「字幕ベースで再生成する」モード。
+                # 字幕が取れない動画はタイトルから上書きせず、翌日に再試行する
+                print("  FORCE_ALL: 字幕なしのためスキップ（既存の要約を維持）")
+                time.sleep(3)  # YouTubeへの連続アクセスを抑制
+                continue
 
             result = generate_metadata(title, transcript, need_full)
             if result is None:
@@ -232,8 +259,8 @@ def main():
             print("5件連続失敗: Geminiクォータ枯渇と判断。翌日の実行で再試行します。")
             break
 
-        # Gemini無料枠: 15RPM なので安全に5秒待つ
-        time.sleep(5)
+        # Gemini無料枠: 15RPM。FORCE_ALL時はYouTube字幕取得の間隔も空ける
+        time.sleep(10 if FORCE_ALL else 5)
 
         # 10件ごとに中間保存
         if updated > 0 and updated % 10 == 0:

@@ -17,7 +17,8 @@ const VIDEOS = [
     "vid_id": "l8axQxkhxU8",
     "date": "2026-06-12",
     "is_short": true,
-    "duration": 59
+    "duration": 59,
+    "transcript_ok": true
   },
   {
     "title": "飛行機の燃料理論で理解するトレード",
@@ -37,7 +38,8 @@ const VIDEOS = [
     "vid_id": "k9QuWDe3jyc",
     "date": "2026-06-10",
     "is_short": true,
-    "duration": 57
+    "duration": 57,
+    "transcript_ok": true
   },
   {
     "title": "損切りした瞬間に逆行される理由",
@@ -57,7 +59,8 @@ const VIDEOS = [
     "vid_id": "wo66-XdX6rQ",
     "date": "2026-06-05",
     "is_short": true,
-    "duration": 59
+    "duration": 59,
+    "transcript_ok": true
   },
   {
     "title": "プロトレーダーが使うナウキャストとは？",
@@ -77,7 +80,8 @@ const VIDEOS = [
     "vid_id": "z_YEqGSrWY0",
     "date": "2026-04-22",
     "is_short": true,
-    "duration": 58
+    "duration": 58,
+    "transcript_ok": true
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
@@ -97,7 +101,8 @@ const VIDEOS = [
     "vid_id": "HXSOaLWFfxM",
     "date": "2026-01-16",
     "is_short": false,
-    "duration": 1096
+    "duration": 1096,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
@@ -117,7 +122,8 @@ const VIDEOS = [
     "vid_id": "6VHINPwHyq8",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 1624
+    "duration": 1624,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
@@ -137,7 +143,8 @@ const VIDEOS = [
     "vid_id": "YSOMB0J4VwI",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 1803
+    "duration": 1803,
+    "transcript_ok": true
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
@@ -157,7 +164,8 @@ const VIDEOS = [
     "vid_id": "EgrGud-QgfA",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 2781
+    "duration": 2781,
+    "transcript_ok": true
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
@@ -177,7 +185,8 @@ const VIDEOS = [
     "vid_id": "gQj0t0Ov2Ys",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 538
+    "duration": 538,
+    "transcript_ok": true
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
@@ -197,7 +206,8 @@ const VIDEOS = [
     "vid_id": "XI3GmDp3TH8",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 387
+    "duration": 387,
+    "transcript_ok": true
   },
   {
     "title": "FXで勝つたった一つの方法",
@@ -2306,7 +2316,8 @@ const VIDEOS = [
     "vid_id": "uXMYArrANNs",
     "date": "2026-04-10",
     "is_short": true,
-    "duration": 59
+    "duration": 59,
+    "transcript_ok": true
   },
   {
     "title": "FXのメリット3選",
@@ -2324,7 +2335,8 @@ const VIDEOS = [
     "vid_id": "_VOUsCn16AI",
     "date": "2026-04-08",
     "is_short": true,
-    "duration": 48
+    "duration": 48,
+    "transcript_ok": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#2",
@@ -2344,7 +2356,8 @@ const VIDEOS = [
     "vid_id": "84LHx8b7KVM",
     "date": "2026-04-08",
     "is_short": false,
-    "duration": 4912
+    "duration": 4912,
+    "transcript_ok": true
   },
   {
     "title": "1000名見てきて分かったプロトレ1%が実際どういうことなのか全て話す",
