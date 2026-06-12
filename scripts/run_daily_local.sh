@@ -10,35 +10,72 @@ set -uo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LOG_FILE="$REPO_DIR/scripts/local_run.log"
+DESKTOP_ALERT="/mnt/c/Users/airic/Desktop/【要確認】動画ナビ更新失敗.txt"
+POWERSHELL="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
 cd "$REPO_DIR"
+
+# 失敗時: Windowsポップアップ + デスクトップに失敗レポートを作成
+notify_failure() {
+  local step="$1"
+  {
+    echo "動画ナビ（https://fx-space.com/videonavi/）の自動更新が失敗しました。"
+    echo ""
+    echo "失敗日時: $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "失敗ステップ: $step"
+    echo ""
+    echo "直近のログ（詳細は video-navi/scripts/local_run.log）:"
+    echo "----------------------------------------"
+    tail -30 "$LOG_FILE" 2>/dev/null
+    echo "----------------------------------------"
+    echo ""
+    echo "Claude Code に「動画ナビの更新が失敗したので調べて」と伝えれば調査できます。"
+    echo "このファイルは次回更新が成功すると自動で消えます。"
+  } > "$DESKTOP_ALERT"
+  # ポップアップは表示したまま放置されてもいいようにバックグラウンドで出す
+  "$POWERSHELL" -NoProfile -Command \
+    "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('動画ナビの自動更新が失敗しました（ステップ: $step）。デスクトップの「【要確認】動画ナビ更新失敗.txt」を確認してください。','動画ナビ 更新失敗','OK','Warning')" \
+    >/dev/null 2>&1 &
+}
+
+fail() {
+  echo "ERROR: $1 failed" >> "$LOG_FILE"
+  notify_failure "$1"
+  echo "===== run_daily_local.sh ABORT: $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$LOG_FILE"
+  exit 1
+}
 
 {
   echo "===== run_daily_local.sh start: $(date '+%Y-%m-%d %H:%M:%S') ====="
+} >> "$LOG_FILE"
 
-  set -a
-  source .env
-  set +a
+set -a
+source .env
+set +a
 
-  git pull --rebase origin main || { echo "ERROR: git pull failed"; exit 1; }
+git pull --rebase origin main >> "$LOG_FILE" 2>&1 || fail "git pull"
+python3 scripts/fetch_discord_urls.py >> "$LOG_FILE" 2>&1 || fail "Discord URL取得 (fetch_discord_urls)"
+python3 scripts/update_videos.py >> "$LOG_FILE" 2>&1 || fail "新着動画取り込み (update_videos)"
 
-  python3 scripts/fetch_discord_urls.py || { echo "ERROR: fetch_discord_urls failed"; exit 1; }
-  python3 scripts/update_videos.py || { echo "ERROR: update_videos failed"; exit 1; }
+# 欠損補完（空カテゴリ・空レベル・空要約）
+python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
+  || echo "WARNING: fill_missing_summaries failed (continuing)" >> "$LOG_FILE"
 
-  # 欠損補完（空カテゴリ・空レベル・空要約）
-  python3 scripts/fill_missing_summaries.py || echo "WARNING: fill_missing_summaries failed (continuing)"
+# 字幕ベース要約への移行が未完の動画を毎日少しずつ処理
+# (transcript_ok が付いた動画はスキップされるので、完了後は実質no-op)
+FORCE_ALL=1 python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
+  || echo "WARNING: FORCE_ALL pass failed (continuing)" >> "$LOG_FILE"
 
-  # 字幕ベース要約への移行が未完の動画を毎日少しずつ処理
-  # (transcript_ok が付いた動画はスキップされるので、完了後は実質no-op)
-  FORCE_ALL=1 python3 scripts/fill_missing_summaries.py || echo "WARNING: FORCE_ALL pass failed (continuing)"
-
+(
   if ! git diff --quiet videos.js; then
     git add videos.js
     git commit -m "Update videos.js with latest uploads & summaries (local run)"
-    git push origin main || { echo "ERROR: git push failed"; exit 1; }
+    git push origin main || exit 9
     echo "videos.js updated & pushed"
   else
     echo "No changes in videos.js"
   fi
+) >> "$LOG_FILE" 2>&1 || fail "git push"
 
-  echo "===== run_daily_local.sh end: $(date '+%Y-%m-%d %H:%M:%S') ====="
-} >> "$LOG_FILE" 2>&1
+# 成功: 前回の失敗アラートが残っていたら消す
+rm -f "$DESKTOP_ALERT"
+echo "===== run_daily_local.sh end (success): $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$LOG_FILE"
