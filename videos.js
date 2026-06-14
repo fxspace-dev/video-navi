@@ -1,5 +1,191 @@
 const VIDEOS = [
   {
+    "title": "【FX完全攻略】騙しブレイクを見抜けない人は永遠に勝てません",
+    "url": "https://www.youtube.com/watch?v=QelnSbpAr8s",
+    "thumb": "https://img.youtube.com/vi/QelnSbpAr8s/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "ライン"
+    ],
+    "method": "一般公開",
+    "summary": "FXトレードにおける「騙しブレイク」を見抜くためのテクニックを、ブレイクの仕組みから解説し、具体的なエントリーポイントと注意点を初心者にも分かりやすく説明している。",
+    "vid_id": "QelnSbpAr8s",
+    "date": "2026-06-13",
+    "is_short": false,
+    "duration": 908,
+    "transcript_ok": true
+  },
+  {
+    "title": "ブレイクの全て【深掘完全解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1515295100576596000",
+    "thumb": "https://img.youtube.com/vi/QvAQrdZTQW8/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "手法",
+      "ライン",
+      "プライスアクション"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "ブレイクの判断基準を深掘りし、上昇・下落の強さの違い、存在率、更新幅、ブレイク反応が出てもエントリーできないパターンについて解説している。",
+    "vid_id": "QvAQrdZTQW8",
+    "date": "2026-06-13",
+    "is_short": false,
+    "duration": 674,
+    "transcript_ok": true
+  },
+  {
+    "title": "プロトレーダーが使うナウキャストとは？",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "ナウキャスト",
+      "手法",
+      "相場"
+    ],
+    "method": "一般公開",
+    "summary": "プロトレーダーが使う「ナウキャスト」について解説し、チャートの売買圧の要素を読み解き、現在の相場環境を言語化する重要性を説明している。",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
+    "is_short": true,
+    "duration": 58,
+    "transcript_ok": true
+  },
+  {
+    "title": "損切り完全解説〜深掘り動画〜",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
+    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "損切",
+      "リアルトレード",
+      "手法"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの分析やエントリー根拠、損切りに至った経緯を深掘り解説している。",
+    "vid_id": "7YmolpwwUcI",
+    "date": "2025-11-01",
+    "is_short": false,
+    "duration": 1096,
+    "transcript_ok": true
+  },
+  {
+    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "ナウキャスト",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
+    "vid_id": "Q1xuEpJuWRc",
+    "date": "2023-06-17",
+    "is_short": false,
+    "duration": 1624
+  },
+  {
+    "title": "よすが式ダウ手法習得編【1章 ライン】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "ライン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "よすが式ダウ理論に基づいたトレード手法の習得を目指すシリーズの第1章として、ラインの引き方について解説している。",
+    "vid_id": "d0QNPmq28eE",
+    "date": "2023-03-01",
+    "is_short": false,
+    "duration": 1803
+  },
+  {
+    "title": "よすが式ダウ手法習得編【0章 準備】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階を解説している。",
+    "vid_id": "jFh1TOOLnY4",
+    "date": "2023-01-18",
+    "is_short": false,
+    "duration": 2781
+  },
+  {
+    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
+    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "メンタル",
+      "シナリオ"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "ミスは根絶するのではなく、発生した場合の対処法を計画に含めることの重要性を、今週のリアルトレード解説を通して解説している。",
+    "vid_id": "gWhVeA8yQ84",
+    "date": "2023-01-14",
+    "is_short": false,
+    "duration": 538,
+    "transcript_ok": true
+  },
+  {
+    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
+    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "チャートパターン",
+      "プライスアクション"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "今週のリアルトレードを解説し、上昇チャネルやダブルトップ、逆三尊などのチャートパターンを用いたシナリオ構築とエントリーポイント、損切り・利確ポイントについて詳細に説明している。",
+    "vid_id": "0wZ6G7P26UI",
+    "date": "2023-01-08",
+    "is_short": false,
+    "duration": 387,
+    "transcript_ok": true
+  },
+  {
     "title": "プライスアクションは見なくていい",
     "url": "https://www.youtube.com/shorts/l8axQxkhxU8",
     "thumb": "https://i.ytimg.com/vi/l8axQxkhxU8/hq2.jpg",
@@ -63,153 +249,6 @@ const VIDEOS = [
     "transcript_ok": true
   },
   {
-    "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "相場"
-    ],
-    "method": "一般公開",
-    "summary": "プロトレーダーが使うナウキャストについて、上昇トレンドにおける買注文と売注文の量から有利不利の方向性を解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
-    "is_short": true,
-    "duration": 58,
-    "transcript_ok": true
-  },
-  {
-    "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "損切",
-      "リアルトレード",
-      "手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの分析やエントリー根拠、損切りに至った経緯を深掘り解説している。",
-    "vid_id": "HXSOaLWFfxM",
-    "date": "2026-01-16",
-    "is_short": false,
-    "duration": 1096,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "ダウ理論"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける「ナウキャスト（環境認識）」の重要性と習得方法を、ダウ理論の深掘りと共に解説している。",
-    "vid_id": "6VHINPwHyq8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1624,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "ライン"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXよすが式ダウ手法習得編の第1章として、ラインの定義、発生原理、そして強さの判定方法を解説している。",
-    "vid_id": "YSOMB0J4VwI",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1803,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "トレード環境",
-      "基礎",
-      "手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレード手法「よすが式ダウ手法」の習得編0章として、トレード環境構築の準備として証券会社の口座開設方法とMT4の使い方を解説している。",
-    "vid_id": "EgrGud-QgfA",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 2781,
-    "transcript_ok": true
-  },
-  {
-    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "シナリオ",
-      "メンタル"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレーダーのよすが氏が、自身のリアルトレードを振り返り、ミスへの対処法やシナリオ構築の重要性、そして異なる時間軸でのトレード戦略について解説している。",
-    "vid_id": "gQj0t0Ov2Ys",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 538,
-    "transcript_ok": true
-  },
-  {
-    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "シナリオ",
-      "プライスアクション"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを火曜日から金曜日まで、4時間足と15分足を用いて詳細に解説し、エントリーポイントやシナリオ構築の考え方を説明している。",
-    "vid_id": "XI3GmDp3TH8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 387,
-    "transcript_ok": true
-  },
-  {
     "title": "FXで勝つたった一つの方法",
     "url": "https://www.youtube.com/shorts/3N3M8WzUBSo",
     "thumb": "https://i.ytimg.com/vi/3N3M8WzUBSo/hq2.jpg",
@@ -241,11 +280,12 @@ const VIDEOS = [
       "メンタル"
     ],
     "method": "一般公開",
-    "summary": "ニュースを元にしたトレードの危険性と、その末路について解説している。",
+    "summary": "ニュースに頼らずテクニカル分析でトレードする重要性を解説。介入額9.7兆円でも相場に勝てない現実と、プロトレーダーの実際の向き合い方を紹介。",
     "vid_id": "73PX1ODuVB0",
     "date": "2026-05-30",
     "is_short": false,
-    "duration": 785
+    "duration": 785,
+    "transcript_ok": true
   },
   {
     "title": "経済アナリストの予測的中率の衝撃事実",
@@ -301,11 +341,12 @@ const VIDEOS = [
       "手法"
     ],
     "method": "一般公開",
-    "summary": "FXで勝率を上げるために、上位1%のトレーダーが実践している3つの重要なルールを解説している。",
+    "summary": "FXで勝ち続けるための3つのルール（RR1以上、損切り後の休憩、過去相場検証）を解説。誰でも実践できる内容で、トレードの土台を変える。",
     "vid_id": "45_u8E47v0w",
     "date": "2026-05-23",
     "is_short": false,
-    "duration": 646
+    "duration": 646,
+    "transcript_ok": true
   },
   {
     "title": "忙しい人ほど重要なトレード習慣",
@@ -360,11 +401,12 @@ const VIDEOS = [
       "あるある"
     ],
     "method": "一般公開",
-    "summary": "損切りした瞬間に相場が逆行してしまう現象の原因と、その解決策を解説している。",
+    "summary": "損切りした瞬間に逆行される現象を終止符を打つためのエントリータイミングを解説。適正なSL・TP設定とRR比1以上を前提に、トレンドラインブレイクや買足のトレンド転換をエントリーの目安とする手法。",
     "vid_id": "ItvOoEgawTM",
     "date": "2026-05-16",
     "is_short": false,
-    "duration": 1118
+    "duration": 1118,
+    "transcript_ok": true
   },
   {
     "title": "9割が知らないFX勉強法の正解",
@@ -421,11 +463,12 @@ const VIDEOS = [
       "ゼロプロ(旧プレアストロ)"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーになるためのロードマップを、ゼロから始める視点で解説している。",
+    "summary": "ゼロからプロトレーダーを目指す方法を解説。FXを選ぶ理由、プロップファームの活用、HFMでのデモトレードとリアルトレード、過去相場検証の重要性について紹介。",
     "vid_id": "npyQNoh9a10",
     "date": "2026-05-09",
     "is_short": false,
-    "duration": 1342
+    "duration": 1342,
+    "transcript_ok": true
   },
   {
     "title": "FXの税金は実はお得？",
@@ -661,11 +704,12 @@ const VIDEOS = [
       "リアルトレード"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "10万円から604万円への資金増加を達成したFXライブ配信の最終回。10万円から1000万円を目指す企画の完結を報告。",
+    "summary": "10万円から604万円を達成した企画の最終回。プロップファーム提携により企画の意義が薄れたこと、疲労を理由に企画終了の意向を示唆。視聴者アンケートの結果、67%が企画継続を支持した。",
     "vid_id": "2bpljB4sKI4",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 3710
+    "duration": 3710,
+    "transcript_ok": true
   },
   {
     "title": "#12.5【FXライブ配信】強化合宿がヤバかった【10万→1000万企画】",
@@ -744,11 +788,12 @@ const VIDEOS = [
       "企画"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信で、オートラインという手法の革命性について解説し、10万円から1000万円を目指す企画の進捗を紹介している。",
+    "summary": "FXトレードツールYTTバージョン1.3のリリースとオートライン機能の解説。横浜旅行の思い出やオフィス移転の検討についても触れている。",
     "vid_id": "silWs6trsUQ",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 5538
+    "duration": 5538,
+    "transcript_ok": true
   },
   {
     "title": "#9【FXライブ配信】アストロトレーダーを知ってるかい？【10万→1000万企画】",
@@ -764,11 +809,12 @@ const VIDEOS = [
       "雑談"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信第9回。アストロトレーダーを紹介し、10万円から1000万円を目指す企画の進行状況を共有。",
+    "summary": "トレードツールのアップデート内容と、FX選手からアストロトレーダーズへの名称変更、新ランク制度について解説。",
     "vid_id": "OP3WHTOmRZY",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 5817
+    "duration": 5817,
+    "transcript_ok": true
   },
   {
     "title": "#8【FXライブ配信】さて、あといくらかな…？【10万→1000万企画】",
@@ -784,11 +830,12 @@ const VIDEOS = [
       "実績"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXライブ配信第8弾。10万円から1000万円を目指す企画の進捗状況と、現在の相場状況について解説。",
+    "summary": "10万円から1000万円を目指す企画のライブ配信。現在のショートポジションの解説と、トレードツールの自動ライン機能のアップデートについて説明。",
     "vid_id": "QWQieHRkRCM",
     "date": "2026-04-03",
     "is_short": false,
-    "duration": 5577
+    "duration": 5577,
+    "transcript_ok": true
   },
   {
     "title": "#7【FXライブ配信】200万達成を皆で見守る会【10万→1000万企画】",
