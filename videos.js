@@ -1,5 +1,169 @@
 const VIDEOS = [
   {
+    "title": "【知らなきゃ勝てない】脳をハックして勝率を上げる4つの方法",
+    "url": "https://www.youtube.com/watch?v=KQmONW9vi0w",
+    "thumb": "https://img.youtube.com/vi/KQmONW9vi0w/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "メンタル",
+      "手法",
+      "基礎"
+    ],
+    "method": "一般公開",
+    "summary": "トレードで勝てない原因となる脳の癖4つ（確証バイアス、報酬予測誤差、直近バイアス、生存者バイアス）を解説し、それぞれの対策法を紹介している。",
+    "vid_id": "KQmONW9vi0w",
+    "date": "2026-06-27",
+    "is_short": false,
+    "duration": 604,
+    "transcript_ok": true
+  },
+  {
+    "title": "プロトレーダーが使うナウキャストとは？",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "ナウキャスト",
+      "手法",
+      "相場"
+    ],
+    "method": "一般公開",
+    "summary": "プロトレーダーが使う「ナウキャスト」について解説している。ナウキャストとは、チャートの売買圧の要素を読み解き、現在の相場環境を言語化する能力であり、未来予測ができないFXトレードにおいて重要であることを紹介している。",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
+    "is_short": true,
+    "duration": 58,
+    "transcript_ok": true
+  },
+  {
+    "title": "損切り完全解説〜深掘り動画〜",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
+    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "損切",
+      "リアルトレード",
+      "手法"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの分析やエントリー根拠、損切りに至った経緯を詳細に解説している。",
+    "vid_id": "7YmolpwwUcI",
+    "date": "2025-11-01",
+    "is_short": false,
+    "duration": 1096,
+    "transcript_ok": true
+  },
+  {
+    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "ナウキャスト",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法習得編」の第2章として、ナウキャストの概念と活用方法を解説している。",
+    "vid_id": "Q1xuEpJuWRc",
+    "date": "2023-06-17",
+    "is_short": false,
+    "duration": 1624
+  },
+  {
+    "title": "よすが式ダウ手法習得編【1章 ライン】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "ライン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "よすが式ダウ理論の習得を目指すシリーズの第1章として、ラインの引き方や活用方法を解説している。",
+    "vid_id": "d0QNPmq28eE",
+    "date": "2023-03-01",
+    "is_short": false,
+    "duration": 1803
+  },
+  {
+    "title": "よすが式ダウ手法習得編【0章 準備】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階を解説している。",
+    "vid_id": "jFh1TOOLnY4",
+    "date": "2023-01-18",
+    "is_short": false,
+    "duration": 2781
+  },
+  {
+    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
+    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "メンタル",
+      "シナリオ"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "ミスは根絶するのではなく、発生した場合の対処法を計画に含めることの重要性を、今週のリアルトレード解説を通じて解説している。",
+    "vid_id": "gWhVeA8yQ84",
+    "date": "2023-01-14",
+    "is_short": false,
+    "duration": 538,
+    "transcript_ok": true
+  },
+  {
+    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
+    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "シナリオ",
+      "チャートパターン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "今週のリアルトレードを解説し、上昇チャネルの上抜けやダブルトップ形成、上昇トライアングルからのブレイクなど、様々な相場状況におけるシナリオ構築とエントリーポイントを詳細に解説している。",
+    "vid_id": "0wZ6G7P26UI",
+    "date": "2023-01-08",
+    "is_short": false,
+    "duration": 387,
+    "transcript_ok": true
+  },
+  {
     "title": "【無料配布】勝手にトレードも人生もうまくいくスケジュール",
     "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1517831653358043158",
     "thumb": "https://img.youtube.com/vi/oaj7Luz4Ic0/mqdefault.jpg",
@@ -18,153 +182,6 @@ const VIDEOS = [
     "date": "2026-06-19",
     "is_short": false,
     "duration": 907,
-    "transcript_ok": true
-  },
-  {
-    "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "相場"
-    ],
-    "method": "一般公開",
-    "summary": "プロトレーダーが使用するナウキャストについて、上昇トレンドにおける買注文と売注文の状況、そして有利不利の方向性を解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
-    "is_short": true,
-    "duration": 58,
-    "transcript_ok": true
-  },
-  {
-    "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
-    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "損切",
-      "リアルトレード",
-      "手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの根拠、エントリー根拠、損切り根拠を詳細に解説。自身のミスも赤裸々に公開し、損切りにおける教訓を伝える。",
-    "vid_id": "HXSOaLWFfxM",
-    "date": "2026-01-16",
-    "is_short": false,
-    "duration": 1096,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
-    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "プライスアクション"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける「ナウキャスト（環境認識）」の重要性と習得方法を、ダウ理論の深掘りと具体的なプライスアクションの解説を通じて紹介している。",
-    "vid_id": "6VHINPwHyq8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1624,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
-    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "基礎",
-      "ライン"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXよすが式ダウ手法習得編の第1章として、ラインの定義、発生原理、そして強さの判定方法を解説している。",
-    "vid_id": "YSOMB0J4VwI",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 1803,
-    "transcript_ok": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
-    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "トレード環境",
-      "基礎",
-      "手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレード手法「よすが式ダウ手法」の習得編0章として、トレード環境構築のための証券会社口座開設とMT4の使い方を解説している。",
-    "vid_id": "EgrGud-QgfA",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 2781,
-    "transcript_ok": true
-  },
-  {
-    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "シナリオ",
-      "メンタル"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを解説し、ミスは根絶するのではなく「対処」することの重要性や、様々な視点でのトレード戦略について紹介している。",
-    "vid_id": "gQj0t0Ov2Ys",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 538,
-    "transcript_ok": true
-  },
-  {
-    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
-    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "シナリオ",
-      "プライスアクション"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを火曜日から金曜日まで、4時間足と15分足を用いて詳細に解説し、エントリーポイントやシナリオ構築の根拠を説明している。",
-    "vid_id": "XI3GmDp3TH8",
-    "date": "2025-09-15",
-    "is_short": false,
-    "duration": 387,
     "transcript_ok": true
   },
   {
@@ -1878,11 +1895,12 @@ const VIDEOS = [
       "その他手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "よすが氏が実践する、思考を爆速で進めるための思考整理術を紹介している。",
+    "summary": "思考を爆速で進めるための「オブシディアン」というツールを使った思考整理術を解説。キャンバス機能で脳内を可視化し、アウトプットすることで思考を深める方法を紹介。",
     "vid_id": "fnOM_JWvjPs",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 438
+    "duration": 438,
+    "transcript_ok": true
   },
   {
     "title": "圧倒的「才能」を前に挫折し、再起した話【コラム動画】",
@@ -1897,11 +1915,12 @@ const VIDEOS = [
       "雑談"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "圧倒的な才能を持つトレーダーに挫折を経験し、そこから再起を果たした自身の経験談を語るコラム動画。",
+    "summary": "圧倒的才能を持つ人物との出会いをきっかけに、自身の才能の正体と活かし方を分析し、FXで半年で勝てるようになった経験を語る。",
     "vid_id": "IBV1BBUhNB8",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 869
+    "duration": 869,
+    "transcript_ok": true
   },
   {
     "title": "何でYoutubeやってるの？投資家ならやらなくてよくない？【コラム動画】",
@@ -1917,11 +1936,12 @@ const VIDEOS = [
       "その他手法"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "投資家がYouTubeを始める理由や、その必要性について考察するコラム動画。",
+    "summary": "投資家がYouTubeをやる理由と、人生で「楽しいこと」を基準に選択することの重要性を解説。他者の欲望に流されず、自分の人生を生きるためのヒント。",
     "vid_id": "DW_IKTzdWB0",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 569
+    "duration": 569,
+    "transcript_ok": true
   },
   {
     "title": "私が「FXで稼げるようになる場所」を作る本当の理由",
@@ -1938,11 +1958,12 @@ const VIDEOS = [
       "コミュニティ"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXで稼げるようになる場所を作るという自身の活動の裏にある、本当の理由と情熱について語っている。",
+    "summary": "「FXで稼げるようになる場所」を作る本当の理由を、お金と幸福の関係、そして「暇」を打破する仕事の重要性から解説。",
     "vid_id": "Fh_SEuaWAVI",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 849
+    "duration": 849,
+    "transcript_ok": true
   },
   {
     "title": "私の手の内「フィルタレーション」、完全解説",
@@ -1958,11 +1979,12 @@ const VIDEOS = [
       "実践"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "トレーダーの「フィルタレーション」という手法について、その詳細な解説を行っている。",
+    "summary": "目標達成の秘訣「フィルタレーション」を公開。集中力とモチベーションを可視化し、目標達成までの道筋を具体化する手法を解説。",
     "vid_id": "q3rVECeq_5s",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 1205
+    "duration": 1205,
+    "transcript_ok": true
   },
   {
     "title": "正直に答えます「FXって楽に稼げるんでしょ？」【コラム動画】",
@@ -1977,11 +1999,12 @@ const VIDEOS = [
       "メンタル"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXが楽に稼げるという誤解に対し、正直にその実情を解説しているコラム動画。",
+    "summary": "FXで「楽に稼げる」という誤解を解き、稼げるが楽ではない現実と、成功に必要な努力と覚悟を解説。",
     "vid_id": "mbii2hXJzwY",
     "date": "2025-09-15",
     "is_short": false,
-    "duration": 250
+    "duration": 250,
+    "transcript_ok": true
   },
   {
     "title": "よすが式のトレードは２種類だけ【初動と追随】",
@@ -1997,11 +2020,12 @@ const VIDEOS = [
       "プライスアクション"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "よすが式トレードの「初動」と「追随」の2つの手法について解説している。",
+    "summary": "よすが式トレードの初動トレードと追随トレードの2種類を解説。初動はトレンド転換の初めを狙い、追随は既に走っているトレンドに乗る手法。それぞれの特徴と具体的なトレード方法を紹介。",
     "vid_id": "X7yit9cbsMM",
     "date": "2025-09-14",
     "is_short": false,
-    "duration": 1187
+    "duration": 1187,
+    "transcript_ok": true
   },
   {
     "title": "【Fundora用】MT4→cTraderコピー機能リリースしたからcTrader使えなくても大丈夫",
