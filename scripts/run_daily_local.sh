@@ -67,10 +67,21 @@ FORCE_ALL=1 python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
 
 (
   if ! git diff --quiet videos.js; then
-    git add videos.js
+    # キャッシュバスティング: エックスサーバーはnginxが静的ファイルに7日間の
+    # ブラウザキャッシュ(max-age=604800)を付け、.htaccessでは制御できない。
+    # そこでvideos.jsが変わるたびにindex.html内の ?v= を更新し、URLを変えることで
+    # 訪問者のブラウザに必ず最新を取り直させる。
+    VER=$(date +%Y%m%d%H%M)
+    python3 -c "
+import re
+s=open('index.html',encoding='utf-8').read()
+s=re.sub(r'(videos\.js|app\.js)\?v=[^\"]*', r'\1?v=$VER', s)
+open('index.html','w',encoding='utf-8').write(s)
+"
+    git add videos.js index.html
     git commit -m "Update videos.js with latest uploads & summaries (local run)"
     git push origin main || exit 9
-    echo "videos.js updated & pushed"
+    echo "videos.js updated & pushed (cache version: $VER)"
   else
     echo "No changes in videos.js"
   fi
