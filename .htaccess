@@ -1,13 +1,15 @@
 # 動画ナビ キャッシュ制御
 #
-# 背景: エックスサーバーの既定では .js / .html に Cache-Control: max-age=604800
-# (7日キャッシュ) が付くため、videos.js を毎日更新しても訪問者のブラウザが
-# 最大7日間 古いデータを表示し続ける（要約・カテゴリが反映されない）。
+# ⚠️ 重要: エックスサーバーは nginx が静的ファイル(.js/.css/画像)を直接配信し、
+# その際 nginx は .htaccess を読まない。よって下記の Header/Expires 指定は
+# videos.js 等には効かない（検証済み: max-age=604800 のまま）。
+# 実際のキャッシュ対策は index.html の ?v= を videos.js 更新時に書き換える方式で
+# 行っている（scripts/run_daily_local.sh）。この .htaccess は Apache が処理する
+# ケースのための保険として残している。
 #
-# 対策: HTML と JS は「キャッシュしてよいが毎回サーバーに最新か確認する」
-# (no-cache) に変更。中身が変わっていなければ 304 で軽く済み、
-# 変わっていればその場で最新が反映される。
-# 画像(png)や css は変更頻度が低いので既定のキャッシュのまま。
+# 背景: nginx 既定で .js に Cache-Control: max-age=604800 (7日) が付くため、
+# videos.js を毎日更新しても、URL(?v=)を変えない限り訪問者のブラウザは
+# 最大7日間 古いデータを表示し続ける（要約・カテゴリが反映されない）。
 
 <IfModule mod_headers.c>
   <FilesMatch "\.(html|js)$">
