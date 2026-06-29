@@ -11,6 +11,7 @@ on:
       - app.js
       - style.css
       - "*.png"
+      - .htaccess
   workflow_dispatch:
 
 jobs:
