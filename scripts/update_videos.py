@@ -332,18 +332,31 @@ def is_youtube_short(vid_id: str) -> bool:
 # ---------------------------------------------------------------------------
 
 def get_transcript(video_id: str) -> str | None:
-    """Try to fetch Japanese transcript for a video."""
+    """Try to fetch Japanese transcript for a video.
+
+    新規動画は視聴者が最初に見るため、字幕ベース要約を確実に付けたい。
+    YouTube の一時的なIPブロック(IpBlocked/RequestBlocked)に遭遇したら
+    少し待って数回リトライする（新規動画は数本なのでリトライしても
+    ブロックを悪化させない）。字幕が本当に無い場合は即 None を返す。
+    """
     api = YouTubeTranscriptApi()
-    try:
-        transcript = api.fetch(video_id, languages=["ja"])
-        return " ".join(e.text for e in transcript)
-    except Exception:
-        pass
-    try:
-        transcript = api.fetch(video_id)
-        return " ".join(e.text for e in transcript)
-    except Exception:
-        return None
+    for attempt in range(3):
+        for langs in (["ja"], None):
+            try:
+                transcript = api.fetch(video_id, languages=langs) if langs else api.fetch(video_id)
+                return " ".join(e.text for e in transcript)
+            except Exception as e:
+                name = type(e).__name__
+                if any(k in name for k in ("Blocked", "TooManyRequests")):
+                    # IP起因の一時失敗 → 待ってリトライ
+                    if attempt < 2:
+                        print(f"  transcript IPブロック、{45}s待機して再試行 ({attempt+1}/3)", file=sys.stderr)
+                        time.sleep(45)
+                    break  # langループを抜けてattemptリトライへ
+                # 字幕が存在しない等 → リトライ不要
+                if langs is None:
+                    return None
+    return None
 
 
 # ---------------------------------------------------------------------------
