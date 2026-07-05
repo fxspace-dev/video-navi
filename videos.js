@@ -5,20 +5,20 @@ const VIDEOS = [
     "thumb": "https://img.youtube.com/vi/PB77sWo1dfU/mqdefault.jpg",
     "levels": [
       "初心者",
-      "中級",
-      "上級"
+      "中級"
     ],
     "categories": [
       "手法",
-      "メンタル",
-      "実践"
+      "基礎",
+      "メンタル"
     ],
     "method": "一般公開",
-    "summary": "FX歴8年の経験者が、10分でFXトレードの極意を解説している動画。",
+    "summary": "FX歴8年の経験から、トレードはテトリスのように「手法に合う相場状況で使う」こと、現代版ダウ理論で十分であること、週2回の厳選トレードの重要性を解説。",
     "vid_id": "PB77sWo1dfU",
     "date": "2026-07-04",
     "is_short": false,
-    "duration": 593
+    "duration": 593,
+    "transcript_ok": true
   },
   {
     "title": "【実践】エントリー直前チェックリスト",
@@ -29,16 +29,17 @@ const VIDEOS = [
       "中級"
     ],
     "categories": [
-      "実践",
       "手法",
+      "実践",
       "ライン"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおけるエントリー直前の重要なチェックポイントを実践的に解説している。",
+    "summary": "エントリー直前の5つのチェックリスト（SL位置、トレンド方向、RR、上位足確認、押し目位置）を解説し、勝率向上に繋がる実践的なポイントを紹介。",
     "vid_id": "hhYtNdrLHDQ",
     "date": "2026-07-04",
     "is_short": false,
-    "duration": 301
+    "duration": 301,
+    "transcript_ok": true
   },
   {
     "title": "プロトレーダーが使うナウキャストとは？",
