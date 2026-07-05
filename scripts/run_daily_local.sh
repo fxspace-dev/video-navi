@@ -44,6 +44,36 @@ fail() {
   exit 1
 }
 
+# push 後、GitHub Actions の本番デプロイ(FTP)が成功したか確認する。
+# FTPデプロイは稀に失敗し、その場合サイトが古いまま止まる（データ生成は成功
+# しているので気づきにくい）。失敗を検知したら通知する。
+# ※ repo は public なので GitHub API は認証不要で叩ける。
+verify_deploy() {
+  local sha concl=""
+  sha=$(git rev-parse HEAD)
+  echo "本番デプロイ確認中 (commit ${sha:0:7})..." >> "$LOG_FILE"
+  for _ in $(seq 1 24); do   # 最大約6分待つ（15秒×24、3回リトライ込み）
+    sleep 15
+    concl=$(curl -s "https://api.github.com/repos/fxspace-dev/video-navi/actions/runs?per_page=10" \
+      | python3 -c "
+import json,sys
+sha='$sha'
+try:
+    runs=json.load(sys.stdin).get('workflow_runs',[])
+except Exception:
+    print('apierr'); sys.exit()
+for x in runs:
+    if x.get('head_sha')==sha and x.get('name')=='Deploy to Production':
+        print(x['conclusion'] if x['status']=='completed' else 'running'); break
+else:
+    print('none')
+" 2>/dev/null)
+    [ "$concl" = "success" ] && { echo "本番デプロイ成功" >> "$LOG_FILE"; return 0; }
+    [ "$concl" = "failure" ] && break
+  done
+  fail "本番デプロイ(FTP) — データはGitHubにpush済みだが、サイトへの反映に失敗 (conclusion=$concl)"
+}
+
 {
   echo "===== run_daily_local.sh start: $(date '+%Y-%m-%d %H:%M:%S') ====="
 } >> "$LOG_FILE"
@@ -65,30 +95,33 @@ python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
 FORCE_ALL=1 python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
   || echo "WARNING: FORCE_ALL pass failed (continuing)" >> "$LOG_FILE"
 
-(
-  if ! git diff --quiet videos.js; then
-    # キャッシュバスティング: エックスサーバーはnginxが静的ファイルに7日間の
-    # ブラウザキャッシュ(max-age=604800)を付け、.htaccessでは制御できない。
-    # そこでvideos.jsが変わるたびにindex.html内の ?v= を更新し、URLを変えることで
-    # 訪問者のブラウザに必ず最新を取り直させる。
-    # 毎日変わるのは videos.js だけなので、その ?v= のみ更新する。
-    # app.js / style.css は中身を変えたときに手動で ?v= を上げること
-    # (毎日変えると未変更ファイルの無駄な再DLが発生するため)。
-    VER=$(date +%Y%m%d%H%M)
-    python3 -c "
+if git diff --quiet videos.js; then
+  echo "No changes in videos.js" >> "$LOG_FILE"
+else
+  # キャッシュバスティング: エックスサーバーはnginxが静的ファイルに7日間の
+  # ブラウザキャッシュ(max-age=604800)を付け、.htaccessでは制御できない。
+  # そこでvideos.jsが変わるたびにindex.html内の ?v= を更新し、URLを変えることで
+  # 訪問者のブラウザに必ず最新を取り直させる。
+  # 毎日変わるのは videos.js だけなので、その ?v= のみ更新する。
+  # app.js / style.css は中身を変えたときに手動で ?v= を上げること
+  # (毎日変えると未変更ファイルの無駄な再DLが発生するため)。
+  VER=$(date +%Y%m%d%H%M)
+  python3 -c "
 import re
 s=open('index.html',encoding='utf-8').read()
 s=re.sub(r'videos\.js\?v=[^\"]*', 'videos.js?v=$VER', s)
 open('index.html','w',encoding='utf-8').write(s)
 "
+  {
     git add videos.js index.html
     git commit -m "Update videos.js with latest uploads & summaries (local run)"
-    git push origin main || exit 9
-    echo "videos.js updated & pushed (cache version: $VER)"
-  else
-    echo "No changes in videos.js"
-  fi
-) >> "$LOG_FILE" 2>&1 || fail "git push"
+    git push origin main
+  } >> "$LOG_FILE" 2>&1 || fail "git push"
+  echo "videos.js updated & pushed (cache version: $VER)" >> "$LOG_FILE"
+
+  # 本番サイトへの反映(GitHub Actions FTPデプロイ)が成功したか確認
+  verify_deploy
+fi
 
 # 成功: 前回の失敗アラートが残っていたら消す
 rm -f "$DESKTOP_ALERT"
