@@ -2,6 +2,7 @@ name: Deploy to Production
 
 # データ生成はローカル (scripts/run_daily_local.sh) で行い、
 # push されたサイトファイルを本番サーバーへFTPデプロイする。
+# xserver への FTP は稀に接続失敗するため、最大3回リトライする。
 on:
   push:
     branches: [main]
@@ -22,7 +23,51 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
+      - name: Deploy via FTP (attempt 1)
+        id: ftp1
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: sv14907.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /fx-space.com/public_html/videonavi/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/scripts/**
+            **/.github/**
+            **/*.md
+
+      - name: Wait before retry 2
+        if: steps.ftp1.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy via FTP (attempt 2)
+        id: ftp2
+        if: steps.ftp1.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: sv14907.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /fx-space.com/public_html/videonavi/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/scripts/**
+            **/.github/**
+            **/*.md
+
+      - name: Wait before retry 3
+        if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy via FTP (attempt 3, final)
+        if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: sv14907.xserver.jp
