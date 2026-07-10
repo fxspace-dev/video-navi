@@ -33,13 +33,7 @@ DISCORD_URLS_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
 EXCLUDE_TITLE_PATTERNS = [
     re.compile(r"今日のシナリオ構築"),
     re.compile(r"ゼロプロ.*期.*添削"),
-    re.compile(r"No Copyright Music"),  # よすがの動画ではないBGM（Roa等）
 ]
-
-# 除外する動画ID（よすがの動画ではないもの。Discordに紛れ込んだBGM等）
-EXCLUDE_VIDEO_IDS = {
-    "EkutnuCkWSQ",  # Together – Roa (No Copyright Music)
-}
 
 EXISTING_CATEGORIES = [
     "手法", "基礎", "リアルトレード", "雑談", "メンタル", "実践",
@@ -534,7 +528,7 @@ def main():
     for item in latest_items:
         snippet = item["snippet"]
         vid_id = snippet["resourceId"]["videoId"]
-        if vid_id in existing_ids or vid_id in seen or vid_id in EXCLUDE_VIDEO_IDS:
+        if vid_id in existing_ids or vid_id in seen:
             continue
         title = snippet["title"]
         if should_exclude_title(title):
@@ -546,7 +540,7 @@ def main():
     # メンバー限定動画: Discord に貼られているが videos.js に未登録のもの
     discord_new_ids = [
         vid for vid in discord_urls.keys()
-        if vid not in existing_ids and vid not in seen and vid not in EXCLUDE_VIDEO_IDS
+        if vid not in existing_ids and vid not in seen
     ]
     print(f"Discord 新規 vid_id: {len(discord_new_ids)}件")
 

@@ -83,10 +83,8 @@ body.dark-mode .logo-text-main { background: linear-gradient(135deg, #fff 0%, #6
 /* ===== HERO ===== */
 .hero {
     position: relative; overflow: hidden;
-    padding: 96px 24px 116px; text-align: center;
+    padding: 80px 24px 100px; text-align: center;
     background: radial-gradient(ellipse at center, #0f1e3d 0%, #050b1a 60%, #02050f 100%);
-    perspective: 1100px;
-    perspective-origin: 50% 40%;
 }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
 
@@ -101,93 +99,35 @@ body.dark-mode .logo-text-main { background: linear-gradient(135deg, #fff 0%, #6
     50% { opacity: 1; transform: scale(1.4); }
 }
 
-/* ===== 3D パースペクティブ・シーン ===== */
-.hero-scene {
+/* Grid overlay */
+.hero-grid-overlay {
     position: absolute; inset: 0;
-    transform-style: preserve-3d;
-    /* JSがマウス位置で --rx / --ry を更新して視差3Dを付ける */
-    transform: rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: transform;
-}
-.hero-stage {
-    position: absolute; left: 50%; top: 58%;
-    transform-style: preserve-3d;
-    animation: sceneIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-@keyframes sceneIn {
-    from { opacity: 0; transform: translateZ(-260px); }
-    to   { opacity: 1; transform: translateZ(0); }
-}
-
-/* 奥へ伸びるグリッドの床（3D） */
-.hero-floor {
-    position: absolute; left: -900px; top: 0; width: 1800px; height: 1100px;
-    transform-style: preserve-3d;
-    transform: translate(-0%, 0) rotateX(78deg);
-    transform-origin: 50% 0;
-    -webkit-mask-image: radial-gradient(ellipse 55% 62% at 50% 30%, #000 0%, transparent 78%);
-    mask-image: radial-gradient(ellipse 55% 62% at 50% 30%, #000 0%, transparent 78%);
-    opacity: 0.7;
-}
-.hero-floor-grid {
-    position: absolute; inset: -50% -0 0; height: 200%;
     background-image:
-        linear-gradient(rgba(96,165,250,0.28) 1.5px, transparent 1.5px),
-        linear-gradient(90deg, rgba(96,165,250,0.20) 1.5px, transparent 1.5px);
-    background-size: 72px 72px;
-    animation: floorMove 4s linear infinite;
+        linear-gradient(rgba(96,165,250,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96,165,250,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
 }
-@keyframes floorMove { from { background-position: 0 0; } to { background-position: 0 72px; } }
 
-/* 浮遊する3Dローソク足 */
-.hero-candles { position: absolute; left: 0; top: 0; transform-style: preserve-3d; }
-.hc {
-    position: absolute;
-    left: var(--x); top: 0;
-    width: 24px; height: var(--h);
-    transform: translate(-50%, -100%) translateZ(var(--z));
-    transform-style: preserve-3d;
-    border-radius: 4px;
-    animation: candleFloat 5s ease-in-out infinite;
-    animation-delay: var(--delay);
+/* Animated chart line */
+.hero-chart {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    width: 100%; height: 60%;
+    opacity: 0.6;
 }
-.hc::before {
-    /* ヒゲ（芯） */
-    content: ''; position: absolute; left: 50%; top: -14px;
-    width: 2px; height: calc(100% + 28px);
-    transform: translateX(-50%) translateZ(0);
+.hero-chart-line {
+    stroke-dasharray: 2400;
+    stroke-dashoffset: 2400;
+    animation: chartDraw 3s ease-out 0.3s forwards;
+    filter: drop-shadow(0 0 8px rgba(96,165,250,0.5));
 }
-.hc::after {
-    /* 側面の厚み感（3D） */
-    content: ''; position: absolute; inset: 0;
-    border-radius: 4px;
-    transform: translateZ(-9px);
-    filter: brightness(0.55);
+.hero-chart-fill {
+    opacity: 0;
+    animation: chartFadeIn 2s ease-out 1.5s forwards;
 }
-.hc-up {
-    background: linear-gradient(180deg, #34d399, #059669);
-    box-shadow: 0 0 22px rgba(16,185,129,0.55), inset 0 0 8px rgba(255,255,255,0.25);
-}
-.hc-up::before { background: #34d399; box-shadow: 0 0 8px rgba(52,211,153,0.8); }
-.hc-up::after { background: #059669; }
-.hc-down {
-    background: linear-gradient(180deg, #f87171, #dc2626);
-    box-shadow: 0 0 22px rgba(239,68,68,0.5), inset 0 0 8px rgba(255,255,255,0.2);
-}
-.hc-down::before { background: #f87171; box-shadow: 0 0 8px rgba(248,113,113,0.8); }
-.hc-down::after { background: #dc2626; }
-@keyframes candleFloat {
-    0%, 100% { transform: translate(-50%, -100%) translateZ(var(--z)) translateY(0); }
-    50%      { transform: translate(-50%, -100%) translateZ(var(--z)) translateY(-16px); }
-}
-@media (prefers-reduced-motion: reduce) {
-    .hero-scene, .hero-stage, .hc, .hero-floor-grid { animation: none !important; transition: none !important; }
-}
-@media (max-width: 720px) {
-    .hero-stage { top: 62%; transform: scale(0.62); }
-    .hero-floor { opacity: 0.5; }
-}
+@keyframes chartDraw { to { stroke-dashoffset: 0; } }
+@keyframes chartFadeIn { to { opacity: 1; } }
 
 /* Glows */
 .hero-glow {
@@ -556,9 +496,9 @@ body.dark-mode .sidebar-toggle { background: #1e293b; border-color: #334155; }
 .main-layout { display: flex; gap: 24px; align-items: flex-start; }
 
 /* ===== SIDEBAR ===== */
-.sidebar { width: 240px; min-width: 180px; max-width: 400px; flex-shrink: 0; position: sticky; top: 68px; max-height: calc(100vh - 84px); overflow-y: auto; overflow-x: hidden; background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+.sidebar { width: 240px; min-width: 180px; max-width: 400px; flex-shrink: 0; position: sticky; top: 68px; background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; position: relative; }
 .sidebar-resize {
-    position: absolute; top: 0; right: 0; width: 8px; height: 100%;
+    position: absolute; top: 0; right: -4px; width: 8px; height: 100%;
     cursor: col-resize; z-index: 10;
 }
 .sidebar-resize::after {
@@ -726,41 +666,6 @@ body.dark-mode .sidebar-toggle { background: #1e293b; border-color: #334155; }
 .rec-title { font-size: 0.78rem; font-weight: 700; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 5px; }
 .rec-cat { font-size: 0.62rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 3px; }
 @media (max-width: 600px) { .modal-recommend-list { grid-template-columns: 1fr; } }
-
-/* ===== YouTube コメント ===== */
-.modal-comments { padding: 0 20px 4px; border-top: 1px solid var(--border-light); margin-top: 4px; }
-.modal-comments-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 16px 0 12px; }
-.modal-comments-title { font-size: 0.82rem; font-weight: 700; color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; }
-.modal-comments-title svg { color: var(--primary); }
-.modal-comments-all { font-size: 0.68rem; font-weight: 700; color: var(--primary); text-decoration: none; white-space: nowrap; }
-.modal-comments-all:hover { text-decoration: underline; }
-.modal-comments-list { display: flex; flex-direction: column; gap: 12px; }
-.cmt { display: flex; gap: 10px; }
-.cmt-avatar { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; background: var(--bg-section); object-fit: cover; }
-.cmt-avatar-fallback { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--primary-pale); color: var(--primary); font-weight: 800; font-size: 0.85rem; }
-.cmt-body { flex: 1; min-width: 0; }
-.cmt-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
-.cmt-author { font-size: 0.72rem; font-weight: 800; color: var(--text); }
-.cmt-date { font-size: 0.62rem; color: var(--text-muted); }
-.cmt-text { font-size: 0.78rem; line-height: 1.6; color: var(--text-sub); word-break: break-word; white-space: pre-wrap; }
-.cmt-text a { color: var(--primary); }
-.cmt-likes { display: inline-flex; align-items: center; gap: 4px; margin-top: 5px; font-size: 0.66rem; font-weight: 700; color: var(--text-muted); }
-.cmt-likes svg { width: 12px; height: 12px; }
-.modal-comments-status { font-size: 0.74rem; color: var(--text-muted); padding: 4px 0 8px; }
-.modal-comments-skeleton { display: flex; flex-direction: column; gap: 12px; }
-.cmt-skel { display: flex; gap: 10px; }
-.cmt-skel-av { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-section); flex-shrink: 0; }
-.cmt-skel-lines { flex: 1; }
-.cmt-skel-line { height: 9px; border-radius: 4px; background: var(--bg-section); margin-bottom: 6px; }
-.modal-comments-skeleton .cmt-skel, .cmt-skel-av, .cmt-skel-line { animation: cmtPulse 1.3s ease-in-out infinite; }
-@keyframes cmtPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
-body.dark-mode .modal-comments-all { color: #93c5fd; }
-
-/* 人気順のときカードに表示する再生回数バッジ */
-.card-views { display: inline-flex; align-items: center; gap: 3px; font-size: 0.64rem; font-weight: 700; color: var(--text-muted); }
-.card-views svg { width: 11px; height: 11px; }
-/* 再生回数の取得中は件数を点滅 */
-#resultCount.is-loading { opacity: 0.5; animation: cmtPulse 1.1s ease-in-out infinite; }
 
 /* ===== MEMO LIST MODAL ===== */
 .memo-list-content { max-width: 680px; }
@@ -1018,31 +923,9 @@ body.dark-mode #memoTextarea { background: #0f172a; border-color: #334155; color
 body.dark-mode .pg-btn { background: #1e293b; border-color: #334155; color: #94a3b8; }
 
 .sidebar-mobile-header { display: none; }
-/* モバイル用「この条件で見る」ボタンはPCでは非表示 */
-.sidebar-mobile-apply { display: none; }
 
 /* ===== TABLET / MOBILE ===== */
 @media (max-width: 900px) {
-    /* フィルターを適用して結果へ戻る固定フッター（モバイル） */
-    .sidebar-mobile-apply {
-        display: block !important;
-        position: sticky; bottom: 0; left: 0; right: 0;
-        margin: 20px -16px -16px; padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
-        background: rgba(255,255,255,0.92);
-        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-        border-top: 1px solid var(--border); z-index: 20;
-    }
-    body.dark-mode .sidebar-mobile-apply { background: rgba(15,23,42,0.92); border-color: #334155; }
-    .sidebar-apply-btn {
-        width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
-        padding: 15px; border: none; border-radius: 12px;
-        background: var(--primary); color: white;
-        font-family: inherit; font-size: 0.98rem; font-weight: 800; cursor: pointer;
-        box-shadow: 0 6px 18px rgba(37,99,235,0.35); transition: all var(--transition);
-    }
-    .sidebar-apply-btn:active { transform: scale(0.98); }
-    /* フッター分の余白を確保 */
-    .sidebar.open { padding-bottom: 0 !important; }
     .sidebar {
         position: fixed !important;
         top: 0 !important;
