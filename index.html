@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://fx-space.com/videonavi/og-image.png?v=20260412a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260411a">
+    <link rel="stylesheet" href="style.css?v=202607101200">
 </head>
 <body>
 
@@ -70,33 +70,37 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero">
     <div class="hero-bg">
         <div class="hero-stars" id="heroStars"></div>
-        <div class="hero-grid-overlay"></div>
-        <svg class="hero-chart" viewBox="0 0 1200 400" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#60a5fa" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.7"/>
-                    <stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
-                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <path class="hero-chart-fill" d="M0,300 Q150,250 300,270 T600,200 T900,180 T1200,150 L1200,400 L0,400 Z" fill="url(#chartFill)"/>
-            <path class="hero-chart-line" d="M0,300 Q150,250 300,270 T600,200 T900,180 T1200,150" stroke="url(#chartLine)" stroke-width="2" fill="none"/>
-        </svg>
+        <div class="hero-nebula"></div>
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
         <div class="hero-glow hero-glow-3"></div>
-        <div class="hero-nebula"></div>
+
+        <!-- 3D パースペクティブ・シーン -->
+        <div class="hero-scene" id="heroScene">
+            <div class="hero-stage">
+                <!-- 奥に伸びるグリッドの床 -->
+                <div class="hero-floor"><div class="hero-floor-grid"></div></div>
+                <!-- 浮遊する3Dローソク足 -->
+                <div class="hero-candles">
+                    <span class="hc hc-up"   style="--x:-320px; --z:-40px;  --h:88px;  --delay:0s"></span>
+                    <span class="hc hc-down" style="--x:-235px; --z:60px;   --h:56px;  --delay:.5s"></span>
+                    <span class="hc hc-up"   style="--x:-150px; --z:-120px; --h:120px; --delay:1.1s"></span>
+                    <span class="hc hc-up"   style="--x:-70px;  --z:30px;   --h:150px; --delay:.3s"></span>
+                    <span class="hc hc-down" style="--x:70px;   --z:-80px;  --h:74px;  --delay:1.4s"></span>
+                    <span class="hc hc-up"   style="--x:150px;  --z:80px;   --h:132px; --delay:.8s"></span>
+                    <span class="hc hc-up"   style="--x:235px;  --z:-50px;  --h:176px; --delay:.2s"></span>
+                    <span class="hc hc-down" style="--x:320px;  --z:50px;   --h:98px;  --delay:1.7s"></span>
+                </div>
+            </div>
+        </div>
+
         <div class="hero-orbit hero-orbit-1"></div>
         <div class="hero-orbit hero-orbit-2"></div>
     </div>
-    <div class="hero-content">
+    <div class="hero-content" id="heroContent">
         <img class="hero-brand-logo" src="logo-fxspace-horizontal.png" alt="FX SPACE">
         <h1 class="hero-title">
             <span class="hero-title-jp">よすが式</span>
@@ -181,6 +185,7 @@
                 <select class="sort-select" id="sortSelect">
                     <option value="date-new" selected>公開日（新しい順）</option>
                     <option value="date-old">公開日（古い順）</option>
+                    <option value="popular">人気順（再生回数）</option>
                     <option value="title-asc">タイトル (A→Z)</option>
                     <option value="title-desc">タイトル (Z→A)</option>
                 </select>
@@ -207,6 +212,14 @@
                     </summary>
                     <div class="sidebar-roadmap-list" id="roadmapList"></div>
                 </details>
+            </div>
+
+            <!-- モバイル用: 条件を適用して結果を見るボタン -->
+            <div class="sidebar-mobile-apply">
+                <button class="sidebar-apply-btn" id="sidebarApplyBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span id="sidebarApplyCount">この条件で見る</span>
+                </button>
             </div>
         </aside>
 
@@ -278,6 +291,16 @@
             </div>
             <textarea class="memo-textarea" id="memoTextarea" placeholder="この動画で学んだことや気づきをメモ..." rows="3"></textarea>
         </div>
+        <div class="modal-comments" id="modalComments" style="display:none;">
+            <div class="modal-comments-header">
+                <h4 class="modal-comments-title">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    YouTubeのコメント
+                </h4>
+                <a class="modal-comments-all" id="modalCommentsAll" href="#" target="_blank">YouTubeで見る →</a>
+            </div>
+            <div class="modal-comments-list" id="modalCommentsList"></div>
+        </div>
         <div class="modal-recommend" id="modalRecommend">
             <h4 class="modal-recommend-title">おすすめの動画</h4>
             <div class="modal-recommend-list" id="modalRecommendList"></div>
@@ -325,7 +348,7 @@
 </div>
 
 
-<script src="videos.js?v=202607062107"></script>
-<script src="app.js?v=202606292151"></script>
+<script src="videos.js?v=202607101200"></script>
+<script src="app.js?v=202607101200"></script>
 </body>
 </html>

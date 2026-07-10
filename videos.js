@@ -2439,25 +2439,6 @@ const VIDEOS = [
     "transcript_ok": true
   },
   {
-    "title": "Together – Roa (No Copyright Music)",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145620977221707",
-    "thumb": "https://img.youtube.com/vi/EkutnuCkWSQ/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "その他手法"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "この動画は、音楽のみで構成されており、具体的なトレード手法や解説は含まれていません。",
-    "vid_id": "EkutnuCkWSQ",
-    "date": "2022-09-20",
-    "is_short": false,
-    "duration": 293,
-    "transcript_ok": true
-  },
-  {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
     "url": "https://www.youtube.com/watch?v=2C-GJoetInw",
     "thumb": "https://img.youtube.com/vi/2C-GJoetInw/mqdefault.jpg",
