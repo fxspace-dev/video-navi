@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://fx-space.com/videonavi/og-image.png?v=20260412a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260411a">
+    <link rel="stylesheet" href="style.css?v=202607101930">
 </head>
 <body>
 
@@ -141,23 +141,25 @@
             <div class="sidebar-resize" id="sidebarResize"></div>
             <div class="sidebar-section">
                 <h3 class="sidebar-title">レベル</h3>
-                <div class="sidebar-options" id="levelFilters">
-                    <label class="sidebar-option"><input type="radio" name="level" value="all" checked><span class="option-radio"></span>すべて</label>
-                    <label class="sidebar-option"><input type="radio" name="level" value="超初心者"><span class="option-radio"></span>🔰 超初心者<span class="option-count" data-level-count="超初心者"></span></label>
-                    <label class="sidebar-option"><input type="radio" name="level" value="初心者"><span class="option-radio"></span>🌱 初心者<span class="option-count" data-level-count="初心者"></span></label>
-                    <label class="sidebar-option"><input type="radio" name="level" value="中級"><span class="option-radio"></span>📈 中級<span class="option-count" data-level-count="中級"></span></label>
-                    <label class="sidebar-option"><input type="radio" name="level" value="上級"><span class="option-radio"></span>🏆 上級<span class="option-count" data-level-count="上級"></span></label>
+                <div class="sidebar-options is-multi" id="levelFilters">
+                    <label class="sidebar-option"><input type="checkbox" name="level" value="all" checked><span class="option-check"></span>すべて</label>
+                    <label class="sidebar-option"><input type="checkbox" name="level" value="超初心者"><span class="option-check"></span>🔰 超初心者<span class="option-count" data-level-count="超初心者"></span></label>
+                    <label class="sidebar-option"><input type="checkbox" name="level" value="初心者"><span class="option-check"></span>🌱 初心者<span class="option-count" data-level-count="初心者"></span></label>
+                    <label class="sidebar-option"><input type="checkbox" name="level" value="中級"><span class="option-check"></span>📈 中級<span class="option-count" data-level-count="中級"></span></label>
+                    <label class="sidebar-option"><input type="checkbox" name="level" value="上級"><span class="option-check"></span>🏆 上級<span class="option-count" data-level-count="上級"></span></label>
                 </div>
+                <p class="sidebar-hint">複数選択できます（例：初心者＋中級）</p>
             </div>
 
             <div class="sidebar-section">
                 <h3 class="sidebar-title">動画タイプ</h3>
-                <div class="sidebar-options" id="typeFilters">
-                    <label class="sidebar-option"><input type="radio" name="vtype" value="all"><span class="option-radio"></span>すべて</label>
-                    <label class="sidebar-option"><input type="radio" name="vtype" value="long" checked><span class="option-radio"></span>メイン動画</label>
-                    <label class="sidebar-option"><input type="radio" name="vtype" value="live"><span class="option-radio"></span>ライブ配信</label>
-                    <label class="sidebar-option"><input type="radio" name="vtype" value="short"><span class="option-radio"></span>ショート動画</label>
+                <div class="sidebar-options is-multi" id="typeFilters">
+                    <label class="sidebar-option"><input type="checkbox" name="vtype" value="all"><span class="option-check"></span>すべて</label>
+                    <label class="sidebar-option"><input type="checkbox" name="vtype" value="long" checked><span class="option-check"></span>メイン動画</label>
+                    <label class="sidebar-option"><input type="checkbox" name="vtype" value="live"><span class="option-check"></span>ライブ配信</label>
+                    <label class="sidebar-option"><input type="checkbox" name="vtype" value="short"><span class="option-check"></span>ショート動画</label>
                 </div>
+                <p class="sidebar-hint">複数選択できます</p>
             </div>
 
             <div class="sidebar-section">
@@ -181,6 +183,7 @@
                 <select class="sort-select" id="sortSelect">
                     <option value="date-new" selected>公開日（新しい順）</option>
                     <option value="date-old">公開日（古い順）</option>
+                    <option value="popular">人気順（再生回数）</option>
                     <option value="title-asc">タイトル (A→Z)</option>
                     <option value="title-desc">タイトル (Z→A)</option>
                 </select>
@@ -207,6 +210,14 @@
                     </summary>
                     <div class="sidebar-roadmap-list" id="roadmapList"></div>
                 </details>
+            </div>
+
+            <!-- モバイル用: 条件を適用して結果を見るボタン -->
+            <div class="sidebar-mobile-apply">
+                <button class="sidebar-apply-btn" id="sidebarApplyBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span id="sidebarApplyCount">この条件で見る</span>
+                </button>
             </div>
         </aside>
 
@@ -246,8 +257,9 @@
 <!-- VIDEO MODAL -->
 <div class="modal" id="videoModal">
     <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-content">
-        <button class="modal-close" id="modalClose">&times;</button>
+    <div class="modal-shell">
+        <button class="modal-close" id="modalClose" aria-label="閉じる">&times;</button>
+        <div class="modal-content">
         <div class="modal-video" id="modalVideo"></div>
         <div class="modal-info">
             <h3 class="modal-title" id="modalTitle"></h3>
@@ -278,18 +290,30 @@
             </div>
             <textarea class="memo-textarea" id="memoTextarea" placeholder="この動画で学んだことや気づきをメモ..." rows="3"></textarea>
         </div>
+        <div class="modal-comments" id="modalComments" style="display:none;">
+            <div class="modal-comments-header">
+                <h4 class="modal-comments-title">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    YouTubeのコメント
+                </h4>
+                <a class="modal-comments-all" id="modalCommentsAll" href="#" target="_blank">YouTubeで見る →</a>
+            </div>
+            <div class="modal-comments-list" id="modalCommentsList"></div>
+        </div>
         <div class="modal-recommend" id="modalRecommend">
             <h4 class="modal-recommend-title">おすすめの動画</h4>
             <div class="modal-recommend-list" id="modalRecommendList"></div>
         </div>
-    </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-shell -->
 </div>
 
 <!-- MEMO LIST MODAL -->
 <div class="modal" id="memoListModal">
     <div class="modal-backdrop" id="memoListBackdrop"></div>
-    <div class="modal-content memo-list-content">
-        <button class="modal-close" id="memoListClose">&times;</button>
+    <div class="modal-shell shell-memo">
+        <button class="modal-close" id="memoListClose" aria-label="閉じる">&times;</button>
+        <div class="modal-content memo-list-content">
         <div class="memo-list-header">
             <div>
                 <h2 class="memo-list-heading">
@@ -308,24 +332,27 @@
             <input type="text" id="memoSearchInput" class="memo-search-input" placeholder="メモを検索...">
         </div>
         <div class="memo-list-body" id="memoListBody"></div>
-    </div>
+        </div><!-- /.memo-list-content -->
+    </div><!-- /.modal-shell -->
 </div>
 
 <!-- PLAYLIST MODAL -->
 <div class="modal" id="playlistModal">
     <div class="modal-backdrop" onclick="closePlaylistModal()"></div>
-    <div class="modal-content playlist-modal-content">
-        <button class="modal-close" onclick="closePlaylistModal()">&times;</button>
+    <div class="modal-shell shell-playlist">
+        <button class="modal-close" onclick="closePlaylistModal()" aria-label="閉じる">&times;</button>
+        <div class="modal-content playlist-modal-content">
         <div class="playlist-header">
             <h2 class="playlist-heading">プレイリスト</h2>
             <button class="playlist-create-btn" onclick="createPlaylistPrompt()">＋ 新規作成</button>
         </div>
         <div class="playlist-body" id="playlistBody"></div>
-    </div>
+        </div><!-- /.playlist-modal-content -->
+    </div><!-- /.modal-shell -->
 </div>
 
 
-<script src="videos.js?v=202607062107"></script>
-<script src="app.js?v=202606292151"></script>
+<script src="videos.js?v=202607101700"></script>
+<script src="app.js?v=202607101930"></script>
 </body>
 </html>

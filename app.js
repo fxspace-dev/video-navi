@@ -19,10 +19,10 @@ function isNewVideo(dateStr) {
 }
 
 // === State ===
-let activeLevel = 'all';
+let activeLevels = []; // 空 = すべて（複数選択可）
 let activeCategories = []; // empty = all
 let activeMethod = 'all';
-let activeType = 'long'; // default: main videos only
+let activeTypes = ['long']; // 既定はメイン動画のみ（空 = すべて・複数選択可）
 let currentPage = 1;
 const PAGE_SIZE = 12;
 const isMobile = () => window.innerWidth <= 640;
@@ -78,6 +78,71 @@ function updateWatchLaterBadge() {
 // === YouTube API 自動取得 ===
 const YT_API_KEY = 'AIzaSyDwzewTQkfpXMABw_K8WDb6Cn8v56PkvrA';
 const YT_CHANNEL_HANDLE = '@fxyosuga';
+
+// === 人気順（再生回数） ===
+const viewCounts = {};          // vid_id -> 再生回数
+let viewCountsLoaded = false;
+let viewCountsLoading = false;
+
+// 全動画の再生回数を YouTube API から取得（50件ずつ）。一度だけ実行。
+async function fetchViewCounts() {
+    const ids = [...new Set(VIDEOS.map(v => v.vid_id).filter(Boolean))];
+    for (let i = 0; i < ids.length; i += 50) {
+        const chunk = ids.slice(i, i + 50);
+        try {
+            const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${chunk.join(',')}&key=${YT_API_KEY}`);
+            const data = await res.json();
+            for (const item of (data.items || [])) {
+                viewCounts[item.id] = parseInt(item.statistics?.viewCount || '0', 10);
+            }
+        } catch (e) {
+            console.warn('再生回数の取得に失敗:', e);
+        }
+    }
+    viewCountsLoaded = true;
+}
+
+// 人気順が選ばれたときに一度だけ取得し、完了後に再描画する
+async function ensureViewCounts() {
+    if (viewCountsLoaded || viewCountsLoading) { renderVideos(); return; }
+    viewCountsLoading = true;
+    const rc = document.getElementById('resultCount');
+    if (rc) rc.classList.add('is-loading');
+    await fetchViewCounts();
+    viewCountsLoading = false;
+    if (rc) rc.classList.remove('is-loading');
+    renderVideos();
+}
+
+// 再生回数を「1.2万回」形式に整形
+function formatViews(n) {
+    if (n === undefined || n === null) return '';
+    if (n >= 100000000) return (n / 100000000).toFixed(1).replace(/\.0$/, '') + '億回';
+    if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + '万回';
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + '千回';
+    return n.toLocaleString() + '回';
+}
+const VIEW_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+
+// 再生数を取得（videos.js に保存された views を優先、無ければクライアント取得分）
+function getViews(v) {
+    if (v && v.views != null) return v.views;
+    if (v && viewCounts[v.vid_id] != null) return viewCounts[v.vid_id];
+    return undefined;
+}
+// カードに常時表示する再生数バッジ（控えめ表示）
+function viewsBadge(v) {
+    const n = getViews(v);
+    return n != null ? `<span class="card-views">${VIEW_ICON}${formatViews(n)}</span>` : '';
+}
+
+// モバイルのフィルターパネルを閉じる
+function closeMobileSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    const ov = document.getElementById('mobileOverlay');
+    if (ov) ov.classList.remove('open');
+    document.body.style.overflow = '';
+}
 
 // ISO 8601 duration (PT#H#M#S) → 秒数
 function parseIsoDuration(iso) {
@@ -175,6 +240,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderWatchLaterRow();
     updateWatchLaterBadge();
     updateMemoBadge();
+    // URL復元で人気順が指定されていたら再生回数を取得
+    if (sortMode === 'popular') ensureViewCounts();
 });
 
 // === Roadmap ===
@@ -275,13 +342,34 @@ function setupSidebarResize() {
 
 function setupEventListeners() {
     document.querySelectorAll('#levelFilters input[name="level"]').forEach(input => {
-        input.addEventListener('change', () => { activeLevel = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
+        input.addEventListener('change', () => {
+            if (input.value === 'all') {
+                // 「すべて」= 選択解除
+                activeLevels = [];
+            } else if (input.checked) {
+                if (!activeLevels.includes(input.value)) activeLevels.push(input.value);
+            } else {
+                activeLevels = activeLevels.filter(l => l !== input.value);
+            }
+            syncLevelCheckboxes();
+            currentPage = 1; renderVideos(); updateActiveFilters();
+        });
     });
     document.querySelectorAll('#methodFilters input[name="method"]').forEach(input => {
         input.addEventListener('change', () => { activeMethod = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
     });
     document.querySelectorAll('#typeFilters input[name="vtype"]').forEach(input => {
-        input.addEventListener('change', () => { activeType = input.value; currentPage = 1; renderVideos(); updateActiveFilters(); });
+        input.addEventListener('change', () => {
+            if (input.value === 'all') {
+                activeTypes = [];
+            } else if (input.checked) {
+                if (!activeTypes.includes(input.value)) activeTypes.push(input.value);
+            } else {
+                activeTypes = activeTypes.filter(t => t !== input.value);
+            }
+            syncTypeCheckboxes();
+            currentPage = 1; renderVideos(); updateActiveFilters();
+        });
     });
     document.getElementById('categoryFilters').addEventListener('click', e => {
         if (e.target.classList.contains('sidebar-tag')) {
@@ -320,7 +408,11 @@ function setupEventListeners() {
         currentPage = 1; renderVideos(); updateActiveFilters();
         input.focus();
     });
-    document.getElementById('sortSelect').addEventListener('change', e => { sortMode = e.target.value; renderVideos(); });
+    document.getElementById('sortSelect').addEventListener('change', e => {
+        sortMode = e.target.value;
+        if (sortMode === 'popular') ensureViewCounts();
+        currentPage = 1; renderVideos();
+    });
     document.getElementById('viewGrid').addEventListener('click', () => setView('grid'));
     document.getElementById('viewList').addEventListener('click', () => setView('list'));
     document.getElementById('resetFilters').addEventListener('click', resetAll);
@@ -351,9 +443,13 @@ function setupEventListeners() {
         document.body.style.overflow = 'hidden';
     });
     const closeBtn = document.getElementById('sidebarMobileClose');
-    if (closeBtn) closeBtn.addEventListener('click', () => {
-        document.getElementById('sidebar').classList.remove('open');
-        document.body.style.overflow = '';
+    if (closeBtn) closeBtn.addEventListener('click', closeMobileSidebar);
+    // モバイル: 「この条件で見る」で結果へ戻る
+    const applyBtn = document.getElementById('sidebarApplyBtn');
+    if (applyBtn) applyBtn.addEventListener('click', () => {
+        closeMobileSidebar();
+        const content = document.querySelector('.content');
+        if (content) content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     // Sidebar close button (X) handled via pseudo-element click won't work,
     // so add a real button for mobile
@@ -386,9 +482,26 @@ function setView(mode) {
     renderVideos();
 }
 
+// activeLevels の状態をレベルのチェックボックスUIに反映
+function syncLevelCheckboxes() {
+    document.querySelectorAll('#levelFilters input[name="level"]').forEach(input => {
+        if (input.value === 'all') input.checked = activeLevels.length === 0;
+        else input.checked = activeLevels.includes(input.value);
+    });
+}
+// activeTypes の状態を動画タイプのチェックボックスUIに反映
+function syncTypeCheckboxes() {
+    document.querySelectorAll('#typeFilters input[name="vtype"]').forEach(input => {
+        if (input.value === 'all') input.checked = activeTypes.length === 0;
+        else input.checked = activeTypes.includes(input.value);
+    });
+}
+
 function updateActiveFilters() {
     const chips = [];
-    if (activeLevel !== 'all') chips.push(`<span class="active-filter-chip">${activeLevel} <span class="chip-remove" onclick="clearFilter('level')">×</span></span>`);
+    activeLevels.forEach(lv => {
+        chips.push(`<span class="active-filter-chip">${lv} <span class="chip-remove" onclick="clearOneLevel('${lv}')">×</span></span>`);
+    });
     activeCategories.forEach(cat => {
         chips.push(`<span class="active-filter-chip">${cat} <span class="chip-remove" onclick="clearOneCategory('${cat}')">×</span></span>`);
     });
@@ -405,8 +518,14 @@ function updateActiveFilters() {
     badge.textContent = chips.length;
 }
 
+function clearOneLevel(lv) {
+    activeLevels = activeLevels.filter(l => l !== lv);
+    syncLevelCheckboxes();
+    currentPage = 1; renderVideos(); updateActiveFilters();
+}
+
 function clearFilter(type) {
-    if (type === 'level') { activeLevel = 'all'; document.querySelector('#levelFilters input[value="all"]').checked = true; }
+    if (type === 'level') { activeLevels = []; syncLevelCheckboxes(); }
     if (type === 'category') { activeCategories = []; document.querySelectorAll('#categoryFilters .sidebar-tag').forEach(b => b.classList.remove('active')); document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.add('active'); }
     if (type === 'method') { activeMethod = 'all'; document.querySelector('#methodFilters input[value="all"]').checked = true; }
     if (type === 'search') { searchQuery = ''; document.getElementById('searchInput').value = ''; }
@@ -431,10 +550,10 @@ function clearOneCategory(cat) {
 }
 
 function resetAll() {
-    activeLevel = 'all'; activeCategories = []; activeMethod = 'all'; activeType = 'long'; searchQuery = ''; sortMode = 'date-new';
-    document.querySelector('#levelFilters input[value="all"]').checked = true;
+    activeLevels = []; activeCategories = []; activeMethod = 'all'; activeTypes = ['long']; searchQuery = ''; sortMode = 'date-new';
+    syncLevelCheckboxes();
+    syncTypeCheckboxes();
     document.querySelector('#methodFilters input[value="all"]').checked = true;
-    var typeRadio = document.querySelector('#typeFilters input[value="long"]'); if (typeRadio) typeRadio.checked = true;
     document.querySelectorAll('#categoryFilters .sidebar-tag').forEach(b => b.classList.remove('active'));
     document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.add('active');
     document.getElementById('searchInput').value = '';
@@ -452,10 +571,10 @@ function getFilteredVideos() {
         return true;
     });
     let result = dedupedVideos.filter(v => {
-        if (activeLevel !== 'all' && !v.levels.includes(activeLevel)) return false;
+        if (activeLevels.length > 0 && !v.levels.some(l => activeLevels.includes(l))) return false;
         if (activeCategories.length > 0 && !activeCategories.some(c => v.categories.includes(c))) return false;
         if (activeMethod !== 'all' && v.method !== activeMethod) return false;
-        if (activeType !== 'all' && getVideoType(v) !== activeType) return false;
+        if (activeTypes.length > 0 && !activeTypes.includes(getVideoType(v))) return false;
         if (searchQuery) {
             const keywords = searchQuery.split(/[\s　]+/).filter(k => k.length > 0);
             for (const q of keywords) {
@@ -468,6 +587,15 @@ function getFilteredVideos() {
     if (sortMode === 'date-old') result.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
     if (sortMode === 'title-asc') result.sort((a, b) => a.title.localeCompare(b.title, 'ja'));
     if (sortMode === 'title-desc') result.sort((a, b) => b.title.localeCompare(a.title, 'ja'));
+    if (sortMode === 'popular') {
+        // 再生回数の多い順。未取得(-1)は末尾へ。同数なら新しい順。
+        result.sort((a, b) => {
+            const va = getViews(a), vb = getViews(b);
+            const na = (va == null ? -1 : va), nb = (vb == null ? -1 : vb);
+            if (nb !== na) return nb - na;
+            return (b.date || '').localeCompare(a.date || '');
+        });
+    }
     return result;
 }
 
@@ -478,6 +606,8 @@ function renderVideos() {
     const noResults = document.getElementById('noResults');
     const paginationEl = document.getElementById('pagination');
     document.getElementById('resultCount').textContent = filtered.length;
+    const applyCount = document.getElementById('sidebarApplyCount');
+    if (applyCount) applyCount.textContent = `この条件で見る（${filtered.length}件）`;
     gridEl.classList.toggle('hidden', viewMode !== 'grid');
     listEl.classList.toggle('hidden', viewMode !== 'list');
     if (filtered.length === 0) {
@@ -565,9 +695,10 @@ function renderGridCard(v, i) {
     const durationHtml = v.duration ? '<span class="video-duration">' + formatDuration(v.duration) + '</span>' : '';
     const vtype = getVideoType(v);
     const typeLabel = vtype === 'short' ? '<span class="video-short-label">SHORT</span>' : vtype === 'live' ? '<span class="video-live-label">LIVE</span>' : '';
+    const viewsHtml = viewsBadge(v);
     return `<a href="${v.url}" target="_blank" class="video-card ${watched ? 'is-watched' : ''}" style="--cat-color:${catColor}" onclick="openModal(${idx}); return false;">
         <div class="video-thumb">${thumbHtml}<div class="video-play-overlay"><div class="play-icon"></div></div>${watchedBadge}${durationHtml}${typeLabel}<button class="card-watchlater ${wlClass}" onclick="event.preventDefault();event.stopPropagation();toggleWatchLater('${v.title.replace(/'/g, "\\'")}');" title="後で見る">${wlIcon}</button></div>
-        <div class="video-info"><h3 class="video-title"><span class="video-badge ${badgeClass}">${badgeText}</span>${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryHint}<div class="video-meta">${dateStr ? `<span class="video-date">${dateStr}</span>` : ''}${hasMemo(v.title) ? '<span class="video-memo-icon" title="メモあり">&#9998;</span>' : ''}</div><div class="video-tags">${levelTags}${catTags}</div></div></a>`;
+        <div class="video-info"><h3 class="video-title"><span class="video-badge ${badgeClass}">${badgeText}</span>${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryHint}<div class="video-meta">${dateStr ? `<span class="video-date">${dateStr}</span>` : ''}${viewsHtml}${hasMemo(v.title) ? '<span class="video-memo-icon" title="メモあり">&#9998;</span>' : ''}</div><div class="video-tags">${levelTags}${catTags}</div></div></a>`;
 }
 
 function renderListItem(v, i) {
@@ -580,9 +711,10 @@ function renderListItem(v, i) {
     const summaryText = v.summary ? v.summary.slice(0, 80) + (v.summary.length > 80 ? '...' : '') : '';
     const idx = VIDEOS.indexOf(v);
     const catColor = getCatColor(v.categories);
+    const viewsHtml = viewsBadge(v);
     return `<a href="${v.url}" target="_blank" class="video-list-item" style="--cat-color:${catColor}" onclick="openModal(${idx}); return false;">
         <div class="list-thumb">${thumbHtml}</div>
-        <div class="list-info"><h3 class="list-title">${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryText ? `<p class="list-summary">${searchQuery ? highlightText(summaryText, searchQuery) : summaryText}</p>` : ''}<div class="list-meta"><span class="list-badge ${badgeClass}">${badgeText}</span>${dateStr ? `<span class="list-date">${dateStr}</span>` : ''}${levelTags}${catTags}</div></div></a>`;
+        <div class="list-info"><h3 class="list-title">${isNewVideo(v.date) ? '<span class="video-new-badge">NEW</span>' : ''}${searchQuery ? highlightText(v.title, searchQuery) : v.title}</h3>${summaryText ? `<p class="list-summary">${searchQuery ? highlightText(summaryText, searchQuery) : summaryText}</p>` : ''}<div class="list-meta"><span class="list-badge ${badgeClass}">${badgeText}</span>${dateStr ? `<span class="list-date">${dateStr}</span>` : ''}${viewsHtml}${levelTags}${catTags}</div></div></a>`;
 }
 
 function openModal(index) {
@@ -591,10 +723,19 @@ function openModal(index) {
     currentModalIndex = index;
     const modal = document.getElementById('videoModal');
     const videoArea = document.getElementById('modalVideo');
-    const fallbackThumb = v.thumb || '';
-    const thumbUrl = v.vid_id ? `https://img.youtube.com/vi/${v.vid_id}/maxresdefault.jpg` : fallbackThumb;
+    // サムネイルのフォールバック連鎖:
+    // maxresdefault(高画質) → hqdefault(全動画に必ず存在) → v.thumb
+    // A/Bテスト中などで maxresdefault が404になる動画でも必ず表示されるようにする。
     const modalDurHtml = v.duration ? `<span class="video-duration">${formatDuration(v.duration)}</span>` : '';
-    videoArea.innerHTML = `<a href="${v.url}" target="_blank" class="modal-thumb-link" onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');renderVideos();"><img src="${thumbUrl}" alt="" onerror="if(this.src!=='${fallbackThumb.replace(/'/g, "\\'")}')this.src='${fallbackThumb.replace(/'/g, "\\'")}';"><div class="modal-play-btn"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.55)"/><polygon points="19,14 19,34 36,24" fill="white"/></svg></div>${modalDurHtml}</a>`;
+    let thumbImgHtml;
+    if (v.vid_id) {
+        const hq = `https://img.youtube.com/vi/${v.vid_id}/hqdefault.jpg`;
+        const maxres = `https://img.youtube.com/vi/${v.vid_id}/maxresdefault.jpg`;
+        thumbImgHtml = `<img src="${maxres}" alt="" data-fallback="${hq}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';}">`;
+    } else {
+        thumbImgHtml = `<img src="${(v.thumb || '').replace(/"/g, '&quot;')}" alt="">`;
+    }
+    videoArea.innerHTML = `<a href="${v.url}" target="_blank" class="modal-thumb-link" onclick="addToHistory('${v.title.replace(/'/g, "\\'")}');renderVideos();">${thumbImgHtml}<div class="modal-play-btn"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.55)"/><polygon points="19,14 19,34 36,24" fill="white"/></svg></div>${modalDurHtml}</a>`;
     document.getElementById('modalTitle').textContent = v.title;
     const modalLink = document.getElementById('modalLink');
     modalLink.href = v.url;
@@ -616,24 +757,9 @@ function openModal(index) {
     };
     updateBmState();
     bmBtn.onclick = () => { toggleWatchLater(v.title); updateBmState(); };
-    // おすすめ動画
-    const recList = document.getElementById('modalRecommendList');
-    const recs = getRecommendations(index, 6);
-    if (recs.length > 0) {
-        document.getElementById('modalRecommend').style.display = '';
-        recList.innerHTML = recs.map(r => {
-            const rv = VIDEOS[r];
-            const rThumb = rv.thumb ? `<img src="${rv.thumb}" alt="" loading="lazy">` : `<div class="rec-thumb-placeholder">🎬</div>`;
-            const rCatColor = getCatColor(rv.categories);
-            const rDurHtml = rv.duration ? `<span class="video-duration">${formatDuration(rv.duration)}</span>` : '';
-            return `<div class="rec-card" style="--cat-color:${rCatColor}" onclick="openModal(${r})">
-                <div class="rec-thumb">${rThumb}${rDurHtml}</div>
-                <div class="rec-info"><p class="rec-title">${rv.title}</p><span class="rec-cat"><span class="cat-dot" style="background:${rCatColor}"></span>${rv.categories[0] || ''}</span></div>
-            </div>`;
-        }).join('');
-    } else {
-        document.getElementById('modalRecommend').style.display = 'none';
-    }
+    // おすすめ動画（「もっと見る」で追加表示）
+    recShownCount = 6;
+    renderRecommendations(index);
     // シェアボタン
     const shareBtn = document.getElementById('modalShare');
     if (shareBtn) {
@@ -658,9 +784,161 @@ function openModal(index) {
             memoArea._saveTimer = setTimeout(() => memoSaved.classList.remove('show'), 1500);
         }, 300);
     };
+    // YouTubeコメント
+    loadComments(v);
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
     document.querySelector('.modal-content').scrollTop = 0;
+}
+
+// === YouTubeコメント読み込み ===
+// よすが本人のチャンネルID（本人コメント/返信の判定用。一度だけ取得してキャッシュ）
+let yosugaChannelId = null;
+async function getYosugaChannelId() {
+    if (yosugaChannelId) return yosugaChannelId;
+    try {
+        const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${YT_CHANNEL_HANDLE}&key=${YT_API_KEY}`);
+        const data = await res.json();
+        yosugaChannelId = data.items?.[0]?.id || null;
+    } catch (e) { yosugaChannelId = null; }
+    return yosugaChannelId;
+}
+
+// 1コメント（本人/視聴者）を描画。owner=true でよすがバッジ付与
+function renderCommentNode(c, owner) {
+    const author = escapeHtml(c.authorDisplayName || '');
+    const initial = (author.replace('@', '').charAt(0) || '?').toUpperCase();
+    const avatar = c.authorProfileImageUrl
+        ? `<img class="cmt-avatar" src="${c.authorProfileImageUrl}" alt="" loading="lazy" referrerpolicy="no-referrer">`
+        : `<div class="cmt-avatar-fallback">${initial}</div>`;
+    const text = escapeHtml(c.textDisplay || '').replace(/\n/g, '<br>');
+    const likes = c.likeCount || 0;
+    const likesHtml = likes > 0
+        ? `<span class="cmt-likes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>${likes.toLocaleString()}</span>`
+        : '';
+    const ownerBadge = owner ? '<span class="cmt-owner-badge">よすが</span>' : '';
+    const authorClass = owner ? 'cmt-author cmt-author-owner' : 'cmt-author';
+    return `${avatar}<div class="cmt-body"><div class="cmt-meta"><span class="${authorClass}">${author}</span>${ownerBadge}<span class="cmt-date">${formatCommentDate(c.publishedAt)}</span></div><div class="cmt-text">${text}</div>${likesHtml}</div>`;
+}
+
+let commentsRequestId = 0;
+async function loadComments(v) {
+    const section = document.getElementById('modalComments');
+    const list = document.getElementById('modalCommentsList');
+    const allLink = document.getElementById('modalCommentsAll');
+    if (!section || !list) return;
+    const reqId = ++commentsRequestId;
+    // Discord限定動画・vid_idなしはコメント非対応
+    if (!v.vid_id || (v.url && v.url.includes('discord.com'))) {
+        section.style.display = 'none';
+        return;
+    }
+    section.style.display = '';
+    allLink.href = `https://www.youtube.com/watch?v=${v.vid_id}`;
+    list.innerHTML = '<div class="modal-comments-skeleton">'
+        + '<div class="cmt-skel"><div class="cmt-skel-av"></div><div class="cmt-skel-lines"><div class="cmt-skel-line" style="width:40%"></div><div class="cmt-skel-line" style="width:90%"></div></div></div>'
+        + '<div class="cmt-skel"><div class="cmt-skel-av"></div><div class="cmt-skel-lines"><div class="cmt-skel-line" style="width:35%"></div><div class="cmt-skel-line" style="width:80%"></div></div></div>'
+        + '</div>';
+    try {
+        const ownerIdPromise = getYosugaChannelId();
+        // replies も取得して、よすがが視聴者コメントへ返信しているものを拾う
+        const res = await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet,replies&videoId=${v.vid_id}&maxResults=30&order=relevance&textFormat=plainText&key=${YT_API_KEY}`);
+        if (reqId !== commentsRequestId) return; // 別の動画が開かれた
+        const data = await res.json();
+        if (data.error) {
+            // コメント無効化などは静かに隠す
+            section.style.display = 'none';
+            return;
+        }
+        const ownerId = await ownerIdPromise;
+        if (reqId !== commentsRequestId) return;
+        const items = data.items || [];
+
+        // よすが本人の単独トップレベルコメント（概要欄まるコピー）は除外。
+        // 視聴者コメント＋そこへのよすがの返信を対象にする。
+        const threads = [];
+        for (const it of items) {
+            const top = it.snippet.topLevelComment.snippet;
+            const topAuthorId = top.authorChannelId && top.authorChannelId.value;
+            if (ownerId && topAuthorId === ownerId) continue; // よすが本人の投稿は非表示
+            const replyComments = (it.replies && it.replies.comments) || [];
+            const yosugaReplies = ownerId
+                ? replyComments
+                    .filter(r => r.snippet.authorChannelId && r.snippet.authorChannelId.value === ownerId)
+                    .map(r => r.snippet)
+                : [];
+            threads.push({ top, yosugaReplies });
+        }
+        // よすがが返信しているスレッドを優先（安定ソートで元の関連度順は維持）
+        threads.sort((a, b) => (b.yosugaReplies.length > 0) - (a.yosugaReplies.length > 0));
+        const shown = threads.slice(0, 8);
+        if (shown.length === 0) {
+            list.innerHTML = '<p class="modal-comments-status">表示できるコメントがありません。</p>';
+            return;
+        }
+        const threadsHtml = shown.map(t => {
+            const topHtml = `<div class="cmt">${renderCommentNode(t.top, false)}</div>`;
+            const repliesHtml = t.yosugaReplies
+                .map(r => `<div class="cmt cmt-reply">${renderCommentNode(r, true)}</div>`)
+                .join('');
+            return `<div class="cmt-thread">${topHtml}${repliesHtml}</div>`;
+        }).join('');
+        // 一部のみ表示のため、YouTubeのコメント欄へ飛ぶ「もっと見る」ボタン
+        const moreHtml = `<a class="modal-more-btn" href="https://www.youtube.com/watch?v=${v.vid_id}" target="_blank" rel="noopener">YouTubeでコメントをもっと見る →</a>`;
+        list.innerHTML = threadsHtml + moreHtml;
+    } catch (e) {
+        if (reqId !== commentsRequestId) return;
+        section.style.display = 'none';
+    }
+}
+function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function formatCommentDate(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    const diff = (Date.now() - d.getTime()) / 1000;
+    if (diff < 3600) return Math.max(1, Math.floor(diff / 60)) + '分前';
+    if (diff < 86400) return Math.floor(diff / 3600) + '時間前';
+    if (diff < 2592000) return Math.floor(diff / 86400) + '日前';
+    if (diff < 31536000) return Math.floor(diff / 2592000) + 'ヶ月前';
+    return Math.floor(diff / 31536000) + '年前';
+}
+
+// === おすすめ動画（もっと見る対応） ===
+let recShownCount = 6;
+function renderRecommendations(index) {
+    const wrap = document.getElementById('modalRecommend');
+    const recList = document.getElementById('modalRecommendList');
+    if (!wrap || !recList) return;
+    // 多めに候補を取り、表示件数分だけ描画（残りは「もっと見る」で展開）
+    const allRecs = getRecommendations(index, 40);
+    if (allRecs.length === 0) { wrap.style.display = 'none'; return; }
+    wrap.style.display = '';
+    const shown = allRecs.slice(0, recShownCount);
+    recList.innerHTML = shown.map(r => {
+        const rv = VIDEOS[r];
+        const rThumb = rv.thumb ? `<img src="${rv.thumb}" alt="" loading="lazy">` : `<div class="rec-thumb-placeholder">🎬</div>`;
+        const rCatColor = getCatColor(rv.categories);
+        const rDurHtml = rv.duration ? `<span class="video-duration">${formatDuration(rv.duration)}</span>` : '';
+        return `<div class="rec-card" style="--cat-color:${rCatColor}" onclick="openModal(${r})">
+            <div class="rec-thumb">${rThumb}${rDurHtml}</div>
+            <div class="rec-info"><p class="rec-title">${rv.title}</p><span class="rec-cat"><span class="cat-dot" style="background:${rCatColor}"></span>${rv.categories[0] || ''}</span></div>
+        </div>`;
+    }).join('');
+    // 「もっと見る」ボタン
+    let moreBtn = document.getElementById('recMoreBtn');
+    if (allRecs.length > recShownCount) {
+        if (!moreBtn) {
+            moreBtn = document.createElement('button');
+            moreBtn.id = 'recMoreBtn';
+            moreBtn.className = 'modal-more-btn';
+            wrap.appendChild(moreBtn);
+        }
+        moreBtn.textContent = 'もっと見る';
+        moreBtn.onclick = () => { recShownCount += 6; renderRecommendations(index); };
+    } else if (moreBtn) {
+        moreBtn.remove();
+    }
 }
 
 function closeModal() {
@@ -748,12 +1026,35 @@ function updateMemoBadge() {
     badge.textContent = count;
 }
 
+// タイトルから【…】[…]（…）などのシリーズ/タグ表記を抜き出す
+function extractBracketTags(title) {
+    const tags = [];
+    const re = /[【\[（(]([^】\]）)]{1,20})[】\]）)]/g;
+    let m;
+    while ((m = re.exec(title)) !== null) {
+        const t = m[1].trim();
+        if (t) tags.push(t);
+    }
+    return tags;
+}
+// タイトルを意味のあるトークン集合に（記号で分割し2文字以上を採用）
+const REC_STOPWORDS = new Set(['解説', '動画', '完全', '方法', 'よすが', 'について', 'こと', 'ため', 'FX']);
+function titleTokens(title) {
+    const cleaned = (title || '').replace(/[【】\[\]（）()「」『』・｜|/,、。！？!?~〜\-—\s　]+/g, ' ');
+    return new Set(
+        cleaned.split(' ')
+            .map(s => s.trim())
+            .filter(s => s.length >= 2 && !REC_STOPWORDS.has(s))
+    );
+}
+
+// 「この動画を見た人が次に見たい動画」を推定して並べる
 function getRecommendations(currentIndex, count) {
     const current = VIDEOS[currentIndex];
     if (!current) return [];
     const history = getHistory();
     const watchedSet = new Set(history);
-    // Build a profile from watch history
+    // 視聴履歴からの嗜好プロファイル
     const histCats = {};
     const histLevels = {};
     history.forEach(t => {
@@ -764,26 +1065,56 @@ function getRecommendations(currentIndex, count) {
         }
     });
 
+    const curCats = new Set(current.categories || []);
+    const curLevels = new Set(current.levels || []);
+    const curTags = extractBracketTags(current.title);
+    const curTokens = titleTokens(current.title);
+
     const scored = VIDEOS.map((v, i) => {
         if (i === currentIndex) return { i, score: -1 };
-        // ショート動画はおすすめから除外
-        if (isShort(v)) return { i, score: -1 };
+        // ショート・ライブ配信はおすすめから除外（メイン動画の続きに見たいのは通常動画）
+        if (isShort(v) || isLive(v)) return { i, score: -1 };
+
         let score = 0;
-        // Category match with current video (strongest signal)
-        v.categories.forEach(c => { if (current.categories.includes(c)) score += 4; });
-        // Level match with current video
-        v.levels.forEach(l => { if (current.levels.includes(l)) score += 1.5; });
-        // Same method bonus
+
+        // ① テーマ（カテゴリ）一致 — 最重要。複数重なるほど関連度が高い
+        let sharedCats = 0;
+        v.categories.forEach(c => { if (curCats.has(c)) { score += 5; sharedCats++; } });
+        if (sharedCats >= 2) score += 5;           // 複数テーマ一致は強い関連
+        if (sharedCats === 0) score -= 2;          // テーマが全く違うものは下げる
+
+        // ② シリーズ/続編 — 同じ【タグ】は「次に見たい」度が高い（例: 1章→2章）
+        const vTags = extractBracketTags(v.title);
+        if (curTags.length && vTags.some(t => curTags.includes(t))) score += 8;
+
+        // ③ タイトルの題材キーワード重なり（同じ話題・銘柄・手法名など）
+        const vTokens = titleTokens(v.title);
+        let sharedTokens = 0;
+        curTokens.forEach(t => { if (vTokens.has(t)) sharedTokens++; });
+        score += Math.min(sharedTokens * 3, 9);
+
+        // ④ 学習レベルの近さ（同じ段階の視聴者が見やすい）
+        let sharedLevels = 0;
+        v.levels.forEach(l => { if (curLevels.has(l)) { score += 2; sharedLevels++; } });
+
+        // ⑤ 公開方法が同じ（限定/公開）だと文脈が近い
         if (v.method === current.method) score += 0.5;
-        // History-based: boost videos in categories the user watches often
+
+        // ⑥ 視聴履歴の嗜好ブースト
         v.categories.forEach(c => { if (histCats[c]) score += Math.min(histCats[c] * 0.5, 2); });
         v.levels.forEach(l => { if (histLevels[l]) score += Math.min(histLevels[l] * 0.3, 1); });
-        // Penalize already watched (still show but lower priority)
+
+        // ⑦ 人気度（再生数）を軽くブースト — 関連が近い中でよく見られている動画を優先
+        const views = getViews(v);
+        if (views && score > 0) score += Math.min(Math.log10(views + 1), 6) * 0.7;
+
+        // ⑧ 視聴済みは下げ、未視聴は少し上げる（新規発見）
         if (watchedSet.has(v.title)) score *= 0.4;
-        // Boost unwatched (discovery)
-        if (!watchedSet.has(v.title)) score += 1;
+        else score += 1;
+
         return { i, score };
     }).filter(s => s.score > 0);
+
     scored.sort((a, b) => b.score - a.score);
     return scored.slice(0, count).map(s => s.i);
 }
@@ -991,9 +1322,8 @@ function submitNewPlaylist(vidTitle) {
 }
 
 function filterByLevel(level) {
-    activeLevel = level;
-    const radio = document.querySelector(`#levelFilters input[value="${level}"]`);
-    if (radio) radio.checked = true;
+    activeLevels = level === 'all' ? [] : [level];
+    syncLevelCheckboxes();
     currentPage = 1; renderVideos(); updateActiveFilters();
     document.querySelector('.main-section').scrollIntoView({ behavior: 'smooth' });
 }
@@ -1075,7 +1405,7 @@ document.addEventListener('keydown', e => {
 function saveFiltersToURL() {
     try {
         const params = new URLSearchParams();
-        if (activeLevel !== 'all') params.set('level', activeLevel);
+        if (activeLevels.length > 0) params.set('level', activeLevels.join(','));
         if (activeCategories.length > 0) params.set('cat', activeCategories.join(','));
         if (activeMethod !== 'all') params.set('method', activeMethod);
         if (searchQuery) params.set('q', searchQuery);
@@ -1086,14 +1416,14 @@ function saveFiltersToURL() {
 }
 function restoreFiltersFromURL() {
     const params = new URLSearchParams(location.search);
-    if (params.has('level')) activeLevel = params.get('level');
+    if (params.has('level')) activeLevels = params.get('level').split(',').filter(Boolean);
     if (params.has('cat')) activeCategories = params.get('cat').split(',').filter(Boolean);
     if (params.has('method')) activeMethod = params.get('method');
     if (params.has('q')) { searchQuery = params.get('q'); const si = document.getElementById('searchInput'); if (si) si.value = searchQuery; }
     if (params.has('sort')) sortMode = params.get('sort');
     // Apply to UI after DOM ready
     setTimeout(() => {
-        if (activeLevel !== 'all') { const r = document.querySelector(`#levelFilters input[value="${activeLevel}"]`); if (r) r.checked = true; }
+        syncLevelCheckboxes();
         if (activeMethod !== 'all') { const r = document.querySelector(`#methodFilters input[value="${activeMethod}"]`); if (r) r.checked = true; }
         if (activeCategories.length > 0) {
             document.querySelector('#categoryFilters .sidebar-tag[data-cat="all"]').classList.remove('active');

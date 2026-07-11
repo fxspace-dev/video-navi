@@ -33,7 +33,13 @@ DISCORD_URLS_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
 EXCLUDE_TITLE_PATTERNS = [
     re.compile(r"今日のシナリオ構築"),
     re.compile(r"ゼロプロ.*期.*添削"),
+    re.compile(r"No Copyright Music"),  # よすがの動画ではないBGM（Roa等）
 ]
+
+# 除外する動画ID（よすがの動画ではないもの。Discordに紛れ込んだBGM等）
+EXCLUDE_VIDEO_IDS = {
+    "EkutnuCkWSQ",  # Together – Roa (No Copyright Music)
+}
 
 EXISTING_CATEGORIES = [
     "手法", "基礎", "リアルトレード", "雑談", "メンタル", "実践",
@@ -45,6 +51,12 @@ EXISTING_CATEGORIES = [
 ]
 
 LEVEL_OPTIONS = ["超初心者", "初心者", "中級", "上級"]
+
+# カテゴリ判定ガイド（fill_missing_summaries と共有）。取り込み時の新規動画にも同じ精度を適用。
+try:
+    from fill_missing_summaries import CATEGORY_GUIDE as _CATEGORY_GUIDE
+except Exception:
+    _CATEGORY_GUIDE = ""
 
 REQUEST_HEADERS = {
     "User-Agent": (
@@ -164,37 +176,48 @@ def scrape_channel_videos_tab() -> list[tuple[str, str]]:
         print(f"  WARNING: ytInitialData JSONパース失敗: {e}", file=sys.stderr)
         return []
 
+    # ytInitialData の木を再帰的に走査して動画エントリを集める。
+    # YouTube は 2024〜2025 に「動画」タブのレンダラを videoRenderer から
+    # lockupViewModel(新形式) へ移行したため、両方に対応する。
     out: list[tuple[str, str]] = []
-    try:
-        tabs = data["contents"]["twoColumnBrowseResultsRenderer"]["tabs"]
-        # タイトルに依存せず、richGridRenderer + videoRenderer を含むタブを探す。
-        # これで言語設定（動画 / Videos）やタブ位置の違いに耐える。
-        best_tab_items: list[dict] = []
-        for t in tabs:
-            tr = t.get("tabRenderer", {})
-            content = tr.get("content", {}) or {}
-            items = content.get("richGridRenderer", {}).get("contents", []) or []
-            # 最初の長尺動画 videoRenderer を見つけたらこのタブが動画タブ
-            if any(
-                it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
-                for it in items
-            ):
-                best_tab_items = items
-                title_label = tr.get("title", "?")
-                print(f"  スクレイピング: '{title_label}' タブから {len(items)}件", file=sys.stderr)
-                break
+    seen: set[str] = set()
 
-        for it in best_tab_items:
-            vr = it.get("richItemRenderer", {}).get("content", {}).get("videoRenderer")
-            if not vr or not vr.get("videoId"):
-                continue
-            vid = vr["videoId"]
-            title_runs = vr.get("title", {}).get("runs", [])
-            title = title_runs[0].get("text", "") if title_runs else ""
+    def add(vid: str, title: str) -> None:
+        if vid and title and vid not in seen:
+            seen.add(vid)
             out.append((vid, title))
-    except (KeyError, TypeError) as e:
-        print(f"  WARNING: ytInitialData 構造が想定と違います: {e}", file=sys.stderr)
 
+    def walk(node) -> None:
+        if isinstance(node, dict):
+            # 新形式: lockupViewModel（contentId + metadata.title.content）
+            lv = node.get("lockupViewModel")
+            if isinstance(lv, dict) and lv.get("contentType") in (
+                "LOCKUP_CONTENT_TYPE_VIDEO", None
+            ):
+                vid = lv.get("contentId", "")
+                title = (
+                    lv.get("metadata", {})
+                    .get("lockupMetadataViewModel", {})
+                    .get("title", {})
+                    .get("content", "")
+                )
+                # contentId が動画ID(11文字)のときだけ採用（プレイリスト等を除外）
+                if vid and title and len(vid) == 11 and "/" not in vid:
+                    add(vid, title)
+            # 旧形式: videoRenderer（videoId + title.runs[].text）
+            vr = node.get("videoRenderer")
+            if isinstance(vr, dict) and vr.get("videoId"):
+                runs = vr.get("title", {}).get("runs", [])
+                title = runs[0].get("text", "") if runs else ""
+                add(vr["videoId"], title)
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(data)
+    print(f"  スクレイピング: 動画タブから {len(out)}件", file=sys.stderr)
     return out
 
 
@@ -387,13 +410,16 @@ def generate_metadata(title: str, transcript: str | None) -> dict:
 ## レベル選択肢（1つ以上選択）
 {", ".join(LEVEL_OPTIONS)}
 
-## 既存カテゴリ一覧（できるだけここから選択。該当なしの場合は新しいカテゴリを作成可）
+## 既存カテゴリ一覧（原則ここから選ぶ）
 {", ".join(EXISTING_CATEGORIES)}
+
+{_CATEGORY_GUIDE}
 
 ## 注意
 - summaryは「〜を解説している」「〜について紹介している」のような体言止めの文体
 - levelsは対象視聴者のレベル（複数可）
-- categoriesは動画の主題に合うもの（1〜3個）
+- categoriesは「内容テーマ」と「形式」の両面から該当を**すべて**選ぶ（通常2〜4個）
+- インタビュー・リアルトレード・実績・企画・あるある等の**形式カテゴリを見落とさない**
 - JSONのみ出力（マークダウンのコードブロックなし）"""
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={GEMINI_API_KEY}"
@@ -528,7 +554,7 @@ def main():
     for item in latest_items:
         snippet = item["snippet"]
         vid_id = snippet["resourceId"]["videoId"]
-        if vid_id in existing_ids or vid_id in seen:
+        if vid_id in existing_ids or vid_id in seen or vid_id in EXCLUDE_VIDEO_IDS:
             continue
         title = snippet["title"]
         if should_exclude_title(title):
@@ -540,7 +566,7 @@ def main():
     # メンバー限定動画: Discord に貼られているが videos.js に未登録のもの
     discord_new_ids = [
         vid for vid in discord_urls.keys()
-        if vid not in existing_ids and vid not in seen
+        if vid not in existing_ids and vid not in seen and vid not in EXCLUDE_VIDEO_IDS
     ]
     print(f"Discord 新規 vid_id: {len(discord_new_ids)}件")
 

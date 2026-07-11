@@ -86,6 +86,15 @@ git pull --rebase origin main >> "$LOG_FILE" 2>&1 || fail "git pull"
 python3 scripts/fetch_discord_urls.py >> "$LOG_FILE" 2>&1 || fail "Discord URL取得 (fetch_discord_urls)"
 python3 scripts/update_videos.py >> "$LOG_FILE" 2>&1 || fail "新着動画取り込み (update_videos)"
 
+# メンバー動画の公開日を実際のメンバー版公開日に補正（Discordコピーの投稿日ではなく）
+# スクレイピング依存で不安定なため失敗しても止めない
+python3 scripts/fix_member_dates.py >> "$LOG_FILE" 2>&1 \
+  || echo "WARNING: fix_member_dates failed (continuing)" >> "$LOG_FILE"
+
+# 各動画の再生数(views)を取得して保存（カードに常時表示するため）
+python3 scripts/fetch_view_counts.py >> "$LOG_FILE" 2>&1 \
+  || echo "WARNING: fetch_view_counts failed (continuing)" >> "$LOG_FILE"
+
 # 欠損補完（空カテゴリ・空レベル・空要約）
 python3 scripts/fill_missing_summaries.py >> "$LOG_FILE" 2>&1 \
   || echo "WARNING: fill_missing_summaries failed (continuing)" >> "$LOG_FILE"
