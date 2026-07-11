@@ -41,6 +41,10 @@ body { font-family: 'Noto Sans JP', 'Inter', sans-serif; color: var(--text); bac
 .header-logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .logo-mark { width: 30px; height: 30px; background: var(--primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.85rem; font-weight: 900; }
 .logo-mark-img { width: 30px; height: 30px; border-radius: 8px; object-fit: contain; }
+/* ロゴマークをテーマで切替（ダークモードは白版で視認性を確保） */
+.logo-mark-dark { display: none; }
+body.dark-mode .logo-mark-light { display: none; }
+body.dark-mode .logo-mark-dark { display: inline-block; }
 .logo-text { font-size: 0.9rem; font-weight: 800; color: var(--text); }
 .logo-text-wrap { display: flex; flex-direction: column; line-height: 1; gap: 2px; }
 .logo-text-jp {
