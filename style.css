@@ -527,7 +527,6 @@ body.dark-mode .sidebar-toggle { background: #1e293b; border-color: #334155; }
 .option-check { width: 15px; height: 15px; border-radius: 4px; border: 2px solid var(--border); flex-shrink: 0; position: relative; transition: all var(--transition); }
 .sidebar-option input:checked ~ .option-check { border-color: var(--primary); background: var(--primary); }
 .sidebar-option input:checked ~ .option-check::after { content: ''; position: absolute; top: 1px; left: 4px; width: 4px; height: 8px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); }
-.sidebar-hint { font-size: 0.62rem; color: var(--text-muted); margin: 6px 2px 0; line-height: 1.4; }
 .sidebar-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .sidebar-tag { padding: 3px 9px; border-radius: 5px; border: 1.5px solid var(--border); background: white; font-size: 0.68rem; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: all var(--transition); font-family: inherit; }
 .sidebar-tag:hover { border-color: var(--accent); color: #92400e; background: var(--accent-light); }
@@ -765,7 +764,10 @@ body.dark-mode .modal-comments-all { color: #93c5fd; }
 .memo-list-delete:hover { color: var(--danger); background: #fef2f2; }
 
 /* ===== MOBILE ===== */
-.mobile-filter-btn { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 150; padding: 10px 20px; border-radius: 50px; background: var(--text); color: white; border: none; font-weight: 700; font-size: 0.8rem; font-family: inherit; cursor: pointer; box-shadow: var(--shadow-xl); align-items: center; gap: 7px; }
+.mobile-filter-btn { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 150; padding: 10px 20px; border-radius: 50px; background: #1e293b; color: #fff; border: none; font-weight: 700; font-size: 0.8rem; font-family: inherit; cursor: pointer; box-shadow: var(--shadow-xl); align-items: center; gap: 7px; }
+/* ダークモードでは背景が明るくなり白文字が読めなくなるので、はっきり見える配色に固定 */
+body.dark-mode .mobile-filter-btn { background: #334155; color: #f8fafc; border: 1px solid #475569; }
+.mobile-filter-btn svg { stroke: currentColor; }
 .mobile-filter-badge { background: var(--accent); color: white; font-size: 0.6rem; padding: 1px 6px; border-radius: 10px; font-weight: 800; }
 .mobile-overlay { display: none; position: fixed; inset: 0; z-index: 180; background: rgba(0,0,0,0.35); }
 .mobile-overlay.open { display: block; }
