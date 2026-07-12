@@ -1,5 +1,216 @@
 const VIDEOS = [
   {
+    "title": "爆速で専業トレーダーになる方法 | ametaroさんインタビュー",
+    "url": "https://www.youtube.com/watch?v=Mf8r6ix2rt0",
+    "thumb": "https://img.youtube.com/vi/Mf8r6ix2rt0/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "インタビュー",
+      "プロップファーム",
+      "ゼロプロ(旧プレアストロ)",
+      "手法",
+      "資金管理",
+      "実績"
+    ],
+    "method": "一般公開",
+    "summary": "FX歴1年で専業トレーダーとなった ametaroさんのインタビュー動画。建築職人からプロップトレーダーになった経緯や、ゼロプロでの学び、トレード手法、資金管理について解説している。",
+    "vid_id": "Mf8r6ix2rt0",
+    "date": "2026-07-11",
+    "is_short": false,
+    "duration": 1100,
+    "transcript_ok": true,
+    "views": 6693
+  },
+  {
+    "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#7",
+    "url": "https://www.youtube.com/watch?v=N__1BllGPxo",
+    "thumb": "https://img.youtube.com/vi/N__1BllGPxo/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "手法",
+      "雑談",
+      "相場"
+    ],
+    "method": "一般公開",
+    "summary": "プロトレーダーがFXライブ配信で、カナダ円のショートトレードを中心に、ドルカナダやユーロオージーなどの通貨ペア分析、海外旅行の話題などを交えながら解説している。",
+    "vid_id": "N__1BllGPxo",
+    "date": "2026-07-07",
+    "is_short": false,
+    "duration": 5713,
+    "transcript_ok": true,
+    "views": 4878
+  },
+  {
+    "title": "プロトレーダーが使うナウキャストとは？",
+    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
+    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "手法",
+      "ナウキャスト",
+      "相場",
+      "実践"
+    ],
+    "method": "一般公開",
+    "summary": "プロトレーダーが使うナウキャストについて、上昇トレンドにおける買注文と売り注文の量の違いから、有利不利の方向性を解説している。",
+    "vid_id": "z_YEqGSrWY0",
+    "date": "2026-04-22",
+    "is_short": true,
+    "duration": 58,
+    "transcript_ok": true,
+    "views": 5552
+  },
+  {
+    "title": "損切り完全解説〜深掘り動画〜",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
+    "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "損切",
+      "リアルトレード",
+      "手法",
+      "ライン",
+      "あるある"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの根拠、エントリーポイント、損切りラインの設定理由、そして時に発生するミスについて深掘り解説している。",
+    "vid_id": "HXSOaLWFfxM",
+    "date": "2025-11-02",
+    "is_short": false,
+    "duration": 1096,
+    "transcript_ok": true,
+    "views": 392
+  },
+  {
+    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
+    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "手法",
+      "ナウキャスト",
+      "基礎",
+      "プライスアクション"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレード教育チャンネル「@fxyosuga」の動画メタデータです。本動画は、よすが式ダウ手法習得編の第2章として、ナウキャスト（環境認識）の概念、必要性、習得方法、そしてダウ理論を深く理解するための3つのポイント（更新幅、存在率、逸脱）について解説しています。",
+    "vid_id": "6VHINPwHyq8",
+    "date": "2023-06-17",
+    "is_short": false,
+    "duration": 1624,
+    "transcript_ok": true,
+    "views": 7372
+  },
+  {
+    "title": "よすが式ダウ手法習得編【1章 ライン】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
+    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
+    "levels": [
+      "初心者",
+      "中級"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "ライン",
+      "チャートパターン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレード教育チャンネル「@fxyosuga」の動画メタデータ生成アシスタントです。本動画は、よすが式ダウ手法習得編の第1章として、ラインの定義、発生原理、そして強さの判定方法について解説しています。",
+    "vid_id": "YSOMB0J4VwI",
+    "date": "2023-03-01",
+    "is_short": false,
+    "duration": 1803,
+    "transcript_ok": true,
+    "views": 6581
+  },
+  {
+    "title": "よすが式ダウ手法習得編【0章 準備】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
+    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
+    "levels": [
+      "超初心者",
+      "初心者"
+    ],
+    "categories": [
+      "手法",
+      "基礎",
+      "トレード環境",
+      "リアルトレード"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "FXトレード教育チャンネル「@fxyosuga」の「よすが式ダウ手法習得編」シリーズの第0章「準備編」として、FX口座の開設方法、MT4の基本的な使い方、デモトレードの開始方法などを解説している。",
+    "vid_id": "EgrGud-QgfA",
+    "date": "2023-01-18",
+    "is_short": false,
+    "duration": 2781,
+    "transcript_ok": true,
+    "views": 4149
+  },
+  {
+    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "メンタル",
+      "シナリオ",
+      "プライスアクション"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "本動画では、FXトレードにおけるミスへの対処法に焦点を当て、自身のリアルトレードを振り返りながら、シナリオ外のトレードへの対応や、直近の値動きに飛びつかず上位足の環境認識の重要性を解説している。",
+    "vid_id": "gQj0t0Ov2Ys",
+    "date": "2023-01-14",
+    "is_short": false,
+    "duration": 538,
+    "transcript_ok": true,
+    "views": 183
+  },
+  {
+    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
+    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "categories": [
+      "リアルトレード",
+      "手法",
+      "チャートパターン",
+      "プライスアクション",
+      "ライン"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "今週のリアルトレードを振り返り、上昇チャネルの上抜けやダブルトップ形成、トライアングルからのブレイクなど、様々な相場状況におけるエントリーポイントやシナリオ構築、撤退判断について解説している。",
+    "vid_id": "XI3GmDp3TH8",
+    "date": "2023-01-08",
+    "is_short": false,
+    "duration": 387,
+    "transcript_ok": true,
+    "views": 212
+  },
+  {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#6",
     "url": "https://www.youtube.com/watch?v=Evwbur9R7wI",
     "thumb": "https://img.youtube.com/vi/Evwbur9R7wI/mqdefault.jpg",
@@ -13,165 +224,14 @@ const VIDEOS = [
       "資金管理"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を積み上げるFXライブ配信の第6弾。",
+    "summary": "子供の誕生報告後、HFMの刀口座で10万円からスキャルピングを開始。ゴールドのショートエントリーとその根拠、トレードスタイルについて解説。",
     "vid_id": "Evwbur9R7wI",
     "date": "2026-07-06",
     "is_short": false,
     "duration": 0,
-    "views": 4953,
-    "cat_v2": true
-  },
-  {
-    "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
-    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ナウキャスト",
-      "手法",
-      "プライスアクション"
-    ],
-    "method": "一般公開",
-    "summary": "プロトレーダーが活用するナウキャストの概念と、そのトレードにおける重要性を解説している。",
-    "vid_id": "fAEy5mNTkxQ",
-    "date": "2026-04-17",
-    "is_short": true,
-    "duration": 58,
-    "views": 4636
-  },
-  {
-    "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1434482112844795925",
-    "thumb": "https://img.youtube.com/vi/7YmolpwwUcI/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "手法",
-      "損切",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "総資産10億円トレーダーが、自身の損切りトレードを3つピックアップし、上位足からの分析やエントリー根拠、損切りに至った経緯を詳細に解説している。",
-    "vid_id": "7YmolpwwUcI",
-    "date": "2025-11-02",
-    "is_short": false,
-    "duration": 1096,
-    "transcript_ok": true,
-    "views": 1093,
-    "cat_v2": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "手法",
-      "ナウキャスト",
-      "基礎"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードのよすが式ダウ手法習得編の第2章として、ナウキャストについて解説している。",
-    "vid_id": "Q1xuEpJuWRc",
-    "date": "2023-06-17",
-    "is_short": false,
-    "duration": 1624,
-    "cat_v2": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
-    "levels": [
-      "初心者",
-      "中級"
-    ],
-    "categories": [
-      "ライン",
-      "基礎",
-      "手法",
-      "ナウキャスト"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "よすが式ダウ理論の習得に向けた第一歩として、ラインの引き方と活用方法を解説している。",
-    "vid_id": "d0QNPmq28eE",
-    "date": "2023-03-01",
-    "is_short": false,
-    "duration": 1803,
-    "cat_v2": true
-  },
-  {
-    "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
-    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
-    "levels": [
-      "超初心者",
-      "初心者"
-    ],
-    "categories": [
-      "基礎",
-      "手法",
-      "ナウキャスト"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおける「よすが式ダウ手法」習得のための準備段階を解説している。",
-    "vid_id": "jFh1TOOLnY4",
-    "date": "2023-01-18",
-    "is_short": false,
-    "duration": 2781,
-    "cat_v2": true
-  },
-  {
-    "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145737612169357",
-    "thumb": "https://img.youtube.com/vi/gWhVeA8yQ84/mqdefault.jpg",
-    "levels": [
-      "中級"
-    ],
-    "categories": [
-      "メンタル",
-      "リアルトレード",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "FXトレードにおけるミスへの向き合い方と、今週のリアルトレードの解説について紹介している。",
-    "vid_id": "gWhVeA8yQ84",
-    "date": "2023-01-14",
-    "is_short": false,
-    "duration": 538,
-    "views": 192,
-    "cat_v2": true
-  },
-  {
-    "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145681983111218",
-    "thumb": "https://img.youtube.com/vi/0wZ6G7P26UI/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "リアルトレード",
-      "手法",
-      "実践"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "今週のリアルトレードを解説し、さらなるトレードの絞り込み方について紹介している。",
-    "vid_id": "0wZ6G7P26UI",
-    "date": "2023-01-08",
-    "is_short": false,
-    "duration": 387,
-    "views": 289,
-    "cat_v2": true
+    "views": 5010,
+    "cat_v2": true,
+    "transcript_ok": true
   },
   {
     "title": "FX8年やった極意を10分で伝える",
@@ -194,7 +254,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 593,
     "transcript_ok": true,
-    "views": 11936,
+    "views": 12300,
     "cat_v2": true
   },
   {
@@ -216,7 +276,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 301,
     "transcript_ok": true,
-    "views": 558,
+    "views": 563,
     "cat_v2": true
   },
   {
@@ -239,7 +299,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 604,
     "transcript_ok": true,
-    "views": 5379,
+    "views": 5468,
     "cat_v2": true
   },
   {
@@ -262,7 +322,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 907,
     "transcript_ok": true,
-    "views": 678,
+    "views": 688,
     "cat_v2": true
   },
   {
@@ -286,7 +346,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 626,
     "transcript_ok": true,
-    "views": 5049,
+    "views": 5078,
     "cat_v2": true
   },
   {
@@ -309,7 +369,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 60,
     "transcript_ok": true,
-    "views": 5469
+    "views": 5503
   },
   {
     "title": "【FX完全攻略】騙しブレイクを見抜けない人は永遠に勝てません",
@@ -332,7 +392,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 908,
     "transcript_ok": true,
-    "views": 9315,
+    "views": 9396,
     "cat_v2": true
   },
   {
@@ -356,7 +416,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 674,
     "transcript_ok": true,
-    "views": 1083,
+    "views": 1091,
     "cat_v2": true
   },
   {
@@ -379,7 +439,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "transcript_ok": true,
-    "views": 4415
+    "views": 4451
   },
   {
     "title": "飛行機の燃料理論で理解するトレード",
@@ -401,7 +461,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 57,
     "transcript_ok": true,
-    "views": 3893
+    "views": 3907
   },
   {
     "title": "損切りした瞬間に逆行される理由",
@@ -423,7 +483,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "transcript_ok": true,
-    "views": 3556
+    "views": 3585
   },
   {
     "title": "FXで勝つたった一つの方法",
@@ -443,7 +503,7 @@ const VIDEOS = [
     "date": "2026-06-03",
     "is_short": true,
     "duration": 59,
-    "views": 4233
+    "views": 4242
   },
   {
     "title": "【9.7兆円も無意味】ニュースでトレードした男の末路",
@@ -465,7 +525,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 785,
     "transcript_ok": true,
-    "views": 4018,
+    "views": 4027,
     "cat_v2": true
   },
   {
@@ -486,7 +546,7 @@ const VIDEOS = [
     "date": "2026-05-29",
     "is_short": true,
     "duration": 57,
-    "views": 2619
+    "views": 2628
   },
   {
     "title": "インジケーターでは勝てない！？",
@@ -507,7 +567,7 @@ const VIDEOS = [
     "date": "2026-05-27",
     "is_short": true,
     "duration": 60,
-    "views": 3219
+    "views": 3223
   },
   {
     "title": "9割の負けトレーダーが知らない…FX上位1%だけが守っている3つのルール",
@@ -532,7 +592,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 646,
     "transcript_ok": true,
-    "views": 9901,
+    "views": 9941,
     "cat_v2": true
   },
   {
@@ -553,7 +613,7 @@ const VIDEOS = [
     "date": "2026-05-22",
     "is_short": true,
     "duration": 56,
-    "views": 6164
+    "views": 6172
   },
   {
     "title": "過去検証をさぼると絶対に勝てない理由",
@@ -574,7 +634,7 @@ const VIDEOS = [
     "date": "2026-05-20",
     "is_short": true,
     "duration": 60,
-    "views": 7611
+    "views": 7624
   },
   {
     "title": "【保存版】損切りした瞬間に逆行される現象に終止符を打つ",
@@ -596,7 +656,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1118,
     "transcript_ok": true,
-    "views": 16821,
+    "views": 16970,
     "cat_v2": true
   },
   {
@@ -619,7 +679,7 @@ const VIDEOS = [
     "date": "2026-05-15",
     "is_short": true,
     "duration": 57,
-    "views": 4393
+    "views": 4395
   },
   {
     "title": "FXでローソク足が使われる理由",
@@ -639,7 +699,7 @@ const VIDEOS = [
     "date": "2026-05-13",
     "is_short": true,
     "duration": 40,
-    "views": 3475
+    "views": 3477
   },
   {
     "title": "【🔰０→１】もし今、ゼロからプロトレーダーになるとしたらこうする",
@@ -662,7 +722,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1342,
     "transcript_ok": true,
-    "views": 16507,
+    "views": 16574,
     "cat_v2": true
   },
   {
@@ -683,7 +743,7 @@ const VIDEOS = [
     "date": "2026-05-08",
     "is_short": true,
     "duration": 60,
-    "views": 9925
+    "views": 9928
   },
   {
     "title": "FX初心者がつまずくlotとは？",
@@ -703,7 +763,7 @@ const VIDEOS = [
     "date": "2026-05-06",
     "is_short": true,
     "duration": 60,
-    "views": 3657
+    "views": 3659
   },
   {
     "title": "FX初心者がつまずくpipsとは？",
@@ -723,7 +783,7 @@ const VIDEOS = [
     "date": "2026-05-01",
     "is_short": true,
     "duration": 59,
-    "views": 5481
+    "views": 5482
   },
   {
     "title": "FX初心者向が分足しか見ない落とし穴",
@@ -743,7 +803,7 @@ const VIDEOS = [
     "date": "2026-04-29",
     "is_short": true,
     "duration": 60,
-    "views": 5502
+    "views": 5504
   },
   {
     "title": "FXに限らず勝ってる人って結局全員この思考持ってるんだよな",
@@ -765,7 +825,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 950,
     "transcript_ok": true,
-    "views": 9682,
+    "views": 9693,
     "cat_v2": true
   },
   {
@@ -809,7 +869,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 0,
     "transcript_ok": true,
-    "views": 8864,
+    "views": 8868,
     "cat_v2": true
   },
   {
@@ -832,7 +892,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6226,
     "transcript_ok": true,
-    "views": 7233,
+    "views": 7236,
     "cat_v2": true
   },
   {
@@ -854,7 +914,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2206,
     "transcript_ok": true,
-    "views": 780,
+    "views": 782,
     "cat_v2": true
   },
   {
@@ -876,7 +936,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 550,
     "transcript_ok": true,
-    "views": 828,
+    "views": 829,
     "cat_v2": true
   },
   {
@@ -898,7 +958,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 748,
     "transcript_ok": true,
-    "views": 1521,
+    "views": 1522,
     "cat_v2": true
   },
   {
@@ -922,7 +982,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 3710,
     "transcript_ok": true,
-    "views": 377,
+    "views": 379,
     "cat_v2": true
   },
   {
@@ -945,7 +1005,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 9002,
     "transcript_ok": true,
-    "views": 35,
+    "views": 36,
     "cat_v2": true
   },
   {
@@ -1227,7 +1287,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 4776,
     "transcript_ok": true,
-    "views": 169,
+    "views": 172,
     "cat_v2": true
   },
   {
@@ -1273,7 +1333,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 199,
     "transcript_ok": true,
-    "views": 753,
+    "views": 757,
     "cat_v2": true
   },
   {
@@ -1320,7 +1380,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 430,
     "transcript_ok": true,
-    "views": 530,
+    "views": 532,
     "cat_v2": true
   },
   {
@@ -1367,7 +1427,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1455,
     "transcript_ok": true,
-    "views": 3796,
+    "views": 3814,
     "cat_v2": true
   },
   {
@@ -1392,7 +1452,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 930,
     "transcript_ok": true,
-    "views": 3714,
+    "views": 3715,
     "cat_v2": true
   },
   {
@@ -1416,7 +1476,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1380,
     "transcript_ok": true,
-    "views": 5193,
+    "views": 5211,
     "cat_v2": true
   },
   {
@@ -1439,7 +1499,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 118,
     "transcript_ok": true,
-    "views": 1159,
+    "views": 1161,
     "cat_v2": true
   },
   {
@@ -1486,7 +1546,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1166,
     "transcript_ok": true,
-    "views": 102,
+    "views": 103,
     "cat_v2": true
   },
   {
@@ -1509,7 +1569,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 662,
     "transcript_ok": true,
-    "views": 103,
+    "views": 104,
     "cat_v2": true
   },
   {
@@ -1532,7 +1592,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 623,
     "transcript_ok": true,
-    "views": 212,
+    "views": 213,
     "cat_v2": true
   },
   {
@@ -1556,7 +1616,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 280,
     "transcript_ok": true,
-    "views": 429,
+    "views": 430,
     "cat_v2": true
   },
   {
@@ -1929,7 +1989,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 521,
     "transcript_ok": true,
-    "views": 252,
+    "views": 254,
     "cat_v2": true
   },
   {
@@ -2134,7 +2194,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 283,
     "transcript_ok": true,
-    "views": 216,
+    "views": 217,
     "cat_v2": true
   },
   {
@@ -2157,7 +2217,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 438,
     "transcript_ok": true,
-    "views": 189,
+    "views": 190,
     "cat_v2": true
   },
   {
@@ -2179,7 +2239,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 869,
     "transcript_ok": true,
-    "views": 121,
+    "views": 122,
     "cat_v2": true
   },
   {
@@ -2201,7 +2261,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 569,
     "transcript_ok": true,
-    "views": 86,
+    "views": 87,
     "cat_v2": true
   },
   {
@@ -2222,7 +2282,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 849,
     "transcript_ok": true,
-    "views": 160,
+    "views": 163,
     "cat_v2": true
   },
   {
@@ -2245,7 +2305,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1205,
     "transcript_ok": true,
-    "views": 314,
+    "views": 316,
     "cat_v2": true
   },
   {
@@ -2268,7 +2328,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 250,
     "transcript_ok": true,
-    "views": 190,
+    "views": 191,
     "cat_v2": true
   },
   {
@@ -2292,7 +2352,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1187,
     "transcript_ok": true,
-    "views": 3749,
+    "views": 3760,
     "cat_v2": true
   },
   {
@@ -2336,7 +2396,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 659,
     "transcript_ok": true,
-    "views": 431,
+    "views": 434,
     "cat_v2": true
   },
   {
@@ -2405,7 +2465,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 476,
     "transcript_ok": true,
-    "views": 413,
+    "views": 412,
     "cat_v2": true
   },
   {
@@ -2472,7 +2532,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1080,
     "transcript_ok": true,
-    "views": 240,
+    "views": 241,
     "cat_v2": true
   },
   {
@@ -2539,7 +2599,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 314,
     "transcript_ok": true,
-    "views": 223,
+    "views": 224,
     "cat_v2": true
   },
   {
@@ -2626,7 +2686,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 736,
     "transcript_ok": true,
-    "views": 728,
+    "views": 729,
     "cat_v2": true
   },
   {
@@ -2649,7 +2709,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 736,
     "transcript_ok": true,
-    "views": 525,
+    "views": 527,
     "cat_v2": true
   },
   {
@@ -2672,7 +2732,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 372,
     "transcript_ok": true,
-    "views": 976,
+    "views": 978,
     "cat_v2": true
   },
   {
@@ -2694,7 +2754,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 726,
     "transcript_ok": true,
-    "views": 6753,
+    "views": 6778,
     "cat_v2": true
   },
   {
@@ -2738,7 +2798,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1009,
     "transcript_ok": true,
-    "views": 16699,
+    "views": 16736,
     "cat_v2": true
   },
   {
@@ -2763,7 +2823,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2188,
     "transcript_ok": true,
-    "views": 5406,
+    "views": 5411,
     "cat_v2": true
   },
   {
@@ -2787,7 +2847,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6320,
     "transcript_ok": true,
-    "views": 7404,
+    "views": 7412,
     "cat_v2": true
   },
   {
@@ -2852,7 +2912,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 4912,
     "transcript_ok": true,
-    "views": 5108,
+    "views": 5111,
     "cat_v2": true
   },
   {
@@ -2876,7 +2936,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1053,
     "transcript_ok": true,
-    "views": 11782,
+    "views": 11800,
     "cat_v2": true
   },
   {
@@ -2939,7 +2999,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 852,
     "transcript_ok": true,
-    "views": 6052,
+    "views": 6061,
     "cat_v2": true
   },
   {
@@ -2959,7 +3019,7 @@ const VIDEOS = [
     "date": "2026-03-25",
     "is_short": true,
     "duration": 59,
-    "views": 5669
+    "views": 5670
   },
   {
     "title": "プロスペクト理論の罠",
@@ -2979,7 +3039,7 @@ const VIDEOS = [
     "date": "2026-03-20",
     "is_short": true,
     "duration": 58,
-    "views": 5063
+    "views": 5064
   },
   {
     "title": "月利8%で億万長者になる方法",
@@ -3000,7 +3060,7 @@ const VIDEOS = [
     "date": "2026-03-18",
     "is_short": true,
     "duration": 57,
-    "views": 8509
+    "views": 8517
   },
   {
     "title": "【地獄】プロでも病む「損益トントン」の抜け出し方│100万部屋作り#2",
@@ -3023,7 +3083,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 641,
     "transcript_ok": true,
-    "views": 8435,
+    "views": 8440,
     "cat_v2": true
   },
   {
@@ -3044,7 +3104,7 @@ const VIDEOS = [
     "date": "2026-03-13",
     "is_short": true,
     "duration": 59,
-    "views": 4187
+    "views": 4189
   },
   {
     "title": "【FXライブ配信】原油どうなってんの？【質問OK】",
@@ -3086,7 +3146,7 @@ const VIDEOS = [
     "date": "2026-03-11",
     "is_short": true,
     "duration": 48,
-    "views": 4089
+    "views": 4090
   },
   {
     "title": "トレードは習慣にすべし",
@@ -3106,7 +3166,7 @@ const VIDEOS = [
     "date": "2026-03-06",
     "is_short": true,
     "duration": 60,
-    "views": 3007
+    "views": 3008
   },
   {
     "title": "【初手損切】トレード利益だけで空き部屋を「理想の城」にする│100万トレード部屋作り#1",
@@ -3129,7 +3189,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 686,
     "transcript_ok": true,
-    "views": 9745,
+    "views": 9757,
     "cat_v2": true
   },
   {
@@ -3151,7 +3211,7 @@ const VIDEOS = [
     "date": "2026-02-27",
     "is_short": true,
     "duration": 59,
-    "views": 6903
+    "views": 6904
   },
   {
     "title": "プライスアクションの正しい使い方",
@@ -3172,7 +3232,7 @@ const VIDEOS = [
     "date": "2026-02-25",
     "is_short": true,
     "duration": 52,
-    "views": 6376
+    "views": 6383
   },
   {
     "title": "候補値選定の重要性",
@@ -3193,7 +3253,7 @@ const VIDEOS = [
     "date": "2026-02-20",
     "is_short": true,
     "duration": 47,
-    "views": 5693
+    "views": 5694
   },
   {
     "title": "エントリー手順3ステップ",
@@ -3213,7 +3273,7 @@ const VIDEOS = [
     "date": "2026-02-18",
     "is_short": true,
     "duration": 41,
-    "views": 7377
+    "views": 7379
   },
   {
     "title": "【Vlog】HFMの超ド派手パーティーに行ってきました in バンコク",
@@ -3235,7 +3295,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 676,
     "transcript_ok": true,
-    "views": 7305,
+    "views": 7310,
     "cat_v2": true
   },
   {
@@ -3277,7 +3337,7 @@ const VIDEOS = [
     "date": "2026-02-11",
     "is_short": true,
     "duration": 60,
-    "views": 6779
+    "views": 6785
   },
   {
     "title": "【🔰総集編】FXで生き残るための基礎思考を全部まとめた",
@@ -3296,13 +3356,14 @@ const VIDEOS = [
       "相場"
     ],
     "method": "一般公開",
-    "summary": "ダウ理論を起点にトレンド継続と反転を需要と供給で説明し、ライン・MTF・シナリオ構築まで一貫した相場の見方を解説している",
+    "summary": "ダウ理論を基盤としたトレンド継続の考え方、注文が集まる場所としての安値とトレンドライン、マルチタイムフレーム分析の重要性、そして1年間のシナリオ構築トレード検証結果を解説。",
     "vid_id": "wqgWDSk5flc",
     "date": "2026-02-07",
     "is_short": false,
     "duration": 1642,
-    "views": 15373,
-    "cat_v2": true
+    "views": 15420,
+    "cat_v2": true,
+    "transcript_ok": true
   },
   {
     "title": "勝率90%でも負ける理由",
@@ -3323,7 +3384,7 @@ const VIDEOS = [
     "date": "2026-02-06",
     "is_short": true,
     "duration": 57,
-    "views": 7251
+    "views": 7252
   },
   {
     "title": "FXで勝てない理由",
@@ -3345,7 +3406,7 @@ const VIDEOS = [
     "date": "2026-02-04",
     "is_short": true,
     "duration": 49,
-    "views": 9945
+    "views": 9948
   },
   {
     "title": "損切りがすべて｜FXリスク管理大全",
@@ -3361,13 +3422,14 @@ const VIDEOS = [
       "資金管理"
     ],
     "method": "一般公開",
-    "summary": "600万円の損切り経験からFXのリスクは消せないが口座を分けることでリスクを分散し期待値を最大化できるという考え方を解説している",
+    "summary": "600万円の損切り経験から、リスク管理の重要性を説き、ハイリスク・ローリスク口座の使い分けを解説。吉が式手法における初動トレードと追随トレードの違いと縦値設置のタイミングについても言及。",
     "vid_id": "AS3dvEHqI8g",
     "date": "2026-01-31",
     "is_short": false,
     "duration": 1783,
-    "views": 8642,
-    "cat_v2": true
+    "views": 8659,
+    "cat_v2": true,
+    "transcript_ok": true
   },
   {
     "title": "上位足を見る重要性",
@@ -3388,7 +3450,7 @@ const VIDEOS = [
     "date": "2026-01-30",
     "is_short": true,
     "duration": 56,
-    "views": 5365
+    "views": 5366
   },
   {
     "title": "ラインの本当の意味",
@@ -3432,7 +3494,7 @@ const VIDEOS = [
     "date": "2026-01-24",
     "is_short": false,
     "duration": 942,
-    "views": 3900,
+    "views": 3901,
     "cat_v2": true
   },
   {
@@ -3496,7 +3558,7 @@ const VIDEOS = [
     "date": "2026-01-17",
     "is_short": false,
     "duration": 789,
-    "views": 6834,
+    "views": 6839,
     "cat_v2": true
   },
   {
@@ -3518,7 +3580,7 @@ const VIDEOS = [
     "date": "2026-01-16",
     "is_short": true,
     "duration": 60,
-    "views": 8771
+    "views": 8772
   },
   {
     "title": "トレンド方向で売買圧を見る",
@@ -3537,7 +3599,7 @@ const VIDEOS = [
     "date": "2026-01-14",
     "is_short": true,
     "duration": 59,
-    "views": 8069
+    "views": 8071
   },
   {
     "title": "インジケーターは情報が欠ける!?ローソク足が最強な決定的理由3選",
@@ -3558,7 +3620,7 @@ const VIDEOS = [
     "date": "2026-01-10",
     "is_short": false,
     "duration": 996,
-    "views": 11063,
+    "views": 11070,
     "cat_v2": true
   },
   {
@@ -3621,7 +3683,7 @@ const VIDEOS = [
     "date": "2026-01-05",
     "is_short": false,
     "duration": 5248,
-    "views": 6428,
+    "views": 6429,
     "cat_v2": true
   },
   {
@@ -3644,7 +3706,7 @@ const VIDEOS = [
     "date": "2026-01-01",
     "is_short": false,
     "duration": 1251,
-    "views": 23804,
+    "views": 23844,
     "cat_v2": true
   },
   {
@@ -3666,7 +3728,7 @@ const VIDEOS = [
     "date": "2025-12-31",
     "is_short": false,
     "duration": 802,
-    "views": 15124,
+    "views": 15135,
     "cat_v2": true
   },
   {
@@ -3688,7 +3750,7 @@ const VIDEOS = [
     "date": "2025-12-31",
     "is_short": false,
     "duration": 4765,
-    "views": 4356,
+    "views": 4357,
     "cat_v2": true
   },
   {
@@ -3712,7 +3774,7 @@ const VIDEOS = [
     "date": "2025-12-30",
     "is_short": false,
     "duration": 961,
-    "views": 9676,
+    "views": 9681,
     "cat_v2": true
   },
   {
@@ -3735,7 +3797,7 @@ const VIDEOS = [
     "date": "2025-12-27",
     "is_short": false,
     "duration": 1220,
-    "views": 12500,
+    "views": 12512,
     "cat_v2": true
   },
   {
@@ -3758,7 +3820,7 @@ const VIDEOS = [
     "date": "2025-12-20",
     "is_short": false,
     "duration": 1047,
-    "views": 6395,
+    "views": 6398,
     "cat_v2": true
   },
   {
@@ -3779,7 +3841,7 @@ const VIDEOS = [
     "date": "2025-12-13",
     "is_short": false,
     "duration": 852,
-    "views": 5803,
+    "views": 5806,
     "cat_v2": true
   },
   {
@@ -3801,7 +3863,7 @@ const VIDEOS = [
     "date": "2025-12-10",
     "is_short": true,
     "duration": 45,
-    "views": 7744
+    "views": 7745
   },
   {
     "title": "【FXライブ配信】よすが式ダウ手法を完全マスターしよう２【質問OK】",
@@ -3822,7 +3884,7 @@ const VIDEOS = [
     "date": "2025-12-07",
     "is_short": false,
     "duration": 5858,
-    "views": 16125,
+    "views": 16157,
     "cat_v2": true
   },
   {
@@ -3844,7 +3906,7 @@ const VIDEOS = [
     "date": "2025-12-06",
     "is_short": false,
     "duration": 705,
-    "views": 17087,
+    "views": 17102,
     "cat_v2": true
   },
   {
@@ -3889,7 +3951,7 @@ const VIDEOS = [
     "date": "2025-11-29",
     "is_short": false,
     "duration": 675,
-    "views": 15413,
+    "views": 15425,
     "cat_v2": true
   },
   {
@@ -3911,7 +3973,7 @@ const VIDEOS = [
     "date": "2025-11-27",
     "is_short": true,
     "duration": 58,
-    "views": 4853
+    "views": 4855
   },
   {
     "title": "ラインの上下で何が起きているのか",
@@ -3932,7 +3994,7 @@ const VIDEOS = [
     "date": "2025-11-25",
     "is_short": true,
     "duration": 45,
-    "views": 6699
+    "views": 6705
   },
   {
     "title": "【🔰完全版】この動画だけでマスターできるライン引き完全解説",
@@ -3955,7 +4017,7 @@ const VIDEOS = [
     "date": "2025-11-22",
     "is_short": false,
     "duration": 1032,
-    "views": 31528,
+    "views": 31603,
     "cat_v2": true
   },
   {
@@ -3977,7 +4039,7 @@ const VIDEOS = [
     "date": "2025-11-20",
     "is_short": true,
     "duration": 51,
-    "views": 14502
+    "views": 14515
   },
   {
     "title": "保有時間を事前に予測する方法",
@@ -3997,7 +4059,7 @@ const VIDEOS = [
     "date": "2025-11-18",
     "is_short": true,
     "duration": 60,
-    "views": 8635
+    "views": 8637
   },
   {
     "title": "完全初心者が2ヶ月で1100万円出金！400万円溶かしたギャンブルトレーダーが勝ちトレーダーに転身したきっかけとは！？",
@@ -4020,7 +4082,7 @@ const VIDEOS = [
     "date": "2025-11-15",
     "is_short": false,
     "duration": 959,
-    "views": 22767,
+    "views": 22792,
     "cat_v2": true
   },
   {
@@ -4062,7 +4124,7 @@ const VIDEOS = [
     "date": "2025-11-13",
     "is_short": false,
     "duration": 5904,
-    "views": 15570,
+    "views": 15590,
     "cat_v2": true
   },
   {
@@ -4103,7 +4165,7 @@ const VIDEOS = [
     "date": "2025-11-11",
     "is_short": false,
     "duration": 5169,
-    "views": 6689,
+    "views": 6690,
     "cat_v2": true
   },
   {
@@ -4124,7 +4186,7 @@ const VIDEOS = [
     "date": "2025-11-08",
     "is_short": false,
     "duration": 903,
-    "views": 19618,
+    "views": 19635,
     "cat_v2": true
   },
   {
@@ -4147,7 +4209,7 @@ const VIDEOS = [
     "date": "2025-11-01",
     "is_short": false,
     "duration": 805,
-    "views": 14200,
+    "views": 14210,
     "cat_v2": true
   },
   {
@@ -4168,7 +4230,7 @@ const VIDEOS = [
     "date": "2025-10-25",
     "is_short": true,
     "duration": 51,
-    "views": 9840
+    "views": 9841
   },
   {
     "title": "インジケーターを使わない理由②",
@@ -4189,7 +4251,7 @@ const VIDEOS = [
     "date": "2025-10-24",
     "is_short": true,
     "duration": 59,
-    "views": 8543
+    "views": 8544
   },
   {
     "title": "インジケーターを使わない理由①",
@@ -4209,7 +4271,7 @@ const VIDEOS = [
     "date": "2025-10-23",
     "is_short": true,
     "duration": 56,
-    "views": 7774
+    "views": 7775
   },
   {
     "title": "インジケーターを使わないで分析",
@@ -4230,7 +4292,7 @@ const VIDEOS = [
     "date": "2025-10-22",
     "is_short": true,
     "duration": 60,
-    "views": 9862
+    "views": 9864
   },
   {
     "title": "スマホだけで稼げるFX手法",
@@ -4250,7 +4312,7 @@ const VIDEOS = [
     "date": "2025-10-21",
     "is_short": true,
     "duration": 49,
-    "views": 8435
+    "views": 8449
   },
   {
     "title": "【💰賞金140万円】ここから日本最強のトレード大会を作り上げていきます",
@@ -4294,7 +4356,7 @@ const VIDEOS = [
     "date": "2025-10-16",
     "is_short": true,
     "duration": 48,
-    "views": 8865
+    "views": 8867
   },
   {
     "title": "【初顔出し】サミット参加したら皆に会えてめちゃくちゃ楽しかった件 - YouTube",
@@ -4315,7 +4377,7 @@ const VIDEOS = [
     "date": "2025-10-12",
     "is_short": false,
     "duration": 533,
-    "views": 9530,
+    "views": 9532,
     "cat_v2": true
   },
   {
@@ -4336,7 +4398,7 @@ const VIDEOS = [
     "date": "2025-10-11",
     "is_short": true,
     "duration": 58,
-    "views": 30977
+    "views": 31042
   },
   {
     "title": "まだインジ頼り？“ローソク足だけ”で勝てる理由をプロが解剖",
@@ -4357,7 +4419,7 @@ const VIDEOS = [
     "date": "2025-10-04",
     "is_short": false,
     "duration": 579,
-    "views": 15799,
+    "views": 15811,
     "cat_v2": true
   },
   {
@@ -4380,7 +4442,7 @@ const VIDEOS = [
     "date": "2025-09-27",
     "is_short": false,
     "duration": 710,
-    "views": 15382,
+    "views": 15399,
     "cat_v2": true
   },
   {
@@ -4401,7 +4463,7 @@ const VIDEOS = [
     "date": "2025-09-26",
     "is_short": true,
     "duration": 60,
-    "views": 8018
+    "views": 8020
   },
   {
     "title": "加速パターンで稼ぐ！",
@@ -4421,7 +4483,7 @@ const VIDEOS = [
     "date": "2025-09-23",
     "is_short": true,
     "duration": 33,
-    "views": 12819
+    "views": 12823
   },
   {
     "title": "【完全版】プロトレーダーの取引環境",
@@ -4442,7 +4504,7 @@ const VIDEOS = [
     "date": "2025-09-20",
     "is_short": false,
     "duration": 489,
-    "views": 18025,
+    "views": 18041,
     "cat_v2": true
   },
   {
@@ -4466,7 +4528,7 @@ const VIDEOS = [
     "date": "2025-09-19",
     "is_short": true,
     "duration": 58,
-    "views": 16043
+    "views": 16044
   },
   {
     "title": "【FXライブ配信】今週のトレード、爆益か爆損か",
@@ -4486,7 +4548,7 @@ const VIDEOS = [
     "date": "2025-09-19",
     "is_short": false,
     "duration": 3789,
-    "views": 7608,
+    "views": 7609,
     "cat_v2": true
   },
   {
@@ -4508,7 +4570,7 @@ const VIDEOS = [
     "date": "2025-09-17",
     "is_short": true,
     "duration": 33,
-    "views": 13404
+    "views": 13407
   },
   {
     "title": "チャートパターンは忘れろ！「加速」と「減速」しかない",
@@ -4529,7 +4591,7 @@ const VIDEOS = [
     "date": "2025-09-15",
     "is_short": true,
     "duration": 62,
-    "views": 11817
+    "views": 11818
   },
   {
     "title": "実際に10万→2000万稼いだテクニック②",
@@ -4549,7 +4611,7 @@ const VIDEOS = [
     "date": "2025-09-13",
     "is_short": true,
     "duration": 60,
-    "views": 13706
+    "views": 13709
   },
   {
     "title": "こんなん勝ち確パターンじゃん！9月12日NZDUSD",
@@ -4570,7 +4632,7 @@ const VIDEOS = [
     "date": "2025-09-12",
     "is_short": true,
     "duration": 104,
-    "views": 18869
+    "views": 18872
   },
   {
     "title": "【FXライブ配信】値動き激しい今週ラストトレード！！！！",
@@ -4613,7 +4675,7 @@ const VIDEOS = [
     "date": "2025-09-10",
     "is_short": true,
     "duration": 99,
-    "views": 15928
+    "views": 15947
   },
   {
     "title": "実際に10万→2000万稼いだテクニック",
@@ -4634,7 +4696,7 @@ const VIDEOS = [
     "date": "2025-09-08",
     "is_short": true,
     "duration": 59,
-    "views": 23061
+    "views": 23078
   },
   {
     "title": "損切り後に崩れる人と崩れない人の決定的な違い",
@@ -4655,7 +4717,7 @@ const VIDEOS = [
     "date": "2025-09-06",
     "is_short": false,
     "duration": 532,
-    "views": 10390,
+    "views": 10391,
     "cat_v2": true
   },
   {
@@ -4677,7 +4739,7 @@ const VIDEOS = [
     "date": "2025-09-04",
     "is_short": true,
     "duration": 86,
-    "views": 21253
+    "views": 21286
   },
   {
     "title": "As a result of the huge drop of 30 yen...",
@@ -4740,7 +4802,7 @@ const VIDEOS = [
     "date": "2025-09-01",
     "is_short": true,
     "duration": 59,
-    "views": 9835
+    "views": 9837
   },
   {
     "title": "【300人プロ誕生】プロトレーダーになっていった人たちの思考法",
@@ -4761,7 +4823,7 @@ const VIDEOS = [
     "date": "2025-08-30",
     "is_short": false,
     "duration": 521,
-    "views": 14575,
+    "views": 14582,
     "cat_v2": true
   },
   {
@@ -4807,7 +4869,7 @@ const VIDEOS = [
     "date": "2025-08-23",
     "is_short": false,
     "duration": 784,
-    "views": 15806,
+    "views": 15812,
     "cat_v2": true
   },
   {
@@ -4849,7 +4911,7 @@ const VIDEOS = [
     "date": "2025-08-16",
     "is_short": false,
     "duration": 481,
-    "views": 8580,
+    "views": 8586,
     "cat_v2": true
   },
   {
@@ -4895,7 +4957,7 @@ const VIDEOS = [
     "date": "2025-08-02",
     "is_short": false,
     "duration": 507,
-    "views": 36722,
+    "views": 36760,
     "cat_v2": true
   },
   {
@@ -4917,7 +4979,7 @@ const VIDEOS = [
     "date": "2025-07-26",
     "is_short": false,
     "duration": 950,
-    "views": 13254,
+    "views": 13257,
     "cat_v2": true
   },
   {
@@ -4940,7 +5002,7 @@ const VIDEOS = [
     "date": "2025-07-19",
     "is_short": false,
     "duration": 914,
-    "views": 19267,
+    "views": 19273,
     "cat_v2": true
   },
   {
@@ -4962,7 +5024,7 @@ const VIDEOS = [
     "date": "2025-07-12",
     "is_short": false,
     "duration": 504,
-    "views": 47398,
+    "views": 47441,
     "cat_v2": true
   },
   {
@@ -4985,7 +5047,7 @@ const VIDEOS = [
     "date": "2025-07-05",
     "is_short": false,
     "duration": 685,
-    "views": 18316,
+    "views": 18333,
     "cat_v2": true
   },
   {
@@ -5008,7 +5070,7 @@ const VIDEOS = [
     "date": "2025-06-28",
     "is_short": false,
     "duration": 647,
-    "views": 25013,
+    "views": 25022,
     "cat_v2": true
   },
   {
@@ -5032,7 +5094,7 @@ const VIDEOS = [
     "date": "2025-06-21",
     "is_short": false,
     "duration": 553,
-    "views": 11301,
+    "views": 11302,
     "cat_v2": true
   },
   {
@@ -5079,7 +5141,7 @@ const VIDEOS = [
     "date": "2025-06-07",
     "is_short": false,
     "duration": 929,
-    "views": 18788,
+    "views": 18800,
     "cat_v2": true
   },
   {
@@ -5100,7 +5162,7 @@ const VIDEOS = [
     "date": "2025-05-31",
     "is_short": false,
     "duration": 795,
-    "views": 16155,
+    "views": 16159,
     "cat_v2": true
   },
   {
@@ -5122,7 +5184,7 @@ const VIDEOS = [
     "date": "2025-05-24",
     "is_short": false,
     "duration": 687,
-    "views": 15547,
+    "views": 15554,
     "cat_v2": true
   },
   {
@@ -5144,7 +5206,7 @@ const VIDEOS = [
     "date": "2025-05-17",
     "is_short": false,
     "duration": 1525,
-    "views": 15095,
+    "views": 15102,
     "cat_v2": true
   },
   {
@@ -5189,7 +5251,7 @@ const VIDEOS = [
     "date": "2025-05-03",
     "is_short": false,
     "duration": 811,
-    "views": 16653,
+    "views": 16655,
     "cat_v2": true
   },
   {
@@ -5212,7 +5274,7 @@ const VIDEOS = [
     "date": "2025-04-26",
     "is_short": false,
     "duration": 764,
-    "views": 24029,
+    "views": 24032,
     "cat_v2": true
   },
   {
@@ -5233,7 +5295,7 @@ const VIDEOS = [
     "date": "2025-04-19",
     "is_short": false,
     "duration": 1134,
-    "views": 26626,
+    "views": 26647,
     "cat_v2": true
   },
   {
@@ -5256,7 +5318,7 @@ const VIDEOS = [
     "date": "2025-04-12",
     "is_short": false,
     "duration": 1034,
-    "views": 22500,
+    "views": 22511,
     "cat_v2": true
   },
   {
@@ -5279,7 +5341,7 @@ const VIDEOS = [
     "date": "2025-04-05",
     "is_short": false,
     "duration": 1603,
-    "views": 19336,
+    "views": 19340,
     "cat_v2": true
   },
   {
@@ -5301,7 +5363,7 @@ const VIDEOS = [
     "date": "2025-03-29",
     "is_short": false,
     "duration": 1223,
-    "views": 50870,
+    "views": 50908,
     "cat_v2": true
   },
   {
@@ -5321,7 +5383,7 @@ const VIDEOS = [
     "date": "2025-03-24",
     "is_short": true,
     "duration": 58,
-    "views": 5191
+    "views": 5192
   },
   {
     "title": "【FX初心者必見】勝ちパターンをリアルチャートで解説",
@@ -5343,7 +5405,7 @@ const VIDEOS = [
     "date": "2025-03-22",
     "is_short": false,
     "duration": 950,
-    "views": 19552,
+    "views": 19562,
     "cat_v2": true
   },
   {
@@ -5364,7 +5426,7 @@ const VIDEOS = [
     "date": "2025-03-17",
     "is_short": true,
     "duration": 57,
-    "views": 9079
+    "views": 9082
   },
   {
     "title": "FX負けを知れば勝てる！負けパターン大全Vol.1",
@@ -5384,7 +5446,7 @@ const VIDEOS = [
     "date": "2025-03-15",
     "is_short": false,
     "duration": 1107,
-    "views": 24747,
+    "views": 24751,
     "cat_v2": true
   },
   {
@@ -5427,7 +5489,7 @@ const VIDEOS = [
     "date": "2025-03-08",
     "is_short": false,
     "duration": 821,
-    "views": 31651,
+    "views": 31685,
     "cat_v2": true
   },
   {
@@ -5448,7 +5510,7 @@ const VIDEOS = [
     "date": "2025-03-03",
     "is_short": true,
     "duration": 70,
-    "views": 7705
+    "views": 7711
   },
   {
     "title": "トレーダーが知っておくべき「ダマシ」を避けるための戦略",
@@ -5471,7 +5533,7 @@ const VIDEOS = [
     "date": "2025-03-01",
     "is_short": false,
     "duration": 691,
-    "views": 20805,
+    "views": 20812,
     "cat_v2": true
   },
   {
@@ -5492,7 +5554,7 @@ const VIDEOS = [
     "date": "2025-02-24",
     "is_short": true,
     "duration": 47,
-    "views": 7774
+    "views": 7780
   },
   {
     "title": "エントリー前の不安ゼロ！勝てるトレードを実現する５つの直前チェックリスト",
@@ -5514,7 +5576,7 @@ const VIDEOS = [
     "date": "2025-02-22",
     "is_short": false,
     "duration": 638,
-    "views": 15952,
+    "views": 15959,
     "cat_v2": true
   },
   {
@@ -5559,7 +5621,7 @@ const VIDEOS = [
     "date": "2025-02-15",
     "is_short": false,
     "duration": 1298,
-    "views": 28695,
+    "views": 28710,
     "cat_v2": true
   },
   {
@@ -5579,7 +5641,7 @@ const VIDEOS = [
     "date": "2025-02-10",
     "is_short": true,
     "duration": 50,
-    "views": 6767
+    "views": 6770
   },
   {
     "title": "FXの値動はランダム？ランダムウォーク仮説で分かった衝撃の真実とは",
@@ -5601,7 +5663,7 @@ const VIDEOS = [
     "date": "2025-02-08",
     "is_short": false,
     "duration": 687,
-    "views": 12189,
+    "views": 12191,
     "cat_v2": true
   },
   {
@@ -5622,7 +5684,7 @@ const VIDEOS = [
     "date": "2025-02-03",
     "is_short": true,
     "duration": 50,
-    "views": 5866
+    "views": 5869
   },
   {
     "title": "人生初Q&A！FX初心者が疑問に思うことをプロが徹底回答",
@@ -5645,7 +5707,7 @@ const VIDEOS = [
     "date": "2025-02-01",
     "is_short": false,
     "duration": 997,
-    "views": 21416,
+    "views": 21417,
     "cat_v2": true
   },
   {
@@ -5666,7 +5728,7 @@ const VIDEOS = [
     "date": "2025-01-25",
     "is_short": false,
     "duration": 669,
-    "views": 16625,
+    "views": 16629,
     "cat_v2": true
   },
   {
@@ -5689,7 +5751,7 @@ const VIDEOS = [
     "date": "2025-01-18",
     "is_short": false,
     "duration": 886,
-    "views": 45042,
+    "views": 45051,
     "cat_v2": true
   },
   {
@@ -5711,7 +5773,7 @@ const VIDEOS = [
     "date": "2025-01-11",
     "is_short": false,
     "duration": 713,
-    "views": 25962,
+    "views": 25963,
     "cat_v2": true
   },
   {
@@ -5734,7 +5796,7 @@ const VIDEOS = [
     "date": "2025-01-04",
     "is_short": false,
     "duration": 852,
-    "views": 30792,
+    "views": 30793,
     "cat_v2": true
   },
   {
@@ -5757,7 +5819,7 @@ const VIDEOS = [
     "date": "2024-12-28",
     "is_short": false,
     "duration": 1046,
-    "views": 42993,
+    "views": 43003,
     "cat_v2": true
   },
   {
@@ -5781,7 +5843,7 @@ const VIDEOS = [
     "date": "2024-12-21",
     "is_short": false,
     "duration": 909,
-    "views": 23419,
+    "views": 23420,
     "cat_v2": true
   },
   {
@@ -5803,7 +5865,7 @@ const VIDEOS = [
     "date": "2024-12-14",
     "is_short": false,
     "duration": 916,
-    "views": 41104,
+    "views": 41119,
     "cat_v2": true
   },
   {
@@ -5825,7 +5887,7 @@ const VIDEOS = [
     "date": "2024-11-30",
     "is_short": false,
     "duration": 1772,
-    "views": 34532,
+    "views": 34557,
     "cat_v2": true
   },
   {
@@ -5848,7 +5910,7 @@ const VIDEOS = [
     "date": "2024-11-16",
     "is_short": false,
     "duration": 804,
-    "views": 24968,
+    "views": 24971,
     "cat_v2": true
   },
   {
@@ -5869,7 +5931,7 @@ const VIDEOS = [
     "date": "2024-11-09",
     "is_short": false,
     "duration": 520,
-    "views": 32900,
+    "views": 32918,
     "cat_v2": true
   },
   {
@@ -5912,7 +5974,7 @@ const VIDEOS = [
     "date": "2024-11-02",
     "is_short": false,
     "duration": 572,
-    "views": 29865,
+    "views": 29870,
     "cat_v2": true
   },
   {
@@ -5933,7 +5995,7 @@ const VIDEOS = [
     "date": "2024-10-26",
     "is_short": false,
     "duration": 386,
-    "views": 31036,
+    "views": 31053,
     "cat_v2": true
   },
   {
@@ -5957,7 +6019,7 @@ const VIDEOS = [
     "date": "2024-10-19",
     "is_short": false,
     "duration": 744,
-    "views": 37607,
+    "views": 37619,
     "cat_v2": true
   },
   {
@@ -5979,7 +6041,7 @@ const VIDEOS = [
     "date": "2024-10-12",
     "is_short": false,
     "duration": 423,
-    "views": 104742,
+    "views": 104770,
     "cat_v2": true
   },
   {
@@ -6000,7 +6062,7 @@ const VIDEOS = [
     "date": "2024-10-05",
     "is_short": false,
     "duration": 587,
-    "views": 20815,
+    "views": 20816,
     "cat_v2": true
   },
   {
@@ -6022,7 +6084,7 @@ const VIDEOS = [
     "date": "2024-09-28",
     "is_short": false,
     "duration": 748,
-    "views": 52527,
+    "views": 52531,
     "cat_v2": true
   },
   {
@@ -6044,7 +6106,7 @@ const VIDEOS = [
     "date": "2024-09-21",
     "is_short": false,
     "duration": 705,
-    "views": 25559,
+    "views": 25563,
     "cat_v2": true
   },
   {
@@ -6067,7 +6129,7 @@ const VIDEOS = [
     "date": "2024-09-14",
     "is_short": false,
     "duration": 600,
-    "views": 59957,
+    "views": 59963,
     "cat_v2": true
   },
   {
@@ -6090,7 +6152,7 @@ const VIDEOS = [
     "date": "2024-09-07",
     "is_short": false,
     "duration": 973,
-    "views": 100121,
+    "views": 100132,
     "cat_v2": true
   },
   {
@@ -6112,7 +6174,7 @@ const VIDEOS = [
     "date": "2024-08-31",
     "is_short": false,
     "duration": 629,
-    "views": 20423,
+    "views": 20431,
     "cat_v2": true
   },
   {
@@ -6134,7 +6196,7 @@ const VIDEOS = [
     "date": "2024-08-24",
     "is_short": false,
     "duration": 765,
-    "views": 50868,
+    "views": 50874,
     "cat_v2": true
   },
   {
@@ -6157,7 +6219,7 @@ const VIDEOS = [
     "date": "2024-08-17",
     "is_short": false,
     "duration": 483,
-    "views": 35060,
+    "views": 35068,
     "cat_v2": true
   },
   {
@@ -6180,7 +6242,7 @@ const VIDEOS = [
     "date": "2024-08-10",
     "is_short": false,
     "duration": 578,
-    "views": 22312,
+    "views": 22318,
     "cat_v2": true
   },
   {
@@ -6203,7 +6265,7 @@ const VIDEOS = [
     "date": "2024-08-03",
     "is_short": false,
     "duration": 662,
-    "views": 16683,
+    "views": 16684,
     "cat_v2": true
   },
   {
@@ -6224,7 +6286,7 @@ const VIDEOS = [
     "date": "2024-07-27",
     "is_short": false,
     "duration": 737,
-    "views": 27433,
+    "views": 27438,
     "cat_v2": true
   },
   {
@@ -6270,7 +6332,7 @@ const VIDEOS = [
     "date": "2024-06-29",
     "is_short": false,
     "duration": 1092,
-    "views": 80190,
+    "views": 80204,
     "cat_v2": true
   },
   {
@@ -6292,7 +6354,7 @@ const VIDEOS = [
     "date": "2024-06-15",
     "is_short": false,
     "duration": 310,
-    "views": 35253,
+    "views": 35257,
     "cat_v2": true
   },
   {
@@ -6312,7 +6374,7 @@ const VIDEOS = [
     "date": "2024-06-08",
     "is_short": false,
     "duration": 542,
-    "views": 40302,
+    "views": 40312,
     "cat_v2": true
   },
   {
@@ -6335,7 +6397,7 @@ const VIDEOS = [
     "date": "2024-06-01",
     "is_short": false,
     "duration": 582,
-    "views": 18479,
+    "views": 18480,
     "cat_v2": true
   },
   {
@@ -6379,7 +6441,7 @@ const VIDEOS = [
     "date": "2024-05-25",
     "is_short": false,
     "duration": 719,
-    "views": 19505,
+    "views": 19509,
     "cat_v2": true
   },
   {
@@ -6401,7 +6463,7 @@ const VIDEOS = [
     "date": "2024-05-18",
     "is_short": false,
     "duration": 560,
-    "views": 33858,
+    "views": 33861,
     "cat_v2": true
   },
   {
@@ -6424,7 +6486,7 @@ const VIDEOS = [
     "date": "2024-05-11",
     "is_short": false,
     "duration": 518,
-    "views": 47054,
+    "views": 47055,
     "cat_v2": true
   },
   {
@@ -6446,7 +6508,7 @@ const VIDEOS = [
     "date": "2024-05-04",
     "is_short": false,
     "duration": 653,
-    "views": 158845,
+    "views": 158885,
     "cat_v2": true
   },
   {
@@ -6467,7 +6529,7 @@ const VIDEOS = [
     "date": "2024-04-20",
     "is_short": false,
     "duration": 512,
-    "views": 23232,
+    "views": 23233,
     "cat_v2": true
   },
   {
@@ -6490,7 +6552,7 @@ const VIDEOS = [
     "date": "2024-04-13",
     "is_short": false,
     "duration": 649,
-    "views": 57941,
+    "views": 57949,
     "cat_v2": true
   },
   {
@@ -6512,7 +6574,7 @@ const VIDEOS = [
     "date": "2024-04-06",
     "is_short": false,
     "duration": 514,
-    "views": 118127,
+    "views": 118184,
     "cat_v2": true
   },
   {
@@ -6534,7 +6596,7 @@ const VIDEOS = [
     "date": "2024-03-30",
     "is_short": false,
     "duration": 497,
-    "views": 23508,
+    "views": 23515,
     "cat_v2": true
   },
   {
@@ -6557,7 +6619,7 @@ const VIDEOS = [
     "date": "2024-03-23",
     "is_short": false,
     "duration": 1331,
-    "views": 65296,
+    "views": 65309,
     "cat_v2": true
   },
   {
@@ -6578,7 +6640,7 @@ const VIDEOS = [
     "date": "2024-03-16",
     "is_short": false,
     "duration": 1689,
-    "views": 60352,
+    "views": 60354,
     "cat_v2": true
   },
   {
@@ -6599,7 +6661,7 @@ const VIDEOS = [
     "date": "2024-03-09",
     "is_short": false,
     "duration": 508,
-    "views": 61386,
+    "views": 61390,
     "cat_v2": true
   },
   {
@@ -6621,7 +6683,7 @@ const VIDEOS = [
     "date": "2024-03-02",
     "is_short": false,
     "duration": 1254,
-    "views": 48668,
+    "views": 48679,
     "cat_v2": true
   },
   {
@@ -6645,7 +6707,7 @@ const VIDEOS = [
     "date": "2024-02-24",
     "is_short": false,
     "duration": 1129,
-    "views": 24395,
+    "views": 24399,
     "cat_v2": true
   },
   {
@@ -6666,7 +6728,7 @@ const VIDEOS = [
     "date": "2024-02-17",
     "is_short": false,
     "duration": 1275,
-    "views": 72821,
+    "views": 72836,
     "cat_v2": true
   },
   {
@@ -6711,7 +6773,7 @@ const VIDEOS = [
     "date": "2024-01-27",
     "is_short": false,
     "duration": 479,
-    "views": 27894,
+    "views": 27897,
     "cat_v2": true
   },
   {
@@ -6734,7 +6796,7 @@ const VIDEOS = [
     "date": "2024-01-20",
     "is_short": false,
     "duration": 455,
-    "views": 13427,
+    "views": 13428,
     "cat_v2": true
   },
   {
@@ -6779,7 +6841,7 @@ const VIDEOS = [
     "date": "2023-12-23",
     "is_short": false,
     "duration": 994,
-    "views": 40669,
+    "views": 40677,
     "cat_v2": true
   },
   {
@@ -6824,7 +6886,7 @@ const VIDEOS = [
     "date": "2023-11-29",
     "is_short": false,
     "duration": 623,
-    "views": 21016,
+    "views": 21019,
     "cat_v2": true
   },
   {
@@ -6848,7 +6910,7 @@ const VIDEOS = [
     "date": "2023-11-18",
     "is_short": false,
     "duration": 946,
-    "views": 47161,
+    "views": 47166,
     "cat_v2": true
   },
   {
@@ -6871,7 +6933,7 @@ const VIDEOS = [
     "date": "2023-10-28",
     "is_short": false,
     "duration": 2911,
-    "views": 58507,
+    "views": 58527,
     "cat_v2": true
   },
   {
@@ -6915,7 +6977,7 @@ const VIDEOS = [
     "date": "2023-10-07",
     "is_short": false,
     "duration": 873,
-    "views": 63262,
+    "views": 63274,
     "cat_v2": true
   },
   {
@@ -6956,7 +7018,7 @@ const VIDEOS = [
     "date": "2023-10-04",
     "is_short": false,
     "duration": 4619,
-    "views": 96,
+    "views": 97,
     "cat_v2": true
   },
   {
@@ -6977,7 +7039,7 @@ const VIDEOS = [
     "date": "2023-09-03",
     "is_short": false,
     "duration": 1007,
-    "views": 29813,
+    "views": 29818,
     "cat_v2": true
   },
   {
@@ -7021,7 +7083,7 @@ const VIDEOS = [
     "date": "2023-08-26",
     "is_short": false,
     "duration": 1389,
-    "views": 71433,
+    "views": 71446,
     "cat_v2": true
   },
   {
@@ -7044,7 +7106,7 @@ const VIDEOS = [
     "date": "2023-08-05",
     "is_short": false,
     "duration": 2633,
-    "views": 57675,
+    "views": 57684,
     "cat_v2": true
   },
   {
@@ -7066,7 +7128,7 @@ const VIDEOS = [
     "date": "2023-07-08",
     "is_short": false,
     "duration": 1236,
-    "views": 43812,
+    "views": 43823,
     "cat_v2": true
   },
   {
@@ -7089,7 +7151,7 @@ const VIDEOS = [
     "date": "2023-06-24",
     "is_short": false,
     "duration": 802,
-    "views": 129567,
+    "views": 129627,
     "cat_v2": true
   },
   {
@@ -7112,7 +7174,7 @@ const VIDEOS = [
     "date": "2023-06-03",
     "is_short": false,
     "duration": 815,
-    "views": 342210,
+    "views": 342243,
     "cat_v2": true
   },
   {
@@ -7134,7 +7196,7 @@ const VIDEOS = [
     "date": "2023-05-27",
     "is_short": false,
     "duration": 538,
-    "views": 50013,
+    "views": 50024,
     "cat_v2": true
   },
   {
@@ -7154,7 +7216,7 @@ const VIDEOS = [
     "date": "2023-05-20",
     "is_short": false,
     "duration": 533,
-    "views": 31022,
+    "views": 31025,
     "cat_v2": true
   },
   {
@@ -7198,7 +7260,7 @@ const VIDEOS = [
     "date": "2023-05-13",
     "is_short": false,
     "duration": 542,
-    "views": 43054,
+    "views": 43059,
     "cat_v2": true
   },
   {
@@ -7220,7 +7282,7 @@ const VIDEOS = [
     "date": "2023-05-04",
     "is_short": false,
     "duration": 232,
-    "views": 20119,
+    "views": 20125,
     "cat_v2": true
   },
   {
@@ -7243,7 +7305,7 @@ const VIDEOS = [
     "date": "2023-05-03",
     "is_short": false,
     "duration": 129,
-    "views": 19189,
+    "views": 19196,
     "cat_v2": true
   },
   {
@@ -7265,7 +7327,7 @@ const VIDEOS = [
     "date": "2023-05-02",
     "is_short": false,
     "duration": 238,
-    "views": 21945,
+    "views": 21951,
     "cat_v2": true
   },
   {
@@ -7287,7 +7349,7 @@ const VIDEOS = [
     "date": "2023-05-01",
     "is_short": false,
     "duration": 215,
-    "views": 25989,
+    "views": 25995,
     "cat_v2": true
   },
   {
@@ -7310,7 +7372,7 @@ const VIDEOS = [
     "date": "2023-04-30",
     "is_short": false,
     "duration": 162,
-    "views": 33554,
+    "views": 33561,
     "cat_v2": true
   },
   {
@@ -7332,7 +7394,7 @@ const VIDEOS = [
     "date": "2023-04-29",
     "is_short": false,
     "duration": 136,
-    "views": 42574,
+    "views": 42586,
     "cat_v2": true
   },
   {
@@ -7353,7 +7415,7 @@ const VIDEOS = [
     "date": "2023-04-28",
     "is_short": false,
     "duration": 185,
-    "views": 65467,
+    "views": 65486,
     "cat_v2": true
   },
   {
@@ -7377,7 +7439,7 @@ const VIDEOS = [
     "date": "2023-04-15",
     "is_short": false,
     "duration": 675,
-    "views": 77542,
+    "views": 77550,
     "cat_v2": true
   },
   {
@@ -7400,7 +7462,7 @@ const VIDEOS = [
     "date": "2023-04-01",
     "is_short": false,
     "duration": 297,
-    "views": 14422,
+    "views": 14423,
     "cat_v2": true
   },
   {
@@ -7444,7 +7506,7 @@ const VIDEOS = [
     "date": "2023-03-11",
     "is_short": false,
     "duration": 538,
-    "views": 56221,
+    "views": 56231,
     "cat_v2": true
   },
   {
@@ -7488,7 +7550,7 @@ const VIDEOS = [
     "date": "2023-02-25",
     "is_short": false,
     "duration": 645,
-    "views": 71597,
+    "views": 71604,
     "cat_v2": true
   },
   {
@@ -7510,7 +7572,7 @@ const VIDEOS = [
     "date": "2023-02-18",
     "is_short": false,
     "duration": 531,
-    "views": 99180,
+    "views": 99206,
     "cat_v2": true
   },
   {
@@ -7534,7 +7596,7 @@ const VIDEOS = [
     "date": "2023-02-11",
     "is_short": false,
     "duration": 727,
-    "views": 74109,
+    "views": 74120,
     "cat_v2": true
   },
   {
@@ -7558,7 +7620,7 @@ const VIDEOS = [
     "date": "2023-02-04",
     "is_short": false,
     "duration": 694,
-    "views": 108399,
+    "views": 108436,
     "cat_v2": true
   },
   {
@@ -7580,7 +7642,7 @@ const VIDEOS = [
     "date": "2023-01-28",
     "is_short": false,
     "duration": 501,
-    "views": 61847,
+    "views": 61862,
     "cat_v2": true
   },
   {
@@ -7624,7 +7686,7 @@ const VIDEOS = [
     "date": "2023-01-21",
     "is_short": false,
     "duration": 1108,
-    "views": 143288,
+    "views": 143318,
     "cat_v2": true
   },
   {
@@ -7646,7 +7708,7 @@ const VIDEOS = [
     "date": "2023-01-14",
     "is_short": false,
     "duration": 521,
-    "views": 30071,
+    "views": 30078,
     "cat_v2": true
   },
   {
@@ -7668,7 +7730,7 @@ const VIDEOS = [
     "date": "2023-01-07",
     "is_short": false,
     "duration": 397,
-    "views": 115974,
+    "views": 115987,
     "cat_v2": true
   },
   {
@@ -7689,7 +7751,7 @@ const VIDEOS = [
     "date": "2022-12-28",
     "is_short": false,
     "duration": 678,
-    "views": 64148,
+    "views": 64160,
     "cat_v2": true
   },
   {
@@ -7712,7 +7774,7 @@ const VIDEOS = [
     "date": "2022-12-18",
     "is_short": false,
     "duration": 590,
-    "views": 13542,
+    "views": 13544,
     "cat_v2": true
   },
   {
@@ -7734,7 +7796,7 @@ const VIDEOS = [
     "date": "2022-12-17",
     "is_short": false,
     "duration": 437,
-    "views": 41836,
+    "views": 41841,
     "cat_v2": true
   },
   {
@@ -7758,7 +7820,7 @@ const VIDEOS = [
     "date": "2022-12-11",
     "is_short": false,
     "duration": 225,
-    "views": 15128,
+    "views": 15131,
     "cat_v2": true
   },
   {
@@ -7779,7 +7841,7 @@ const VIDEOS = [
     "date": "2022-12-10",
     "is_short": false,
     "duration": 1512,
-    "views": 129935,
+    "views": 129956,
     "cat_v2": true
   },
   {
@@ -7801,7 +7863,7 @@ const VIDEOS = [
     "date": "2022-12-04",
     "is_short": false,
     "duration": 570,
-    "views": 13469,
+    "views": 13470,
     "cat_v2": true
   },
   {
@@ -7822,7 +7884,7 @@ const VIDEOS = [
     "date": "2022-11-26",
     "is_short": false,
     "duration": 354,
-    "views": 104678,
+    "views": 104698,
     "cat_v2": true
   },
   {
@@ -7867,7 +7929,7 @@ const VIDEOS = [
     "date": "2022-11-20",
     "is_short": false,
     "duration": 239,
-    "views": 13277,
+    "views": 13279,
     "cat_v2": true
   },
   {
@@ -7888,7 +7950,7 @@ const VIDEOS = [
     "date": "2022-11-08",
     "is_short": true,
     "duration": 48,
-    "views": 25521
+    "views": 25524
   },
   {
     "title": "【現金】FXで5万円を5日間運用した結果、当てられたらその額あげるよ",
@@ -7930,7 +7992,7 @@ const VIDEOS = [
     "date": "2022-10-29",
     "is_short": false,
     "duration": 614,
-    "views": 131251,
+    "views": 131263,
     "cat_v2": true
   },
   {
@@ -7952,7 +8014,7 @@ const VIDEOS = [
     "date": "2022-10-25",
     "is_short": true,
     "duration": 59,
-    "views": 30906
+    "views": 30910
   },
   {
     "title": "【これがリアル】FXで1万円を100万円にするのは簡単じゃない、けど俺ならできるはずなんだ【9月編】",
@@ -7975,7 +8037,7 @@ const VIDEOS = [
     "date": "2022-10-22",
     "is_short": false,
     "duration": 540,
-    "views": 39617,
+    "views": 39621,
     "cat_v2": true
   },
   {
@@ -7996,7 +8058,7 @@ const VIDEOS = [
     "date": "2022-10-16",
     "is_short": false,
     "duration": 705,
-    "views": 55883,
+    "views": 55893,
     "cat_v2": true
   },
   {
@@ -8021,7 +8083,7 @@ const VIDEOS = [
     "date": "2022-10-08",
     "is_short": false,
     "duration": 935,
-    "views": 25626,
+    "views": 25628,
     "cat_v2": true
   },
   {
@@ -8044,7 +8106,7 @@ const VIDEOS = [
     "date": "2022-10-01",
     "is_short": false,
     "duration": 844,
-    "views": 37797,
+    "views": 37799,
     "cat_v2": true
   },
   {
@@ -8092,7 +8154,7 @@ const VIDEOS = [
     "date": "2022-09-17",
     "is_short": false,
     "duration": 2780,
-    "views": 698844,
+    "views": 699072,
     "cat_v2": true
   },
   {
@@ -8115,7 +8177,7 @@ const VIDEOS = [
     "date": "2022-09-11",
     "is_short": false,
     "duration": 565,
-    "views": 110924,
+    "views": 110939,
     "cat_v2": true
   },
   {
