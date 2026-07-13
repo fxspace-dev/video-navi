@@ -1,5 +1,22 @@
 const VIDEOS = [
   {
+    "title": "仕事を辞めると言ってきたリスクを嫌う友人【コラム動画】",
+    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526069020468449382",
+    "thumb": "https://img.youtube.com/vi/wsQoemJXWMg/mqdefault.jpg",
+    "levels": [
+      "初心者"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "wsQoemJXWMg",
+    "date": "2023-01-05",
+    "is_short": false,
+    "duration": 315
+  },
+  {
     "title": "【FXライブ配信】ここが始まりの地",
     "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045744199372972",
     "thumb": "https://img.youtube.com/vi/Nbuky8i7omk/mqdefault.jpg",
