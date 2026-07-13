@@ -19,7 +19,7 @@ const VIDEOS = [
   {
     "title": "【FXライブ配信】今年を振り返って来年に備える",
     "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045791721095169",
-    "thumb": "https://img.youtube.com/vi/VcWEAzI0gU4/mqdefault.jpg",
+    "thumb": "https://img.youtube.com/vi/boRHzCBsMTY/mqdefault.jpg",
     "levels": [
       "中級"
     ],
@@ -28,7 +28,7 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "",
-    "vid_id": "VcWEAzI0gU4",
+    "vid_id": "boRHzCBsMTY",
     "date": "2022-12-25",
     "is_short": false,
     "duration": 6106
@@ -1012,7 +1012,7 @@ const VIDEOS = [
     "method": "メンバーシップ限定公開",
     "summary": "10万円から604万円を達成した企画の最終回。プロップファーム提携により企画の意義が薄れたこと、疲労を理由に企画終了の意向を示唆。視聴者アンケートの結果、67%が企画継続を支持した。",
     "vid_id": "2bpljB4sKI4",
-    "date": "2026-04-03",
+    "date": "2023-10-06",
     "is_short": false,
     "duration": 3710,
     "transcript_ok": true,
