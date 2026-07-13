@@ -1,5 +1,39 @@
 const VIDEOS = [
   {
+    "title": "【FXライブ配信】ここが始まりの地",
+    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045744199372972",
+    "thumb": "https://img.youtube.com/vi/Nbuky8i7omk/mqdefault.jpg",
+    "levels": [
+      "中級"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "Nbuky8i7omk",
+    "date": "2022-12-09",
+    "is_short": false,
+    "duration": 8677
+  },
+  {
+    "title": "【FXライブ配信】今年を振り返って来年に備える",
+    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045791721095169",
+    "thumb": "https://img.youtube.com/vi/VcWEAzI0gU4/mqdefault.jpg",
+    "levels": [
+      "中級"
+    ],
+    "categories": [
+      "未分類"
+    ],
+    "method": "メンバーシップ限定公開",
+    "summary": "",
+    "vid_id": "VcWEAzI0gU4",
+    "date": "2022-12-25",
+    "is_short": false,
+    "duration": 6106
+  },
+  {
     "title": "爆速で専業トレーダーになる方法 | ametaroさんインタビュー",
     "url": "https://www.youtube.com/watch?v=Mf8r6ix2rt0",
     "thumb": "https://img.youtube.com/vi/Mf8r6ix2rt0/mqdefault.jpg",
