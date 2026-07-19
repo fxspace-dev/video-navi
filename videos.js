@@ -69,7 +69,7 @@ const VIDEOS = [
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1461621596187000991",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249495341498608",
     "thumb": "https://img.youtube.com/vi/HXSOaLWFfxM/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -91,7 +91,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106559909101578",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248077008244736",
     "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -113,7 +113,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106441193390204",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247476535165158",
     "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -136,7 +136,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106398441115740",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247152793620480",
     "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
     "levels": [
       "超初心者",
@@ -158,7 +158,7 @@ const VIDEOS = [
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247117242695800",
     "thumb": "https://img.youtube.com/vi/gQj0t0Ov2Ys/mqdefault.jpg",
     "levels": [
       "中級",
@@ -181,7 +181,7 @@ const VIDEOS = [
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247092005568654",
     "thumb": "https://img.youtube.com/vi/XI3GmDp3TH8/mqdefault.jpg",
     "levels": [
       "中級",
@@ -203,7 +203,7 @@ const VIDEOS = [
   },
   {
     "title": "【FXライブ配信】続・革命前夜",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045860822253628",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248757043597423",
     "thumb": "https://img.youtube.com/vi/i2m9G9QvsWw/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -228,7 +228,7 @@ const VIDEOS = [
   },
   {
     "title": "【FXライブ配信】革命前夜",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045824876937236",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248696053960714",
     "thumb": "https://img.youtube.com/vi/veGpUi-vNCE/mqdefault.jpg",
     "levels": [
       "中級",
@@ -253,7 +253,7 @@ const VIDEOS = [
   },
   {
     "title": "仕事を辞めると言ってきたリスクを嫌う友人【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526069020468449382",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247020953800864",
     "thumb": "https://img.youtube.com/vi/wsQoemJXWMg/mqdefault.jpg",
     "levels": [
       "初心者"
@@ -275,7 +275,7 @@ const VIDEOS = [
   },
   {
     "title": "【FXライブ配信】ここが始まりの地",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045744199372972",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246804288766133",
     "thumb": "https://img.youtube.com/vi/Nbuky8i7omk/mqdefault.jpg",
     "levels": [
       "中級"
@@ -296,7 +296,7 @@ const VIDEOS = [
   },
   {
     "title": "【FXライブ配信】今年を振り返って来年に備える",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1526045791721095169",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246882470596628",
     "thumb": "https://img.youtube.com/vi/boRHzCBsMTY/mqdefault.jpg",
     "levels": [
       "中級"
@@ -415,7 +415,7 @@ const VIDEOS = [
   },
   {
     "title": "【実践】エントリー直前チェックリスト",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1522904827775029398",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249910246375445",
     "thumb": "https://img.youtube.com/vi/hhYtNdrLHDQ/mqdefault.jpg",
     "levels": [
       "中級"
@@ -462,7 +462,7 @@ const VIDEOS = [
   },
   {
     "title": "【無料配布】勝手にトレードも人生もうまくいくスケジュール",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1517831653358043158",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249882186612836",
     "thumb": "https://img.youtube.com/vi/oaj7Luz4Ic0/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -559,7 +559,7 @@ const VIDEOS = [
   },
   {
     "title": "ブレイクの全て【深掘完全解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1515295100576596000",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249859218341919",
     "thumb": "https://img.youtube.com/vi/QvAQrdZTQW8/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1083,7 +1083,7 @@ const VIDEOS = [
   },
   {
     "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1493776048842870915",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249825714507896",
     "thumb": "https://img.youtube.com/vi/uo0pN6Mgh5I/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1106,7 +1106,7 @@ const VIDEOS = [
   },
   {
     "title": "【4/15より適用】Fintokeiのギャンブル行為ルールが変更したので解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1493466245037559910",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249800967852102",
     "thumb": "https://img.youtube.com/vi/nB1dwq7OaYw/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1128,31 +1128,8 @@ const VIDEOS = [
     "is_live": false
   },
   {
-    "title": "ゼロプロ90 5期　募集開始",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1490903132593590363",
-    "thumb": "https://img.youtube.com/vi/_wteV5IwDfs/mqdefault.jpg",
-    "levels": [
-      "中級",
-      "上級"
-    ],
-    "categories": [
-      "ゼロプロ(旧プレアストロ)",
-      "企画"
-    ],
-    "method": "メンバーシップ限定公開",
-    "summary": "ゼロプロ90 5期の募集開始を告知。具体的な内容や手法、ポイントは字幕テキストに記載なし。",
-    "vid_id": "_wteV5IwDfs",
-    "date": "2026-04-05",
-    "is_short": false,
-    "duration": 748,
-    "transcript_ok": true,
-    "views": 1523,
-    "cat_v2": true,
-    "is_live": false
-  },
-  {
     "title": "#ラスト【FXライブ配信】10万→604万でFINISH【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550324376014998",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248733328740472",
     "thumb": "https://img.youtube.com/vi/2bpljB4sKI4/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1177,7 +1154,7 @@ const VIDEOS = [
   },
   {
     "title": "#12.5【FXライブ配信】強化合宿がヤバかった【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550267799044209",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248644862607380",
     "thumb": "https://img.youtube.com/vi/-jgTEUJpHc0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1201,7 +1178,7 @@ const VIDEOS = [
   },
   {
     "title": "#12【FXライブ配信】明日から強化合宿です【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550240267636736",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248609747763382",
     "thumb": "https://img.youtube.com/vi/d9r15v17DA8/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1224,7 +1201,7 @@ const VIDEOS = [
   },
   {
     "title": "#11【FXライブ配信】これで皆シナリオ構築マスター【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550212648272033",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248576914751619",
     "thumb": "https://img.youtube.com/vi/koK8UtYMNJc/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1248,7 +1225,7 @@ const VIDEOS = [
   },
   {
     "title": "#10【FXライブ配信】オートライン、結構革命じゃない？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550186798780458",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248517238194246",
     "thumb": "https://img.youtube.com/vi/silWs6trsUQ/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1273,7 +1250,7 @@ const VIDEOS = [
   },
   {
     "title": "#9【FXライブ配信】アストロトレーダーを知ってるかい？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550157329465404",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248493515477084",
     "thumb": "https://img.youtube.com/vi/OP3WHTOmRZY/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1297,7 +1274,7 @@ const VIDEOS = [
   },
   {
     "title": "#8【FXライブ配信】さて、あといくらかな…？【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550114933706773",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248463014236311",
     "thumb": "https://img.youtube.com/vi/QWQieHRkRCM/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1321,7 +1298,7 @@ const VIDEOS = [
   },
   {
     "title": "#7【FXライブ配信】200万達成を皆で見守る会【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550084596039742",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248434522325143",
     "thumb": "https://img.youtube.com/vi/o74CauRB1eI/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1345,7 +1322,7 @@ const VIDEOS = [
   },
   {
     "title": "#6【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550054195855563",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248417699237980",
     "thumb": "https://img.youtube.com/vi/z8hV14oWCIA/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1369,7 +1346,7 @@ const VIDEOS = [
   },
   {
     "title": "#5【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550022453366784",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248386862579852",
     "thumb": "https://img.youtube.com/vi/w44E1vymFNg/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1393,7 +1370,7 @@ const VIDEOS = [
   },
   {
     "title": "#4【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549978719223970",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248347452768286",
     "thumb": "https://img.youtube.com/vi/vHgeqfPgsIo/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1417,7 +1394,7 @@ const VIDEOS = [
   },
   {
     "title": "#3【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549941901885610",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248323780382750",
     "thumb": "https://img.youtube.com/vi/_z8mWhaJ3ms/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1442,7 +1419,7 @@ const VIDEOS = [
   },
   {
     "title": "#2【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549907173048422",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248266167292015",
     "thumb": "https://img.youtube.com/vi/LNePlXjMJlE/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1466,7 +1443,7 @@ const VIDEOS = [
   },
   {
     "title": "#1【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549882606878720",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248212916408390",
     "thumb": "https://img.youtube.com/vi/AXcasWro9J0/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1494,7 +1471,7 @@ const VIDEOS = [
   },
   {
     "title": "#0【FXライブ配信】10万→1000万にする",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489549707532570795",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248130838204517",
     "thumb": "https://img.youtube.com/vi/wFjOER3w9Ig/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1517,7 +1494,7 @@ const VIDEOS = [
   },
   {
     "title": "あれについて学びたいな…を解決するもの作りました",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1462666806387937333",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249618943442976",
     "thumb": "https://img.youtube.com/vi/Duhcfz-56H8/mqdefault.jpg",
     "levels": [
       "超初心者",
@@ -1541,7 +1518,7 @@ const VIDEOS = [
   },
   {
     "title": "【5日間】お試しゼロプロ添削完全版",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1454714151074140211",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249541625774140",
     "thumb": "https://img.youtube.com/vi/ujiAnOR_CKA/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1566,7 +1543,7 @@ const VIDEOS = [
   },
   {
     "title": "プロの損切後の立ち回り方２種類完全解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1413828569855037552",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249383861227550",
     "thumb": "https://img.youtube.com/vi/wWsFfLdIiUU/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1591,7 +1568,7 @@ const VIDEOS = [
   },
   {
     "title": "CFDで爆益を出す具体的なトレード方法",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1421445128505266197",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249475263627397",
     "thumb": "https://img.youtube.com/vi/Xh0lTF2ULlk/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1615,7 +1592,7 @@ const VIDEOS = [
   },
   {
     "title": "よすがの過去相場検証の全て",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417107147669377177",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247178957684829",
     "thumb": "https://img.youtube.com/vi/mUdZW69kogs/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1640,7 +1617,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【4章 リアル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106649302171769",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248906151104654",
     "thumb": "https://img.youtube.com/vi/7zjYgm_8iUM/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1666,7 +1643,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【3章 シナリオ】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106607837548656",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248546611171328",
     "thumb": "https://img.youtube.com/vi/EsX9nU4nmuI/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1691,7 +1668,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法【習得編】、いかがでしょう？",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417106305880952862",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528238361741885471",
     "thumb": "https://img.youtube.com/vi/irTed42ew7c/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1715,7 +1692,7 @@ const VIDEOS = [
   },
   {
     "title": "【3 20   3 24】今週の全リアルトレード解説【ハイレベル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113434306609353",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247573188575232",
     "thumb": "https://img.youtube.com/vi/QpBF-W0qMEs/mqdefault.jpg",
     "levels": [
       "上級"
@@ -1740,7 +1717,7 @@ const VIDEOS = [
   },
   {
     "title": "【3 13   3 17】今週の全リアルトレード解説【ハイレベル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113434306609353",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247547372503190",
     "thumb": "https://img.youtube.com/vi/7xEnLhhi9xk/mqdefault.jpg",
     "levels": [
       "上級"
@@ -1764,7 +1741,7 @@ const VIDEOS = [
   },
   {
     "title": "【3 6   3 10】今週の全リアルトレード解説【ハイレベル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113434306609353",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247522873839698",
     "thumb": "https://img.youtube.com/vi/XTOL4IMa6ko/mqdefault.jpg",
     "levels": [
       "上級"
@@ -1788,7 +1765,7 @@ const VIDEOS = [
   },
   {
     "title": "【2 27   3 3】今週の全リアルトレード解説【ハイレベル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113434306609353",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247500350292078",
     "thumb": "https://img.youtube.com/vi/-rsWm23wUCI/mqdefault.jpg",
     "levels": [
       "上級"
@@ -1812,7 +1789,7 @@ const VIDEOS = [
   },
   {
     "title": "「ここだけ」は取るべし【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113434306609353",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247237162041415",
     "thumb": "https://img.youtube.com/vi/T-byBdrXBQg/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1837,7 +1814,7 @@ const VIDEOS = [
   },
   {
     "title": "【4 24   4 28】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247732639236166",
     "thumb": "https://img.youtube.com/vi/feIQFwybzc4/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1861,7 +1838,7 @@ const VIDEOS = [
   },
   {
     "title": "【4 17   4 21】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247708002029619",
     "thumb": "https://img.youtube.com/vi/UX6Z6Cpn3vs/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1886,7 +1863,7 @@ const VIDEOS = [
   },
   {
     "title": "【4 10   4 14】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247680281612419",
     "thumb": "https://img.youtube.com/vi/ByffhpnYz2U/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1910,7 +1887,7 @@ const VIDEOS = [
   },
   {
     "title": "【4 3   4 7】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247643816329216",
     "thumb": "https://img.youtube.com/vi/SS5KXMTOG7E/mqdefault.jpg",
     "levels": [
       "中級"
@@ -1934,7 +1911,7 @@ const VIDEOS = [
   },
   {
     "title": "【3 27   3 31】今週の全リアルトレード解説【ハイレベル】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113356972032061",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247596085416008",
     "thumb": "https://img.youtube.com/vi/DAivHGL2gKE/mqdefault.jpg",
     "levels": [
       "上級"
@@ -1959,7 +1936,7 @@ const VIDEOS = [
   },
   {
     "title": "【5 29   6 2】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248011958911116",
     "thumb": "https://img.youtube.com/vi/5Cb_Y1JTibE/mqdefault.jpg",
     "levels": [
       "中級",
@@ -1985,7 +1962,7 @@ const VIDEOS = [
   },
   {
     "title": "【5 22   5 26】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247984582819911",
     "thumb": "https://img.youtube.com/vi/Pqnh5j8L-aE/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2009,7 +1986,7 @@ const VIDEOS = [
   },
   {
     "title": "【5 15   5 19】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247909945049190",
     "thumb": "https://img.youtube.com/vi/3UeC-CBMH04/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2033,7 +2010,7 @@ const VIDEOS = [
   },
   {
     "title": "【5 8   5 13】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247782400327772",
     "thumb": "https://img.youtube.com/vi/XSupCvzmTds/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2057,7 +2034,7 @@ const VIDEOS = [
   },
   {
     "title": "【5 1   5 5】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113288806338682",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247755753914419",
     "thumb": "https://img.youtube.com/vi/mtsnq8ur6hg/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2081,7 +2058,7 @@ const VIDEOS = [
   },
   {
     "title": "【7 3   7 7】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248241680810075",
     "thumb": "https://img.youtube.com/vi/7-75_yAKKZ8/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2105,7 +2082,7 @@ const VIDEOS = [
   },
   {
     "title": "【6 26   6 30】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248190673879053",
     "thumb": "https://img.youtube.com/vi/QB37qp_yyXM/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2129,7 +2106,7 @@ const VIDEOS = [
   },
   {
     "title": "【6 19   6 23】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248171858362429",
     "thumb": "https://img.youtube.com/vi/wTE-raRnuqs/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2153,7 +2130,7 @@ const VIDEOS = [
   },
   {
     "title": "【6 12   6 16】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248101855301814",
     "thumb": "https://img.youtube.com/vi/ehfL7dEbIB0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2178,7 +2155,7 @@ const VIDEOS = [
   },
   {
     "title": "【6 5   6 9】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113216685277287",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248041469906994",
     "thumb": "https://img.youtube.com/vi/Do6oCChBjXw/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2202,7 +2179,7 @@ const VIDEOS = [
   },
   {
     "title": "3月のシナリオ構築動画通りのお手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247621880119416",
     "thumb": "https://img.youtube.com/vi/5pJY_iJFqsI/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2226,7 +2203,7 @@ const VIDEOS = [
   },
   {
     "title": "1日200pips取れるのはスキャだけ【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247448861020250",
     "thumb": "https://img.youtube.com/vi/cvvVYGXRuF8/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2251,7 +2228,7 @@ const VIDEOS = [
   },
   {
     "title": "【7 10   7 14】今週の全リアルトレード＆お手本トレード解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113159512723537",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248290175357038",
     "thumb": "https://img.youtube.com/vi/8pQ-8EHrLj0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2275,7 +2252,7 @@ const VIDEOS = [
   },
   {
     "title": "経済指標をスキャる【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247418389397515",
     "thumb": "https://img.youtube.com/vi/w1SvHXmimFc/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2299,7 +2276,7 @@ const VIDEOS = [
   },
   {
     "title": "レンジでも1日50pips取る【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426113093854822504",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247326479487137",
     "thumb": "https://img.youtube.com/vi/9rZWAc3vBNA/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2325,7 +2302,7 @@ const VIDEOS = [
   },
   {
     "title": "TradingViewおすすめインジケーター",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1417107240212758590",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247294879596594",
     "thumb": "https://img.youtube.com/vi/Z9l6iJmFZ-s/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2349,7 +2326,7 @@ const VIDEOS = [
   },
   {
     "title": "「学校で古文は必要か？」議論に終止符を打つ",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107446488629289",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248810503930097",
     "thumb": "https://img.youtube.com/vi/nqSMSkOoU7E/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2371,7 +2348,7 @@ const VIDEOS = [
   },
   {
     "title": "Fintokeiの社長と会ったら革命的だった話",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107405854081045",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248852572799027",
     "thumb": "https://img.youtube.com/vi/_Z88oGGbVXI/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2393,7 +2370,7 @@ const VIDEOS = [
   },
   {
     "title": "その人が「成功者」となるか？　予想した研究結果に超納得した話",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107363504328785",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248783392211145",
     "thumb": "https://img.youtube.com/vi/3gkzvLrpB08/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2416,7 +2393,7 @@ const VIDEOS = [
   },
   {
     "title": "FXのポテンシャル、ちゃんと知ってる？【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107328116723784",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247053803720765",
     "thumb": "https://img.youtube.com/vi/SpwzpWPYBYY/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2439,7 +2416,7 @@ const VIDEOS = [
   },
   {
     "title": "よすがが実践している思考を爆速で進める思考整理術",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107194700365971",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248930058637342",
     "thumb": "https://img.youtube.com/vi/fnOM_JWvjPs/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2462,7 +2439,7 @@ const VIDEOS = [
   },
   {
     "title": "圧倒的「才能」を前に挫折し、再起した話【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107091931398174",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246988280303628",
     "thumb": "https://img.youtube.com/vi/IBV1BBUhNB8/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2485,7 +2462,7 @@ const VIDEOS = [
   },
   {
     "title": "何でYoutubeやってるの？投資家ならやらなくてよくない？【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107051510763674",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246914666201219",
     "thumb": "https://img.youtube.com/vi/DW_IKTzdWB0/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2508,7 +2485,7 @@ const VIDEOS = [
   },
   {
     "title": "私が「FXで稼げるようになる場所」を作る本当の理由",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417107015456526447",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248953710182542",
     "thumb": "https://img.youtube.com/vi/Fh_SEuaWAVI/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2530,7 +2507,7 @@ const VIDEOS = [
   },
   {
     "title": "私の手の内「フィルタレーション」、完全解説",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417106978194460793",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247380288471150",
     "thumb": "https://img.youtube.com/vi/q3rVECeq_5s/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2553,7 +2530,7 @@ const VIDEOS = [
   },
   {
     "title": "正直に答えます「FXって楽に稼げるんでしょ？」【コラム動画】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1417106949933109293",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246851222896821",
     "thumb": "https://img.youtube.com/vi/mbii2hXJzwY/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2577,7 +2554,7 @@ const VIDEOS = [
   },
   {
     "title": "よすが式のトレードは２種類だけ【初動と追随】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466672177873029/1417107270898286603",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248979111018657",
     "thumb": "https://img.youtube.com/vi/X7yit9cbsMM/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2602,7 +2579,7 @@ const VIDEOS = [
   },
   {
     "title": "【Fundora用】MT4→cTraderコピー機能リリースしたからcTrader使えなくても大丈夫",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1426114465925169213",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249219809546420",
     "thumb": "https://img.youtube.com/vi/mcfs2SJEK7U/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2625,7 +2602,7 @@ const VIDEOS = [
   },
   {
     "title": "適切な監視通貨ペア数、はっきりさせよう",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416827775733465233",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249067514236928",
     "thumb": "https://img.youtube.com/vi/O_WnT3GOKLU/mqdefault.jpg",
     "levels": [
       "初心者",
@@ -2648,7 +2625,7 @@ const VIDEOS = [
   },
   {
     "title": "プロップの税金について税理士に全部聞いてみた",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416825121452068985",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249269323038891",
     "thumb": "https://img.youtube.com/vi/h-BhOGIo4ss/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2672,7 +2649,7 @@ const VIDEOS = [
   },
   {
     "title": "YTT使えばトレードセットして放置してるだけで稼げます",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416824681083699417",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249293666783315",
     "thumb": "https://img.youtube.com/vi/f37RIDhgcVU/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2696,7 +2673,7 @@ const VIDEOS = [
   },
   {
     "title": "利益を３倍以上にするテクニック、ピラミッディングのコツ",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416824026713690234",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249320091025419",
     "thumb": "https://img.youtube.com/vi/x_6RdKXs-8k/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2720,7 +2697,7 @@ const VIDEOS = [
   },
   {
     "title": "FX SPACEで●●して最強のプラットフォームにします",
-    "url": "https://discord.com/channels/1039824083208126474/1413466542049464330/1416837825088852123",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249011956355144",
     "thumb": "https://img.youtube.com/vi/rY_vyBdKqMc/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2743,7 +2720,7 @@ const VIDEOS = [
   },
   {
     "title": "Youtubeメンバーシップの代わりとなるサブスクを開始しました。あとYTT買い切りも",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822985741832345",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249446226333706",
     "thumb": "https://img.youtube.com/vi/lfHiYEJ6Gws/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2766,7 +2743,7 @@ const VIDEOS = [
   },
   {
     "title": "Fundoraが正式ローンチされたのでFintokeiとガチ比較してみた結果",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249098082324514",
     "thumb": "https://img.youtube.com/vi/40BobTZPAN0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2788,7 +2765,7 @@ const VIDEOS = [
   },
   {
     "title": "FundoraとFintokeiとガチ比較してみた結果２",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249137475092600",
     "thumb": "https://img.youtube.com/vi/BEtavXkkNp8/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2810,7 +2787,7 @@ const VIDEOS = [
   },
   {
     "title": "【秘密厳守】Fundora、これ最強じゃないか…？",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249179028328490",
     "thumb": "https://img.youtube.com/vi/OAN8pERiMdo/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2834,7 +2811,7 @@ const VIDEOS = [
   },
   {
     "title": "Fundoraの1％ルール詳細発表│我々にはアレがあるので攻略余裕です",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249245533212772",
     "thumb": "https://img.youtube.com/vi/u2wS7RQ8GFQ/mqdefault.jpg",
     "levels": [
       "中級",
@@ -2858,7 +2835,7 @@ const VIDEOS = [
   },
   {
     "title": "Fintokeiの改善きたぞ！！しかもここからあと５段進化するらしい",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249346439647232",
     "thumb": "https://img.youtube.com/vi/saBgJPQleS0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2880,7 +2857,7 @@ const VIDEOS = [
   },
   {
     "title": "新興プロップFunded7ってどうなの？内部調査してきました",
-    "url": "https://discord.com/channels/1039824083208126474/1416822828719673395/1416822948769042513",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249417793278042",
     "thumb": "https://img.youtube.com/vi/4uEXrybJ4Q4/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2902,7 +2879,7 @@ const VIDEOS = [
   },
   {
     "title": "移動平均線の勝てる戦略を完全解説する",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1416834067202310244",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528249035037605971",
     "thumb": "https://img.youtube.com/vi/H1iopAiRMNM/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2925,7 +2902,7 @@ const VIDEOS = [
   },
   {
     "title": "デイがだめならスキャをすればいいじゃない【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145875193856105",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247268929572896",
     "thumb": "https://img.youtube.com/vi/ItOroDiLmQs/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2949,7 +2926,7 @@ const VIDEOS = [
   },
   {
     "title": "デイ→スキャ、縦横無尽に立ち回れ【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145793887273045",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247205662560397",
     "thumb": "https://img.youtube.com/vi/Mq3f4P82cU0/mqdefault.jpg",
     "levels": [
       "中級"
@@ -2973,7 +2950,7 @@ const VIDEOS = [
   },
   {
     "title": "正しい「目線」の切り替えが生死を分ける【今週のリアルトレード解説】",
-    "url": "https://discord.com/channels/1039824083208126474/1413466605714804816/1463145620977221707",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528246939374587995",
     "thumb": "https://img.youtube.com/vi/HQHizcvkKtw/mqdefault.jpg",
     "levels": [
       "中級"
@@ -7398,7 +7375,7 @@ const VIDEOS = [
   },
   {
     "title": "#13【FXライブ配信】400万達成を皆で見届けてくれ【10万→1000万企画】",
-    "url": "https://discord.com/channels/1039824083208126474/1414551420643840040/1489550288649064528",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248667507523675",
     "thumb": "https://i.ytimg.com/vi/yqdo2ajSPKc/maxresdefault.jpg",
     "levels": [
       "中級"

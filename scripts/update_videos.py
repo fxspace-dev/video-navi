@@ -33,6 +33,7 @@ DISCORD_URLS_PATH = os.path.join(os.path.dirname(__file__), "discord_urls.json")
 EXCLUDE_TITLE_PATTERNS = [
     re.compile(r"今日のシナリオ構築"),
     re.compile(r"ゼロプロ.*期.*添削"),
+    re.compile(r"ゼロプロ.*募集開始"),  # 3か月毎の受講生募集動画。募集終了で削除されるためナビ非掲載
     re.compile(r"No Copyright Music"),  # よすがの動画ではないBGM（Roa等）
 ]
 
