@@ -1376,7 +1376,9 @@ function isShort(v) {
     if (v.duration && v.duration <= 180) return true;
     return false;
 }
-function isLive(v) { return v.title && v.title.includes('ライブ配信'); }
+// is_live フィールドを優先（取り込み時に「YouTube配信情報 or タイトル」で判定済み）。
+// 古いデータで欠落している場合のみタイトルにフォールバック。
+function isLive(v) { return typeof v.is_live === 'boolean' ? v.is_live : !!(v.title && v.title.includes('ライブ配信')); }
 function getVideoType(v) { if (isShort(v)) return 'short'; if (isLive(v)) return 'live'; return 'long'; }
 
 // === Keyboard navigation ===

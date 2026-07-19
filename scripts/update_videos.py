@@ -663,6 +663,9 @@ def main():
             "vid_id": vid_id,
             "date": published,
             "is_short": bool(is_short),
+            # ライブ判定: YouTube配信情報(is_live_broadcast) or タイトルに「ライブ配信」。
+            # メンバー限定は再アップ版で配信情報が消えるためタイトルでも拾う。
+            "is_live": bool(is_live_broadcast or ("ライブ配信" in title)),
             "duration": int(duration_sec),
         }
         if transcript:

@@ -19,7 +19,8 @@ const VIDEOS = [
     "date": "2026-07-16",
     "is_short": true,
     "duration": 65,
-    "views": 1451
+    "views": 1451,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#8",
@@ -41,7 +42,8 @@ const VIDEOS = [
     "date": "2026-07-14",
     "is_short": false,
     "duration": 0,
-    "views": 0
+    "views": 0,
+    "is_live": true
   },
   {
     "title": "プロトレーダーが使うナウキャストとは？",
@@ -62,7 +64,8 @@ const VIDEOS = [
     "date": "2026-04-22",
     "is_short": true,
     "duration": 58,
-    "views": 5564
+    "views": 5564,
+    "is_live": false
   },
   {
     "title": "損切り完全解説〜深掘り動画〜",
@@ -83,7 +86,8 @@ const VIDEOS = [
     "date": "2025-11-02",
     "is_short": false,
     "duration": 1096,
-    "views": 392
+    "views": 392,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
@@ -104,7 +108,8 @@ const VIDEOS = [
     "date": "2023-06-17",
     "is_short": false,
     "duration": 1624,
-    "views": 7448
+    "views": 7448,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
@@ -126,7 +131,8 @@ const VIDEOS = [
     "date": "2023-03-01",
     "is_short": false,
     "duration": 1803,
-    "views": 6642
+    "views": 6642,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
@@ -147,7 +153,8 @@ const VIDEOS = [
     "date": "2023-01-18",
     "is_short": false,
     "duration": 2781,
-    "views": 4170
+    "views": 4170,
+    "is_live": false
   },
   {
     "title": "ミスは根絶よりも「対処」すべき【今週のリアルトレード解説】",
@@ -169,7 +176,8 @@ const VIDEOS = [
     "date": "2023-01-14",
     "is_short": false,
     "duration": 538,
-    "views": 183
+    "views": 183,
+    "is_live": false
   },
   {
     "title": "まだまだまだまだ絞れる【今週のリアルトレード解説】",
@@ -190,7 +198,8 @@ const VIDEOS = [
     "date": "2023-01-08",
     "is_short": false,
     "duration": 387,
-    "views": 212
+    "views": 212,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】続・革命前夜",
@@ -214,7 +223,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 8329,
     "transcript_ok": true,
-    "views": 18
+    "views": 18,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】革命前夜",
@@ -238,7 +248,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5442,
     "transcript_ok": true,
-    "views": 14
+    "views": 14,
+    "is_live": true
   },
   {
     "title": "仕事を辞めると言ってきたリスクを嫌う友人【コラム動画】",
@@ -259,7 +270,8 @@ const VIDEOS = [
     "duration": 315,
     "cat_v2": true,
     "views": 84,
-    "transcript_ok": true
+    "transcript_ok": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】ここが始まりの地",
@@ -279,7 +291,8 @@ const VIDEOS = [
     "duration": 8677,
     "cat_v2": true,
     "views": 30,
-    "transcript_ok": true
+    "transcript_ok": true,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】今年を振り返って来年に備える",
@@ -298,7 +311,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6106,
     "cat_v2": true,
-    "views": 27
+    "views": 27,
+    "is_live": true
   },
   {
     "title": "爆速で専業トレーダーになる方法 | ametaroさんインタビュー",
@@ -323,7 +337,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1100,
     "transcript_ok": true,
-    "views": 10713
+    "views": 10713,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#7",
@@ -346,7 +361,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5713,
     "transcript_ok": true,
-    "views": 5167
+    "views": 5167,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#6",
@@ -369,7 +385,8 @@ const VIDEOS = [
     "duration": 0,
     "views": 5144,
     "cat_v2": true,
-    "transcript_ok": true
+    "transcript_ok": true,
+    "is_live": true
   },
   {
     "title": "FX8年やった極意を10分で伝える",
@@ -393,7 +410,8 @@ const VIDEOS = [
     "duration": 593,
     "transcript_ok": true,
     "views": 13209,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【実践】エントリー直前チェックリスト",
@@ -415,7 +433,8 @@ const VIDEOS = [
     "duration": 301,
     "transcript_ok": true,
     "views": 588,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【知らなきゃ勝てない】脳をハックして勝率を上げる4つの方法",
@@ -438,7 +457,8 @@ const VIDEOS = [
     "duration": 604,
     "transcript_ok": true,
     "views": 5674,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【無料配布】勝手にトレードも人生もうまくいくスケジュール",
@@ -461,7 +481,8 @@ const VIDEOS = [
     "duration": 907,
     "transcript_ok": true,
     "views": 697,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【プロ実践】FXで負ける本能を仕組みで攻略する4つの方法",
@@ -485,7 +506,8 @@ const VIDEOS = [
     "duration": 626,
     "transcript_ok": true,
     "views": 5179,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "99%が見逃す最強エントリーサイン",
@@ -507,7 +529,8 @@ const VIDEOS = [
     "duration": 60,
     "transcript_ok": true,
     "views": 5616,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FX完全攻略】騙しブレイクを見抜けない人は永遠に勝てません",
@@ -531,7 +554,8 @@ const VIDEOS = [
     "duration": 908,
     "transcript_ok": true,
     "views": 9632,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ブレイクの全て【深掘完全解説】",
@@ -555,7 +579,8 @@ const VIDEOS = [
     "duration": 674,
     "transcript_ok": true,
     "views": 1109,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プライスアクションは見なくていい",
@@ -578,7 +603,8 @@ const VIDEOS = [
     "duration": 59,
     "transcript_ok": true,
     "views": 4507,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "飛行機の燃料理論で理解するトレード",
@@ -600,7 +626,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 57,
     "transcript_ok": true,
-    "views": 3974
+    "views": 3974,
+    "is_live": false
   },
   {
     "title": "損切りした瞬間に逆行される理由",
@@ -622,7 +649,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "transcript_ok": true,
-    "views": 3674
+    "views": 3674,
+    "is_live": false
   },
   {
     "title": "FXで勝つたった一つの方法",
@@ -642,7 +670,8 @@ const VIDEOS = [
     "date": "2026-06-03",
     "is_short": true,
     "duration": 59,
-    "views": 4309
+    "views": 4309,
+    "is_live": false
   },
   {
     "title": "【9.7兆円も無意味】ニュースでトレードした男の末路",
@@ -665,7 +694,8 @@ const VIDEOS = [
     "duration": 785,
     "transcript_ok": true,
     "views": 4048,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "経済アナリストの予測的中率の衝撃事実",
@@ -685,7 +715,8 @@ const VIDEOS = [
     "date": "2026-05-29",
     "is_short": true,
     "duration": 57,
-    "views": 2641
+    "views": 2641,
+    "is_live": false
   },
   {
     "title": "インジケーターでは勝てない！？",
@@ -706,7 +737,8 @@ const VIDEOS = [
     "date": "2026-05-27",
     "is_short": true,
     "duration": 60,
-    "views": 3250
+    "views": 3250,
+    "is_live": false
   },
   {
     "title": "9割の負けトレーダーが知らない…FX上位1%だけが守っている3つのルール",
@@ -731,7 +763,8 @@ const VIDEOS = [
     "duration": 646,
     "transcript_ok": true,
     "views": 10105,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "忙しい人ほど重要なトレード習慣",
@@ -751,7 +784,8 @@ const VIDEOS = [
     "date": "2026-05-22",
     "is_short": true,
     "duration": 56,
-    "views": 6199
+    "views": 6199,
+    "is_live": false
   },
   {
     "title": "過去検証をさぼると絶対に勝てない理由",
@@ -772,7 +806,8 @@ const VIDEOS = [
     "date": "2026-05-20",
     "is_short": true,
     "duration": 60,
-    "views": 7702
+    "views": 7702,
+    "is_live": false
   },
   {
     "title": "【保存版】損切りした瞬間に逆行される現象に終止符を打つ",
@@ -795,7 +830,8 @@ const VIDEOS = [
     "duration": 1118,
     "transcript_ok": true,
     "views": 17402,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "9割が知らないFX勉強法の正解",
@@ -817,7 +853,8 @@ const VIDEOS = [
     "date": "2026-05-15",
     "is_short": true,
     "duration": 57,
-    "views": 4417
+    "views": 4417,
+    "is_live": false
   },
   {
     "title": "FXでローソク足が使われる理由",
@@ -838,7 +875,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 40,
     "views": 3487,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【🔰０→１】もし今、ゼロからプロトレーダーになるとしたらこうする",
@@ -862,7 +900,8 @@ const VIDEOS = [
     "duration": 1342,
     "transcript_ok": true,
     "views": 16769,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXの税金は実はお得？",
@@ -882,7 +921,8 @@ const VIDEOS = [
     "date": "2026-05-08",
     "is_short": true,
     "duration": 60,
-    "views": 9938
+    "views": 9938,
+    "is_live": false
   },
   {
     "title": "FX初心者がつまずくlotとは？",
@@ -902,7 +942,8 @@ const VIDEOS = [
     "date": "2026-05-06",
     "is_short": true,
     "duration": 60,
-    "views": 3666
+    "views": 3666,
+    "is_live": false
   },
   {
     "title": "FX初心者がつまずくpipsとは？",
@@ -922,7 +963,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "views": 5498,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX初心者向が分足しか見ない落とし穴",
@@ -942,7 +984,8 @@ const VIDEOS = [
     "date": "2026-04-29",
     "is_short": true,
     "duration": 60,
-    "views": 5518
+    "views": 5518,
+    "is_live": false
   },
   {
     "title": "FXに限らず勝ってる人って結局全員この思考持ってるんだよな",
@@ -965,7 +1008,8 @@ const VIDEOS = [
     "duration": 950,
     "transcript_ok": true,
     "views": 9744,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロトレーダーが使うMTFとは？",
@@ -986,7 +1030,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 60,
     "views": 5057,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#5",
@@ -1009,7 +1054,8 @@ const VIDEOS = [
     "duration": 0,
     "transcript_ok": true,
     "views": 8897,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#4",
@@ -1032,7 +1078,8 @@ const VIDEOS = [
     "duration": 6226,
     "transcript_ok": true,
     "views": 7263,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【🔴イベントアーカイブ】らいていさん追加インタビュー",
@@ -1054,7 +1101,8 @@ const VIDEOS = [
     "duration": 2206,
     "transcript_ok": true,
     "views": 796,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4/15より適用】Fintokeiのギャンブル行為ルールが変更したので解説",
@@ -1076,7 +1124,8 @@ const VIDEOS = [
     "duration": 550,
     "transcript_ok": true,
     "views": 834,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ゼロプロ90 5期　募集開始",
@@ -1098,7 +1147,8 @@ const VIDEOS = [
     "duration": 748,
     "transcript_ok": true,
     "views": 1523,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "#ラスト【FXライブ配信】10万→604万でFINISH【10万→1000万企画】",
@@ -1122,7 +1172,8 @@ const VIDEOS = [
     "duration": 3710,
     "transcript_ok": true,
     "views": 385,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#12.5【FXライブ配信】強化合宿がヤバかった【10万→1000万企画】",
@@ -1145,7 +1196,8 @@ const VIDEOS = [
     "duration": 9002,
     "transcript_ok": true,
     "views": 37,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#12【FXライブ配信】明日から強化合宿です【10万→1000万企画】",
@@ -1167,7 +1219,8 @@ const VIDEOS = [
     "duration": 4733,
     "transcript_ok": true,
     "views": 38,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#11【FXライブ配信】これで皆シナリオ構築マスター【10万→1000万企画】",
@@ -1190,7 +1243,8 @@ const VIDEOS = [
     "duration": 6717,
     "transcript_ok": true,
     "views": 54,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#10【FXライブ配信】オートライン、結構革命じゃない？【10万→1000万企画】",
@@ -1214,7 +1268,8 @@ const VIDEOS = [
     "duration": 5538,
     "transcript_ok": true,
     "views": 38,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#9【FXライブ配信】アストロトレーダーを知ってるかい？【10万→1000万企画】",
@@ -1237,7 +1292,8 @@ const VIDEOS = [
     "duration": 5817,
     "transcript_ok": true,
     "views": 32,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#8【FXライブ配信】さて、あといくらかな…？【10万→1000万企画】",
@@ -1260,7 +1316,8 @@ const VIDEOS = [
     "duration": 5577,
     "transcript_ok": true,
     "views": 44,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#7【FXライブ配信】200万達成を皆で見守る会【10万→1000万企画】",
@@ -1283,7 +1340,8 @@ const VIDEOS = [
     "duration": 4961,
     "transcript_ok": true,
     "views": 52,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#6【FXライブ配信】10万→1000万にする",
@@ -1306,7 +1364,8 @@ const VIDEOS = [
     "duration": 7348,
     "transcript_ok": true,
     "views": 107,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#5【FXライブ配信】10万→1000万にする",
@@ -1329,7 +1388,8 @@ const VIDEOS = [
     "duration": 4581,
     "transcript_ok": true,
     "views": 78,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#4【FXライブ配信】10万→1000万にする",
@@ -1352,7 +1412,8 @@ const VIDEOS = [
     "duration": 7010,
     "transcript_ok": true,
     "views": 62,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#3【FXライブ配信】10万→1000万にする",
@@ -1376,7 +1437,8 @@ const VIDEOS = [
     "duration": 6879,
     "transcript_ok": true,
     "views": 82,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#2【FXライブ配信】10万→1000万にする",
@@ -1399,7 +1461,8 @@ const VIDEOS = [
     "duration": 4701,
     "transcript_ok": true,
     "views": 100,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#1【FXライブ配信】10万→1000万にする",
@@ -1426,7 +1489,8 @@ const VIDEOS = [
     "duration": 4776,
     "transcript_ok": true,
     "views": 171,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "#0【FXライブ配信】10万→1000万にする",
@@ -1448,7 +1512,8 @@ const VIDEOS = [
     "duration": 5230,
     "transcript_ok": true,
     "views": 342,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "あれについて学びたいな…を解決するもの作りました",
@@ -1471,7 +1536,8 @@ const VIDEOS = [
     "duration": 199,
     "transcript_ok": true,
     "views": 764,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5日間】お試しゼロプロ添削完全版",
@@ -1495,7 +1561,8 @@ const VIDEOS = [
     "duration": 1301,
     "transcript_ok": true,
     "views": 591,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロの損切後の立ち回り方２種類完全解説",
@@ -1519,7 +1586,8 @@ const VIDEOS = [
     "duration": 430,
     "transcript_ok": true,
     "views": 536,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "CFDで爆益を出す具体的なトレード方法",
@@ -1542,7 +1610,8 @@ const VIDEOS = [
     "duration": 371,
     "transcript_ok": true,
     "views": 883,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすがの過去相場検証の全て",
@@ -1566,7 +1635,8 @@ const VIDEOS = [
     "duration": 1455,
     "transcript_ok": true,
     "views": 3869,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法習得編【4章 リアル】",
@@ -1591,7 +1661,8 @@ const VIDEOS = [
     "duration": 930,
     "transcript_ok": true,
     "views": 3749,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法習得編【3章 シナリオ】",
@@ -1615,7 +1686,8 @@ const VIDEOS = [
     "duration": 1380,
     "transcript_ok": true,
     "views": 5257,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすが式ダウ手法【習得編】、いかがでしょう？",
@@ -1638,7 +1710,8 @@ const VIDEOS = [
     "duration": 118,
     "transcript_ok": true,
     "views": 1168,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【3 20   3 24】今週の全リアルトレード解説【ハイレベル】",
@@ -1662,7 +1735,8 @@ const VIDEOS = [
     "duration": 562,
     "transcript_ok": true,
     "views": 127,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【3 13   3 17】今週の全リアルトレード解説【ハイレベル】",
@@ -1685,7 +1759,8 @@ const VIDEOS = [
     "duration": 1166,
     "transcript_ok": true,
     "views": 103,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【3 6   3 10】今週の全リアルトレード解説【ハイレベル】",
@@ -1708,7 +1783,8 @@ const VIDEOS = [
     "duration": 662,
     "transcript_ok": true,
     "views": 104,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【2 27   3 3】今週の全リアルトレード解説【ハイレベル】",
@@ -1731,7 +1807,8 @@ const VIDEOS = [
     "duration": 623,
     "transcript_ok": true,
     "views": 214,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "「ここだけ」は取るべし【今週のリアルトレード解説】",
@@ -1755,7 +1832,8 @@ const VIDEOS = [
     "duration": 280,
     "transcript_ok": true,
     "views": 433,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4 24   4 28】今週の全リアルトレード＆お手本トレード解説",
@@ -1778,7 +1856,8 @@ const VIDEOS = [
     "duration": 543,
     "transcript_ok": true,
     "views": 89,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4 17   4 21】今週の全リアルトレード＆お手本トレード解説",
@@ -1802,7 +1881,8 @@ const VIDEOS = [
     "duration": 687,
     "transcript_ok": true,
     "views": 85,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4 10   4 14】今週の全リアルトレード＆お手本トレード解説",
@@ -1825,7 +1905,8 @@ const VIDEOS = [
     "duration": 692,
     "transcript_ok": true,
     "views": 57,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4 3   4 7】今週の全リアルトレード＆お手本トレード解説",
@@ -1848,7 +1929,8 @@ const VIDEOS = [
     "duration": 1336,
     "transcript_ok": true,
     "views": 65,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【3 27   3 31】今週の全リアルトレード解説【ハイレベル】",
@@ -1872,7 +1954,8 @@ const VIDEOS = [
     "duration": 646,
     "transcript_ok": true,
     "views": 66,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5 29   6 2】今週の全リアルトレード＆お手本トレード解説",
@@ -1897,7 +1980,8 @@ const VIDEOS = [
     "duration": 757,
     "transcript_ok": true,
     "views": 80,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5 22   5 26】今週の全リアルトレード＆お手本トレード解説",
@@ -1920,7 +2004,8 @@ const VIDEOS = [
     "duration": 657,
     "transcript_ok": true,
     "views": 60,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5 15   5 19】今週の全リアルトレード＆お手本トレード解説",
@@ -1943,7 +2028,8 @@ const VIDEOS = [
     "duration": 536,
     "transcript_ok": true,
     "views": 50,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5 8   5 13】今週の全リアルトレード＆お手本トレード解説",
@@ -1966,7 +2052,8 @@ const VIDEOS = [
     "duration": 567,
     "transcript_ok": true,
     "views": 46,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5 1   5 5】今週の全リアルトレード＆お手本トレード解説",
@@ -1989,7 +2076,8 @@ const VIDEOS = [
     "duration": 815,
     "transcript_ok": true,
     "views": 59,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【7 3   7 7】今週の全リアルトレード＆お手本トレード解説",
@@ -2012,7 +2100,8 @@ const VIDEOS = [
     "duration": 420,
     "transcript_ok": true,
     "views": 122,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【6 26   6 30】今週の全リアルトレード＆お手本トレード解説",
@@ -2035,7 +2124,8 @@ const VIDEOS = [
     "duration": 808,
     "transcript_ok": true,
     "views": 72,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【6 19   6 23】今週の全リアルトレード＆お手本トレード解説",
@@ -2058,7 +2148,8 @@ const VIDEOS = [
     "duration": 720,
     "transcript_ok": true,
     "views": 69,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【6 12   6 16】今週の全リアルトレード＆お手本トレード解説",
@@ -2082,7 +2173,8 @@ const VIDEOS = [
     "duration": 652,
     "transcript_ok": true,
     "views": 49,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【6 5   6 9】今週の全リアルトレード＆お手本トレード解説",
@@ -2105,7 +2197,8 @@ const VIDEOS = [
     "duration": 760,
     "transcript_ok": true,
     "views": 63,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "3月のシナリオ構築動画通りのお手本トレード解説",
@@ -2128,7 +2221,8 @@ const VIDEOS = [
     "duration": 521,
     "transcript_ok": true,
     "views": 254,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "1日200pips取れるのはスキャだけ【今週のリアルトレード解説】",
@@ -2152,7 +2246,8 @@ const VIDEOS = [
     "duration": 837,
     "transcript_ok": true,
     "views": 156,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【7 10   7 14】今週の全リアルトレード＆お手本トレード解説",
@@ -2175,7 +2270,8 @@ const VIDEOS = [
     "duration": 463,
     "transcript_ok": true,
     "views": 137,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "経済指標をスキャる【今週のリアルトレード解説】",
@@ -2198,7 +2294,8 @@ const VIDEOS = [
     "duration": 458,
     "transcript_ok": true,
     "views": 240,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "レンジでも1日50pips取る【今週のリアルトレード解説】",
@@ -2223,7 +2320,8 @@ const VIDEOS = [
     "duration": 842,
     "transcript_ok": true,
     "views": 282,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "TradingViewおすすめインジケーター",
@@ -2246,7 +2344,8 @@ const VIDEOS = [
     "duration": 379,
     "transcript_ok": true,
     "views": 454,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "「学校で古文は必要か？」議論に終止符を打つ",
@@ -2267,7 +2366,8 @@ const VIDEOS = [
     "duration": 538,
     "transcript_ok": true,
     "views": 100,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Fintokeiの社長と会ったら革命的だった話",
@@ -2288,7 +2388,8 @@ const VIDEOS = [
     "duration": 526,
     "transcript_ok": true,
     "views": 86,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "その人が「成功者」となるか？　予想した研究結果に超納得した話",
@@ -2310,7 +2411,8 @@ const VIDEOS = [
     "duration": 550,
     "transcript_ok": true,
     "views": 169,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXのポテンシャル、ちゃんと知ってる？【コラム動画】",
@@ -2332,7 +2434,8 @@ const VIDEOS = [
     "duration": 283,
     "transcript_ok": true,
     "views": 217,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすがが実践している思考を爆速で進める思考整理術",
@@ -2354,7 +2457,8 @@ const VIDEOS = [
     "duration": 438,
     "transcript_ok": true,
     "views": 190,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "圧倒的「才能」を前に挫折し、再起した話【コラム動画】",
@@ -2376,7 +2480,8 @@ const VIDEOS = [
     "duration": 869,
     "transcript_ok": true,
     "views": 122,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "何でYoutubeやってるの？投資家ならやらなくてよくない？【コラム動画】",
@@ -2398,7 +2503,8 @@ const VIDEOS = [
     "duration": 569,
     "transcript_ok": true,
     "views": 87,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "私が「FXで稼げるようになる場所」を作る本当の理由",
@@ -2419,7 +2525,8 @@ const VIDEOS = [
     "duration": 849,
     "transcript_ok": true,
     "views": 163,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "私の手の内「フィルタレーション」、完全解説",
@@ -2441,7 +2548,8 @@ const VIDEOS = [
     "duration": 1205,
     "transcript_ok": true,
     "views": 316,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "正直に答えます「FXって楽に稼げるんでしょ？」【コラム動画】",
@@ -2464,7 +2572,8 @@ const VIDEOS = [
     "duration": 250,
     "transcript_ok": true,
     "views": 191,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすが式のトレードは２種類だけ【初動と追随】",
@@ -2488,7 +2597,8 @@ const VIDEOS = [
     "duration": 1187,
     "transcript_ok": true,
     "views": 3816,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【Fundora用】MT4→cTraderコピー機能リリースしたからcTrader使えなくても大丈夫",
@@ -2510,7 +2620,8 @@ const VIDEOS = [
     "duration": 836,
     "transcript_ok": true,
     "views": 765,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "適切な監視通貨ペア数、はっきりさせよう",
@@ -2532,7 +2643,8 @@ const VIDEOS = [
     "duration": 659,
     "transcript_ok": true,
     "views": 434,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロップの税金について税理士に全部聞いてみた",
@@ -2555,7 +2667,8 @@ const VIDEOS = [
     "duration": 603,
     "transcript_ok": true,
     "views": 253,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "YTT使えばトレードセットして放置してるだけで稼げます",
@@ -2578,7 +2691,8 @@ const VIDEOS = [
     "duration": 625,
     "transcript_ok": true,
     "views": 577,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "利益を３倍以上にするテクニック、ピラミッディングのコツ",
@@ -2601,7 +2715,8 @@ const VIDEOS = [
     "duration": 476,
     "transcript_ok": true,
     "views": 413,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX SPACEで●●して最強のプラットフォームにします",
@@ -2623,7 +2738,8 @@ const VIDEOS = [
     "duration": 877,
     "transcript_ok": true,
     "views": 276,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Youtubeメンバーシップの代わりとなるサブスクを開始しました。あとYTT買い切りも",
@@ -2645,7 +2761,8 @@ const VIDEOS = [
     "duration": 160,
     "transcript_ok": true,
     "views": 2476,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Fundoraが正式ローンチされたのでFintokeiとガチ比較してみた結果",
@@ -2666,7 +2783,8 @@ const VIDEOS = [
     "duration": 1080,
     "transcript_ok": true,
     "views": 241,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FundoraとFintokeiとガチ比較してみた結果２",
@@ -2687,7 +2805,8 @@ const VIDEOS = [
     "duration": 305,
     "transcript_ok": true,
     "views": 140,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【秘密厳守】Fundora、これ最強じゃないか…？",
@@ -2710,7 +2829,8 @@ const VIDEOS = [
     "duration": 332,
     "transcript_ok": true,
     "views": 179,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Fundoraの1％ルール詳細発表│我々にはアレがあるので攻略余裕です",
@@ -2733,7 +2853,8 @@ const VIDEOS = [
     "duration": 314,
     "transcript_ok": true,
     "views": 224,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Fintokeiの改善きたぞ！！しかもここからあと５段進化するらしい",
@@ -2754,7 +2875,8 @@ const VIDEOS = [
     "duration": 360,
     "transcript_ok": true,
     "views": 22,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "新興プロップFunded7ってどうなの？内部調査してきました",
@@ -2775,7 +2897,8 @@ const VIDEOS = [
     "duration": 231,
     "transcript_ok": true,
     "views": 1456,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "移動平均線の勝てる戦略を完全解説する",
@@ -2797,7 +2920,8 @@ const VIDEOS = [
     "duration": 338,
     "transcript_ok": true,
     "views": 4122,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "デイがだめならスキャをすればいいじゃない【今週のリアルトレード解説】",
@@ -2820,7 +2944,8 @@ const VIDEOS = [
     "duration": 736,
     "transcript_ok": true,
     "views": 730,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "デイ→スキャ、縦横無尽に立ち回れ【今週のリアルトレード解説】",
@@ -2843,7 +2968,8 @@ const VIDEOS = [
     "duration": 736,
     "transcript_ok": true,
     "views": 527,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "正しい「目線」の切り替えが生死を分ける【今週のリアルトレード解説】",
@@ -2866,7 +2992,8 @@ const VIDEOS = [
     "duration": 372,
     "transcript_ok": true,
     "views": 979,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【2026年最新】スマホトレードで勝つための全手順、完全公開",
@@ -2888,7 +3015,8 @@ const VIDEOS = [
     "duration": 726,
     "transcript_ok": true,
     "views": 6822,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXプロトレーダーの考え方",
@@ -2909,7 +3037,8 @@ const VIDEOS = [
     "date": "2026-04-15",
     "is_short": true,
     "duration": 59,
-    "views": 5254
+    "views": 5254,
+    "is_live": false
   },
   {
     "title": "🔰初心者が3か月で爆速プロになってたから何したか全部聞く",
@@ -2932,7 +3061,8 @@ const VIDEOS = [
     "duration": 1009,
     "transcript_ok": true,
     "views": 16879,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#3",
@@ -2957,7 +3087,8 @@ const VIDEOS = [
     "duration": 2188,
     "transcript_ok": true,
     "views": 5430,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#1",
@@ -2981,7 +3112,8 @@ const VIDEOS = [
     "duration": 6320,
     "transcript_ok": true,
     "views": 7466,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "FXをおすすめする理由2選",
@@ -3002,7 +3134,8 @@ const VIDEOS = [
     "duration": 59,
     "transcript_ok": true,
     "views": 3239,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXのメリット3選",
@@ -3022,7 +3155,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 48,
     "transcript_ok": true,
-    "views": 3181
+    "views": 3181,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#2",
@@ -3046,7 +3180,8 @@ const VIDEOS = [
     "duration": 4912,
     "transcript_ok": true,
     "views": 5136,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "1000名見てきて分かったプロトレ1%が実際どういうことなのか全て話す",
@@ -3069,7 +3204,8 @@ const VIDEOS = [
     "duration": 1053,
     "transcript_ok": true,
     "views": 11879,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX取引の2種類の利益",
@@ -3088,7 +3224,8 @@ const VIDEOS = [
     "date": "2026-04-03",
     "is_short": true,
     "duration": 60,
-    "views": 3162
+    "views": 3162,
+    "is_live": false
   },
   {
     "title": "1万円でもトレードできる理由",
@@ -3108,7 +3245,8 @@ const VIDEOS = [
     "date": "2026-04-01",
     "is_short": true,
     "duration": 58,
-    "views": 3587
+    "views": 3587,
+    "is_live": false
   },
   {
     "title": "【禁忌】トレーダーが絶対やっちゃいけない精神状態でトレードした結果│100万部屋作り#3",
@@ -3132,7 +3270,8 @@ const VIDEOS = [
     "duration": 852,
     "transcript_ok": true,
     "views": 6080,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXがほかの投資より有利な理由",
@@ -3151,7 +3290,8 @@ const VIDEOS = [
     "date": "2026-03-25",
     "is_short": true,
     "duration": 59,
-    "views": 5673
+    "views": 5673,
+    "is_live": false
   },
   {
     "title": "プロスペクト理論の罠",
@@ -3171,7 +3311,8 @@ const VIDEOS = [
     "date": "2026-03-20",
     "is_short": true,
     "duration": 58,
-    "views": 5071
+    "views": 5071,
+    "is_live": false
   },
   {
     "title": "月利8%で億万長者になる方法",
@@ -3192,7 +3333,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 57,
     "views": 8576,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【地獄】プロでも病む「損益トントン」の抜け出し方│100万部屋作り#2",
@@ -3217,7 +3359,8 @@ const VIDEOS = [
     "duration": 641,
     "transcript_ok": true,
     "views": 8465,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "兼業トレーダーのトレーダースタイル②",
@@ -3237,7 +3380,8 @@ const VIDEOS = [
     "date": "2026-03-13",
     "is_short": true,
     "duration": 59,
-    "views": 4193
+    "views": 4193,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】原油どうなってんの？【質問OK】",
@@ -3259,7 +3403,8 @@ const VIDEOS = [
     "duration": 7672,
     "transcript_ok": true,
     "views": 5040,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "兼業トレーダーのトレーダースタイル①",
@@ -3279,7 +3424,8 @@ const VIDEOS = [
     "date": "2026-03-11",
     "is_short": true,
     "duration": 48,
-    "views": 4093
+    "views": 4093,
+    "is_live": false
   },
   {
     "title": "トレードは習慣にすべし",
@@ -3299,7 +3445,8 @@ const VIDEOS = [
     "date": "2026-03-06",
     "is_short": true,
     "duration": 60,
-    "views": 3010
+    "views": 3010,
+    "is_live": false
   },
   {
     "title": "【初手損切】トレード利益だけで空き部屋を「理想の城」にする│100万トレード部屋作り#1",
@@ -3322,7 +3469,8 @@ const VIDEOS = [
     "duration": 686,
     "transcript_ok": true,
     "views": 9779,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "タイミング待ちの重要性",
@@ -3343,7 +3491,8 @@ const VIDEOS = [
     "date": "2026-02-27",
     "is_short": true,
     "duration": 59,
-    "views": 6915
+    "views": 6915,
+    "is_live": false
   },
   {
     "title": "プライスアクションの正しい使い方",
@@ -3364,7 +3513,8 @@ const VIDEOS = [
     "date": "2026-02-25",
     "is_short": true,
     "duration": 52,
-    "views": 6402
+    "views": 6402,
+    "is_live": false
   },
   {
     "title": "候補値選定の重要性",
@@ -3385,7 +3535,8 @@ const VIDEOS = [
     "date": "2026-02-20",
     "is_short": true,
     "duration": 47,
-    "views": 5703
+    "views": 5703,
+    "is_live": false
   },
   {
     "title": "エントリー手順3ステップ",
@@ -3405,7 +3556,8 @@ const VIDEOS = [
     "date": "2026-02-18",
     "is_short": true,
     "duration": 41,
-    "views": 7389
+    "views": 7389,
+    "is_live": false
   },
   {
     "title": "【Vlog】HFMの超ド派手パーティーに行ってきました in バンコク",
@@ -3427,7 +3579,8 @@ const VIDEOS = [
     "duration": 676,
     "transcript_ok": true,
     "views": 7345,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "シナリオ構築の重要性",
@@ -3448,7 +3601,8 @@ const VIDEOS = [
     "date": "2026-02-13",
     "is_short": true,
     "duration": 49,
-    "views": 6309
+    "views": 6309,
+    "is_live": false
   },
   {
     "title": "期待値の考え方",
@@ -3468,7 +3622,8 @@ const VIDEOS = [
     "date": "2026-02-11",
     "is_short": true,
     "duration": 60,
-    "views": 6794
+    "views": 6794,
+    "is_live": false
   },
   {
     "title": "【🔰総集編】FXで生き残るための基礎思考を全部まとめた",
@@ -3494,7 +3649,8 @@ const VIDEOS = [
     "duration": 1642,
     "views": 15620,
     "cat_v2": true,
-    "transcript_ok": true
+    "transcript_ok": true,
+    "is_live": false
   },
   {
     "title": "勝率90%でも負ける理由",
@@ -3515,7 +3671,8 @@ const VIDEOS = [
     "date": "2026-02-06",
     "is_short": true,
     "duration": 57,
-    "views": 7256
+    "views": 7256,
+    "is_live": false
   },
   {
     "title": "FXで勝てない理由",
@@ -3537,7 +3694,8 @@ const VIDEOS = [
     "date": "2026-02-04",
     "is_short": true,
     "duration": 49,
-    "views": 9959
+    "views": 9959,
+    "is_live": false
   },
   {
     "title": "損切りがすべて｜FXリスク管理大全",
@@ -3560,7 +3718,8 @@ const VIDEOS = [
     "duration": 1783,
     "views": 8742,
     "cat_v2": true,
-    "transcript_ok": true
+    "transcript_ok": true,
+    "is_live": false
   },
   {
     "title": "上位足を見る重要性",
@@ -3582,7 +3741,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 56,
     "views": 5377,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ラインの本当の意味",
@@ -3604,7 +3764,8 @@ const VIDEOS = [
     "date": "2026-01-28",
     "is_short": true,
     "duration": 53,
-    "views": 4696
+    "views": 4696,
+    "is_live": false
   },
   {
     "title": "みんなに2026年の目標を聞いてみた！【ライブ切り抜き】",
@@ -3627,7 +3788,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 942,
     "views": 3910,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "三尊の本質を理解する",
@@ -3647,7 +3809,8 @@ const VIDEOS = [
     "date": "2026-01-23",
     "is_short": true,
     "duration": 51,
-    "views": 6283
+    "views": 6283,
+    "is_live": false
   },
   {
     "title": "前回安値に買い注文が溜まる理由",
@@ -3668,7 +3831,8 @@ const VIDEOS = [
     "date": "2026-01-21",
     "is_short": true,
     "duration": 59,
-    "views": 6847
+    "views": 6847,
+    "is_live": false
   },
   {
     "title": "【2026年相場予測】ゴールド・ドル円だけ見ろ。プロが見ている分岐点を全て見せます！",
@@ -3691,7 +3855,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 789,
     "views": 6852,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "レンジブレイクの仕組み",
@@ -3712,7 +3877,8 @@ const VIDEOS = [
     "date": "2026-01-16",
     "is_short": true,
     "duration": 60,
-    "views": 8777
+    "views": 8777,
+    "is_live": false
   },
   {
     "title": "トレンド方向で売買圧を見る",
@@ -3731,7 +3897,8 @@ const VIDEOS = [
     "date": "2026-01-14",
     "is_short": true,
     "duration": 59,
-    "views": 8076
+    "views": 8076,
+    "is_live": false
   },
   {
     "title": "インジケーターは情報が欠ける!?ローソク足が最強な決定的理由3選",
@@ -3753,7 +3920,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 996,
     "views": 11112,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXで勝つための考え方",
@@ -3773,7 +3941,8 @@ const VIDEOS = [
     "date": "2026-01-09",
     "is_short": true,
     "duration": 60,
-    "views": 5531
+    "views": 5531,
+    "is_live": false
   },
   {
     "title": "未来予測ではFXで勝てない理由",
@@ -3794,7 +3963,8 @@ const VIDEOS = [
     "date": "2026-01-07",
     "is_short": true,
     "duration": 60,
-    "views": 3846
+    "views": 3846,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】2026年 チャート分析初めします【質問OK】",
@@ -3816,7 +3986,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5248,
     "views": 6435,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "2026年版初心者でも再現できる「30万→1億」計画を全部公開します",
@@ -3839,7 +4010,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1251,
     "views": 24063,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "バラバラな経歴なのに「勝ち組全員」がやっていた共通手法とは？",
@@ -3861,7 +4033,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 802,
     "views": 15178,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】2026年の計画を一緒に立てよう!!!!!!【質問OK】",
@@ -3883,7 +4056,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 4765,
     "views": 4364,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【1億円出金】プロップの社長に直談判してきました",
@@ -3906,7 +4080,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 961,
     "views": 9729,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX初心者3人を5日間指導したリアルな成長記録 これがプロの本気添削！",
@@ -3929,7 +4104,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1220,
     "views": 12577,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "未来予測は捨てろ｜経済評論家の衝撃データとFXの正解【ナウキャスト解説】",
@@ -3952,7 +4128,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1047,
     "views": 6415,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "含み損でもメンタルを壊さないトレーダーの“待ち時間ルーティン”",
@@ -3973,7 +4150,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 852,
     "views": 5813,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ライン引きの実践4ステップ",
@@ -3994,7 +4172,8 @@ const VIDEOS = [
     "date": "2025-12-10",
     "is_short": true,
     "duration": 45,
-    "views": 7756
+    "views": 7756,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】よすが式ダウ手法を完全マスターしよう２【質問OK】",
@@ -4015,7 +4194,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5858,
     "views": 16282,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【完全公開】負けトレーダーが勝てるようになるまでにやったこと全て",
@@ -4037,7 +4217,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 705,
     "views": 17197,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "現在を正確に把握するナウキャスト",
@@ -4058,7 +4239,8 @@ const VIDEOS = [
     "date": "2025-12-05",
     "is_short": true,
     "duration": 57,
-    "views": 5981
+    "views": 5981,
+    "is_live": false
   },
   {
     "title": "総資産400億トレーダーCISの真実｜9割の人が勘違いしている“爆益の取り方",
@@ -4081,7 +4263,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 675,
     "views": 15480,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ブレイクの値動きの原理",
@@ -4102,7 +4285,8 @@ const VIDEOS = [
     "date": "2025-11-27",
     "is_short": true,
     "duration": 58,
-    "views": 4863
+    "views": 4863,
+    "is_live": false
   },
   {
     "title": "ラインの上下で何が起きているのか",
@@ -4123,7 +4307,8 @@ const VIDEOS = [
     "date": "2025-11-25",
     "is_short": true,
     "duration": 45,
-    "views": 6714
+    "views": 6714,
+    "is_live": false
   },
   {
     "title": "【🔰完全版】この動画だけでマスターできるライン引き完全解説",
@@ -4147,7 +4332,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1032,
     "views": 31943,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロが15分足を選ぶ3つの理由",
@@ -4168,7 +4354,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 51,
     "views": 14566,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "保有時間を事前に予測する方法",
@@ -4188,7 +4375,8 @@ const VIDEOS = [
     "date": "2025-11-18",
     "is_short": true,
     "duration": 60,
-    "views": 8645
+    "views": 8645,
+    "is_live": false
   },
   {
     "title": "完全初心者が2ヶ月で1100万円出金！400万円溶かしたギャンブルトレーダーが勝ちトレーダーに転身したきっかけとは！？",
@@ -4212,7 +4400,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 959,
     "views": 22879,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ショート 上位足トレードの意外な落とし穴",
@@ -4232,7 +4421,8 @@ const VIDEOS = [
     "date": "2025-11-13",
     "is_short": true,
     "duration": 57,
-    "views": 10055
+    "views": 10055,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】ライン引きを完全マスターしよう【質問OK】",
@@ -4254,7 +4444,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5904,
     "views": 15695,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "ショート 時間足で勝率が雲泥の差になる理由",
@@ -4275,7 +4466,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "views": 12815,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】1か月の入院生活終えてきましたぜ",
@@ -4296,7 +4488,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5169,
     "views": 6693,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【初心者向け】FXガチ勢たちのトレード環境を大公開",
@@ -4316,7 +4509,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 903,
     "views": 19732,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【プロはここで切る！】総資産10億円トレーダーの損切り完全解説",
@@ -4339,7 +4533,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 805,
     "views": 14245,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "インジケーターを使わない理由③",
@@ -4359,7 +4554,8 @@ const VIDEOS = [
     "date": "2025-10-25",
     "is_short": true,
     "duration": 51,
-    "views": 9856
+    "views": 9856,
+    "is_live": false
   },
   {
     "title": "インジケーターを使わない理由②",
@@ -4380,7 +4576,8 @@ const VIDEOS = [
     "date": "2025-10-24",
     "is_short": true,
     "duration": 59,
-    "views": 8552
+    "views": 8552,
+    "is_live": false
   },
   {
     "title": "インジケーターを使わない理由①",
@@ -4400,7 +4597,8 @@ const VIDEOS = [
     "date": "2025-10-23",
     "is_short": true,
     "duration": 56,
-    "views": 7789
+    "views": 7789,
+    "is_live": false
   },
   {
     "title": "インジケーターを使わないで分析",
@@ -4422,7 +4620,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 60,
     "views": 9886,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "スマホだけで稼げるFX手法",
@@ -4442,7 +4641,8 @@ const VIDEOS = [
     "date": "2025-10-21",
     "is_short": true,
     "duration": 49,
-    "views": 8476
+    "views": 8476,
+    "is_live": false
   },
   {
     "title": "【💰賞金140万円】ここから日本最強のトレード大会を作り上げていきます",
@@ -4464,7 +4664,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 354,
     "views": 3865,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "トレード回数が多いと負ける理由",
@@ -4485,7 +4686,8 @@ const VIDEOS = [
     "date": "2025-10-16",
     "is_short": true,
     "duration": 48,
-    "views": 8881
+    "views": 8881,
+    "is_live": false
   },
   {
     "title": "【初顔出し】サミット参加したら皆に会えてめちゃくちゃ楽しかった件 - YouTube",
@@ -4507,7 +4709,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 533,
     "views": 9537,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "スキャルピングが難しい本当の理由と解決策",
@@ -4527,7 +4730,8 @@ const VIDEOS = [
     "date": "2025-10-11",
     "is_short": true,
     "duration": 58,
-    "views": 31288
+    "views": 31288,
+    "is_live": false
   },
   {
     "title": "まだインジ頼り？“ローソク足だけ”で勝てる理由をプロが解剖",
@@ -4549,7 +4753,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 579,
     "views": 15850,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "CFDトレードで930万円稼いだ方法を徹底解説",
@@ -4572,7 +4777,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 710,
     "views": 15437,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "損切後にメンタル崩壊する人の共通点",
@@ -4592,7 +4798,8 @@ const VIDEOS = [
     "date": "2025-09-26",
     "is_short": true,
     "duration": 60,
-    "views": 8027
+    "views": 8027,
+    "is_live": false
   },
   {
     "title": "加速パターンで稼ぐ！",
@@ -4612,7 +4819,8 @@ const VIDEOS = [
     "date": "2025-09-23",
     "is_short": true,
     "duration": 33,
-    "views": 12843
+    "views": 12843,
+    "is_live": false
   },
   {
     "title": "【完全版】プロトレーダーの取引環境",
@@ -4634,7 +4842,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 489,
     "views": 18100,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "トレードの全て、結局これ",
@@ -4657,7 +4866,8 @@ const VIDEOS = [
     "date": "2025-09-19",
     "is_short": true,
     "duration": 58,
-    "views": 16052
+    "views": 16052,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】今週のトレード、爆益か爆損か",
@@ -4678,7 +4888,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 3789,
     "views": 7611,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "様子見してたらいっちゃった…でも大丈夫！9月15日GBPJPY",
@@ -4699,7 +4910,8 @@ const VIDEOS = [
     "date": "2025-09-17",
     "is_short": true,
     "duration": 33,
-    "views": 13423
+    "views": 13423,
+    "is_live": false
   },
   {
     "title": "チャートパターンは忘れろ！「加速」と「減速」しかない",
@@ -4720,7 +4932,8 @@ const VIDEOS = [
     "date": "2025-09-15",
     "is_short": true,
     "duration": 62,
-    "views": 11824
+    "views": 11824,
+    "is_live": false
   },
   {
     "title": "実際に10万→2000万稼いだテクニック②",
@@ -4740,7 +4953,8 @@ const VIDEOS = [
     "date": "2025-09-13",
     "is_short": true,
     "duration": 60,
-    "views": 13745
+    "views": 13745,
+    "is_live": false
   },
   {
     "title": "こんなん勝ち確パターンじゃん！9月12日NZDUSD",
@@ -4761,7 +4975,8 @@ const VIDEOS = [
     "date": "2025-09-12",
     "is_short": true,
     "duration": 104,
-    "views": 18890
+    "views": 18890,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】値動き激しい今週ラストトレード！！！！",
@@ -4783,7 +4998,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 8425,
     "views": 8308,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "プロのリアルトレード解説！9月9日EURJPY",
@@ -4804,7 +5020,8 @@ const VIDEOS = [
     "date": "2025-09-10",
     "is_short": true,
     "duration": 99,
-    "views": 15978
+    "views": 15978,
+    "is_live": false
   },
   {
     "title": "実際に10万→2000万稼いだテクニック",
@@ -4825,7 +5042,8 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "views": 23159,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "損切り後に崩れる人と崩れない人の決定的な違い",
@@ -4847,7 +5065,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 532,
     "views": 10395,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Explaining the highly reproducible real trades of FX pros! Live broadcast on September 2nd EURAUD",
@@ -4868,7 +5087,8 @@ const VIDEOS = [
     "date": "2025-09-04",
     "is_short": true,
     "duration": 86,
-    "views": 21402
+    "views": 21402,
+    "is_live": false
   },
   {
     "title": "As a result of the huge drop of 30 yen...",
@@ -4888,7 +5108,8 @@ const VIDEOS = [
     "date": "2025-09-03",
     "is_short": true,
     "duration": 58,
-    "views": 6408
+    "views": 6408,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】指標ISM、完全攻略隊",
@@ -4911,7 +5132,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5888,
     "views": 7580,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "Is the Lehman Shock happening again? If you own stocks now, read on!",
@@ -4931,7 +5153,8 @@ const VIDEOS = [
     "date": "2025-09-01",
     "is_short": true,
     "duration": 59,
-    "views": 9838
+    "views": 9838,
+    "is_live": false
   },
   {
     "title": "【300人プロ誕生】プロトレーダーになっていった人たちの思考法",
@@ -4952,7 +5175,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 521,
     "views": 14607,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】3000万円の行方を見守らないか？",
@@ -4975,7 +5199,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6471,
     "views": 8735,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【実践】旅行しながら稼げるのがFXトレーダーの醍醐味だよね",
@@ -4998,7 +5223,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 784,
     "views": 15828,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】経済指標PMIを一緒に見守らないか？",
@@ -5019,7 +5245,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6468,
     "views": 6603,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【挑戦】勉強ほぼゼロでテクニカルアナリスト試験に臨んだ結果…",
@@ -5040,7 +5267,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 481,
     "views": 8604,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "歴史は繰り返すのか？リーマンショックと現在の相場を徹底比較",
@@ -5063,7 +5291,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 869,
     "views": 36178,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "2000万稼ぐまで毎回使った！たった１つの最強ローソク足パターン",
@@ -5086,7 +5315,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 507,
     "views": 36898,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【7年連敗→運用800億】レイ・バロスが“たった1つ”変えて人生逆転した瞬間とは？",
@@ -5107,7 +5337,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 950,
     "views": 13270,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX初心者も必見！リアルチャートでトレード力チェック",
@@ -5130,7 +5361,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 914,
     "views": 19332,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ロスカット崩壊…“安全神話”が砕け散った瞬間【スイスフランショック】",
@@ -5152,7 +5384,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 504,
     "views": 47527,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "600万円を一撃出金！会社員トレーダーが守った「勝ちルール3つ」全部公開",
@@ -5175,7 +5408,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 685,
     "views": 18358,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "400ドル▶2億ドルの実験“3行ルール”だけで史上最速200億を稼いだタートルズの真実【リチャード・デニス】",
@@ -5197,7 +5431,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 647,
     "views": 25057,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "天才じゃなくても90日でFXプロ！“7段レベルUP”学習メソッドで280名が合格した理由",
@@ -5221,7 +5456,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 553,
     "views": 11320,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "初心者が必ずハマるやりがちな失敗3選！",
@@ -5244,7 +5480,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 552,
     "views": 8999,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "完全ゼロから３か月でプロトレーダー　５連続出金で合計536万円",
@@ -5268,7 +5505,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 929,
     "views": 18865,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "1時間あれば勝てる！放置セット×夜スキャ 2大戦略を公開",
@@ -5289,7 +5527,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 795,
     "views": 16189,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "勝率10％アップ!?拡大型トライアングルを完全攻略",
@@ -5311,7 +5550,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 687,
     "views": 15575,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ゼロ→プロトレーダー実例集！最速FX成功ストーリー3連発",
@@ -5333,7 +5573,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1525,
     "views": 15161,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【緊急】FX詐欺コンサルの手口を暴露！“実績パクリ＋高額請求”をZoom対決で追及",
@@ -5354,7 +5595,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 968,
     "views": 14239,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "「ハイレバ＝危険」は大間違い！FXで勝つための『実効レバレッジ』完全解説",
@@ -5376,7 +5618,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 811,
     "views": 16665,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "トレード手順80%カットの最短最速FX術を完全解説",
@@ -5398,7 +5641,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 764,
     "views": 24061,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【🔰初心者】FXの税金を完全解説│節税テクニックも！【税理士対談】",
@@ -5419,7 +5663,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1134,
     "views": 26699,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "資金ゼロでも6000万運用できる方法を完全解説【プロップファームFundora】",
@@ -5442,7 +5687,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1034,
     "views": 22530,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "年利56% AI自動売買“SIRIUS”ついにリリース！",
@@ -5465,7 +5711,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1603,
     "views": 19365,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ガチ検証 1日1時間スキャルピングで稼げるか？",
@@ -5487,7 +5734,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1223,
     "views": 51018,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "トレードでモチベーションを維持するコツ【よすが】#fx #fx初心者",
@@ -5506,7 +5754,8 @@ const VIDEOS = [
     "date": "2025-03-24",
     "is_short": true,
     "duration": 58,
-    "views": 5194
+    "views": 5194,
+    "is_live": false
   },
   {
     "title": "【FX初心者必見】勝ちパターンをリアルチャートで解説",
@@ -5528,7 +5777,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 950,
     "views": 19627,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Can ordinary people make money with FX? [Yosuga]",
@@ -5548,7 +5798,8 @@ const VIDEOS = [
     "date": "2025-03-17",
     "is_short": true,
     "duration": 57,
-    "views": 9089
+    "views": 9089,
+    "is_live": false
   },
   {
     "title": "FX負けを知れば勝てる！負けパターン大全Vol.1",
@@ -5569,7 +5820,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1107,
     "views": 24808,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Is it possible to lose 100 million yen in FX?! [Yosuga]",
@@ -5589,7 +5841,8 @@ const VIDEOS = [
     "date": "2025-03-10",
     "is_short": true,
     "duration": 57,
-    "views": 7742
+    "views": 7742,
+    "is_live": false
   },
   {
     "title": "【 FX初心者必見】これだけ見ればOK！よすが式FX“勝ちパターン集”Vol.1",
@@ -5611,7 +5864,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 821,
     "views": 31789,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "How to deal with negative comments from others [Yosuga]",
@@ -5631,7 +5885,8 @@ const VIDEOS = [
     "date": "2025-03-03",
     "is_short": true,
     "duration": 70,
-    "views": 7733
+    "views": 7733,
+    "is_live": false
   },
   {
     "title": "トレーダーが知っておくべき「ダマシ」を避けるための戦略",
@@ -5654,7 +5909,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 691,
     "views": 20856,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "How much do professional traders really make? [Yosuga]",
@@ -5674,7 +5930,8 @@ const VIDEOS = [
     "date": "2025-02-24",
     "is_short": true,
     "duration": 47,
-    "views": 7789
+    "views": 7789,
+    "is_live": false
   },
   {
     "title": "エントリー前の不安ゼロ！勝てるトレードを実現する５つの直前チェックリスト",
@@ -5697,7 +5954,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 638,
     "views": 16004,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロトレーダーが語る健康的なFXトレード習慣とは【よすが】",
@@ -5718,7 +5976,8 @@ const VIDEOS = [
     "date": "2025-02-17",
     "is_short": true,
     "duration": 55,
-    "views": 6409
+    "views": 6409,
+    "is_live": false
   },
   {
     "title": "【月利176％】よすが式リアルトレードを１つ１つ全部解説する",
@@ -5742,7 +6001,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1298,
     "views": 28803,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXトレード_税金の意外な落とし穴とは【よすが】",
@@ -5761,7 +6021,8 @@ const VIDEOS = [
     "date": "2025-02-10",
     "is_short": true,
     "duration": 50,
-    "views": 6776
+    "views": 6776,
+    "is_live": false
   },
   {
     "title": "FXの値動はランダム？ランダムウォーク仮説で分かった衝撃の真実とは",
@@ -5783,7 +6044,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 687,
     "views": 12198,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX is the best investment theory [Yosuga]",
@@ -5803,7 +6065,8 @@ const VIDEOS = [
     "date": "2025-02-03",
     "is_short": true,
     "duration": 50,
-    "views": 5871
+    "views": 5871,
+    "is_live": false
   },
   {
     "title": "人生初Q&A！FX初心者が疑問に思うことをプロが徹底回答",
@@ -5827,7 +6090,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 997,
     "views": 21434,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FX初心者向け】狙うべきはコレ！おすすめ通貨ランキングTOP3",
@@ -5848,7 +6112,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 669,
     "views": 16657,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【 2025年最新版】最短・高期待値で9万で月140万稼ぐ方法",
@@ -5870,7 +6135,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 886,
     "views": 45089,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【2025年版】初心者がFXで成功する2つの法則",
@@ -5892,7 +6158,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 713,
     "views": 25976,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "年始に要注意！フラッシュクラッシュを攻略せよ",
@@ -5915,7 +6182,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 852,
     "views": 30805,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "移動平均線の本当の使い方を完全公開します",
@@ -5938,7 +6206,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1046,
     "views": 43044,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロ220人以上輩出の高再現性手法「よすが式ダウ手法」の誕生秘話",
@@ -5962,7 +6231,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 909,
     "views": 23440,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "これから値動きが上がる/下がるなんて誰にも分からない…けど勝ち方はある",
@@ -5984,7 +6254,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 916,
     "views": 41179,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "３か月でプロテストに合格した人にトレードのコツをインタビュー",
@@ -6006,7 +6277,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1772,
     "views": 34638,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "損切をキャンセルする「建値撤退」を完全解説",
@@ -6029,7 +6301,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 804,
     "views": 24999,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【🔰初心者向け】どの時間足見たらいいの？",
@@ -6050,7 +6323,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 520,
     "views": 32971,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信？】最強のサポートツールYTTがまた進化するらしい",
@@ -6071,7 +6345,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 9364,
     "views": 14966,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "もし今FXをゼロから始めるならこうする",
@@ -6093,7 +6368,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 572,
     "views": 29894,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "これが揃って初めてエントリーできる３つの条件",
@@ -6114,7 +6390,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 386,
     "views": 31131,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "確実にレベルが上がる「超実践FX問題集」作った",
@@ -6138,7 +6415,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 744,
     "views": 37725,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "安定して勝つ！スキャルピングのコツ",
@@ -6160,7 +6438,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 423,
     "views": 104852,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "経済指標の立ち回り、これだけです",
@@ -6181,7 +6460,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 587,
     "views": 20827,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXは勝ち方無限、負け方１つ",
@@ -6203,7 +6483,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 748,
     "views": 52541,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロ実践の確実なFX上達法２つ",
@@ -6225,7 +6506,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 705,
     "views": 25604,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全保存版】FXの需要と供給、一瞬で見えるようにする",
@@ -6248,7 +6530,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 600,
     "views": 60005,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "騙されるな！ガチのプロトレーダーの成績はこんなもんです",
@@ -6271,7 +6554,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 973,
     "views": 100229,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【メンタル最強】トレードで感情を捨てた方法",
@@ -6293,7 +6577,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 629,
     "views": 20467,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXの残酷な真実",
@@ -6315,7 +6600,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 765,
     "views": 50893,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "「損切したのに戻ってきた！😭」をなくす方法",
@@ -6338,7 +6624,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 483,
     "views": 35106,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "150人以上のプロを輩出して気付いた、FXで勝つ人負ける人の決定的な違い4選",
@@ -6361,7 +6648,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 578,
     "views": 22330,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "爆益か破産かのボーダーライン　FXでのバルサラの破産確率",
@@ -6383,7 +6671,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 662,
     "views": 16709,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "ゲーム理論でFXを徹底解析したら真実が見えた",
@@ -6404,7 +6693,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 737,
     "views": 27478,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信？】ゲーム理論をFXに適用したら本質見えてこない？",
@@ -6426,7 +6716,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 7561,
     "views": 12990,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "3日で3万→1200万にしたプロトレーダーに全てを聞いてみた",
@@ -6450,7 +6741,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1092,
     "views": 80235,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "400人教えて頻出した負け確定チャートパターン",
@@ -6472,7 +6764,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 310,
     "views": 35276,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【初心者向け】FX億トレーダーのトレード環境＆ツールを全部紹介します",
@@ -6492,7 +6785,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 542,
     "views": 40370,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロを100人以上輩出した伝説「FX SPACE」を完全解説",
@@ -6515,7 +6809,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 582,
     "views": 18492,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信?】問題集出したり、AIオートトレード進捗話したり",
@@ -6537,7 +6832,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5763,
     "views": 8491,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "FXが最強な理由 他投資と徹底比較",
@@ -6559,7 +6855,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 719,
     "views": 19526,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "初心者の99％が勘違いしているFXで勝つ方法",
@@ -6581,7 +6878,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 560,
     "views": 33888,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "1億円稼ぐまでにやったこと",
@@ -6604,7 +6902,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 518,
     "views": 47075,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロが使う高勝率チャートパターン2選",
@@ -6626,7 +6925,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 653,
     "views": 159004,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX初心者がやりがちな失敗3選",
@@ -6647,7 +6947,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 512,
     "views": 23257,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "”ながら”でできるスキャルピング手法完全解説",
@@ -6670,7 +6971,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 649,
     "views": 57984,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "実践的ローソク足パターンは３つで完璧",
@@ -6692,7 +6994,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 514,
     "views": 118333,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【＋81万円】旅行しながらスマホで稼ぐプロトレーダーの1日",
@@ -6714,7 +7017,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 497,
     "views": 23558,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全版】FX初心者ガイド「 FXの勝ち方」編 ＿ゼロからわかるFXシリーズNo .4",
@@ -6737,7 +7041,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1331,
     "views": 65363,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全版】FX初心者ガイド「 FXのはじめ方」編 ＿ゼロからわかるFXシリーズNo .3",
@@ -6758,7 +7063,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1689,
     "views": 60402,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【1日で＋61万】FXで勝てるようになった１つのきっかけ",
@@ -6779,7 +7085,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 508,
     "views": 61443,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全版】FX初心者ガイド「 FXの基礎知識」編 ＿ゼロからわかるFXシリーズNo .2",
@@ -6801,7 +7108,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1254,
     "views": 48722,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX経験ゼロ初心者→プロまで３か月＋半年間月利12％以上継続！最速上達者インタビュー",
@@ -6825,7 +7133,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1129,
     "views": 24430,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全版】FX初心者ガイド「FXって何？」編 ＿ゼロからわかるFXシリーズNo .1",
@@ -6846,7 +7155,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1275,
     "views": 72912,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】AIを使ったオートトレードが完成した話とかをするかも",
@@ -6868,7 +7178,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6084,
     "views": 9031,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【初心者必見】６年間トレードし続けて辿り着いた必勝ルール５選",
@@ -6891,7 +7202,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 479,
     "views": 27923,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【初心者もできる】1年間よすがのシナリオ構築に従ってたら勝てたのか？",
@@ -6914,7 +7226,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 455,
     "views": 13428,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "5分のセットで49万円稼ぐプロトレーダーの日常",
@@ -6937,7 +7250,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 528,
     "views": 28165,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロトレーダーを輩出しまくってるFX攻略フローチャートを解説する",
@@ -6959,7 +7273,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 994,
     "views": 40730,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】一足先に今年の振り返りと来年の目標を決めないか？",
@@ -6981,7 +7296,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 5219,
     "views": 6387,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "今日からFXの常識を変えていきます",
@@ -7004,7 +7320,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 623,
     "views": 21044,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "専業6年FXトレーダーが毎朝やってる必須ルーティン",
@@ -7028,7 +7345,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 946,
     "views": 47198,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "全トレーダーに絶対役立つツールYTTを作ったので全機能を見てほしい",
@@ -7051,7 +7369,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2911,
     "views": 58609,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "特殊なトレード手法で10万を300万にしたので解説する",
@@ -7074,7 +7393,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 873,
     "views": 63331,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "#13【FXライブ配信】400万達成を皆で見届けてくれ【10万→1000万企画】",
@@ -7095,7 +7415,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 4619,
     "views": 99,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "奪われた人生を自分のものにした話 in沖縄",
@@ -7116,7 +7437,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1007,
     "views": 29851,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FXライブ配信】１週間の旅から帰ってきたトレーダー【雑談】",
@@ -7137,7 +7459,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6941,
     "views": 7003,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "○○○を使って現実的に最短で「1億円」到達する方法",
@@ -7160,7 +7483,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1389,
     "views": 71487,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "最強トレードツール作ったからお披露目します",
@@ -7183,7 +7507,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2633,
     "views": 57712,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX歴3か月の初心者にプロが3か月間みっちり教え込んだ結果",
@@ -7205,7 +7530,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1236,
     "views": 43863,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "最速で10万円を1000万円にする現実的な方法完全解説",
@@ -7228,7 +7554,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 802,
     "views": 129849,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXで1日1万円稼ぐ技術、スキャルピング完全解説",
@@ -7251,7 +7578,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 815,
     "views": 342380,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "1万回トレードしても勝ちを安定させる技術、シナリオ構築完全解説",
@@ -7273,7 +7601,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 538,
     "views": 50077,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "初心者時代に読みたかった…おすすめFX必読本３選",
@@ -7293,7 +7622,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 533,
     "views": 31039,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "絶対逃すな！今だけもらえる貴金属バープレゼントキャンペーン",
@@ -7314,7 +7644,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 317,
     "views": 4992,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "1日1時間縛りトレードで稼げるのか？実践してみた結果",
@@ -7336,7 +7667,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 542,
     "views": 43068,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【7日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7359,7 +7691,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 232,
     "views": 20141,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【6日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7383,7 +7716,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 129,
     "views": 19213,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【5日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7405,7 +7739,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 238,
     "views": 21965,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【4日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7427,7 +7762,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 215,
     "views": 26013,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【3日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7450,7 +7786,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 162,
     "views": 33586,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【2日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7472,7 +7809,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 136,
     "views": 42619,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【1日目】1週間でFX初心者を勝てるようにする最短上達法",
@@ -7493,7 +7831,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 185,
     "views": 65540,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FX初期時代に600万円損切して気付いたFXの真実",
@@ -7517,7 +7856,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 675,
     "views": 77576,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "もし3月よすがのシナリオ構築に従ってトレードしてたら…",
@@ -7540,7 +7880,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 297,
     "views": 14425,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "最強AIでFX必勝法を作ろう",
@@ -7562,7 +7903,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 834,
     "views": 11435,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "克服せよ！FXで負ける唯一の原因、プロスペクト理論完全解説",
@@ -7584,7 +7926,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 538,
     "views": 56275,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "よすがのシナリオ構築動画に従ってトレードしただけで稼げる？",
@@ -7606,7 +7949,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 447,
     "views": 20296,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【実録】リアルなプロトレーダーの1日 浅草編",
@@ -7628,7 +7972,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 645,
     "views": 71645,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXエントリー前にこの3つだけ確認したらめっちゃ勝てるようになります",
@@ -7650,7 +7995,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 531,
     "views": 99305,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "絶ッ対使って！必須ツールTradingView完全解説",
@@ -7673,7 +8019,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 727,
     "views": 74148,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXを知らない人でも10分で分かるように実戦まで解説するダウ理論",
@@ -7697,7 +8044,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 694,
     "views": 108531,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "半年で2500万稼ぐ、ハイレバレッジでのリスクコントロール術",
@@ -7719,7 +8067,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 501,
     "views": 61921,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "メンバーシップって何やってるの？",
@@ -7742,7 +8091,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 187,
     "views": 12593,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完全解説】FXで勝つためには避けては通れない道、過去相場検証",
@@ -7763,7 +8113,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1108,
     "views": 143486,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "投資初心者は株や不動産ではなく「FX」すべし！理由TOP5",
@@ -7785,7 +8136,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 521,
     "views": 30102,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "10万を2000万にしたノーリスクFX爆益法",
@@ -7807,7 +8159,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 397,
     "views": 116047,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【初心者向け】FXが確実に上手くなる方法とロードマップ",
@@ -7828,7 +8181,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 678,
     "views": 64198,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "損切の後はチャンスになる",
@@ -7851,7 +8205,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 590,
     "views": 13547,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "専業5年目トレーダーが「専業トレーダーになれる条件」を解説する",
@@ -7873,7 +8228,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 437,
     "views": 41858,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "「毎日トレード」思考はすごく危険！【今週のリアルトレード解説】",
@@ -7897,7 +8253,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 225,
     "views": 15131,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【FX初心者向け】プロトレーダーの取引環境、全部紹介します",
@@ -7918,7 +8275,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1512,
     "views": 130020,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "逆行トレンドでもエントリーする方法【今週のリアルトレード解説】",
@@ -7940,7 +8298,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 570,
     "views": 13481,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "とりあえずこれやってれば稼げるFX勝ちパターン",
@@ -7961,7 +8320,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 354,
     "views": 104801,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロトレーダーが5万円を5日間運用した結果、当てられた人に現金プレゼント結果発表＆今後の方針トーク",
@@ -7983,7 +8343,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 487,
     "views": 4397,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "今週のリアルトレードからFX必勝パターンを学ぶ【11/14~18】",
@@ -8006,7 +8367,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 239,
     "views": 13281,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "Absolutely no-no behaviors of people who can't win in FX #shorts",
@@ -8026,7 +8388,8 @@ const VIDEOS = [
     "date": "2022-11-08",
     "is_short": true,
     "duration": 48,
-    "views": 25524
+    "views": 25524,
+    "is_live": false
   },
   {
     "title": "【現金】FXで5万円を5日間運用した結果、当てられたらその額あげるよ",
@@ -8048,7 +8411,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 242,
     "views": 2780,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【初心者必見】FXで勝てるようになった、たった１つのポイント",
@@ -8069,7 +8433,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 614,
     "views": 131313,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "プロトレーダーが解説するFXで勝つための唯一の方法 #Shorts",
@@ -8090,7 +8455,8 @@ const VIDEOS = [
     "date": "2022-10-25",
     "is_short": true,
     "duration": 59,
-    "views": 30922
+    "views": 30922,
+    "is_live": false
   },
   {
     "title": "【これがリアル】FXで1万円を100万円にするのは簡単じゃない、けど俺ならできるはずなんだ【9月編】",
@@ -8114,7 +8480,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 540,
     "views": 39628,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【初心者必見】FXで勝てない人がしているNG行動 6選",
@@ -8135,7 +8502,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 705,
     "views": 55921,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【完結】FX初心者に1か月間ガチで教えてみた結果、ヤバいことになった【リアルトレード編】",
@@ -8160,7 +8528,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 935,
     "views": 25635,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【プロが教える】FX初心者に1か月間ガチで教えてみた結果、ヤバいことになった【手法マスター編】",
@@ -8183,7 +8552,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 844,
     "views": 37811,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【必勝法を作る!!】FX初心者に1か月間ガチで教えてみた結果、ヤバいことになった【教え子決定編】",
@@ -8206,7 +8576,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 714,
     "views": 15852,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "【保存版】FX初心者でも年4000万円稼ぐ「よすが式ダウ手法」を完全理解",
@@ -8231,7 +8602,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2780,
     "views": 699716,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": false
   },
   {
     "title": "FXプロトレーダーが1万円を100万円にする過程、全部見せます【8月編】",
@@ -8254,7 +8626,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 565,
     "views": 110972,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   },
   {
     "title": "【FXライブ配信】損切の手本、見せます｜1万円企画【#6】",
@@ -8279,7 +8652,8 @@ const VIDEOS = [
     "is_short": false,
     "duration": 2419,
     "views": 12417,
-    "cat_v2": true
+    "cat_v2": true,
+    "is_live": true
   }
 ];
 
