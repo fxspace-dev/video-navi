@@ -4,15 +4,14 @@ const VIDEOS = [
     "url": "https://www.youtube.com/watch?v=w5TEBj2b5AM",
     "thumb": "https://img.youtube.com/vi/w5TEBj2b5AM/mqdefault.jpg",
     "levels": [
-      "初心者",
       "中級",
       "上級"
     ],
     "categories": [
       "過去検証",
       "実践",
-      "手法",
       "YTT",
+      "手法",
       "トレード環境"
     ],
     "method": "一般公開",
@@ -23,7 +22,8 @@ const VIDEOS = [
     "is_live": false,
     "duration": 639,
     "transcript_ok": true,
-    "views": 886
+    "views": 886,
+    "cat_v2": true
   },
   {
     "title": "【フル版】FTO（YTT搭載）で過去相場検証をしてみた",
@@ -35,19 +35,21 @@ const VIDEOS = [
     ],
     "categories": [
       "過去検証",
+      "実践",
       "YTT",
-      "リアルトレード",
-      "手法"
+      "手法",
+      "トレード環境"
     ],
     "method": "メンバーシップ限定公開",
-    "summary": "Forex Tester Onlineで自作ツールYTTが利用可能になったことを受け、過去相場検証をひたすら行う動画。ドル円を対象に、実際のトレード環境に近い形で検証を進める。",
+    "summary": "よすがが過去相場検証ツールFTOを使用し、トレードの思考プロセスを全て喋りながら実際の検証を行う動画。セットアップからエントリー、決済、統計データ公開までを実演し、過去検証の重要性と具体的な進め方を解説している。",
     "vid_id": "-kzUKf9w-HE",
     "date": "2026-07-25",
     "is_short": false,
     "is_live": false,
     "duration": 1534,
     "transcript_ok": true,
-    "views": 45
+    "views": 45,
+    "cat_v2": true
   },
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#8",
