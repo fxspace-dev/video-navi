@@ -104,8 +104,8 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【2章 ナウキャスト】",
-    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248906151104654",
-    "thumb": "https://img.youtube.com/vi/Q1xuEpJuWRc/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248077008244736",
+    "thumb": "https://img.youtube.com/vi/6VHINPwHyq8/mqdefault.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -117,7 +117,7 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "よすが式ダウ手法習得編の第2章として、ナウキャストの手法について解説している。",
-    "vid_id": "Q1xuEpJuWRc",
+    "vid_id": "6VHINPwHyq8",
     "date": "2023-06-17",
     "is_short": false,
     "is_live": false,
@@ -125,8 +125,8 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【1章 ライン】",
-    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248906151104654",
-    "thumb": "https://img.youtube.com/vi/d0QNPmq28eE/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247476535165158",
+    "thumb": "https://img.youtube.com/vi/YSOMB0J4VwI/mqdefault.jpg",
     "levels": [
       "初心者",
       "中級"
@@ -139,7 +139,7 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "よすが式ダウ手法の習得に向けた第一章として、ラインの引き方や活用方法を解説している。",
-    "vid_id": "d0QNPmq28eE",
+    "vid_id": "YSOMB0J4VwI",
     "date": "2023-03-01",
     "is_short": false,
     "is_live": false,
@@ -147,8 +147,8 @@ const VIDEOS = [
   },
   {
     "title": "よすが式ダウ手法習得編【0章 準備】",
-    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248906151104654",
-    "thumb": "https://img.youtube.com/vi/jFh1TOOLnY4/mqdefault.jpg",
+    "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528247152793620480",
+    "thumb": "https://img.youtube.com/vi/EgrGud-QgfA/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -160,7 +160,7 @@ const VIDEOS = [
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレードにおけるダウ理論の基礎知識と、よすが式ダウ手法を習得するための準備段階について解説している。",
-    "vid_id": "jFh1TOOLnY4",
+    "vid_id": "EgrGud-QgfA",
     "date": "2023-01-18",
     "is_short": false,
     "is_live": false,

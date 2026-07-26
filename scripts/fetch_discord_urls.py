@@ -101,13 +101,17 @@ def fetch_messages(channel_id: str, limit_total: int = 1000) -> list[dict]:
 
 
 def extract_vid_ids(msg: dict) -> list[str]:
-    """メッセージ(content+embeds)からYouTube動画IDをすべて抽出"""
+    """メッセージ本文＋embedのURL/タイトルからYouTube動画IDを抽出。
+
+    ※ embedのdescription(動画説明文)は「前回動画→」等の他動画リンクを含むため
+      抽出対象にしない。含めると、ある動画の説明文で参照された別動画IDが
+      その投稿にマッピングされ、URL/vid_idが誤って別動画に紐づく不具合が起きる。
+    """
     ids: list[str] = []
     text_sources = [msg.get("content", "")]
     for emb in msg.get("embeds", []):
         text_sources.append(emb.get("url", "") or "")
         text_sources.append(emb.get("title", "") or "")
-        text_sources.append(emb.get("description", "") or "")
     for src in text_sources:
         for pat in YT_PATTERNS:
             for m in pat.finditer(src):
