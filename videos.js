@@ -1,50 +1,52 @@
 const VIDEOS = [
   {
     "title": "【FXライブ配信】10万からスキャで増やすプロトレーダー#8",
-    "url": "https://www.youtube.com/watch?v=FF9u31wh9Uc",
-    "thumb": "https://img.youtube.com/vi/FF9u31wh9Uc/mqdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=r58BX3eexjU",
+    "thumb": "https://img.youtube.com/vi/r58BX3eexjU/mqdefault.jpg",
     "levels": [
       "初心者",
-      "中級"
+      "中級",
+      "上級"
     ],
     "categories": [
       "リアルトレード",
       "手法",
-      "実践",
-      "資金管理"
+      "相場",
+      "雑談"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが10万円の資金からスキャルピングで利益を増やす様子をライブ配信で解説している。",
-    "vid_id": "FF9u31wh9Uc",
+    "summary": "プロトレーダーが10万円からスキャルピングで資金を増やすFXライブ配信第8弾。ドル円をショートで狙うシナリオを中心に、指標後の値動きやトレード判断について解説。",
+    "vid_id": "r58BX3eexjU",
     "date": "2026-07-14",
     "is_short": false,
     "is_live": true,
-    "duration": 0,
-    "views": 0
+    "duration": 4915,
+    "transcript_ok": true,
+    "views": 5477
   },
   {
     "title": "プロトレーダーが使うナウキャストとは？",
-    "url": "https://www.youtube.com/shorts/z_YEqGSrWY0",
-    "thumb": "https://i.ytimg.com/vi/z_YEqGSrWY0/hq2.jpg",
+    "url": "https://www.youtube.com/shorts/fAEy5mNTkxQ",
+    "thumb": "https://i.ytimg.com/vi/fAEy5mNTkxQ/hq2.jpg",
     "levels": [
       "中級",
       "上級"
     ],
     "categories": [
-      "手法",
       "ナウキャスト",
+      "手法",
       "相場",
-      "実践"
+      "チャート"
     ],
     "method": "一般公開",
-    "summary": "プロトレーダーが使うナウキャストについて、上昇トレンドにおける買注文と売注文の量の違いや、有利不利の方向性を解説している。",
-    "vid_id": "z_YEqGSrWY0",
-    "date": "2026-04-22",
+    "summary": "プロトレーダーが使うナウキャストについて解説。チャートの売買圧の要素を読み解き、今の相場環境を言語化する能力であり、未来予測ができないFXにおいて重要なスキルであることを説明。",
+    "vid_id": "fAEy5mNTkxQ",
+    "date": "2026-04-17",
     "is_short": true,
     "is_live": false,
     "duration": 58,
     "transcript_ok": true,
-    "views": 5626
+    "views": 4698
   },
   {
     "title": "プロだって迷うのさ 8月11日XAU/USD",
@@ -69,7 +71,7 @@ const VIDEOS = [
     "is_live": false,
     "duration": 61,
     "transcript_ok": true,
-    "views": 7239
+    "views": 7428
   },
   {
     "title": "【暴露】チェコ本社に突撃！Fintokeiの裏側を社長が全部ぶっちゃけてくれた",
@@ -94,7 +96,7 @@ const VIDEOS = [
     "is_live": false,
     "duration": 2186,
     "transcript_ok": true,
-    "views": 6745
+    "views": 6773
   },
   {
     "title": "【フル版】スキャリアルトレードを全公開する",
@@ -117,7 +119,7 @@ const VIDEOS = [
     "is_short": false,
     "is_live": false,
     "duration": 769,
-    "views": 550,
+    "views": 551,
     "transcript_ok": true
   },
   {
@@ -141,7 +143,7 @@ const VIDEOS = [
     "is_short": false,
     "is_live": false,
     "duration": 594,
-    "views": 9596,
+    "views": 9605,
     "transcript_ok": true
   },
   {
@@ -167,7 +169,7 @@ const VIDEOS = [
     "is_live": false,
     "duration": 639,
     "transcript_ok": true,
-    "views": 7473,
+    "views": 7487,
     "cat_v2": true
   },
   {
@@ -193,7 +195,7 @@ const VIDEOS = [
     "is_live": false,
     "duration": 1534,
     "transcript_ok": true,
-    "views": 889,
+    "views": 888,
     "cat_v2": true
   },
   {
@@ -216,7 +218,7 @@ const VIDEOS = [
     "is_short": false,
     "is_live": false,
     "duration": 1624,
-    "views": 8286,
+    "views": 8288,
     "transcript_ok": true
   },
   {
@@ -240,7 +242,7 @@ const VIDEOS = [
     "is_short": false,
     "is_live": false,
     "duration": 1803,
-    "views": 7380,
+    "views": 7383,
     "transcript_ok": true
   },
   {
@@ -286,7 +288,7 @@ const VIDEOS = [
     "date": "2026-07-16",
     "is_short": true,
     "duration": 65,
-    "views": 11209,
+    "views": 11218,
     "is_live": false
   },
   {
@@ -308,7 +310,7 @@ const VIDEOS = [
     "date": "2025-11-02",
     "is_short": false,
     "duration": 1096,
-    "views": 431,
+    "views": 432,
     "is_live": false,
     "transcript_ok": true
   },
@@ -496,7 +498,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1100,
     "transcript_ok": true,
-    "views": 13733,
+    "views": 13745,
     "is_live": false
   },
   {
@@ -542,7 +544,7 @@ const VIDEOS = [
     "date": "2026-07-06",
     "is_short": false,
     "duration": 0,
-    "views": 5427,
+    "views": 5430,
     "cat_v2": true,
     "transcript_ok": true,
     "is_live": true
@@ -568,7 +570,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 593,
     "transcript_ok": true,
-    "views": 15248,
+    "views": 15256,
     "cat_v2": true,
     "is_live": false
   },
@@ -591,7 +593,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 301,
     "transcript_ok": true,
-    "views": 831,
+    "views": 834,
     "cat_v2": true,
     "is_live": false
   },
@@ -664,7 +666,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 626,
     "transcript_ok": true,
-    "views": 5572,
+    "views": 5575,
     "cat_v2": true,
     "is_live": false
   },
@@ -687,7 +689,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 60,
     "transcript_ok": true,
-    "views": 7003,
+    "views": 7007,
     "cat_v2": true,
     "is_live": false
   },
@@ -712,7 +714,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 908,
     "transcript_ok": true,
-    "views": 10737,
+    "views": 10741,
     "cat_v2": true,
     "is_live": false
   },
@@ -761,7 +763,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "transcript_ok": true,
-    "views": 5527,
+    "views": 5530,
     "cat_v2": true,
     "is_live": false
   },
@@ -785,7 +787,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 57,
     "transcript_ok": true,
-    "views": 5054,
+    "views": 5070,
     "is_live": false
   },
   {
@@ -808,7 +810,7 @@ const VIDEOS = [
     "is_short": true,
     "duration": 59,
     "transcript_ok": true,
-    "views": 4685,
+    "views": 4699,
     "is_live": false
   },
   {
@@ -829,7 +831,7 @@ const VIDEOS = [
     "date": "2026-06-03",
     "is_short": true,
     "duration": 59,
-    "views": 5595,
+    "views": 5597,
     "is_live": false
   },
   {
@@ -852,7 +854,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 785,
     "transcript_ok": true,
-    "views": 4166,
+    "views": 4167,
     "cat_v2": true,
     "is_live": false
   },
@@ -874,7 +876,7 @@ const VIDEOS = [
     "date": "2026-05-29",
     "is_short": true,
     "duration": 57,
-    "views": 2815,
+    "views": 2818,
     "is_live": false
   },
   {
@@ -896,7 +898,7 @@ const VIDEOS = [
     "date": "2026-05-27",
     "is_short": true,
     "duration": 60,
-    "views": 3430,
+    "views": 3431,
     "is_live": false
   },
   {
@@ -921,7 +923,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 646,
     "transcript_ok": true,
-    "views": 10715,
+    "views": 10717,
     "cat_v2": true,
     "is_live": false
   },
@@ -988,7 +990,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1118,
     "transcript_ok": true,
-    "views": 19092,
+    "views": 19097,
     "cat_v2": true,
     "is_live": false
   },
@@ -1058,7 +1060,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1342,
     "transcript_ok": true,
-    "views": 17536,
+    "views": 17542,
     "cat_v2": true,
     "is_live": false
   },
@@ -1080,7 +1082,7 @@ const VIDEOS = [
     "date": "2026-05-08",
     "is_short": true,
     "duration": 60,
-    "views": 10097,
+    "views": 10102,
     "is_live": false
   },
   {
@@ -1101,7 +1103,7 @@ const VIDEOS = [
     "date": "2026-05-06",
     "is_short": true,
     "duration": 60,
-    "views": 3757,
+    "views": 3758,
     "is_live": false
   },
   {
@@ -1121,7 +1123,7 @@ const VIDEOS = [
     "date": "2026-05-01",
     "is_short": true,
     "duration": 59,
-    "views": 5618,
+    "views": 5619,
     "cat_v2": true,
     "is_live": false
   },
@@ -1166,7 +1168,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 950,
     "transcript_ok": true,
-    "views": 9968,
+    "views": 9967,
     "cat_v2": true,
     "is_live": false
   },
@@ -1282,7 +1284,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 550,
     "transcript_ok": true,
-    "views": 868,
+    "views": 867,
     "cat_v2": true,
     "is_live": false
   },
@@ -1331,7 +1333,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 9002,
     "transcript_ok": true,
-    "views": 39,
+    "views": 40,
     "cat_v2": true,
     "is_live": true
   },
@@ -1696,7 +1698,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1301,
     "transcript_ok": true,
-    "views": 712,
+    "views": 714,
     "cat_v2": true,
     "is_live": false
   },
@@ -1721,7 +1723,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 430,
     "transcript_ok": true,
-    "views": 611,
+    "views": 612,
     "cat_v2": true,
     "is_live": false
   },
@@ -1796,7 +1798,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 930,
     "transcript_ok": true,
-    "views": 3982,
+    "views": 3984,
     "cat_v2": true,
     "is_live": false
   },
@@ -2455,7 +2457,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 842,
     "transcript_ok": true,
-    "views": 291,
+    "views": 292,
     "cat_v2": true,
     "is_live": false
   },
@@ -2732,7 +2734,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1187,
     "transcript_ok": true,
-    "views": 4279,
+    "views": 4285,
     "cat_v2": true,
     "is_live": false
   },
@@ -3150,7 +3152,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 726,
     "transcript_ok": true,
-    "views": 7071,
+    "views": 7072,
     "cat_v2": true,
     "is_live": false
   },
@@ -3196,7 +3198,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1009,
     "transcript_ok": true,
-    "views": 17568,
+    "views": 17574,
     "cat_v2": true,
     "is_live": false
   },
@@ -3247,7 +3249,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 6320,
     "transcript_ok": true,
-    "views": 7668,
+    "views": 7670,
     "cat_v2": true,
     "is_live": true
   },
@@ -3339,7 +3341,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 1053,
     "transcript_ok": true,
-    "views": 12255,
+    "views": 12261,
     "cat_v2": true,
     "is_live": false
   },
@@ -3405,7 +3407,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 852,
     "transcript_ok": true,
-    "views": 6225,
+    "views": 6226,
     "cat_v2": true,
     "is_live": false
   },
@@ -3447,7 +3449,7 @@ const VIDEOS = [
     "date": "2026-03-20",
     "is_short": true,
     "duration": 58,
-    "views": 5090,
+    "views": 5091,
     "is_live": false
   },
   {
@@ -3468,7 +3470,7 @@ const VIDEOS = [
     "date": "2026-03-18",
     "is_short": true,
     "duration": 57,
-    "views": 8915,
+    "views": 8918,
     "cat_v2": true,
     "is_live": false
   },
@@ -3649,7 +3651,7 @@ const VIDEOS = [
     "date": "2026-02-25",
     "is_short": true,
     "duration": 52,
-    "views": 6541,
+    "views": 6545,
     "is_live": false
   },
   {
@@ -3714,7 +3716,7 @@ const VIDEOS = [
     "is_short": false,
     "duration": 676,
     "transcript_ok": true,
-    "views": 7488,
+    "views": 7490,
     "cat_v2": true,
     "is_live": false
   },
@@ -3783,7 +3785,7 @@ const VIDEOS = [
     "date": "2026-02-07",
     "is_short": false,
     "duration": 1642,
-    "views": 16314,
+    "views": 16316,
     "cat_v2": true,
     "transcript_ok": true,
     "is_live": false
@@ -3807,7 +3809,7 @@ const VIDEOS = [
     "date": "2026-02-06",
     "is_short": true,
     "duration": 57,
-    "views": 7274,
+    "views": 7271,
     "is_live": false
   },
   {
@@ -3852,7 +3854,7 @@ const VIDEOS = [
     "date": "2026-01-31",
     "is_short": false,
     "duration": 1783,
-    "views": 9042,
+    "views": 9043,
     "cat_v2": true,
     "transcript_ok": true,
     "is_live": false
@@ -3968,7 +3970,7 @@ const VIDEOS = [
     "date": "2026-01-21",
     "is_short": true,
     "duration": 59,
-    "views": 6860,
+    "views": 6859,
     "is_live": false
   },
   {
@@ -4149,7 +4151,7 @@ const VIDEOS = [
     "date": "2026-01-01",
     "is_short": false,
     "duration": 1251,
-    "views": 25113,
+    "views": 25132,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4222,7 +4224,7 @@ const VIDEOS = [
     "date": "2025-12-30",
     "is_short": false,
     "duration": 961,
-    "views": 9948,
+    "views": 9951,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4247,7 +4249,7 @@ const VIDEOS = [
     "date": "2025-12-27",
     "is_short": false,
     "duration": 1220,
-    "views": 13012,
+    "views": 13018,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4319,7 +4321,7 @@ const VIDEOS = [
     "date": "2025-12-10",
     "is_short": true,
     "duration": 45,
-    "views": 7791,
+    "views": 7792,
     "is_live": false
   },
   {
@@ -4340,7 +4342,7 @@ const VIDEOS = [
     "date": "2025-12-07",
     "is_short": false,
     "duration": 5858,
-    "views": 17038,
+    "views": 17043,
     "cat_v2": true,
     "is_live": true,
     "transcript_ok": true
@@ -4364,7 +4366,7 @@ const VIDEOS = [
     "date": "2025-12-06",
     "is_short": false,
     "duration": 705,
-    "views": 17704,
+    "views": 17712,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4411,7 +4413,7 @@ const VIDEOS = [
     "date": "2025-11-29",
     "is_short": false,
     "duration": 675,
-    "views": 15828,
+    "views": 15829,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4435,7 +4437,7 @@ const VIDEOS = [
     "date": "2025-11-27",
     "is_short": true,
     "duration": 58,
-    "views": 4897,
+    "views": 4898,
     "is_live": false
   },
   {
@@ -4481,7 +4483,7 @@ const VIDEOS = [
     "date": "2025-11-22",
     "is_short": false,
     "duration": 1032,
-    "views": 33582,
+    "views": 33596,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4504,7 +4506,7 @@ const VIDEOS = [
     "date": "2025-11-20",
     "is_short": true,
     "duration": 51,
-    "views": 14857,
+    "views": 14858,
     "cat_v2": true,
     "is_live": false
   },
@@ -4550,7 +4552,7 @@ const VIDEOS = [
     "date": "2025-11-15",
     "is_short": false,
     "duration": 959,
-    "views": 23269,
+    "views": 23270,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4573,7 +4575,7 @@ const VIDEOS = [
     "date": "2025-11-13",
     "is_short": true,
     "duration": 57,
-    "views": 10083,
+    "views": 10084,
     "is_live": false
   },
   {
@@ -4595,7 +4597,7 @@ const VIDEOS = [
     "date": "2025-11-13",
     "is_short": false,
     "duration": 5904,
-    "views": 16146,
+    "views": 16149,
     "cat_v2": true,
     "is_live": true,
     "transcript_ok": true
@@ -4662,7 +4664,7 @@ const VIDEOS = [
     "date": "2025-11-08",
     "is_short": false,
     "duration": 903,
-    "views": 20460,
+    "views": 20463,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4687,7 +4689,7 @@ const VIDEOS = [
     "date": "2025-11-01",
     "is_short": false,
     "duration": 805,
-    "views": 14427,
+    "views": 14429,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -4797,7 +4799,7 @@ const VIDEOS = [
     "date": "2025-10-21",
     "is_short": true,
     "duration": 49,
-    "views": 8746,
+    "views": 8747,
     "is_live": false
   },
   {
@@ -4888,7 +4890,7 @@ const VIDEOS = [
     "date": "2025-10-11",
     "is_short": true,
     "duration": 58,
-    "views": 33923,
+    "views": 33936,
     "is_live": false
   },
   {
@@ -5001,7 +5003,7 @@ const VIDEOS = [
     "date": "2025-09-20",
     "is_short": false,
     "duration": 489,
-    "views": 18642,
+    "views": 18646,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5027,7 +5029,7 @@ const VIDEOS = [
     "date": "2025-09-19",
     "is_short": true,
     "duration": 58,
-    "views": 16102,
+    "views": 16104,
     "is_live": false
   },
   {
@@ -5072,7 +5074,7 @@ const VIDEOS = [
     "date": "2025-09-17",
     "is_short": true,
     "duration": 33,
-    "views": 13514,
+    "views": 13513,
     "is_live": false
   },
   {
@@ -5183,7 +5185,7 @@ const VIDEOS = [
     "date": "2025-09-10",
     "is_short": true,
     "duration": 99,
-    "views": 16409,
+    "views": 16413,
     "is_live": false
   },
   {
@@ -5204,7 +5206,7 @@ const VIDEOS = [
     "date": "2025-09-08",
     "is_short": true,
     "duration": 59,
-    "views": 24375,
+    "views": 24384,
     "cat_v2": true,
     "is_live": false
   },
@@ -5227,7 +5229,7 @@ const VIDEOS = [
     "date": "2025-09-06",
     "is_short": false,
     "duration": 532,
-    "views": 10444,
+    "views": 10445,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5251,7 +5253,7 @@ const VIDEOS = [
     "date": "2025-09-04",
     "is_short": true,
     "duration": 86,
-    "views": 21942,
+    "views": 21949,
     "is_live": false
   },
   {
@@ -5318,7 +5320,7 @@ const VIDEOS = [
     "date": "2025-09-01",
     "is_short": true,
     "duration": 59,
-    "views": 9858,
+    "views": 9859,
     "is_live": false
   },
   {
@@ -5339,7 +5341,7 @@ const VIDEOS = [
     "date": "2025-08-30",
     "is_short": false,
     "duration": 521,
-    "views": 14829,
+    "views": 14830,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5389,7 +5391,7 @@ const VIDEOS = [
     "date": "2025-08-23",
     "is_short": false,
     "duration": 784,
-    "views": 15972,
+    "views": 15977,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5435,7 +5437,7 @@ const VIDEOS = [
     "date": "2025-08-16",
     "is_short": false,
     "duration": 481,
-    "views": 8678,
+    "views": 8679,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5460,7 +5462,7 @@ const VIDEOS = [
     "date": "2025-08-09",
     "is_short": false,
     "duration": 869,
-    "views": 36217,
+    "views": 36218,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5485,7 +5487,7 @@ const VIDEOS = [
     "date": "2025-08-02",
     "is_short": false,
     "duration": 507,
-    "views": 37846,
+    "views": 37849,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5533,7 +5535,7 @@ const VIDEOS = [
     "date": "2025-07-19",
     "is_short": false,
     "duration": 914,
-    "views": 19766,
+    "views": 19768,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5557,7 +5559,7 @@ const VIDEOS = [
     "date": "2025-07-12",
     "is_short": false,
     "duration": 504,
-    "views": 48933,
+    "views": 48942,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5582,7 +5584,7 @@ const VIDEOS = [
     "date": "2025-07-05",
     "is_short": false,
     "duration": 685,
-    "views": 18608,
+    "views": 18612,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5683,7 +5685,7 @@ const VIDEOS = [
     "date": "2025-06-07",
     "is_short": false,
     "duration": 929,
-    "views": 19268,
+    "views": 19273,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5730,7 +5732,7 @@ const VIDEOS = [
     "date": "2025-05-24",
     "is_short": false,
     "duration": 687,
-    "views": 15800,
+    "views": 15802,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5801,7 +5803,7 @@ const VIDEOS = [
     "date": "2025-05-03",
     "is_short": false,
     "duration": 811,
-    "views": 16995,
+    "views": 16996,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5825,7 +5827,7 @@ const VIDEOS = [
     "date": "2025-04-26",
     "is_short": false,
     "duration": 764,
-    "views": 24224,
+    "views": 24225,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5848,7 +5850,7 @@ const VIDEOS = [
     "date": "2025-04-19",
     "is_short": false,
     "duration": 1134,
-    "views": 27075,
+    "views": 27078,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5873,7 +5875,7 @@ const VIDEOS = [
     "date": "2025-04-12",
     "is_short": false,
     "duration": 1034,
-    "views": 22892,
+    "views": 22891,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5898,7 +5900,7 @@ const VIDEOS = [
     "date": "2025-04-05",
     "is_short": false,
     "duration": 1603,
-    "views": 19553,
+    "views": 19552,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5922,7 +5924,7 @@ const VIDEOS = [
     "date": "2025-03-29",
     "is_short": false,
     "duration": 1223,
-    "views": 51774,
+    "views": 51777,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -5966,7 +5968,7 @@ const VIDEOS = [
     "date": "2025-03-22",
     "is_short": false,
     "duration": 950,
-    "views": 19975,
+    "views": 19976,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6010,7 +6012,7 @@ const VIDEOS = [
     "date": "2025-03-15",
     "is_short": false,
     "duration": 1107,
-    "views": 25116,
+    "views": 25123,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6055,7 +6057,7 @@ const VIDEOS = [
     "date": "2025-03-08",
     "is_short": false,
     "duration": 821,
-    "views": 32460,
+    "views": 32463,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6078,7 +6080,7 @@ const VIDEOS = [
     "date": "2025-03-03",
     "is_short": true,
     "duration": 70,
-    "views": 7860,
+    "views": 7862,
     "is_live": false
   },
   {
@@ -6147,7 +6149,7 @@ const VIDEOS = [
     "date": "2025-02-22",
     "is_short": false,
     "duration": 638,
-    "views": 16245,
+    "views": 16249,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6195,7 +6197,7 @@ const VIDEOS = [
     "date": "2025-02-15",
     "is_short": false,
     "duration": 1298,
-    "views": 29242,
+    "views": 29246,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6239,7 +6241,7 @@ const VIDEOS = [
     "date": "2025-02-08",
     "is_short": false,
     "duration": 687,
-    "views": 12278,
+    "views": 12279,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6286,7 +6288,7 @@ const VIDEOS = [
     "date": "2025-02-01",
     "is_short": false,
     "duration": 997,
-    "views": 21754,
+    "views": 21757,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6309,7 +6311,7 @@ const VIDEOS = [
     "date": "2025-01-25",
     "is_short": false,
     "duration": 669,
-    "views": 16839,
+    "views": 16840,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6333,7 +6335,7 @@ const VIDEOS = [
     "date": "2025-01-18",
     "is_short": false,
     "duration": 886,
-    "views": 45485,
+    "views": 45490,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6357,7 +6359,7 @@ const VIDEOS = [
     "date": "2025-01-11",
     "is_short": false,
     "duration": 713,
-    "views": 26107,
+    "views": 26108,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6407,7 +6409,7 @@ const VIDEOS = [
     "date": "2024-12-28",
     "is_short": false,
     "duration": 1046,
-    "views": 43438,
+    "views": 43442,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6433,7 +6435,7 @@ const VIDEOS = [
     "date": "2024-12-21",
     "is_short": false,
     "duration": 909,
-    "views": 23585,
+    "views": 23588,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6457,7 +6459,7 @@ const VIDEOS = [
     "date": "2024-12-14",
     "is_short": false,
     "duration": 916,
-    "views": 41651,
+    "views": 41655,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6481,7 +6483,7 @@ const VIDEOS = [
     "date": "2024-11-30",
     "is_short": false,
     "duration": 1772,
-    "views": 35161,
+    "views": 35167,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6506,7 +6508,7 @@ const VIDEOS = [
     "date": "2024-11-16",
     "is_short": false,
     "duration": 804,
-    "views": 25210,
+    "views": 25211,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6529,7 +6531,7 @@ const VIDEOS = [
     "date": "2024-11-09",
     "is_short": false,
     "duration": 520,
-    "views": 33371,
+    "views": 33372,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6576,7 +6578,7 @@ const VIDEOS = [
     "date": "2024-11-02",
     "is_short": false,
     "duration": 572,
-    "views": 30036,
+    "views": 30038,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6599,7 +6601,7 @@ const VIDEOS = [
     "date": "2024-10-26",
     "is_short": false,
     "duration": 386,
-    "views": 31601,
+    "views": 31603,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6625,7 +6627,7 @@ const VIDEOS = [
     "date": "2024-10-19",
     "is_short": false,
     "duration": 744,
-    "views": 38348,
+    "views": 38350,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6649,7 +6651,7 @@ const VIDEOS = [
     "date": "2024-10-12",
     "is_short": false,
     "duration": 423,
-    "views": 105908,
+    "views": 105914,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6672,7 +6674,7 @@ const VIDEOS = [
     "date": "2024-10-05",
     "is_short": false,
     "duration": 587,
-    "views": 20947,
+    "views": 20946,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6696,7 +6698,7 @@ const VIDEOS = [
     "date": "2024-09-28",
     "is_short": false,
     "duration": 748,
-    "views": 52662,
+    "views": 52667,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6720,7 +6722,7 @@ const VIDEOS = [
     "date": "2024-09-21",
     "is_short": false,
     "duration": 705,
-    "views": 25902,
+    "views": 25904,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6745,7 +6747,7 @@ const VIDEOS = [
     "date": "2024-09-14",
     "is_short": false,
     "duration": 600,
-    "views": 60333,
+    "views": 60337,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6770,7 +6772,7 @@ const VIDEOS = [
     "date": "2024-09-07",
     "is_short": false,
     "duration": 973,
-    "views": 100766,
+    "views": 100769,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6794,7 +6796,7 @@ const VIDEOS = [
     "date": "2024-08-31",
     "is_short": false,
     "duration": 629,
-    "views": 20634,
+    "views": 20635,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6818,7 +6820,7 @@ const VIDEOS = [
     "date": "2024-08-24",
     "is_short": false,
     "duration": 765,
-    "views": 51003,
+    "views": 51005,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6843,7 +6845,7 @@ const VIDEOS = [
     "date": "2024-08-17",
     "is_short": false,
     "duration": 483,
-    "views": 35357,
+    "views": 35360,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6868,7 +6870,7 @@ const VIDEOS = [
     "date": "2024-08-10",
     "is_short": false,
     "duration": 578,
-    "views": 22447,
+    "views": 22449,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6892,7 +6894,7 @@ const VIDEOS = [
     "date": "2024-08-03",
     "is_short": false,
     "duration": 662,
-    "views": 16817,
+    "views": 16818,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6915,7 +6917,7 @@ const VIDEOS = [
     "date": "2024-07-27",
     "is_short": false,
     "duration": 737,
-    "views": 27702,
+    "views": 27704,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -6965,7 +6967,7 @@ const VIDEOS = [
     "date": "2024-06-29",
     "is_short": false,
     "duration": 1092,
-    "views": 80636,
+    "views": 80639,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7011,7 +7013,7 @@ const VIDEOS = [
     "date": "2024-06-08",
     "is_short": false,
     "duration": 542,
-    "views": 40800,
+    "views": 40803,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7108,7 +7110,7 @@ const VIDEOS = [
     "date": "2024-05-18",
     "is_short": false,
     "duration": 560,
-    "views": 34045,
+    "views": 34048,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7133,7 +7135,7 @@ const VIDEOS = [
     "date": "2024-05-11",
     "is_short": false,
     "duration": 518,
-    "views": 47204,
+    "views": 47207,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7157,7 +7159,7 @@ const VIDEOS = [
     "date": "2024-05-04",
     "is_short": false,
     "duration": 653,
-    "views": 159785,
+    "views": 159787,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7180,7 +7182,7 @@ const VIDEOS = [
     "date": "2024-04-20",
     "is_short": false,
     "duration": 512,
-    "views": 23436,
+    "views": 23437,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7205,7 +7207,7 @@ const VIDEOS = [
     "date": "2024-04-13",
     "is_short": false,
     "duration": 649,
-    "views": 58373,
+    "views": 58376,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7229,7 +7231,7 @@ const VIDEOS = [
     "date": "2024-04-06",
     "is_short": false,
     "duration": 514,
-    "views": 119327,
+    "views": 119328,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7278,7 +7280,7 @@ const VIDEOS = [
     "date": "2024-03-23",
     "is_short": false,
     "duration": 1331,
-    "views": 65710,
+    "views": 65717,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7301,7 +7303,7 @@ const VIDEOS = [
     "date": "2024-03-16",
     "is_short": false,
     "duration": 1689,
-    "views": 60734,
+    "views": 60740,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7324,7 +7326,7 @@ const VIDEOS = [
     "date": "2024-03-09",
     "is_short": false,
     "duration": 508,
-    "views": 61829,
+    "views": 61833,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7348,7 +7350,7 @@ const VIDEOS = [
     "date": "2024-03-02",
     "is_short": false,
     "duration": 1254,
-    "views": 48996,
+    "views": 49000,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7374,7 +7376,7 @@ const VIDEOS = [
     "date": "2024-02-24",
     "is_short": false,
     "duration": 1129,
-    "views": 24713,
+    "views": 24716,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7397,7 +7399,7 @@ const VIDEOS = [
     "date": "2024-02-17",
     "is_short": false,
     "duration": 1275,
-    "views": 73443,
+    "views": 73446,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7446,7 +7448,7 @@ const VIDEOS = [
     "date": "2024-01-27",
     "is_short": false,
     "duration": 479,
-    "views": 28133,
+    "views": 28135,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7520,7 +7522,7 @@ const VIDEOS = [
     "date": "2023-12-23",
     "is_short": false,
     "duration": 994,
-    "views": 41376,
+    "views": 41378,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7569,7 +7571,7 @@ const VIDEOS = [
     "date": "2023-11-29",
     "is_short": false,
     "duration": 623,
-    "views": 21207,
+    "views": 21208,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7595,7 +7597,7 @@ const VIDEOS = [
     "date": "2023-11-18",
     "is_short": false,
     "duration": 946,
-    "views": 47410,
+    "views": 47412,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7620,7 +7622,7 @@ const VIDEOS = [
     "date": "2023-10-28",
     "is_short": false,
     "duration": 2911,
-    "views": 59193,
+    "views": 59196,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7691,7 +7693,7 @@ const VIDEOS = [
     "date": "2023-09-03",
     "is_short": false,
     "duration": 1007,
-    "views": 30022,
+    "views": 30023,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7739,7 +7741,7 @@ const VIDEOS = [
     "date": "2023-08-26",
     "is_short": false,
     "duration": 1389,
-    "views": 71837,
+    "views": 71838,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7788,7 +7790,7 @@ const VIDEOS = [
     "date": "2023-07-08",
     "is_short": false,
     "duration": 1236,
-    "views": 44009,
+    "views": 44010,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7813,7 +7815,7 @@ const VIDEOS = [
     "date": "2023-06-24",
     "is_short": false,
     "duration": 802,
-    "views": 131339,
+    "views": 131341,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7838,7 +7840,7 @@ const VIDEOS = [
     "date": "2023-06-03",
     "is_short": false,
     "duration": 815,
-    "views": 343251,
+    "views": 343256,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -7862,7 +7864,7 @@ const VIDEOS = [
     "date": "2023-05-27",
     "is_short": false,
     "duration": 538,
-    "views": 50711,
+    "views": 50713,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8030,7 +8032,7 @@ const VIDEOS = [
     "date": "2023-05-01",
     "is_short": false,
     "duration": 215,
-    "views": 26097,
+    "views": 26098,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8055,7 +8057,7 @@ const VIDEOS = [
     "date": "2023-04-30",
     "is_short": false,
     "duration": 162,
-    "views": 33696,
+    "views": 33697,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8079,7 +8081,7 @@ const VIDEOS = [
     "date": "2023-04-29",
     "is_short": false,
     "duration": 136,
-    "views": 42768,
+    "views": 42769,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8102,7 +8104,7 @@ const VIDEOS = [
     "date": "2023-04-28",
     "is_short": false,
     "duration": 185,
-    "views": 65783,
+    "views": 65787,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8128,7 +8130,7 @@ const VIDEOS = [
     "date": "2023-04-15",
     "is_short": false,
     "duration": 675,
-    "views": 77709,
+    "views": 77712,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8201,7 +8203,7 @@ const VIDEOS = [
     "date": "2023-03-11",
     "is_short": false,
     "duration": 538,
-    "views": 56568,
+    "views": 56576,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8249,7 +8251,7 @@ const VIDEOS = [
     "date": "2023-02-25",
     "is_short": false,
     "duration": 645,
-    "views": 71870,
+    "views": 71873,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8273,7 +8275,7 @@ const VIDEOS = [
     "date": "2023-02-18",
     "is_short": false,
     "duration": 531,
-    "views": 99896,
+    "views": 99897,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8298,7 +8300,7 @@ const VIDEOS = [
     "date": "2023-02-11",
     "is_short": false,
     "duration": 727,
-    "views": 74408,
+    "views": 74409,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8324,7 +8326,7 @@ const VIDEOS = [
     "date": "2023-02-04",
     "is_short": false,
     "duration": 694,
-    "views": 109114,
+    "views": 109116,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8348,7 +8350,7 @@ const VIDEOS = [
     "date": "2023-01-28",
     "is_short": false,
     "duration": 501,
-    "views": 62376,
+    "views": 62380,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8396,7 +8398,7 @@ const VIDEOS = [
     "date": "2023-01-21",
     "is_short": false,
     "duration": 1108,
-    "views": 144367,
+    "views": 144380,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8420,7 +8422,7 @@ const VIDEOS = [
     "date": "2023-01-14",
     "is_short": false,
     "duration": 521,
-    "views": 30229,
+    "views": 30231,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8444,7 +8446,7 @@ const VIDEOS = [
     "date": "2023-01-07",
     "is_short": false,
     "duration": 397,
-    "views": 116470,
+    "views": 116473,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8467,7 +8469,7 @@ const VIDEOS = [
     "date": "2022-12-28",
     "is_short": false,
     "duration": 678,
-    "views": 64461,
+    "views": 64462,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8565,7 +8567,7 @@ const VIDEOS = [
     "date": "2022-12-10",
     "is_short": false,
     "duration": 1512,
-    "views": 130555,
+    "views": 130558,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8612,7 +8614,7 @@ const VIDEOS = [
     "date": "2022-11-26",
     "is_short": false,
     "duration": 354,
-    "views": 105492,
+    "views": 105497,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8729,7 +8731,7 @@ const VIDEOS = [
     "date": "2022-10-29",
     "is_short": false,
     "duration": 614,
-    "views": 131656,
+    "views": 131658,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8800,7 +8802,7 @@ const VIDEOS = [
     "date": "2022-10-16",
     "is_short": false,
     "duration": 705,
-    "views": 56104,
+    "views": 56105,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8904,7 +8906,7 @@ const VIDEOS = [
     "date": "2022-09-17",
     "is_short": false,
     "duration": 2780,
-    "views": 703785,
+    "views": 703823,
     "cat_v2": true,
     "is_live": false,
     "transcript_ok": true
@@ -8929,7 +8931,7 @@ const VIDEOS = [
     "date": "2022-09-11",
     "is_short": false,
     "duration": 565,
-    "views": 111297,
+    "views": 111299,
     "cat_v2": true,
     "is_live": true,
     "transcript_ok": true
