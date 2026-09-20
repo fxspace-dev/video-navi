@@ -811,14 +811,36 @@ function renderCommentNode(c, owner) {
     const avatar = c.authorProfileImageUrl
         ? `<img class="cmt-avatar" src="${c.authorProfileImageUrl}" alt="" loading="lazy" referrerpolicy="no-referrer">`
         : `<div class="cmt-avatar-fallback">${initial}</div>`;
-    const text = escapeHtml(c.textDisplay || '').replace(/\n/g, '<br>');
+    const raw = c.textDisplay || '';
+    const CMT_LIMIT = 130; // これを超える長文はカードが埋まるので折りたたむ
+    const toHtml = s => escapeHtml(s).replace(/\n/g, '<br>');
+    let textHtml;
+    if (raw.length > CMT_LIMIT) {
+        textHtml = '<div class="cmt-text">'
+            + `<span class="cmt-short">${toHtml(raw.slice(0, CMT_LIMIT))}…</span>`
+            + `<span class="cmt-full" style="display:none">${toHtml(raw)}</span>`
+            + ' <button class="cmt-toggle" onclick="toggleComment(this)">続きを読む</button></div>';
+    } else {
+        textHtml = `<div class="cmt-text">${toHtml(raw)}</div>`;
+    }
     const likes = c.likeCount || 0;
     const likesHtml = likes > 0
         ? `<span class="cmt-likes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>${likes.toLocaleString()}</span>`
         : '';
     const ownerBadge = owner ? '<span class="cmt-owner-badge">よすが</span>' : '';
     const authorClass = owner ? 'cmt-author cmt-author-owner' : 'cmt-author';
-    return `${avatar}<div class="cmt-body"><div class="cmt-meta"><span class="${authorClass}">${author}</span>${ownerBadge}<span class="cmt-date">${formatCommentDate(c.publishedAt)}</span></div><div class="cmt-text">${text}</div>${likesHtml}</div>`;
+    return `${avatar}<div class="cmt-body"><div class="cmt-meta"><span class="${authorClass}">${author}</span>${ownerBadge}<span class="cmt-date">${formatCommentDate(c.publishedAt)}</span></div>${textHtml}${likesHtml}</div>`;
+}
+// 長文コメントの「続きを読む/閉じる」トグル
+function toggleComment(btn) {
+    const box = btn.closest('.cmt-text');
+    if (!box) return;
+    const short = box.querySelector('.cmt-short');
+    const full = box.querySelector('.cmt-full');
+    if (!short || !full) return;
+    const showingFull = full.style.display !== 'none';
+    if (showingFull) { full.style.display = 'none'; short.style.display = ''; btn.textContent = '続きを読む'; }
+    else { full.style.display = ''; short.style.display = 'none'; btn.textContent = '閉じる'; }
 }
 
 let commentsRequestId = 0;

@@ -709,6 +709,9 @@ body.dark-mode .modal-more-btn:hover { background: #334155; }
 .cmt-date { font-size: 0.62rem; color: var(--text-muted); }
 .cmt-text { font-size: 0.78rem; line-height: 1.6; color: var(--text-sub); word-break: break-word; white-space: pre-wrap; }
 .cmt-text a { color: var(--primary); }
+.cmt-toggle { background: none; border: 0; padding: 0; color: var(--primary); font-size: 0.72rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.cmt-toggle:hover { text-decoration: underline; }
+body.dark-mode .cmt-toggle { color: #93c5fd; }
 .cmt-likes { display: inline-flex; align-items: center; gap: 4px; margin-top: 5px; font-size: 0.66rem; font-weight: 700; color: var(--text-muted); }
 .cmt-likes svg { width: 12px; height: 12px; }
 .modal-comments-status { font-size: 0.74rem; color: var(--text-muted); padding: 4px 0 8px; }

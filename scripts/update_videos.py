@@ -56,8 +56,10 @@ LEVEL_OPTIONS = ["超初心者", "初心者", "中級", "上級"]
 # カテゴリ判定ガイド（fill_missing_summaries と共有）。取り込み時の新規動画にも同じ精度を適用。
 try:
     from fill_missing_summaries import CATEGORY_GUIDE as _CATEGORY_GUIDE
+    from fill_missing_summaries import SUMMARY_GUIDE as _SUMMARY_GUIDE
 except Exception:
     _CATEGORY_GUIDE = ""
+    _SUMMARY_GUIDE = ""
 
 REQUEST_HEADERS = {
     "User-Agent": (
@@ -416,8 +418,9 @@ def generate_metadata(title: str, transcript: str | None) -> dict:
 
 {_CATEGORY_GUIDE}
 
+{_SUMMARY_GUIDE}
+
 ## 注意
-- summaryは「〜を解説している」「〜について紹介している」のような体言止めの文体
 - levelsは対象視聴者のレベル（複数可）
 - categoriesは「内容テーマ」と「形式」の両面から該当を**すべて**選ぶ（通常2〜4個）
 - インタビュー・リアルトレード・実績・企画・あるある等の**形式カテゴリを見落とさない**
