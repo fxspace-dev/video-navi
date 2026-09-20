@@ -731,7 +731,9 @@ function openModal(index) {
     if (v.vid_id) {
         const hq = `https://img.youtube.com/vi/${v.vid_id}/hqdefault.jpg`;
         const maxres = `https://img.youtube.com/vi/${v.vid_id}/maxresdefault.jpg`;
-        thumbImgHtml = `<img src="${maxres}" alt="" data-fallback="${hq}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';}">`;
+        // maxresが無い動画はYouTubeが404でもグレーのダミー画像(120x90)を返すため、
+        // 読み込めても寸法が小さければ hqdefault に差し替える（onerror だけでは防げない）。
+        thumbImgHtml = `<img src="${maxres}" alt="" data-hq="${hq}" onload="if(this.naturalWidth<=120&&this.dataset.hq){this.src=this.dataset.hq;this.dataset.hq='';}" onerror="if(this.dataset.hq){this.src=this.dataset.hq;this.dataset.hq='';}">`;
     } else {
         thumbImgHtml = `<img src="${(v.thumb || '').replace(/"/g, '&quot;')}" alt="">`;
     }
