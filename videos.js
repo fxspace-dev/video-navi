@@ -433,7 +433,7 @@ const VIDEOS = [
     "categories": [
       "手法",
       "基礎",
-      "ダウ・ナウキャスト"
+      "ナウキャスト"
     ],
     "method": "メンバーシップ限定公開",
     "summary": "FXトレード手法「よすが式ダウ手法」習得編の準備として、証券会社口座の開設方法とMT4の使い方を解説。デモトレードで操作に慣れることを推奨。",
@@ -4153,7 +4153,7 @@ const VIDEOS = [
   {
     "title": "【2026年相場予測】ゴールド・ドル円だけ見ろ。プロが見ている分岐点を全て見せます！",
     "url": "https://www.youtube.com/watch?v=KzbFwJXbCJQ",
-    "thumb": "https://www.notion.so/image/attachment%3Ad621386b-00d9-4e39-9436-fab03bb3770b%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-17_161429.png?table=block&id=201c3160-1076-460b-bd89-dd349e526228&cache=v2",
+    "thumb": "https://img.youtube.com/vi/KzbFwJXbCJQ/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -4311,7 +4311,7 @@ const VIDEOS = [
   {
     "title": "2026年版初心者でも再現できる「30万→1億」計画を全部公開します",
     "url": "https://youtu.be/0BR49UhvsIo",
-    "thumb": "https://www.notion.so/image/attachment%3Ab93f12cd-14b4-49e7-9cc0-13fb64273b9e%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-07_160423.png?table=block&id=2e1a8fb3-5191-8047-b75d-ccf0d26da3a4&cache=v2",
+    "thumb": "https://img.youtube.com/vi/0BR49UhvsIo/mqdefault.jpg",
     "levels": [
       "超初心者",
       "初心者"
@@ -4336,7 +4336,7 @@ const VIDEOS = [
   {
     "title": "バラバラな経歴なのに「勝ち組全員」がやっていた共通手法とは？",
     "url": "https://youtu.be/-snvY2PGvgw",
-    "thumb": "https://www.notion.so/image/attachment%3A03aaf85f-1119-454a-b01d-afd4256176ac%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-07_161644.png?table=block&id=2e1a8fb3-5191-8018-949b-e6a99d38d668&cache=v2",
+    "thumb": "https://img.youtube.com/vi/-snvY2PGvgw/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -4384,7 +4384,7 @@ const VIDEOS = [
   {
     "title": "【1億円出金】プロップの社長に直談判してきました",
     "url": "https://youtu.be/hyeLzseYDOk",
-    "thumb": "https://www.notion.so/image/attachment%3A77b997ee-b82e-4864-aa24-25cf1090df7e%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-07_220143.png?table=block&id=2e1a8fb3-5191-803d-9690-e3d58be8599b&cache=v2",
+    "thumb": "https://img.youtube.com/vi/hyeLzseYDOk/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -4409,7 +4409,7 @@ const VIDEOS = [
   {
     "title": "FX初心者3人を5日間指導したリアルな成長記録 これがプロの本気添削！",
     "url": "https://youtu.be/WhbaMOf01XY",
-    "thumb": "https://www.notion.so/image/attachment%3A2daf9558-8243-498f-88c3-b99243512f68%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_105454.png?table=block&id=2e1a8fb3-5191-8043-849c-e712a7e61b82&cache=v2",
+    "thumb": "https://img.youtube.com/vi/WhbaMOf01XY/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -4434,7 +4434,7 @@ const VIDEOS = [
   {
     "title": "未来予測は捨てろ｜経済評論家の衝撃データとFXの正解【ナウキャスト解説】",
     "url": "https://youtu.be/xmcVN6i0BSk",
-    "thumb": "https://www.notion.so/image/attachment%3A13ad15c8-8dc3-48dc-94fb-644334624ddb%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-13_010154.png?table=block&id=2e1a8fb3-5191-80ec-a610-e8f94fb197b5&cache=v2",
+    "thumb": "https://img.youtube.com/vi/xmcVN6i0BSk/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -4459,7 +4459,7 @@ const VIDEOS = [
   {
     "title": "含み損でもメンタルを壊さないトレーダーの“待ち時間ルーティン”",
     "url": "https://youtu.be/csvMponcNEY",
-    "thumb": "https://www.notion.so/image/attachment%3A89a75797-1c35-4335-a0eb-3de5a9198dde%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-13_010254.png?table=block&id=2e1a8fb3-5191-80e1-b0e5-db5692039db3&cache=v2",
+    "thumb": "https://img.youtube.com/vi/csvMponcNEY/mqdefault.jpg",
     "levels": [
       "中級"
     ],
@@ -4527,7 +4527,7 @@ const VIDEOS = [
   {
     "title": "【完全公開】負けトレーダーが勝てるようになるまでにやったこと全て",
     "url": "https://youtu.be/6zrbJJr9p0U",
-    "thumb": "https://www.notion.so/image/attachment%3A03c2a36b-6c82-46b6-8a43-1d7e810aa3c5%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_105934.png?table=block&id=2e1a8fb3-5191-8025-8705-d3337a98562c&cache=v2",
+    "thumb": "https://img.youtube.com/vi/6zrbJJr9p0U/mqdefault.jpg",
     "levels": [
       "中級"
     ],
@@ -4573,7 +4573,7 @@ const VIDEOS = [
   {
     "title": "総資産400億トレーダーCISの真実｜9割の人が勘違いしている“爆益の取り方",
     "url": "https://youtu.be/V27x9bsFoCU",
-    "thumb": "https://www.notion.so/image/attachment%3Ade4dd021-321c-43f0-817d-10a86c2a0733%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-14_110055.png?table=block&id=2e1a8fb3-5191-803f-8175-e0deef52973c&cache=v2",
+    "thumb": "https://img.youtube.com/vi/V27x9bsFoCU/mqdefault.jpg",
     "levels": [
       "中級",
       "上級"
@@ -4827,7 +4827,7 @@ const VIDEOS = [
   {
     "title": "【初心者向け】FXガチ勢たちのトレード環境を大公開",
     "url": "https://www.youtube.com/watch?v=Pv-5SKM_7kk&t=2s",
-    "thumb": "https://www.notion.so/image/attachment%3A98506d0b-40e4-479d-b0b2-607842ecbba9%3A%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-01-11_210429.png?table=block&id=83dc38ef-908b-4107-adfa-8af591a0d5c8&cache=v2",
+    "thumb": "https://img.youtube.com/vi/Pv-5SKM_7kk/mqdefault.jpg",
     "levels": [
       "初心者"
     ],
@@ -7832,7 +7832,7 @@ const VIDEOS = [
   {
     "title": "#13【FXライブ配信】400万達成を皆で見届けてくれ【10万→1000万企画】",
     "url": "https://discord.com/channels/1039824083208126474/1528174536175128767/1528248667507523675",
-    "thumb": "https://i.ytimg.com/vi/yqdo2ajSPKc/maxresdefault.jpg",
+    "thumb": "https://img.youtube.com/vi/GkpwfKCi2y0/mqdefault.jpg",
     "levels": [
       "中級"
     ],

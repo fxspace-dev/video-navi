@@ -2,7 +2,9 @@ name: Deploy to Production
 
 # データ生成はローカル (scripts/run_daily_local.sh) で行い、
 # push されたサイトファイルを本番サーバーへFTPデプロイする。
-# xserver への FTP は稀に接続失敗するため、最大3回リトライする。
+# FTPの前に videos.js の検証と ?v= 上げ忘れチェックを行い、
+# 問題があればデプロイを止める（壊れたまま公開しない）。
+# xserver への FTP は稀に接続失敗するため、最大5回リトライする。
 on:
   push:
     branches: [main]
@@ -22,12 +24,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # ?v= チェックで前コミットと比較するため履歴が必要
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # --- 公開前ガードレール（問題があればここで止まる） ---
+      - name: Validate videos.js
+        run: python scripts/validate_videos.py
+
+      - name: Check cache-bust (?v=)
+        run: python scripts/check_cachebust.py "${{ github.event.before }}" "${{ github.sha }}"
+
+      # --- FTPデプロイ（最大5回リトライ） ---
       - name: Deploy via FTP (attempt 1)
         id: ftp1
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
+        with: &ftp
           server: sv14907.xserver.jp
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
@@ -43,41 +60,37 @@ jobs:
       - name: Wait before retry 2
         if: steps.ftp1.outcome == 'failure'
         run: sleep 20
-
       - name: Deploy via FTP (attempt 2)
         id: ftp2
         if: steps.ftp1.outcome == 'failure'
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: sv14907.xserver.jp
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /fx-space.com/public_html/videonavi/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/scripts/**
-            **/.github/**
-            **/*.md
+        with: *ftp
 
       - name: Wait before retry 3
-        if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
+        if: steps.ftp2.outcome == 'failure'
         run: sleep 30
-
-      - name: Deploy via FTP (attempt 3, final)
-        if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
+      - name: Deploy via FTP (attempt 3)
+        id: ftp3
+        if: steps.ftp2.outcome == 'failure'
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: sv14907.xserver.jp
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /fx-space.com/public_html/videonavi/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/scripts/**
-            **/.github/**
-            **/*.md
+        with: *ftp
+
+      - name: Wait before retry 4
+        if: steps.ftp3.outcome == 'failure'
+        run: sleep 45
+      - name: Deploy via FTP (attempt 4)
+        id: ftp4
+        if: steps.ftp3.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with: *ftp
+
+      - name: Wait before retry 5
+        if: steps.ftp4.outcome == 'failure'
+        run: sleep 60
+      - name: Deploy via FTP (attempt 5, final)
+        if: steps.ftp4.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with: *ftp
