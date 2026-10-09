@@ -1,0 +1,11 @@
+# 改行コードを全環境でLFに統一する。
+# Windows側(core.autocrlf=true)とWSL側でgitの見え方が食い違い、
+# videos.js が「変更済み」に見えて毎晩の自動更新(git pull)が止まる問題を防ぐ。
+* text=auto eol=lf
+
+# 画像はバイナリ（改行変換しない）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

@@ -82,7 +82,8 @@ set -a
 source .env
 set +a
 
-git pull --rebase origin main >> "$LOG_FILE" 2>&1 || fail "git pull"
+# --autostash: 改行差分などで作業ツリーが汚れていても一時退避してpullを通す（毎晩の停止を防ぐ）
+git pull --rebase --autostash origin main >> "$LOG_FILE" 2>&1 || fail "git pull"
 python3 scripts/fetch_discord_urls.py >> "$LOG_FILE" 2>&1 || fail "Discord URL取得 (fetch_discord_urls)"
 python3 scripts/update_videos.py >> "$LOG_FILE" 2>&1 || fail "新着動画取り込み (update_videos)"
 
